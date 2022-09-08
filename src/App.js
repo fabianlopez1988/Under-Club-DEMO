@@ -1,9 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import Header from './componentes/Header';
+import NavBar from "./componentes/NavBar"
+import History from './componentes/History';
+import Artists from './componentes/Artists';
+
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Under Club DEMO</h1>
+      <NavBar />
+      <Header />
+      <History />
+      <Artists />
+
     </div>
   );
 }
