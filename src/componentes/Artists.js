@@ -1,11 +1,14 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import fiama from "../assets/fiamamolina.jpg";
+import jose from "../assets/jose.jpg"
+import juli from "../assets/juli.jpg"
+
 
 const Artists = () => {
   return (
     <div>
-      <div className="titleResidents">
+      <div className="titleResidents" id="residents">
         <h1>RESIDENTES</h1>
         <h1>(A-Z)</h1>
       </div>
@@ -37,17 +40,14 @@ const Artists = () => {
               </p>
             </div>
             <div className="accordion-right">
-              {/* <div> */}
               <ul>
                 <li>Soundcloud</li>
                 <li>Instagram</li>
                 <li>Facebook</li>
                 <li>Resident Advisor</li>
               </ul>
-              {/* <h5>Contacto</h5>
-            <p>daniela.underclub@gmail.com</p> */}
+  
 
-              {/* </div> */}
               <img src={fiama} alt="fiama" className="photo"></img>
             </div>
           </Accordion.Body>
@@ -56,21 +56,35 @@ const Artists = () => {
         <Accordion.Item eventKey="2">
           <Accordion.Header>Josefina Muñóz</Accordion.Header>
           <Accordion.Body>
-            <p>
+          <div className="accordion-left">
+              <p>
               Josefina Muñoz de la ciudad de Córdoba con residencia en Buenos
               Aires, busca un sonido en constante evolución. Procura un viaje
               que va desde los sonidos más orgánicos hasta las melodías más
               hipnóticas y rítmicas. Teniendo así, una versatilidad a la hora de
-              encarar cada pista de baile
-            </p>
+              encarar cada pista de baile. <br></br>
+              En su faceta como productora, ha logrado editar en sellos como Vapourtrail & BlackArt (Colombia), y varias colaboraciones en Suara, Human Recs, Simplecoding Recordings, Concepto Hipnotico. Con varios proyectos pronto a salir, Josefina no descansa en su crecimiento.
+              </p>
+            </div>
+            <div className="accordion-right">
+              <ul>
+                <li>Soundcloud</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Resident Advisor</li>
+              </ul>
+              <img src={jose} alt="jose" className="photo"></img>
+            </div>
           </Accordion.Body>
         </Accordion.Item>
 
+         
         <Accordion.Item eventKey="3">
           <Accordion.Header>Julieta Kopp</Accordion.Header>
           <Accordion.Body>
-            Nacida en Monte Grande, Buenos Aires. Atraída por la escena
-            electrónica durante varios años. Su estilo, enfocado enteramente a
+          <div className="accordion-left">
+              <p>
+            Su estilo, enfocado enteramente a
             la pista de baile, adquiere un sonido progresivo con perspectiva
             profunda, hipnótica y poderosa, con kicks serios y marcadas
             atmósferas.<br></br>
@@ -79,10 +93,26 @@ const Artists = () => {
             Su carrera está en pleno crecimiento gracias a sus presentaciones
             que han tenido gran reconocimiento del público, lo que la lleva a
             fines de 2020 a comenzar su residencia en el reconocido Under Club
-            de Buenos Aires.
+            de Buenos Aires.<br></br>
+            Al momento está comenzando su faceta como productora, editando en sellos como Dynamic Reflection, Induxtriall Records y Combine Audio, entre otros.
+            </p>
+            </div>
+            <div className="accordion-right">
+              <ul>
+                <li>Soundcloud</li>
+                <li>Instagram</li>
+                <li>Facebook</li>
+                <li>Resident Advisor</li>
+                <li>
+                  <a href="https://portfolio-julieta-kopp.vercel.app/" target="_blank"> Press Kit</a>
+                 </li>
+              </ul>
+              <img src={juli} alt="juli" className="photo"></img>
+            </div>
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="4">
+           
           <Accordion.Header>Kid Riot</Accordion.Header>
           <Accordion.Body></Accordion.Body>
         </Accordion.Item>

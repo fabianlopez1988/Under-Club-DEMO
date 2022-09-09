@@ -2,9 +2,10 @@ import React from "react";
 
 const History = () => {
   return (
-    <div className="historyContainer">
+    <div className="historyContainer" id="history">
       <div className="titulo3Container">
         <h1 className="titulo3">UNDER CLUB</h1>
+        
       </div>
       <div className="titulo4Container">
         <h1 className="titulo4">PARA TODO EL MUNDO</h1>
