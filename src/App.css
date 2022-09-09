@@ -35,7 +35,7 @@ body {
 }
 
 
- .containerVideo {
+.containerVideo {
   position: relative;
  display: inline-block;
   width: 100%;
@@ -43,7 +43,7 @@ body {
   object-fit: contain;
 
 } 
-*/
+
 
 video {
   width: 100%;
@@ -205,11 +205,6 @@ video {
 
 .text {
   padding-left: 2%;
-  /* font-size:28px; */
-  /* font-family:helvetica; */
-  /* font-weight:bold; */
-  /* color:#71d90b; */
-  /* text-transform:uppercase; */
 }
 .parpadea {
 
@@ -218,7 +213,7 @@ video {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 
-  -webkit-animation-name:parpadeo;
+  -webkit-animation-name: parpadeo;
   -webkit-animation-duration: 0.005; 
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
