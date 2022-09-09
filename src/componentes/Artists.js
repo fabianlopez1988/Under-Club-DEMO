@@ -104,7 +104,7 @@ const Artists = () => {
                 <li>Facebook</li>
                 <li>Resident Advisor</li>
                 <li>
-                  <a href="https://portfolio-julieta-kopp.vercel.app/" target="_blank"> Press Kit</a>
+                  <a href="https://portfolio-julieta-kopp.vercel.app/" target="_blank" rel="noreferrer"> Press Kit</a>
                  </li>
               </ul>
               <img src={juli} alt="juli" className="photo"></img>

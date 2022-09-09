@@ -10,7 +10,7 @@ const NavBar = () => {
       <Navbar className="navbar" variant='dark' expand="lg">
       <Container className="style-navbar">
         <Navbar.Brand href="#home">
-          <img src='https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg' width="52" height="46"></img>
+          <img src='https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg' alt="logo" width="52" height="46"></img>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
