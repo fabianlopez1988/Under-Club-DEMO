@@ -20,7 +20,20 @@ body {
 .navbar {
   background-color: black;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
+
+.style-navbar{
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
 
  .containerVideo {
   position: relative;
@@ -49,11 +62,13 @@ video {
   align-items: flex-start;
   left: 2%;
   margin-bottom: 200px;
+  
 
 }
 
 .titulo1 {
   font-size: 75px;
+  
 }
 
 .titulo2 {
@@ -132,7 +147,7 @@ video {
 
 .accordion-button:hover{
   color: white;
-}
+  filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px blueviolet);}
 
 .accordion-body {
   font-family: HelveticaLt;
@@ -175,4 +190,58 @@ video {
 .accordion-right ul{
   list-style: none;
   padding-right: 2%;
+
+
 }
+
+.accordion-right ul li a {
+  text-decoration-line: none;
+  color: white;
+}
+
+.accordion-right ul li a:hover{
+  color: blueviolet;
+}
+
+.text {
+  padding-left: 2%;
+  /* font-size:28px; */
+  /* font-family:helvetica; */
+  /* font-weight:bold; */
+  /* color:#71d90b; */
+  /* text-transform:uppercase; */
+}
+.parpadea {
+
+  animation-name: parpadeo;
+  animation-duration: 0.005s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 0.005; 
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+
+/* parpadeo */
+@-moz-keyframes parpadeo{
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+
