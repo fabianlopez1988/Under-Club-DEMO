@@ -1,19 +1,28 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import Header from './componentes/Header';
-import NavBar from "./componentes/NavBar"
-import History from './componentes/History';
-import Artists from './componentes/Artists';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import NavBar from "./components/NavBar"
+import History from './components/History';
+import Artists from './components/Artists';
+import Home from "./components/Home"
 
 
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Header />
-      <History />
-      <Artists />
+    <NavBar />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/artists" element={<Artists />}/>
+        <Route path="/history" element={<History/>}/>
+        
+
+      </Routes>
+    
+    </BrowserRouter>
 
     </div>
   );

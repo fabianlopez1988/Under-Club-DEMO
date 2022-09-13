@@ -9,9 +9,9 @@ const Artists = () => {
   return (
     <div>
       <div className="titleResidents" id="residents">
-        <h1>RESIDENTES</h1>
-        <h1>(A-Z)</h1>
-      </div>
+      <section class="artists-section">
+        <h1>RESIDENTES<br></br>
+        (A-Z)</h1>
 
       {/* ACORDEÓN */}
 
@@ -91,10 +91,8 @@ const Artists = () => {
             Su pasión y dedicación general a la causa le permiten ampliar su
             visión y explorar en nuevos sonidos a cada paso.<br></br>
             Su carrera está en pleno crecimiento gracias a sus presentaciones
-            que han tenido gran reconocimiento del público, lo que la lleva a
-            fines de 2020 a comenzar su residencia en el reconocido Under Club
-            de Buenos Aires.<br></br>
-            Al momento está comenzando su faceta como productora, editando en sellos como Dynamic Reflection, Induxtriall Records y Combine Audio, entre otros.
+            que han tenido gran reconocimiento del público.<br></br> Mantiene firme su residencia en el mítico Under Club de Buenos Aires.<br></br>
+            En su faceta como productora, ha editado en sellos como Dynamic Reflection, Induxtriall Records y Combine Audio, entre otros.
             </p>
             </div>
             <div className="accordion-right">
@@ -130,7 +128,15 @@ const Artists = () => {
           <Accordion.Body></Accordion.Body>
         </Accordion.Item>
       </Accordion>
+
+
+
+
+      </section>
+
     </div>
+          </div>
+
   );
 };
 

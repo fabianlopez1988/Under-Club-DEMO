@@ -1,24 +1,24 @@
 @font-face {
-  font-family: Helvetica-bold;
-  src: url("../public/Fonts/helvetica-bold.ttf") format("truetype");
+  font-family: LeagueSpartan-Bold;
+  src: url("../public/Fonts/LeagueSpartan-Bold.otf") format("truetype");
   font-weight: normal;
   font-style: normal;  
 }
 
 @font-face {
-  font-family: HelveticaLt;
-  src: url("../public/Fonts/HelveticaLt.ttf");
+  font-family: LeagueSpartan-Regular;
+  src: url("../public/Fonts/LeagueSpartan-Regular.ttf");
 }
 
 body {
-  font-family: Helvetica-bold;
+  font-family: LeagueSpartan-Bold;
   margin: 0;
  background-color: black;
  color: white;
 }
 
 .navbar {
-  background-color: black;
+  background-color: none !important;
   color: white;
   display: flex;
   flex-direction: column;
@@ -32,6 +32,11 @@ body {
 
 .navbar-collapse {
   flex-grow: 0;
+}
+
+#button-streamings {
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -67,12 +72,12 @@ video {
 }
 
 .titulo1 {
-  font-size: 75px;
+  font-size: 80px;
   
 }
 
 .titulo2 {
-  font-size: 75px;
+  font-size: 80px;
   color: blueviolet;
 }
 
@@ -86,12 +91,12 @@ video {
 }
 
 .titulo3 {
-  font-size: 5rem;
+  font-size: 75px;
 
 }
 
 .titulo4 {
-  font-size: 5rem;
+  font-size: 75px;
 
 }
 
@@ -108,6 +113,7 @@ video {
 }
 
 .historyContainer {
+  padding-top: 8%;
   height: 100%;
   width: 100%;
   margin-top: 100px;
@@ -119,25 +125,31 @@ video {
   padding-right: 18%;
   padding-top: 8%;
   font-size: 1.5rem;
-  font-family: HelveticaLt;
+  font-family: LeagueSpartan-Regular;
   text-align: justify;
 }
 
 .titleResidents {
   margin-bottom: 5%;
+  
 }
 
 .titleResidents h1{
-  padding-left: 5%;
   font-size: 5rem;
+  padding-bottom: 5%;
+  letter-spacing: 5px;
 }
 
 
 .accordion-button {
-  padding-left: 5%;
-  font-size: 1.5rem;
-  padding-bottom: 5%;
+  font-size: 2.5rem;
+  padding-bottom: 1%;
+  padding-top: 1%;
   color: blueviolet;  
+  border-bottom: 4px solid blueviolet;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
 
 }
 
@@ -150,15 +162,24 @@ video {
   filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px blueviolet);}
 
 .accordion-body {
-  font-family: HelveticaLt;
+  font-family: LeagueSpartan-Regular;
   font-size: 1.5rem;
+  padding-top: 2%;
   padding-bottom: 5%;
   justify-content: center;
-  padding-left: 5%;
+  /* padding-left: 5%; */
   padding-right: 5%;
   display: flex;
   align-items: center;
   align-items: flex-start;
+  text-align: justify;
+  
+}
+
+.artists-section {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 8%;
 }
 
 .photo{
@@ -209,12 +230,12 @@ video {
 .parpadea {
 
   animation-name: parpadeo;
-  animation-duration: 0.005s;
+  animation-duration: 0.05s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 
   -webkit-animation-name: parpadeo;
-  -webkit-animation-duration: 0.005; 
+  -webkit-animation-duration: 0.05; 
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
 }
