@@ -1,13 +1,16 @@
-import React from 'react'
+import React from "react";
 import Header from "../components/Header";
-import ShortHistory from './ShortHistory';
+import ShortHistory from "./ShortHistory";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <div>{<Header />}
-        {<ShortHistory />}
-</div>
-  )
-}
+    <div>
+      {<Header />}
+      {<ShortHistory />}
+      {<Footer />}
+    </div>
+  );
+};
 
-export default Home
+export default Home;

@@ -12,8 +12,8 @@ import Home from "./components/Home"
 function App() {
   return (
     <div className="App">
-    <NavBar />
     <BrowserRouter>
+    <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/artists" element={<Artists />}/>

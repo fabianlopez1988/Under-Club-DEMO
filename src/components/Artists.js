@@ -3,11 +3,12 @@ import Accordion from "react-bootstrap/Accordion";
 import fiama from "../assets/fiamamolina.jpg";
 import jose from "../assets/jose.jpg"
 import juli from "../assets/juli.jpg"
+import "./Artists.css";
 
 
 const Artists = () => {
   return (
-    <div>
+    <div className="artists-container">
       <div className="titleResidents" id="residents">
       <section class="artists-section">
         <h1>RESIDENTES<br></br>

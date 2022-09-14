@@ -177,9 +177,11 @@ video {
 }
 
 .artists-section {
-  padding-left: 5%;
+  padding-left: 8%;
   padding-right: 5%;
   padding-top: 8%;
+  position:relative;
+  z-index: 2;
 }
 
 .photo{

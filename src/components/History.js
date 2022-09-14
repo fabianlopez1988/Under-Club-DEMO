@@ -1,6 +1,6 @@
-import React from 'react'
-import LoremIpsum from 'react-lorem-ipsum'
-import "./History.css"
+import React from 'react';
+import LoremIpsum from 'react-lorem-ipsum';
+import "./History.css";
 
 const History = () => {
   return (
@@ -10,14 +10,14 @@ const History = () => {
         </h1>
         <LoremIpsum />
         <LoremIpsum />
-        <h2>
+        <h1>
             CULTURA
-        </h2>
+        </h1>
         <LoremIpsum />
         <LoremIpsum />
-        <h2>
+        <h1>
             HITOS
-        </h2>
+        </h1>
         <LoremIpsum />
         <LoremIpsum />
     </div>
