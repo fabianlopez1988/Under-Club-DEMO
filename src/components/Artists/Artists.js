@@ -1,8 +1,8 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
-import fiama from "../assets/fiamamolina.jpg";
-import jose from "../assets/jose.jpg"
-import juli from "../assets/juli.jpg"
+import fiama from "../../assets/fiamamolina.jpg";
+import jose from "../../assets/jose.jpg"
+import juli from "../../assets/juli.jpg"
 import "./Artists.css";
 
 

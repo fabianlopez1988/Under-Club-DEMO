@@ -1,5 +1,6 @@
 import React from "react";
-import trailer from "../assets/videoUC.mp4";
+import trailer from "../../assets/videoUC.mp4";
+import "./Header.css";
 
 const Header = () => {
   return (

@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.footer-container img {
+  width: auto;
+}
+
 .icons {
   list-style: none;
   text-decoration: none;
@@ -24,6 +28,8 @@
   font-size: 150%;
   opacity: 0.7;
 }
+
+
 
 
 

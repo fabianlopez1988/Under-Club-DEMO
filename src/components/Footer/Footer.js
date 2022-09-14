@@ -1,5 +1,5 @@
 import React from "react";
-import foto from "../assets/UCfooter.jpg";
+import foto from "../../assets/UCfooter.jpg";
 import "./Footer.css";
 import {
   FaFacebook,

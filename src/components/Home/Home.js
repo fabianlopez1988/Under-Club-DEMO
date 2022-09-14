@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../components/Header";
-import ShortHistory from "./ShortHistory";
-import Footer from "./Footer";
+import Header from "../Header/Header";
+import ShortHistory from "../ShortHistory/ShortHistory";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (

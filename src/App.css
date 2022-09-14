@@ -40,94 +40,8 @@ body {
 }
 
 
-.containerVideo {
-  position: relative;
- display: inline-block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-
-} 
 
 
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.headerContainer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  left: 2%;
-  margin-bottom: 200px;
-  
-
-}
-
-.titulo1 {
-  font-size: 80px;
-  
-}
-
-.titulo2 {
-  font-size: 80px;
-  color: blueviolet;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0,0,0, 0.3);
-}
-
-.titulo3 {
-  font-size: 75px;
-
-}
-
-.titulo4 {
-  font-size: 75px;
-
-}
-
-.titulo3Container {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 8%
-}
-
-.titulo4Container {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 8%;
-}
-
-.historyContainer {
-  padding-top: 8%;
-  height: 100%;
-  width: 100%;
-  margin-top: 100px;
-  margin-bottom: 400px;
-}
-
-.historyContainer p {
-  padding-left: 18%;
-  padding-right: 18%;
-  padding-top: 8%;
-  font-size: 1.5rem;
-  font-family: LeagueSpartan-Regular;
-  text-align: justify;
-}
 
 .titleResidents {
   margin-bottom: 5%;
@@ -177,11 +91,10 @@ video {
 }
 
 .artists-section {
-  padding-left: 8%;
+  padding-left: 5%;
   padding-right: 5%;
   padding-top: 8%;
   position:relative;
-  z-index: 2;
 }
 
 .photo{
@@ -232,12 +145,12 @@ video {
 .parpadea {
 
   animation-name: parpadeo;
-  animation-duration: 0.05s;
+  animation-duration: 0.1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 
   -webkit-animation-name: parpadeo;
-  -webkit-animation-duration: 0.05; 
+  -webkit-animation-duration: 0.1s; 
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
 }
