@@ -1,6 +1,7 @@
 import React from "react";
+import "./ShortHistory.css";
 
-const History = () => {
+const ShortHistory = () => {
   return (
     <div className="historyContainer" id="history">
       <div className="titulo3Container">
@@ -30,4 +31,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default ShortHistory;
