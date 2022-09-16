@@ -13,3 +13,34 @@
 
 }
 
+
+
+@media (max-width: 767.98px) {
+   .history-container {
+    margin-top: 20%;
+    font-size: 1em;
+
+   }
+   .history-container h1 {
+    font-family: LeagueSpartan-Bold;
+    font-size: 120%
+
+}
+   
+}
+      
+
+
+@media (max-width: 575.98px) {
+    .history-container {
+        margin-top: 20%;
+        font-size: 15px
+
+    }
+    .history-container h1 {
+        font-family: LeagueSpartan-Bold;
+        font-size: 100%
+    
+    }
+}
+      
