@@ -1,3 +1,200 @@
-.artists-container {
-    
+.titleResidents {
+  margin-bottom: 5%;
+}
+
+.titleResidents h1 {
+  font-size: 5rem;
+  padding-bottom: 5%;
+  letter-spacing: 5px;
+}
+
+.accordion-button {
+  font-size: 2.5rem;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  color: blueviolet;
+  border-bottom: 4px solid blueviolet;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.accordion-button collapsed {
+  text-decoration-line: underline;
+}
+
+.accordion-button:hover {
+  color: white;
+  filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px blueviolet);
+}
+
+.accordion-body {
+  font-family: LeagueSpartan-Regular;
+  font-size: 1.5rem;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.artists-section {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 8%;
+  position: relative;
+  width: 100%;
+}
+
+.photo {
+  height: 550px;
+  width: 390px;
+}
+
+.photo:hover {
+  filter: opacity(0.95) drop-shadow(4px 4px 2px blueviolet);
+  transition: 0.6s;
+}
+
+.accordion-left {
+  width: 40%;
+}
+
+.accordion-right {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: end;
+}
+
+.accordion-right ul {
+  list-style: none;
+  padding-right: 2%;
+}
+
+.accordion-right ul li a {
+  text-decoration-line: none;
+  color: white;
+}
+
+.accordion-right ul li a:hover {
+  color: blueviolet;
+}
+
+.text {
+  padding-left: 2%;
+}
+
+@media (max-width: 767.98px) {
+  .titleResidents h1 {
+    font-size: 45px;
+    padding-bottom: 2%;
+    letter-spacing: 3px;
+  }
+  .accordion-button {
+    font-size: 35px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: blueviolet;
+    letter-spacing: 1px;
+  }
+  .artists-section {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15%;
+    position: relative;
+  }
+  .accordionArtists {
+    padding-top: 5%;
+  }
+  .artists-section div div {
+    padding-top: 10px;
+  }
+    .accordion-body {
+    font-family: LeagueSpartan-Regular;
+    font-size: 15px;
+    padding-right: 1%;
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    text-align: justify;
+    width: 100%;
+
+  } 
+  .photo {
+    height: 70%;
+    width: 70%;
+  }
+  .accordion-right {
+    display: flex;
+    width: 100%;
+  }
+  .accordion-left {
+    width: 100%;
+  }
+  .accordion-right ul {
+        margin-bottom: 0px;
+  }
+}
+
+
+
+/* PANTALLA CELU */
+
+@media (max-width: 575.98px) {
+  .titleResidents h1 {
+    font-size: 40px;
+    padding-top: 20%;
+  }
+  .accordion-button {
+    font-size: 30px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: blueviolet;
+    letter-spacing: 1px;
+  }
+  .artists-section {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    position: relative;
+  }
+  .accordionArtists {
+    padding-top: 5%;
+  }
+  .artists-section div div {
+    padding-top: 10px;
+  }
+  .accordion-body {
+    font-family: LeagueSpartan-Regular;
+    font-size: 15px;
+    padding-right: 1%;
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    text-align: justify;
+    width: 100%;
+    flex-direction: column;
+  }
+  .photo {
+    height: 50%;
+    width: 50%;
+  }
+  .accordion-right {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: center;
+    text-align: end;
+  }
+  .accordion-left {
+    width: 100%;
+  }
+  .accordion-right ul {
+        margin-bottom: 0px;
+  }
+  
 }

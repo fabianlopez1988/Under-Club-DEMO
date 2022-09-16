@@ -1,12 +1,10 @@
 .containerVideo {
   position: relative;
- display: inline-block;
+  display: inline-block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-
-} 
-
+}
 
 video {
   width: 100%;
@@ -29,7 +27,6 @@ video {
 
 .titulo1 {
   font-size: 80px;
-
 }
 
 .titulo2 {
@@ -43,9 +40,8 @@ video {
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: rgba(0,0,0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
-
 
 /* // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) { ... }
@@ -54,26 +50,23 @@ video {
 @media (min-width: 768px) { ... } */
 
 @media (max-width: 767.98px) {
-    .titulo1 {
-        font-size: 40px;
-      
-    }
-    .titulo2{
-        font-size: 40px
-    }
-
+  .titulo1 {
+    /* font-size: 40px; */
+    display: none;
+  }
+  .titulo2 {
+    /* font-size: 40px */
+    display: none;
+  }
 }
-      
-
 
 @media (max-width: 575.98px) {
-    .titulo1 {
-        font-size: 20px;
-      
-    }
-    .titulo2{
-        font-size: 20px
-    }
-    
+  .titulo1 {
+    /* font-size: 20px; */
+    display: none;
+  }
+  .titulo2 {
+    /* font-size: 20px */
+    display: none;
+  }
 }
-      

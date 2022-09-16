@@ -31,5 +31,25 @@
 
 
 
+@media (max-width: 767.98px) {
+  .icons {
+    width: 80%;
+
+  }
+
+ 
+}
+    
+
+
+@media (max-width: 575.98px) {
+  .icons {
+    width: 80%;
+
+  }
+}
+    
+
+
 
 

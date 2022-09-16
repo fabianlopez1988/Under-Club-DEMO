@@ -1,18 +1,81 @@
+.navbar {
+  background-color: none !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.style-navbar {
+  display: flex;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 100%;
+}
+
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-sm,
+.navbar > .container-md,
+.navbar > .container-lg,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+  flex-direction: row-reverse;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+#button-streamings {
+  width: 40px;
+  height: 40px;
+}
+
 .logo-container {
-    display: flex;
-    position: absolute;
-    width: 8%;
-    height: 100%;
-    justify-content: start;
-    padding-left: 2%;
-    padding-bottom: 2%;
-    float: left;
-    z-index: 2; 
-    align-items: flex-end;
+  display: flex;
+  position: absolute;
+  width: 8%;
+  height: 100%;
+  justify-content: start;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  float: left;
+  z-index: 2;
+  align-items: flex-end;
 }
 
 .logo-fixed {
-    position: fixed;
+  position: fixed;
 }
 
+@media (max-width: 767.98px) {
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-sm,
+  .navbar > .container-md,
+  .navbar > .container-lg,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    flex-direction: initial;
+  }
+  .logo-fixed img {
+    width: 95%;
+    height: 95%;
+  }
+}
 
+@media (max-width: 575.98px) {
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-sm,
+  .navbar > .container-md,
+  .navbar > .container-lg,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    flex-direction: initial;
+  }
+  .logo-fixed img {
+    width: 85%;
+    height: 85%;
+  }
+}

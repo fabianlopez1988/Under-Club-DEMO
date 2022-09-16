@@ -51,6 +51,13 @@
         padding-top: 5%;
         font-size: 0.8rem;
       }
+      .titulo3Container {
+        margin-left: 5%;
+      }
+      
+      .titulo4Container {
+        margin-right: 5%;
+      }
    
 }
       
@@ -65,10 +72,19 @@
         font-size: 20px;
       }
       .historyContainer p {
-        padding-left: 3%;
-        padding-right: 3%;
+        padding-left: 4%;
+        padding-right: 4%;
         padding-top: 3%;
         font-size: 16px;
       }
+      .titulo3Container {
+
+        margin-left: 4%;
+      }
+      
+      .titulo4Container {
+        margin-right: 4%;
+      }
+      
 }
       
