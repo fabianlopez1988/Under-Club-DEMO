@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import History from "./components/History/History";
 import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
+import Login from "./components/LoginAdmin/Login";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
+
+          <Route path="/admin" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>
