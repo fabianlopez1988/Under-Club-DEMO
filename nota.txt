@@ -1,0 +1,11 @@
+MEDIA QUERIES
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { ... } */
+
+// DESKTOP
+@media (max-width: 992px) { }
+

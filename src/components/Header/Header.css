@@ -49,6 +49,16 @@ video {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { ... } */
 
+/* DESKTOP */
+@media (max-width: 991.98px) {
+  .titulo1 {
+    font-size: 40px;
+  }
+  .titulo2 {
+    font-size: 40px
+  }
+}
+
 @media (max-width: 767.98px) {
   .titulo1 {
     /* font-size: 40px; */

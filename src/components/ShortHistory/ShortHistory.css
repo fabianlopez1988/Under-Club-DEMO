@@ -22,8 +22,8 @@
   padding-top: 8%;
   height: 100%;
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 400px;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 .historyContainer p {
@@ -33,6 +33,33 @@
   font-size: 1.5rem;
   font-family: LeagueSpartan-Regular;
   text-align: justify;
+}
+
+
+/* DESKTOP */
+@media (max-width: 991.98px) {
+  .titulo3 {
+      font-size: 40px;
+    }
+    
+    .titulo4 {
+      font-size: 40px;
+    }
+
+    .historyContainer p {
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5%;
+      font-size: 100%;
+    }
+    .titulo3Container {
+      margin-left: 5%;
+    }
+    
+    .titulo4Container {
+      margin-right: 5%;
+    }
+ 
 }
 
 

@@ -6,6 +6,8 @@ import "./CarouselHome.css";
 
 function CarouselHome() {
   return (
+    <div className="carousel-container">
+
     <Carousel fade>
       <Carousel.Item>
         <img
@@ -45,6 +47,9 @@ function CarouselHome() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+
+    </div>
+
   );
 }
 
