@@ -1,6 +1,7 @@
 import "./Login.css";
 import imgLogin from "../../assets/imgLogin.jpg";
 import Form from "react-bootstrap/Form";
+import imgVinilo from "../../assets/imgVinilo.png"
 // import useInput from "../utils/useInput.js";
 // import { useDispatch } from "react-redux";
 // import { userLogin } from "../store/user";
@@ -36,8 +37,11 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="form-container">
+      <img className="rotate" src={imgVinilo} style={{width: "80px", height: "80px"}} alt="vinilo"/><br></br>
         <Form /*onSubmit={handleSubmit}*/>
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
+         
             <Form.Label>Correo electrónico</Form.Label>
             <br></br>
             <input type="email" placeholder="Ingrese su email" /*{...email}*/></input>
