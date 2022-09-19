@@ -7,6 +7,7 @@ import History from "./components/History/History";
 import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
 import Login from "./components/LoginAdmin/Login";
+import PruebaFoto from "./components/PruebaFoto";
 
 function App() {
   return (
@@ -19,6 +20,13 @@ function App() {
           <Route path="/history" element={<History />} />
 
           <Route path="/admin" element={<Login />} />
+
+
+          <Route path="/residents" element={<PruebaFoto />} />
+
+
+
+
         </Routes>
       </BrowserRouter>
     </div>

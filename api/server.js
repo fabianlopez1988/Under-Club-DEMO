@@ -5,6 +5,7 @@ const cors= require("cors")
 const Residents= require("./models/Residents")
 const cookieParser= require("cookie-parser")
 const sessions= require("express-session")
+const routes = require("./routes/index")
 
 const port= 3001
 
@@ -19,6 +20,8 @@ app.use(sessions({
     resave: true,
     saveUninitialized: true
 }))
+
+app.use("/api", routes)
 
 db.sync({force: false})
 .then(() => {

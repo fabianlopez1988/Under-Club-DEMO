@@ -18,19 +18,19 @@ Residents.init({
     },
     soundcloud: {
         type: Sequelize.STRING,
-        allowNull: false
+        //allowNull: false
     },
     instagram: {
         type: Sequelize.STRING,
-        allowNull: false
+        //allowNull: false
     },
     residentAdvisor: {
         type: Sequelize.STRING,
-        allowNull: false
+        //allowNull: false
     },
     facebook: {
         type: Sequelize.STRING,
-        allowNull: false
+        //allowNull: false
     }
 },{sequelize: db, modelName: "resident"})
 
