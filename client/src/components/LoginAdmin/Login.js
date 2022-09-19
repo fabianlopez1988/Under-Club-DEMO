@@ -26,7 +26,7 @@ const Login = () => {
   //     )
   //       .then(() => {
   //         if (localStorage.getItem("user").admin === true) {
-  //           navigate("/");
+  //           navigate("/admin");
   //         }else {
   //           navigate("/");
   //         }
@@ -52,7 +52,7 @@ const Login = () => {
             <br></br>
             <input type="password" placeholder="Ingrese su contraseña" /*{...password}*/></input>
           </Form.Group>
-          <button className="button-login" type="submit">
+          <button type="submit">
             Acceder
           </button>
         </Form>

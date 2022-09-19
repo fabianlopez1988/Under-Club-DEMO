@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer-container">
-        <img src={foto} alt="foto-footer" />
+        {/* <img src={foto} alt="foto-footer" /> */}
         <ul className="icons">
           <li>
             <a
