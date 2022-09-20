@@ -56,3 +56,9 @@
   opacity: 1;
   z-index: -1;
 }
+
+@media (max-width: 575.98px) {
+  .panel-container ul button {
+    min-width: 200px;
+  }
+}

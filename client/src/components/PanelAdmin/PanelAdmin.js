@@ -21,6 +21,11 @@ const PanelAdmin = () => {
         <Link className="links-options" to="/admin/users">
           <button>Users</button>
         </Link>
+
+        <Link className="links-options" to="/">
+          <button style={{marginTop: "15%"}} >Página Principal</button>
+        </Link>
+
       </ul>
     </div>
   );
