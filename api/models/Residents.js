@@ -6,14 +6,14 @@ class Residents extends Sequelize.Model{}
 Residents.init({
     name: {
         type: Sequelize.STRING,
-        allowNull: false
+        // allowNull: false
     },
     biography: {
         type: Sequelize.STRING,
-        allowNull: false
+        // allowNull: false
     },
     photo: {
-        type: Sequelize.BLOB,
+        type: Sequelize.BLOB('long'),
         allowNull: false
     },
     soundcloud: {

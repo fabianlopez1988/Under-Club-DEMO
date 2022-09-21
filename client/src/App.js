@@ -7,7 +7,7 @@ import History from "./components/History/History";
 import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
 import Login from "./components/LoginAdmin/Login";
-import PruebaFoto from "./components/PruebaFoto";
+import PruebaFoto from "./components/PruebaFoto/PruebaFoto";
 
 function App() {
   return (
