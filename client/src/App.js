@@ -8,6 +8,12 @@ import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
 import Login from "./components/LoginAdmin/Login";
 import PruebaFoto from "./components/PruebaFoto";
+import PanelAdmin from "./components/PanelAdmin/PanelAdmin";
+
+import Events from "./components/PanelAdmin/Options/Events/Events"
+import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo"
+import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub"
+import Users from "./components/PanelAdmin/Options/Users/Users"
 
 function App() {
   return (
@@ -18,15 +24,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
-
-          <Route path="/admin" element={<Login />} />
-
-
           <Route path="/residents" element={<PruebaFoto />} />
+          
+          <Route path="/login" element={<Login />} />
+          <Route path="/admin" element={<PanelAdmin/>} />
 
-
-
-
+          <Route path="/admin/events" element={<Events/>} />
+          <Route path="/admin/initialvideo" element={<InitialVideo/>} />
+          <Route path="/admin/ourclub" element={<OurClub/>} />
+          <Route path="/admin/users" element={<Users/>} />
         </Routes>
       </BrowserRouter>
     </div>
