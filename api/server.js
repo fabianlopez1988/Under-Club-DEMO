@@ -7,7 +7,7 @@ const cookieParser= require("cookie-parser")
 const sessions= require("express-session")
 const routes = require("./routes/index")
 
-const port= 3001
+const port= 5000
 
 app.use(cors())
 
@@ -23,7 +23,7 @@ app.use(sessions({
 
 app.use("/api", routes)
 
-db.sync({force: false})
+db.sync({force:false})
 .then(() => {
     app.listen(port, () => console.log(`Escuchando en el puerto ${port}`))
 })
