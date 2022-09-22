@@ -6,6 +6,7 @@ const Residents= require("./models/Residents")
 const cookieParser= require("cookie-parser")
 const sessions= require("express-session")
 const routes = require("./routes/index")
+const path = require('path');
 
 const port= 5000
 
@@ -20,6 +21,10 @@ app.use(sessions({
     resave: true,
     saveUninitialized: true
 }))
+
+// función middleware para servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use("/api", routes)
 
