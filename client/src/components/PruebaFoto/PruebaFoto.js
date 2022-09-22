@@ -1,47 +1,30 @@
 import React, { useState, useEffect } from "react";
-import axios from 'axios'
-import "./PruebaFoto.css"
+import axios from "axios";
+import "./PruebaFoto.css";
 
 function PruebaFoto() {
   const [baseImage, setBaseImage] = useState("");
-
-  const [resident, setResident] = useState("")
+  const [resident, setResident] = useState("");
 
   const uploadImage = async (e) => {
     const file = e.target.files[0];
-    const base64 = await convertBase64(file);
-    console.log(base64);
-    setBaseImage(base64);
-    axios
-    .post("/api/residents/add",{
-      photo: base64
-    })
-    .then((res)=>console.log(res.data))
+    const blob = URL.createObjectURL(file);
+    setBaseImage(blob);
   };
 
-  const convertBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
+  const handleClick = (blob) => {
+    axios
+      .post("/api/residents/add", {
+        photo: blob,
+      })
+      .then((res) => res.data);
   };
 
   useEffect(() => {
-    axios
-      .get("/api/residents")
-      .then((res)=>setResident(res.data));
-    }, []);
-   
+    axios.get("/api/residents").then((res) => setResident(res.data));
+  }, [handleClick]);
 
-    return (
+  return (
     <div className="photo-container">
       <input
         type="file"
@@ -50,12 +33,18 @@ function PruebaFoto() {
         }}
       />
       <br></br>
-      <img src={baseImage} height="200px" />
-      {
-        !resident ? null : (
-          <img src={resident[1].photo}/>
-        )
-      }
+      <img height={"200px"} src={baseImage} />
+      <button onClick={() => handleClick(baseImage)}>guardar</button>
+      <div className="imagenes-container">
+      {resident ? (
+        resident.map((res, i) => (
+            <img height={"200px"} key={i} src={res.photo} alt={res.id} />
+        ))
+      ) : (
+        <h1>no estoy</h1>
+      )}
+
+      </div>
     </div>
   );
 }
