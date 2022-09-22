@@ -13,7 +13,7 @@ Residents.init({
         // allowNull: false
     },
     photo: {
-        type: Sequelize.BLOB('long'),
+        type: Sequelize.STRING,
         allowNull: false
     },
     soundcloud: {

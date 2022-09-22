@@ -9,6 +9,12 @@
   margin-top: 100px;
 }
 label {
-  width: 350px;
+  width: 200px;
   box-sizing: border-box;
+}
+
+.imagenes-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }

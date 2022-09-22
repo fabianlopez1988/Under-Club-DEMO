@@ -15,6 +15,7 @@ import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVi
 import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub"
 import Users from "./components/PanelAdmin/Options/Users/Users"
 import PruebaFoto from "./components/PruebaFoto/PruebaFoto";
+import Fotos from "./components/Fotos/Fotos";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
           <Route path="/residents" element={<PruebaFoto />} />
+          <Route path="/fotos" element={ <Fotos/> } />
 
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PanelAdmin/>} />
