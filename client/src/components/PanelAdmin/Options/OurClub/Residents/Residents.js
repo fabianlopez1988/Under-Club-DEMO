@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./PruebaFoto.css";
+import "./Residents.css";
 
-function PruebaFoto() {
-  const [baseImage, setBaseImage] = useState("");
+function Residents() {
+  const [baseImage, setBaseImage] = useState([]);
   const [resident, setResident] = useState("");
 
-  const uploadImage = async (e) => {
+  const uploadImage = (e) => {
     const file = e.target.files[0];
     const blob = URL.createObjectURL(file);
     setBaseImage(blob);
   };
 
+
   const handleClick = (blob) => {
     axios
-      .post("/api/residents/add", {
+      .post("/api/residents", {
         photo: blob,
       })
       .then((res) => res.data);
@@ -35,7 +36,7 @@ function PruebaFoto() {
       <br></br>
       <img height={"200px"} src={baseImage} />
       <button onClick={() => handleClick(baseImage)}>guardar</button>
-      <div className="imagenes-container">
+      {/* {<div className="imagenes-container">
       {resident ? (
         resident.map((res, i) => (
             <img height={"200px"} key={i} src={res.photo} alt={res.id} />
@@ -44,9 +45,9 @@ function PruebaFoto() {
         <h1>no estoy</h1>
       )}
 
-      </div>
+      </div> } */}
     </div>
   );
 }
 
-export default PruebaFoto;
+export default Residents;
