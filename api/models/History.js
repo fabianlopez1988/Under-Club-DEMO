@@ -1,18 +1,18 @@
 const Sequelize = require("sequelize");
 const db = require("../db");
 
-class Culture extends Sequelize.Model {}
+class History extends Sequelize.Model {}
 
-Culture.init(
+History.init(
   {
-    title: {
+    image: {
       type: Sequelize.STRING,
       //allowNull: false
     },
-    paragraph: {
+    history: {
       type: Sequelize.TEXT,
       //allowNull: false
     },
-  },{ sequelize: db, modelName: "culture" });
+  },{ sequelize: db, modelName: "history" });
 
-module.exports = Culture;
+module.exports = History;
