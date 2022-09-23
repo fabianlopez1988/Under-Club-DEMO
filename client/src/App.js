@@ -14,8 +14,8 @@ import Events from "./components/PanelAdmin/Options/Events/Events"
 import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo"
 import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub"
 import Users from "./components/PanelAdmin/Options/Users/Users"
-import PruebaFoto from "./components/PruebaFoto/PruebaFoto";
 import Fotos from "./components/Fotos/Fotos";
+import Residents from "./components/PanelAdmin/Options/OurClub/Residents/Residents";
 
 
 function App() {
@@ -27,8 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
-          <Route path="/residents" element={<PruebaFoto />} />
-          <Route path="/fotos" element={ <Fotos/> } />
+          {/* <Route path="/fotos" element={ <Fotos /> } /> */}
 
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PanelAdmin/>} />
@@ -37,6 +36,8 @@ function App() {
           <Route path="/admin/initialvideo" element={<InitialVideo/>} />
           <Route path="/admin/ourclub" element={<OurClub/>} />
           <Route path="/admin/users" element={<Users/>} />
+          <Route path="/admin/ourclub/residents" element={<Residents/>} />
+
         </Routes>
       </BrowserRouter>
     </div>
