@@ -5,10 +5,22 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BsMusicPlayerFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { userLogout } from "../../store/user";
 import "./NavBar.css";
 
 const NavBar = () => {
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () =>{
+    dispatch(userLogout())
+    .then(()=> navigate("/login"))
+  }
+
   return (
     <>
       <div className="container-general">
@@ -34,6 +46,13 @@ const NavBar = () => {
                   Eventos
                 </Nav.Link>
                 <Nav.Link href="#contacto">Contacto</Nav.Link>
+                {
+                  !user ? null : (
+                    <div onClick={handleLogout}>
+                      <Nav.Link>Cerrar Sesión</Nav.Link>
+                    </div>
+                  ) 
+                }
                 <Nav.Link href="#streamings" id="button-streamings">
                   {<BsMusicPlayerFill />}
                 </Nav.Link>

@@ -1,4 +1,5 @@
 const Users = require("../models/Users");
+const passport = require("passport");
 
 const usersController = {
   //crea un user
@@ -6,6 +7,28 @@ const usersController = {
     try {
       const newUser = await Users.create(req.body);
       return res.status(201).send(newUser);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  //loguea un user
+  loginUser: async (req, res) => {
+    try {
+      await passport.authenticate("local");
+      return res.status(200).send(req.body);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  //desloguea un user
+  logoutUser: async (req, res, next) => {
+    try {
+      await req.logout((err) => {
+        if (err) return next(err);
+        return res.sendStatus(200);
+      });
     } catch (error) {
       console.log(error);
     }
@@ -22,11 +45,21 @@ const usersController = {
       console.log(error);
     }
   },
-  
+
+  //trae todos los users
+  getAllUsers: async (req, res) => {
+    try {
+      const getAllUsers = await Users.findAll();
+      return res.status(200).send(getAllUsers);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
   //borra un user
   deleteUser: async (req, res) => {
     try {
-        await Users.destroy({
+      await Users.destroy({
         where: { id: req.params.id },
       });
       return res.status(204);

@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./OurClub.css";
+import "./Milestones.css";
 
-const OurClub = () => {
+const Milestones = () => {
+
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
@@ -12,26 +13,22 @@ const OurClub = () => {
   }, []);
 
   return (
-    <div className="ourclub-container">
+    <div className="milestones-container">
       <h1>Configuraciones</h1>
       <ul>
         <Link className="links-options" to="/admin/ourclub/history">
-          <button>Historia</button>
+          <button>Crear un Hito</button>
         </Link>
 
         <Link className="links-options" to="/admin/ourclub/culture">
-          <button>Cultura</button>
+          <button>Editar un Hito</button>
         </Link>
 
         <Link className="links-options" to="/admin/ourclub/milestones">
-          <button>Hitos</button>
+          <button>Borrar un Hito</button>
         </Link>
 
-        <Link className="links-options" to="/admin/ourclub/residents">
-          <button>Residentes</button>
-        </Link>
-
-        <Link className="links-options" to="/admin">
+        <Link className="links-options" to="/admin/ourclub">
           <button style={{ marginTop: "15%" }}>Volver Atrás</button>
         </Link>
       </ul>
@@ -39,4 +36,4 @@ const OurClub = () => {
   );
 };
 
-export default OurClub;
+export default Milestones;
