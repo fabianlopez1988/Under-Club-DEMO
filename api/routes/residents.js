@@ -1,5 +1,5 @@
 const express = require("express");
-const { deleteResident } = require("../controllers/residentsController");
+// const { deleteResident } = require("../controllers/residentsController");
 const router = express.Router();
 const residentsController = require("../controllers/residentsController");
 
