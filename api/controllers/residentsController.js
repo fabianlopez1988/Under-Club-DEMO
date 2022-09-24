@@ -38,7 +38,7 @@ const residentsController = {
       await Residents.destroy({
         where: { id: req.params.id },
       });
-      return res.status(204);
+      return res.sendStatus(204);
     } catch (error) {
       console.log(error);
     }

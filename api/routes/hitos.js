@@ -1,7 +1,9 @@
-const express = require("express")
-const router = express.Router()
-const hitosController = require("../controllers/hitosController")
+const express = require("express");
+const router = express.Router();
+const hitosController = require("../controllers/hitosController");
 
-router.post("/add", hitosController.createHito)
+router.post("/", hitosController.createHito);
+router.put("/:id", hitosController.updateHito);
+router.delete("/:id", hitosController.deleteHito);
 
-module.exports = router
+module.exports = router;

@@ -14,10 +14,10 @@ import Events from "./components/PanelAdmin/Options/Events/Events"
 import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo"
 import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub"
 import Users from "./components/PanelAdmin/Options/Users/Users"
-import Fotos from "./components/Fotos/Fotos";
 import Residents from "./components/PanelAdmin/Options/OurClub/Residents/Residents";
 import Milestones from "./components/PanelAdmin/Options/OurClub/Milestones/Milestones";
-
+// import CarouselHome from "./components/CarouselHome/CarouselHome";
+import Culture from "./components/PanelAdmin/Options/OurClub/Culture/Culture";
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
           <Route path="/admin/users" element={<Users/>} />
           <Route path="/admin/ourclub/residents" element={<Residents/>} />
           <Route path="/admin/ourclub/milestones" element={<Milestones/>} />
+          <Route path="/admin/ourclub/culture" element={<Culture/>} />
 
         </Routes>
       </BrowserRouter>

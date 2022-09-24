@@ -26,6 +26,16 @@ const NavBar = () => {
       <div className="container-general">
         <Navbar className="navbar" variant="dark" expand="lg" fixed="top">
           <Container className="style-navbar">
+          <div className="logo-fixed">
+            <Link to="/">
+              <img
+                src="https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg"
+                alt="logo"
+                // width="78"
+                // height="69"
+              />
+            </Link>
+          </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -61,16 +71,7 @@ const NavBar = () => {
           </Container>
         </Navbar>
         <div className="logo-container">
-          <div className="logo-fixed">
-            <Link to="/">
-              <img
-                src="https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg"
-                alt="logo"
-                width="78"
-                height="69"
-              />
-            </Link>
-          </div>
+         
         </div>
       </div>
     </>
