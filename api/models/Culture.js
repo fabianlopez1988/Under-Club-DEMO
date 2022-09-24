@@ -5,6 +5,10 @@ class Culture extends Sequelize.Model {}
 
 Culture.init(
   {
+    image: {
+      type: Sequelize.STRING,
+      //allowNull: false
+    },
     title: {
       type: Sequelize.STRING,
       //allowNull: false

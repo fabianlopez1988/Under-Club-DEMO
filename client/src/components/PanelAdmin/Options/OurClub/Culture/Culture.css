@@ -1,0 +1,20 @@
+.photo-container {
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 100px;
+  }
+  label {
+    width: 200px;
+    box-sizing: border-box;
+  }
+  
+  .imagenes-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }

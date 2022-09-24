@@ -9,6 +9,7 @@ const Artists = () => {
   useEffect(() => {
     axios.get("/api/residents").then((res) => setResident(res.data));
   }, []);
+  
   return (
     <div className="artists-container">
       <div className="titleResidents" id="residents">

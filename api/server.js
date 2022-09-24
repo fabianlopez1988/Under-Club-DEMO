@@ -23,8 +23,6 @@ app.use(sessions({
     saveUninitialized: true
 }))
 
-// función middleware para servir archivos estáticos
-// app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use("/api", routes)
