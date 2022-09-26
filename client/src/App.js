@@ -18,6 +18,13 @@ import Residents from "./components/PanelAdmin/Options/OurClub/Residents/Residen
 import Milestones from "./components/PanelAdmin/Options/OurClub/Milestones/Milestones";
 // import CarouselHome from "./components/CarouselHome/CarouselHome";
 import Culture from "./components/PanelAdmin/Options/OurClub/Culture/Culture";
+import HistoryAdmin from "./components/PanelAdmin/Options/OurClub/History/History"
+import AddHistory from "./components/PanelAdmin/Options/OurClub/History/AddHistory/AddHistory";
+import DeleteHistory from "./components/PanelAdmin/Options/OurClub/History/DeleteHistory/DeleteHistory";
+import UpdateHistory from "./components/PanelAdmin/Options/OurClub/History/UpdateHistory/UpdateHistory";
+import AddMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/AddMilestones/AddMilestones";
+import UpdateMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/UpdateMilestones/UpdateMilestones";
+import DeleteMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/DeleteMilestones/DeleteMilestones";
 
 function App() {
   return (
@@ -37,9 +44,19 @@ function App() {
           <Route path="/admin/initialvideo" element={<InitialVideo/>} />
           <Route path="/admin/ourclub" element={<OurClub/>} />
           <Route path="/admin/users" element={<Users/>} />
+
           <Route path="/admin/ourclub/residents" element={<Residents/>} />
           <Route path="/admin/ourclub/milestones" element={<Milestones/>} />
           <Route path="/admin/ourclub/culture" element={<Culture/>} />
+          <Route path="/admin/ourclub/history" element={<HistoryAdmin />} />
+
+          <Route path="/admin/ourclub/history/addhistory" element={<AddHistory />} />
+          <Route path="/admin/ourclub/history/updatehistory" element={<UpdateHistory />} />
+          <Route path="/admin/ourclub/history/deletehistory" element={<DeleteHistory />} />
+
+          <Route path="/admin/ourclub/milestones/addmilestones" element={<AddMilestones/>} />
+          <Route path="/admin/ourclub/milestones/updatemilestones" element={<UpdateMilestones/>} />
+          <Route path="/admin/ourclub/milestones/deletemilestones" element={<DeleteMilestones/>} />
 
         </Routes>
       </BrowserRouter>

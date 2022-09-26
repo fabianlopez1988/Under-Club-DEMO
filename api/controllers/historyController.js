@@ -34,6 +34,26 @@ const historyController = {
       console.log(error);
     }
   },
+  //trae todos las history
+  getAllHistory: async (req, res) => {
+    try {
+      const getAllHistory = await History.findAll();
+      return res.status(200).send(getAllHistory);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  //trae una sola history
+  getHistory: async (req, res) => {
+    try {
+      const getHistory = await History.findOne({
+        where: { id: req.params.id },
+      });
+      return res.status(200).send(getHistory);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 module.exports = historyController;

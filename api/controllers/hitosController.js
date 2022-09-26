@@ -34,6 +34,26 @@ const hitosController = {
       console.log(error);
     }
   },
+   //trae todos los hitos
+   getAllMilestones: async (req, res) => {
+    try {
+      const getAllMilestones = await Hitos.findAll();
+      return res.status(200).send(getAllMilestones);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  //trae un solo hito
+  getMilestone: async (req, res) => {
+    try {
+      const getMilestone = await Hitos.findOne({
+        where: { id: req.params.id },
+      });
+      return res.status(200).send(getMilestone);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 module.exports = hitosController;
