@@ -34,6 +34,26 @@ const eventsController = {
       console.log(error);
     }
   },
+  //trae todos los events
+  getAllEvents: async (req, res) => {
+    try {
+      const getAllEvents = await Events.findAll();
+      return res.status(200).send(getAllEvents);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  //trae un event
+  getEvent: async (req, res) => {
+    try {
+      const getEvent = await Events.findOne({
+        where: { id: req.params.id },
+      });
+      return res.status(200).send(getEvent);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 module.exports = eventsController;
