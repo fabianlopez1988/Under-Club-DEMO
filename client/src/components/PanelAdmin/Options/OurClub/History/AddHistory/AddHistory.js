@@ -18,7 +18,6 @@ const AddHistory = () => {
   const [showAlert, setShowAlert] = useState(false);
   const [showErrorAlert, setShowErrorAlert] = useState(false);
 
-
   const user = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {

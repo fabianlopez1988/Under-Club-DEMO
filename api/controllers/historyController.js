@@ -13,7 +13,10 @@ const historyController = {
   //edita history
   updateHistory: async (req, res) => {
     try {
-      const editHistory = await History.update(req.body, {
+      const editHistory = await History.update({
+        image: req.body.image,
+        history: req.body.history,
+      }, {
         where: { id: req.params.id },
         // returning: true,
         // plain: true,

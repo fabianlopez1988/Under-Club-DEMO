@@ -27,7 +27,7 @@ const UpdateHistory = () => {
       <h1>Editar Historias</h1>
       <div className="grid">
         {histories
-          ? histories.data.map((history) => (
+          ? histories.data?.map((history) => (
               <div>
                 <Link to={`/admin/ourclub/history/updatehistory/${history.id}`}>
                   <img src={history.image} alt={history.id} />
