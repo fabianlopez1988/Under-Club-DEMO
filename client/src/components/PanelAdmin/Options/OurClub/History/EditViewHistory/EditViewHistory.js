@@ -1,12 +1,17 @@
-import "./AddHistory.css";
-import Form from "react-bootstrap/Form";
-import { useDispatch } from "react-redux";
-import useInput from "../../../../../../utils/useInput";
-import { addHistory } from "../../../../../../store/history";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  getAllHistory,
+  getHistory,
+  updateHistory,
+} from "../../../../../../store/history";
+import "./EditViewHistory.css";
+import Form from "react-bootstrap/Form";
+import useInput from "../../../../../../utils/useInput";
 
-const AddHistory = () => {
+const EditViewHistory = () => {
+  const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -21,6 +26,13 @@ const AddHistory = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    dispatch(getHistory(id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const historyRedux = useSelector((state) => state.history);
+
   const uploadImage = (e) => {
     const file = e.target.files[0];
     const blob = URL.createObjectURL(file);
@@ -29,21 +41,23 @@ const AddHistory = () => {
 
   const handleClick = (blob) => {
     dispatch(
-      addHistory({
-        image: blob,
-        history: history.value,
+      updateHistory({
+        image: blob === null ? historyRedux.image : blob,
+        history:
+          history.value.length === 0 ? historyRedux.history : history.value,
       })
     )
-    .then(() => navigate("/admin/ourclub/history"));
+      .then(() => dispatch(getAllHistory()))
+      .then(() => navigate("/admin/ourclub/history"));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  }
+  };
 
   return (
-    <div className="add-history-container">
-      <Form onSubmit={handleSubmit}> 
+    <div className="edit-container">
+      <Form onSubmit={handleSubmit}>
         <h1>Historia</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Imagen</Form.Label>
@@ -62,10 +76,12 @@ const AddHistory = () => {
           <br></br>
           <textarea placeholder="Narre la Historia..." {...history}></textarea>
         </Form.Group>
-        <button type="submit" onClick={() => handleClick(baseImage)}>Guardar</button>
+        <button type="submit" onClick={() => handleClick(baseImage)}>
+          Guardar
+        </button>
       </Form>
     </div>
   );
 };
 
-export default AddHistory;
+export default EditViewHistory;

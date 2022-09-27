@@ -1,34 +1,41 @@
 import "./UpdateHistory.css";
 import { useDispatch, useSelector } from "react-redux";
-import { updateHistory, getAllHistory } from "../../../../../../store/history";
-import { useEffect, useState } from "react";
+import { getAllHistory } from "../../../../../../store/history";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const UpdateHistory = () => {
   const dispatch = useDispatch();
-  
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  useEffect(() => {
+    if (!user) navigate("/");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
     dispatch(getAllHistory());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
-  const histories = useSelector((state) => state.history);
 
+  const histories = useSelector((state) => state.history);
 
   return (
     <div className="update-history-container">
       <h1>Editar Historias</h1>
-      {/* {
-        console.log(histories?.data)
-      } */}
-      <ul>
-      {
-        histories?.data.map((history) => (
-          <div>
-            <img src={history.image} alt={history.id} />
-            <p>{history.history}</p>
-          </div>
-        ))
-      }
-    </ul>
+      <div className="grid">
+        {histories
+          ? histories.data.map((history) => (
+              <div>
+                <Link to={`/admin/ourclub/history/updatehistory/${history.id}`}>
+                  <img src={history.image} alt={history.id} />
+                </Link>
+              </div>
+            ))
+          : null}
+      </div>
     </div>
   );
 };
