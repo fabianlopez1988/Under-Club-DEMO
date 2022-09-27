@@ -7,6 +7,7 @@ import History from "./components/History/History";
 import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
 import Login from "./components/LoginAdmin/Login";
+import Culture from "./components/Culture/Culture";
 
 import PanelAdmin from "./components/PanelAdmin/PanelAdmin";
 
@@ -17,7 +18,7 @@ import Users from "./components/PanelAdmin/Options/Users/Users"
 import Residents from "./components/PanelAdmin/Options/OurClub/Residents/Residents";
 import Milestones from "./components/PanelAdmin/Options/OurClub/Milestones/Milestones";
 // import CarouselHome from "./components/CarouselHome/CarouselHome";
-import Culture from "./components/PanelAdmin/Options/OurClub/Culture/Culture";
+// import Culture from "./components/PanelAdmin/Options/OurClub/Culture/AddCulture";
 import HistoryAdmin from "./components/PanelAdmin/Options/OurClub/History/History"
 import AddHistory from "./components/PanelAdmin/Options/OurClub/History/AddHistory/AddHistory";
 import DeleteHistory from "./components/PanelAdmin/Options/OurClub/History/DeleteHistory/DeleteHistory";
@@ -36,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
+          <Route path="/culture" element={<Culture />} /> 
           {/* <Route path="/fotos" element={ <Fotos /> } /> */}
 
           <Route path="/login" element={<Login />} />

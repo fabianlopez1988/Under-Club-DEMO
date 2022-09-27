@@ -5,7 +5,7 @@
 }
 
 
-.add-history-container button {
+.submit {
   border: none;
   border: 3px solid blueviolet;
   background: black;
@@ -20,12 +20,12 @@
   position: relative;
 }
 
-.add-history-container button:hover {
+.submit:hover {
   color: white;
   cursor: pointer;
 }
 
-.add-history-container button:before {
+.submit:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -37,7 +37,7 @@
   opacity: 0;
 }
 
-.add-history-container button:hover:before {
+.submit:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;

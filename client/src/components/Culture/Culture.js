@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import IntroCulture from "./IntroCulture/IntroCulture";
+import axios from "axios";
 
 const Culture = () => {
   const [cultures, setCultures] = useState([]);

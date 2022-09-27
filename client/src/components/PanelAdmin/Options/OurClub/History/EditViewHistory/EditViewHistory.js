@@ -43,8 +43,8 @@ const EditViewHistory = () => {
     dispatch(
       updateHistory({
         image: blob === null ? historyRedux.image : blob,
-        history:
-          history.value.length === 0 ? historyRedux.history : history.value,
+        history: history.value === null ? historyRedux.history: history.value,         
+
       })
     )
       .then(() => dispatch(getAllHistory()))

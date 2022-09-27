@@ -15,8 +15,8 @@ const historyController = {
     try {
       const editHistory = await History.update(req.body, {
         where: { id: req.params.id },
-        returning: true,
-        plain: true,
+        // returning: true,
+        // plain: true,
       });
       return res.status(200).send(editHistory[1]);
     } catch (error) {

@@ -5,6 +5,7 @@ import useInput from "../../../../../../utils/useInput";
 import { addHistory } from "../../../../../../store/history";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
+import Alert from 'react-bootstrap/Alert';
 
 const AddHistory = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,11 @@ const AddHistory = () => {
 
   const history = useInput();
 
-  const [baseImage, setBaseImage] = useState([]);
+  const [baseImage, setBaseImage] = useState("");
+
+  const [showAlert, setShowAlert] = useState(false);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
+
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -34,14 +39,18 @@ const AddHistory = () => {
         history: history.value,
       })
     )
-    .then(() => navigate("/admin/ourclub/history"));
+    .then(()=> setShowAlert(true))
+    .then(() => navigate("/admin/ourclub/history"))
   };
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
   }
 
   return (
+    <>
     <div className="add-history-container">
       <Form onSubmit={handleSubmit}> 
         <h1>Historia</h1>
@@ -62,9 +71,19 @@ const AddHistory = () => {
           <br></br>
           <textarea placeholder="Narre la Historia..." {...history}></textarea>
         </Form.Group>
-        <button type="submit" onClick={() => handleClick(baseImage)}>Guardar</button>
+        <button className="submit" type="submit" onClick={() => handleClick(baseImage)}>Guardar</button> 
       </Form>
     </div>
+      <Alert
+            variant="success"
+            show={showAlert}
+            onClose={() => setShowAlert(false)}
+            dismissible
+          >
+            <p>"Creado"</p>
+          </Alert>
+    
+    </>
   );
 };
 

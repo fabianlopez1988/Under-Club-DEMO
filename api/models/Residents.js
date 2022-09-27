@@ -6,6 +6,7 @@ class Residents extends Sequelize.Model{}
 Residents.init({
     name: {
         type: Sequelize.STRING,
+        unique: true
         // allowNull: false
     },
     biography: {

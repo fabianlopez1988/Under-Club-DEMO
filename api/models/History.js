@@ -7,12 +7,20 @@ History.init(
   {
     image: {
       type: Sequelize.STRING,
-      //allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     history: {
       type: Sequelize.TEXT,
-      //allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
-  },{ sequelize: db, modelName: "history" });
+  },
+  { sequelize: db, modelName: "history" }
+);
 
 module.exports = History;

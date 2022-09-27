@@ -1,14 +1,24 @@
-import React from 'react';
-import LoremIpsum from 'react-lorem-ipsum';
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const IntroCulture = () => {
+  const [introCulture, setIntroCulture] = useState([]);
 
-  return (
-    <div>
-       <LoremIpsum />
-    </div>
-  )
-}
+  useEffect(() => {
+    axios.get("/api/introculture").then((res) => setIntroCulture(res.data));
+  }, []);
 
-export default IntroCulture
+  return (<section>
+    {
+      !introCulture ? null : introCulture.map((intro) => (
+        <div>
+          {intro.paragraph}
+        </div>
+      ))
+    }
+
+  </section>
+  );
+};
+
+export default IntroCulture;
