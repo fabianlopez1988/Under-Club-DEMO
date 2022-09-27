@@ -5,7 +5,7 @@ import useInput from "../../../../../../utils/useInput";
 import { addHistory } from "../../../../../../store/history";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
-import Alert from 'react-bootstrap/Alert';
+import Swal from "sweetalert2";
 
 const AddHistory = () => {
   const dispatch = useDispatch();
@@ -14,9 +14,6 @@ const AddHistory = () => {
   const history = useInput();
 
   const [baseImage, setBaseImage] = useState("");
-
-  const [showAlert, setShowAlert] = useState(false);
-  const [showErrorAlert, setShowErrorAlert] = useState(false);
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -31,57 +28,70 @@ const AddHistory = () => {
     setBaseImage(blob);
   };
 
+  const errorAlert = () => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Debes completar todos los campos!",
+    });
+  };
+
   const handleClick = (blob) => {
     dispatch(
       addHistory({
-        image: blob,
-        history: history.value,
+        image: blob ? blob : errorAlert(),
+        history: history.value.length === 0 ? errorAlert() : history.value,
       })
     )
-    .then(()=> setShowAlert(true))
-    .then(() => navigate("/admin/ourclub/history"))
+      .then(() =>
+        Swal.fire({
+          icon: "success",
+          title: "Creado",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      )
+      .then(() => navigate("/admin/ourclub/history"));
   };
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  }
+  };
 
   return (
     <>
-    <div className="add-history-container">
-      <Form onSubmit={handleSubmit}> 
-        <h1>Historia</h1>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Imagen</Form.Label>
-          <br></br>
-          <input
-            type="file"
-            onChange={(e) => {
-              uploadImage(e);
-            }}
-          ></input>
-          <img height={"200px"} src={baseImage} alt="" />
-        </Form.Group>
+      <div className="add-history-container">
+        <Form onSubmit={handleSubmit}>
+          <h1>Historia</h1>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Imagen</Form.Label>
+            <br></br>
+            <input
+              type="file"
+              onChange={(e) => {
+                uploadImage(e);
+              }}
+            ></input>
+            <img height={"200px"} src={baseImage} alt="" />
+          </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Historia</Form.Label>
-          <br></br>
-          <textarea placeholder="Narre la Historia..." {...history}></textarea>
-        </Form.Group>
-        <button className="submit" type="submit" onClick={() => handleClick(baseImage)}>Guardar</button> 
-      </Form>
-    </div>
-      <Alert
-            variant="success"
-            show={showAlert}
-            onClose={() => setShowAlert(false)}
-            dismissible
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Historia</Form.Label>
+            <br></br>
+            <textarea
+              placeholder="Narre la Historia..."
+              {...history}
+            ></textarea>
+          </Form.Group>
+          <button
+            className="submit"
+            type="submit"
+            onClick={() => handleClick(baseImage)}
           >
-            <p>"Creado"</p>
-          </Alert>
-    
+            Guardar
+          </button>
+        </Form>
+      </div>
     </>
   );
 };

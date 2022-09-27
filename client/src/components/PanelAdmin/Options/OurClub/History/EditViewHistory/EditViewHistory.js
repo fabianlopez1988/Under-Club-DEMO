@@ -9,6 +9,7 @@ import {
 import "./EditViewHistory.css";
 import Form from "react-bootstrap/Form";
 import useInput from "../../../../../../utils/useInput";
+import Swal from "sweetalert2";
 
 const EditViewHistory = () => {
   const { id } = useParams();
@@ -47,6 +48,14 @@ const EditViewHistory = () => {
           history.value.length === 0 ? historyRedux.history : history.value,
       })
     )
+      .then(() =>
+        Swal.fire({
+          icon: "success",
+          title: "Actualizado",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      )
       .then(() => dispatch(getAllHistory()))
       .then(() => navigate("/admin/ourclub/history"));
   };
@@ -68,11 +77,13 @@ const EditViewHistory = () => {
               uploadImage(e);
             }}
           ></input>
-          <img
-            height={"200px"}
-            src={historyRedux.image}
-            alt={historyRedux.id}
-          />
+          {!baseImage ? (
+            <img
+              height={"200px"}
+              src={historyRedux.image}
+              alt={historyRedux.id}
+            />
+          ) : null}
           <img height={"200px"} src={baseImage} alt="" />
         </Form.Group>
 

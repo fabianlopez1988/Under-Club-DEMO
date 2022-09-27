@@ -70,9 +70,6 @@ const NavBar = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div className="logo-container">
-         
-        </div>
       </div>
     </>
   );

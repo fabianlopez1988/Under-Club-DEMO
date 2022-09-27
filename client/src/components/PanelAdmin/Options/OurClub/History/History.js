@@ -12,7 +12,7 @@ const History = () => {
   }, []);
 
   return (
-    <div className="history-container">
+    <div className="history-options-container">
       <h1>Configuraciones</h1>
       <ul>
         <Link className="links-options" to="/admin/ourclub/history/addhistory">

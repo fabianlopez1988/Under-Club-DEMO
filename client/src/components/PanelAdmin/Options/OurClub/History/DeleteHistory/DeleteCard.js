@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { deleteHistory, getAllHistory } from "../../../../../../store/history";
 import "./DeleteCard.css";
+import Swal from "sweetalert2";
 
 const DeleteCard = ({ history }) => {
   const dispatch = useDispatch();
@@ -16,7 +17,16 @@ const DeleteCard = ({ history }) => {
   }, []);
 
   const handleDelete = (id) => {
-    dispatch(deleteHistory(id)).then(() => dispatch(getAllHistory()));
+    dispatch(deleteHistory(id))
+      .then(() =>
+        Swal.fire({
+          icon: "success",
+          title: "Borrado",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      )
+      .then(() => dispatch(getAllHistory()));
   };
 
   return (

@@ -22,7 +22,7 @@ const Footer = () => {
               target="_blank"
               class=" brands fa-facebook-f "
             >
-              <span class="label">
+              <span className="label">
                 <FaFacebook color="white"/>
               </span>
             </a>
@@ -33,7 +33,7 @@ const Footer = () => {
               target="_blank"
               class="icon brands fa-instagram"
             >
-              <span class="label">
+              <span className="label">
                 <FaInstagram color="white"/>
               </span>
             </a>
@@ -44,7 +44,7 @@ const Footer = () => {
               target="_blank"
               class="icon brands fa-soundcloud"
             >
-              <span class="label">
+              <span className="label">
                 <FaSoundcloud color="white" />
               </span>
             </a>
@@ -55,7 +55,7 @@ const Footer = () => {
               target="_blank"
               class="icon brands fa-youtube"
             >
-              <span class="label">
+              <span className="label">
                 <FaYoutube color="white" />
               </span>
             </a>
@@ -66,7 +66,7 @@ const Footer = () => {
               target="_blank"
               class="icon brands fa-twitter"
             >
-              <span class="label">
+              <span className="label">
                 <FaTwitter color="white"/>
               </span>
             </a>
@@ -76,7 +76,7 @@ const Footer = () => {
               href="mailto:joe.underclub@gmail.com"
               class="icon brands fa-mailbulk"
             >
-              <span class="label">
+              <span className="label">
                 <FaMailBulk color="white" />
               </span>
             </a>
