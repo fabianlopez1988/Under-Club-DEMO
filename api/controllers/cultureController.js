@@ -19,6 +19,15 @@ const cultureController = {
       console.log(error);
     }
   },
+  //trae una cultura por ID
+  getCultureById: async (req, res) => {
+    try {
+      const getCultureById = await Culture.findByPk(req.params.id);
+      return res.status(200).send(getCultureById);
+    } catch (error) {
+      console.log(error)
+    }
+  },
   //editar cultura
   updateCulture: async (req, res) => {
     try {

@@ -19,6 +19,15 @@ const residentsController = {
       console.log(error);
     }
   },
+  //muestra un residente por id
+  getResidentById: async (req, res) => {
+    try {
+      const getResident = await Residents.findByPk(req.params.id);
+      return res.status(200).send(getResident);
+    } catch (error) {
+      console.log(error);
+    }
+  },
   //edita un residente
   updateResident: async (req, res) => {
     try {
