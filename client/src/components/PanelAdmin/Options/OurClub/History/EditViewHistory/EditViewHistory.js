@@ -17,7 +17,7 @@ const EditViewHistory = () => {
 
   const history = useInput();
 
-  const [baseImage, setBaseImage] = useState([]);
+  const [baseImage, setBaseImage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -42,7 +42,7 @@ const EditViewHistory = () => {
   const handleClick = (blob) => {
     dispatch(
       updateHistory({
-        image: blob === null ? historyRedux.image : blob,
+        image: blob === "" ? historyRedux.image : blob,
         history:
           history.value.length === 0 ? historyRedux.history : history.value,
       })
@@ -68,13 +68,18 @@ const EditViewHistory = () => {
               uploadImage(e);
             }}
           ></input>
+          <img
+            height={"200px"}
+            src={historyRedux.image}
+            alt={historyRedux.id}
+          />
           <img height={"200px"} src={baseImage} alt="" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Historia</Form.Label>
           <br></br>
-          <textarea placeholder="Narre la Historia..." {...history}></textarea>
+          <textarea placeholder={historyRedux.history} {...history}></textarea>
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar

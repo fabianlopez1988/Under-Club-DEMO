@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { deleteHistory, getAllHistory } from "../../../../../../store/history";
-import "./DeleteCard.css"
+import "./DeleteCard.css";
 
 const DeleteCard = ({ history }) => {
   const dispatch = useDispatch();

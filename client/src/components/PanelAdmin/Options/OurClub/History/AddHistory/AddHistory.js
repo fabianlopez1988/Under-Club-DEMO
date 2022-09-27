@@ -12,7 +12,7 @@ const AddHistory = () => {
 
   const history = useInput();
 
-  const [baseImage, setBaseImage] = useState([]);
+  const [baseImage, setBaseImage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
 

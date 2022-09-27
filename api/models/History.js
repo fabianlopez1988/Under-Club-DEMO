@@ -7,11 +7,11 @@ History.init(
   {
     image: {
       type: Sequelize.STRING,
-      //allowNull: false
+      allowNull: false
     },
     history: {
       type: Sequelize.TEXT,
-      //allowNull: false
+      allowNull: false
     },
   },{ sequelize: db, modelName: "history" });
 
