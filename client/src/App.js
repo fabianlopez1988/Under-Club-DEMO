@@ -23,10 +23,19 @@ import HistoryAdmin from "./components/PanelAdmin/Options/OurClub/History/Histor
 import AddHistory from "./components/PanelAdmin/Options/OurClub/History/AddHistory/AddHistory";
 import DeleteHistory from "./components/PanelAdmin/Options/OurClub/History/DeleteHistory/DeleteHistory";
 import UpdateHistory from "./components/PanelAdmin/Options/OurClub/History/UpdateHistory/UpdateHistory";
+import EditViewHistory from "./components/PanelAdmin/Options/OurClub/History/EditViewHistory/EditViewHistory";
+
 import AddMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/AddMilestones/AddMilestones";
 import UpdateMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/UpdateMilestones/UpdateMilestones";
 import DeleteMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/DeleteMilestones/DeleteMilestones";
-import EditViewHistory from "./components/PanelAdmin/Options/OurClub/History/EditViewHistory/EditViewHistory";
+
+import CultureAdmin from "./components/PanelAdmin/Options/OurClub/Culture/CultureAdmin";
+import AddCulture from "./components/PanelAdmin/Options/OurClub/Culture/AddCulture/AddCulture";
+import DeleteCulture from "./components/PanelAdmin/Options/OurClub/Culture/DeleteCulture/DeleteCulture";
+import UpdateCulture from "./components/PanelAdmin/Options/OurClub/Culture/UpdateCulture/UpdateCulture";
+import EditViewCulture from "./components/PanelAdmin/Options/OurClub/Culture/EditViewCulture/EditViewCulture";
+
+
 
 function App() {
   return (
@@ -50,7 +59,7 @@ function App() {
 
           <Route path="/admin/ourclub/residents" element={<Residents/>} />
           <Route path="/admin/ourclub/milestones" element={<Milestones/>} />
-          <Route path="/admin/ourclub/culture" element={<Culture/>} />
+          <Route path="/admin/ourclub/culture" element={<CultureAdmin/>} />
           <Route path="/admin/ourclub/history" element={<HistoryAdmin />} />
 
           <Route path="/admin/ourclub/history/addhistory" element={<AddHistory />} />
@@ -61,6 +70,11 @@ function App() {
           <Route path="/admin/ourclub/milestones/addmilestones" element={<AddMilestones/>} />
           <Route path="/admin/ourclub/milestones/updatemilestones" element={<UpdateMilestones/>} />
           <Route path="/admin/ourclub/milestones/deletemilestones" element={<DeleteMilestones/>} />
+
+          <Route path="/admin/ourclub/culture/addculture" element={<AddCulture />} />
+          <Route path="/admin/ourclub/culture/updateculture" element={<UpdateCulture />} />
+          <Route path="/admin/ourclub/culture/updateculture/:id" element={<EditViewCulture />} />
+          <Route path="/admin/ourclub/culture/deleteculture" element={<DeleteCulture />} />
 
         </Routes>
       </BrowserRouter>
