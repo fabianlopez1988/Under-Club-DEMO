@@ -27,6 +27,7 @@ import AddMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/Ad
 import UpdateMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/UpdateMilestones/UpdateMilestones";
 import DeleteMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/DeleteMilestones/DeleteMilestones";
 import EditViewHistory from "./components/PanelAdmin/Options/OurClub/History/EditViewHistory/EditViewHistory";
+import EditViewMilestone from "./components/PanelAdmin/Options/OurClub/Milestones/EditViewMilestone/EditViewMilestone";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
 
           <Route path="/admin/ourclub/milestones/addmilestones" element={<AddMilestones/>} />
           <Route path="/admin/ourclub/milestones/updatemilestones" element={<UpdateMilestones/>} />
+          <Route path="/admin/ourclub/milestones/updatemilestones/:id" element={<EditViewMilestone />} />
           <Route path="/admin/ourclub/milestones/deletemilestones" element={<DeleteMilestones/>} />
 
         </Routes>

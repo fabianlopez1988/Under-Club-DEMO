@@ -7,11 +7,17 @@ Hitos.init(
   {
     image: {
       type: Sequelize.STRING,
-      //allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
     description: {
       type: Sequelize.TEXT,
-      //allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
   },{ sequelize: db, modelName: "hito" });
 

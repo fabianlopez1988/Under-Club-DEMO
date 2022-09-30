@@ -27,11 +27,10 @@ const DeleteHistory = () => {
     <div className="delete-container">
       <h1>Borrar Historia</h1>
       <div className="grid">
-        {histories === []
-          ? histories.data.map((history) => (
+        {histories?.data.map((history) => (
               <DeleteCard key={history.id} history={history} />
             ))
-          : <h1>No hay nada para borrar</h1>}
+          }
       </div>
     </div>
   );
