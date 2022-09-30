@@ -30,6 +30,7 @@ const DeleteHistory = () => {
         {histories?.data.map((history) => (
               <DeleteCard key={history.id} history={history} />
             ))
+
           }
       </div>
     </div>

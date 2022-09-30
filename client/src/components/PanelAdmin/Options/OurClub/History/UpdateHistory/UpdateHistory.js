@@ -27,10 +27,10 @@ const UpdateHistory = () => {
     <div className="update-history-container">
       <h1>Editar Historias</h1>
       <div className="grid">
-        {histories?.data?.map((history) => (
+        {histories?.data.map((history, i) => (
           <div>
             <Link to={`/admin/ourclub/history/updatehistory/${history.id}`}>
-              <img src={history.image} alt={history.id} key={history.id}/>
+              <img src={history.image} alt={history.id} key={i}/>
             </Link>
           </div>
         ))}
