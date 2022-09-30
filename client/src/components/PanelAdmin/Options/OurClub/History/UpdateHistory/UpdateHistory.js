@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllHistory } from "../../../../../../store/history";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
 
 const UpdateHistory = () => {
   const dispatch = useDispatch();
@@ -28,15 +27,13 @@ const UpdateHistory = () => {
     <div className="update-history-container">
       <h1>Editar Historias</h1>
       <div className="grid">
-        {histories === []
-          ? histories.data?.map((history) => (
-              <div>
-                <Link to={`/admin/ourclub/history/updatehistory/${history.id}`}>
-                  <img src={history.image} alt={history.id} />
-                </Link>
-              </div>
-            ))
-          : <h1>No hay nada para editar</h1>}
+        {histories?.data.map((history, i) => (
+          <div>
+            <Link to={`/admin/ourclub/history/updatehistory/${history.id}`}>
+              <img src={history.image} alt={history.id} key={i}/>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

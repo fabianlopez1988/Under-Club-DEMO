@@ -40,7 +40,7 @@ const Artists = () => {
                           <li>{res.facebook}</li>
                           <li>{res.residentAdvisor}</li>
                         </ul>
-                        <img src={res.photo} alt="foto" className="photo"></img>
+                        <img src={res.photo} alt="foto" className="photo" />
                       </div>
                     </Accordion.Body>
                   </Accordion.Item>
