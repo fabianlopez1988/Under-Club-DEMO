@@ -2,21 +2,22 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import {
-  getAllMilestones,
-  getMilestone,
-  updateMilestones,
-} from "../../../../../../store/milestones";
-import "./EditViewMilestone.css";
+  getAllCulture,
+  getCulture,
+  updateCulture,
+} from "../../../../../../store/culture";
+import "./EditViewCulture.css";
 import Form from "react-bootstrap/Form";
 import useInput from "../../../../../../utils/useInput";
 import Swal from "sweetalert2";
 
-const EditViewMilestone = () => {
+const EditViewCulture = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const description = useInput();
+  const title = useInput();
+  const paragraph = useInput();
 
   const [baseImage, setBaseImage] = useState("");
 
@@ -28,11 +29,11 @@ const EditViewMilestone = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(getMilestone(id));
-    // eslint-disable-next-lMilupdateMilestonesct-hooks/exhaustive-deps
+    dispatch(getCulture(id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const milestonesRedux = useSelector((state) => state.milestones);
+  const cultureRedux = useSelector((state) => state.culture);
 
   const uploadImage = (e) => {
     const file = e.target.files[0];
@@ -42,10 +43,12 @@ const EditViewMilestone = () => {
 
   const handleClick = (blob) => {
     dispatch(
-      updateMilestones({
-        image: blob === "" ? milestonesRedux.image : blob,
-        description:
-          description.value.length === 0 ? milestonesRedux.description : description.value,
+      updateCulture({
+        image: blob === "" ? cultureRedux.image : blob,
+        title:
+          title.value.length === 0 ? cultureRedux.title : title.value,
+        paragraph:
+          paragraph.value.length === 0 ? cultureRedux.paragraph : paragraph.value,
       })
     )
       .then(() =>
@@ -56,8 +59,8 @@ const EditViewMilestone = () => {
           timer: 1500,
         })
       )
-      .then(() => dispatch(getAllMilestones()))
-      .then(() => navigate("/admin/ourclub/milestones"));
+      .then(() => dispatch(getAllCulture()))
+      .then(() => navigate("/admin/ourclub/culture"));
   };
 
   const handleSubmit = (e) => {
@@ -67,7 +70,7 @@ const EditViewMilestone = () => {
   return (
     <div className="edit-container">
       <Form onSubmit={handleSubmit}>
-        <h1>Hitos</h1>
+        <h1>Historia</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Imagen</Form.Label>
           <br></br>
@@ -80,17 +83,22 @@ const EditViewMilestone = () => {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={milestonesRedux.image}
-              alt={milestonesRedux.id}
+              src={cultureRedux.image}
+              alt={cultureRedux.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
         </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Título</Form.Label>
+          <br></br>
+          <input placeholder={cultureRedux.title} {...title}></input>
+        </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Descripción</Form.Label>
+          <Form.Label>Historia</Form.Label>
           <br></br>
-          <textarea placeholder={milestonesRedux.description} {...description}></textarea>
+          <textarea placeholder={cultureRedux.paragraph} {...paragraph}></textarea>
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar
@@ -100,4 +108,4 @@ const EditViewMilestone = () => {
   );
 };
 
-export default EditViewMilestone;
+export default EditViewCulture;

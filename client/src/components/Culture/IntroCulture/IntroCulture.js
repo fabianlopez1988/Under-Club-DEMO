@@ -8,16 +8,12 @@ const IntroCulture = () => {
     axios.get("/api/introculture").then((res) => setIntroCulture(res.data));
   }, []);
 
-  return (<section>
-    {
-      !introCulture ? null : introCulture.map((intro) => (
-        <div>
-          {intro.paragraph}
-        </div>
-      ))
-    }
-
-  </section>
+  return (
+    <section className="intro-culture">
+      {!introCulture
+        ? null
+        : introCulture.map((intro) => <div>{intro.paragraph}</div>)}
+    </section>
   );
 };
 

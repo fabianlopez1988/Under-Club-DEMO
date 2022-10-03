@@ -7,8 +7,8 @@
 }
 
 video {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: contain;
 }
 
@@ -26,11 +26,11 @@ video {
 }
 
 .titulo1 {
-  font-size: 70px;
+  font-size: 100px;
 }
 
 .titulo2 {
-  font-size: 70px;
+  font-size: 100px;
   color: blueviolet;
 }
 

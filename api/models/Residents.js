@@ -1,55 +1,38 @@
-const Sequelize = require("sequelize");
-const db = require("../db");
+const Sequelize= require("sequelize")
+const db= require("../db")
 
-class Residents extends Sequelize.Model {}
+class Residents extends Sequelize.Model{}
 
-Residents.init(
-  {
+Residents.init({
     name: {
-      type: Sequelize.STRING,
-      unique: true,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+        type: Sequelize.STRING,
+        unique: true
+        // allowNull: false
     },
     biography: {
-      type: Sequelize.TEXT,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+        type: Sequelize.TEXT,
+        // allowNull: false
     },
     photo: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+        type: Sequelize.STRING,
+        // allowNull: false
     },
     soundcloud: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+        type: Sequelize.STRING,
+        //allowNull: false
     },
     instagram: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+        type: Sequelize.STRING,
+        //allowNull: false
     },
     residentAdvisor: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
+        type: Sequelize.STRING,
+        //allowNull: false
+    },
+    facebook: {
+        type: Sequelize.STRING,
+        //allowNull: false
     }
-  },
-  { sequelize: db, modelName: "resident" }
-);
+},{sequelize: db, modelName: "resident"})
 
-module.exports = Residents;
+module.exports= Residents

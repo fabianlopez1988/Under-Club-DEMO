@@ -7,7 +7,10 @@ IntroCulture.init(
   {
     paragraph: {
       type: Sequelize.TEXT,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
   },{ sequelize: db, modelName: "introCulture" });
 

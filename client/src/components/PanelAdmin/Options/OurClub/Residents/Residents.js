@@ -1,37 +1,52 @@
-import { useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Residents.css";
 
 function Residents() {
-  const user = JSON.parse(localStorage.getItem("user"))
-  const navigate = useNavigate
+  const [baseImage, setBaseImage] = useState([]);
+  const [resident, setResident] = useState("");
+
+  const uploadImage = (e) => {
+    const file = e.target.files[0];
+    const blob = URL.createObjectURL(file);
+    setBaseImage(blob);
+  };
+
+
+  const handleClick = (blob) => {
+    axios
+      .post("/api/residents", {
+        photo: blob,
+      })
+      .then((res) => res.data);
+  };
 
   useEffect(() => {
-    if (!user) navigate("/")
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    axios.get("/api/residents").then((res) => setResident(res.data));
+  }, [handleClick]);
 
   return (
-    <div className="residents-options-container">
-    <h1>Configuraciones</h1>
-    <ul>
-      <Link className="links-options" to="/admin/ourclub/residents/addresidents">
-        <button>Crear un Residente</button>
-      </Link>
+    <div className="photo-container">
+      <input
+        type="file"
+        onChange={(e) => {
+          uploadImage(e);
+        }}
+      />
+      <br></br>
+      <img height={"200px"} src={baseImage} />
+      <button onClick={() => handleClick(baseImage)}>guardar</button>
+      {/* {<div className="imagenes-container">
+      {resident ? (
+        resident.map((res, i) => (
+            <img height={"200px"} key={i} src={res.photo} alt={res.id} />
+        ))
+      ) : (
+        <h1>no estoy</h1>
+      )}
 
-      <Link className="links-options" to="/admin/ourclub/residents/updateresidents">
-        <button>Editar un Residente</button>
-      </Link>
-
-      <Link className="links-options" to="/admin/ourclub/residents/deleteresidents">
-        <button>Borrar un Residente</button>
-      </Link>
-
-      <Link className="links-options" to="/admin/ourclub">
-        <button style={{ marginTop: "15%" }}>Volver Atrás</button>
-      </Link>
-    </ul>
-  </div>
+      </div> } */}
+    </div>
   );
 }
 

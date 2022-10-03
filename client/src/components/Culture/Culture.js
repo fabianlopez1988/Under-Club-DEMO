@@ -1,6 +1,7 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import IntroCulture from "./IntroCulture/IntroCulture";
 import axios from "axios";
+import "./Culture.css";
 
 const Culture = () => {
   const [cultures, setCultures] = useState([]);
@@ -10,24 +11,35 @@ const Culture = () => {
   }, []);
 
   return (
-    <div>
-      <section>
+    <div className="culture-container">
+      <section className="intro">
         <IntroCulture />
       </section>
-      <section>
-        {!cultures
-          ? null
-          : cultures.map((culture) => (
-              <div>
-                <img
-                  className="d-block w-100"
-                  src={culture.image}
-                  alt="image"
-                  key={culture.id}
-                />
-                <div>{culture.paragraph}</div>
-              </div>
-            ))}
+
+      <section className="culture-section">
+        {
+          <div>
+            <div className="box left">
+              <h1>{cultures[0]?.title}</h1>
+              <p>{cultures[0]?.paragraph}</p>
+            </div>
+            <div className="box right">
+              <h1>{cultures[1]?.title}</h1>
+              <p>{cultures[1]?.paragraph}</p>
+            </div>
+            <div className="box center-left">
+              <h1>{cultures[2]?.title}</h1>
+              <p>{cultures[2]?.paragraph}</p>
+            </div>
+            <div className="box center-right">
+              <h1>{cultures[3]?.title}</h1>
+              <p>{cultures[3]?.paragraph}</p>
+            </div>
+            <div className="first-line"></div>
+            <div className="second-line"></div>
+            <div className="third-line"></div>
+          </div>
+        }
       </section>
     </div>
   );

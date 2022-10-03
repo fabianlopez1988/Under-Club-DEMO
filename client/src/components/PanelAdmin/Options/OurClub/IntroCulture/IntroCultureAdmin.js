@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./History.css";
+import "./IntroCultureAdmin.css";
 
-const History = () => {
+const IntroCultureAdmin = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const navigate = useNavigate();
 
@@ -12,20 +12,16 @@ const History = () => {
   }, []);
 
   return (
-    <div className="history-options-container">
+    <div className="intro-culture-options-container">
       <h1>Configuraciones</h1>
       <ul>
-        {/* <Link className="links-options" to="/admin/ourclub/history/addhistory">
-          <button>Crear una Historia</button>
+        {/* <Link className="links-options" to="/admin/ourclub/introculture/addintroculture">
+          <button>Crear Intro Cultura</button>
         </Link> */}
 
-        <Link className="links-options" to="/admin/ourclub/history/updatehistory">
-          <button>Editar una Historia</button>
+        <Link className="links-options" to="/admin/ourclub/introculture/editviewintroculture">
+          <button>Editar Intro Cultura</button>
         </Link>
-{/* 
-        <Link className="links-options" to="/admin/ourclub/history/deletehistory">
-          <button>Borrar una Historia</button>
-        </Link> */}
 
         <Link className="links-options" to="/admin/ourclub">
           <button style={{ marginTop: "15%" }}>Volver Atrás</button>
@@ -35,4 +31,4 @@ const History = () => {
   );
 };
 
-export default History;
+export default IntroCultureAdmin;

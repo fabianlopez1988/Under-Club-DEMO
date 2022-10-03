@@ -1,11 +1,11 @@
-.add-residents-container {
+.edit-intro-container {
     display: flex;
     justify-content: center;
     padding-top: 150px;
   }
   
   
-  .submit {
+  .edit-intro-container button {
     border: none;
     border: 3px solid blueviolet;
     background: black;
@@ -20,12 +20,12 @@
     position: relative;
   }
   
-  .submit:hover {
+  .edit-intro-container button:hover {
     color: white;
     cursor: pointer;
   }
   
-  .submit:before {
+  .edit-intro-container button:before {
     transition: 0.5s all ease;
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@
     opacity: 0;
   }
   
-  .submit:hover:before {
+  .edit-intro-container button:hover:before {
     transition: 0.5s all ease;
     left: 0;
     right: 0;
@@ -45,7 +45,8 @@
     z-index: -1;
   }
   
-  .add-residents-container textarea {
+  .edit-intro-container textarea {
     min-height: 10em;
     min-width: 100%;
   }
+  

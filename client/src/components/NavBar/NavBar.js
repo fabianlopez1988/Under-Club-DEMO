@@ -41,8 +41,8 @@ const NavBar = () => {
               <Nav className="me-auto">
                 <NavDropdown title="Nuestro Club" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/history">Historia</NavDropdown.Item>
-                  <NavDropdown.Item href="#culture">Cultura</NavDropdown.Item>
-                  <NavDropdown.Item href="#hitos">Hitos</NavDropdown.Item>
+                  <NavDropdown.Item href="/culture">Cultura</NavDropdown.Item>
+                  <NavDropdown.Item href="/hitos">Hitos</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="/artists">
                     Residentes

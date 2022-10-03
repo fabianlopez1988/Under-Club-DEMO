@@ -23,15 +23,21 @@ import HistoryAdmin from "./components/PanelAdmin/Options/OurClub/History/Histor
 import AddHistory from "./components/PanelAdmin/Options/OurClub/History/AddHistory/AddHistory";
 import DeleteHistory from "./components/PanelAdmin/Options/OurClub/History/DeleteHistory/DeleteHistory";
 import UpdateHistory from "./components/PanelAdmin/Options/OurClub/History/UpdateHistory/UpdateHistory";
+import EditViewHistory from "./components/PanelAdmin/Options/OurClub/History/EditViewHistory/EditViewHistory";
+
 import AddMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/AddMilestones/AddMilestones";
 import UpdateMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/UpdateMilestones/UpdateMilestones";
 import DeleteMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/DeleteMilestones/DeleteMilestones";
-import EditViewHistory from "./components/PanelAdmin/Options/OurClub/History/EditViewHistory/EditViewHistory";
-import EditViewMilestone from "./components/PanelAdmin/Options/OurClub/Milestones/EditViewMilestone/EditViewMilestone";
-import AddResidents from "./components/PanelAdmin/Options/OurClub/Residents/AddResidents/AddResidents";
-import UpdateResidents from "./components/PanelAdmin/Options/OurClub/Residents/UpdateResidents/UpdateResidents";
-import EditViewResidents from "./components/PanelAdmin/Options/OurClub/Residents/EditViewResidents/EditViewResidents";
-import DeleteResidents from "./components/PanelAdmin/Options/OurClub/Residents/DeleteResidents/DeleteResidents";
+
+import CultureAdmin from "./components/PanelAdmin/Options/OurClub/Culture/CultureAdmin";
+import AddCulture from "./components/PanelAdmin/Options/OurClub/Culture/AddCulture/AddCulture";
+import DeleteCulture from "./components/PanelAdmin/Options/OurClub/Culture/DeleteCulture/DeleteCulture";
+import UpdateCulture from "./components/PanelAdmin/Options/OurClub/Culture/UpdateCulture/UpdateCulture";
+import EditViewCulture from "./components/PanelAdmin/Options/OurClub/Culture/EditViewCulture/EditViewCulture";
+
+import IntroCultureAdmin from "./components/PanelAdmin/Options/OurClub/IntroCulture/IntroCultureAdmin";
+import AddIntroCulture from "./components/PanelAdmin/Options/OurClub/IntroCulture/AddIntroCulture/AddIntroCulture";
+import EditViewIntroCulture from "./components/PanelAdmin/Options/OurClub/IntroCulture/EditViewIntroCulture/EditViewIntroCulture";
 
 function App() {
   return (
@@ -43,7 +49,6 @@ function App() {
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
           <Route path="/culture" element={<Culture />} /> 
-          {/* <Route path="/fotos" element={ <Fotos /> } /> */}
 
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PanelAdmin/>} />
@@ -55,8 +60,9 @@ function App() {
 
           <Route path="/admin/ourclub/residents" element={<Residents/>} />
           <Route path="/admin/ourclub/milestones" element={<Milestones/>} />
-          <Route path="/admin/ourclub/culture" element={<Culture/>} />
+          <Route path="/admin/ourclub/culture" element={<CultureAdmin/>} />
           <Route path="/admin/ourclub/history" element={<HistoryAdmin />} />
+          <Route path="/admin/ourclub/introculture" element={<IntroCultureAdmin/>} />
 
           <Route path="/admin/ourclub/history/addhistory" element={<AddHistory />} />
           <Route path="/admin/ourclub/history/updatehistory" element={<UpdateHistory />} />
@@ -65,14 +71,16 @@ function App() {
 
           <Route path="/admin/ourclub/milestones/addmilestones" element={<AddMilestones/>} />
           <Route path="/admin/ourclub/milestones/updatemilestones" element={<UpdateMilestones/>} />
-          <Route path="/admin/ourclub/milestones/updatemilestones/:id" element={<EditViewMilestone />} />
           <Route path="/admin/ourclub/milestones/deletemilestones" element={<DeleteMilestones/>} />
 
-          <Route path="/admin/ourclub/residents/addresidents" element={<AddResidents />} />
-          <Route path="/admin/ourclub/residents/updateresidents" element={<UpdateResidents/>} />
-          <Route path="/admin/ourclub/residents/updateresidents/:id" element={<EditViewResidents/>} />
-          <Route path="/admin/ourclub/residents/deleteresidents" element={<DeleteResidents/>} />
+          <Route path="/admin/ourclub/culture/addculture" element={<AddCulture />} />
+          <Route path="/admin/ourclub/culture/updateculture" element={<UpdateCulture />} />
+          <Route path="/admin/ourclub/culture/updateculture/:id" element={<EditViewCulture />} />
+          <Route path="/admin/ourclub/culture/deleteculture" element={<DeleteCulture />} />
 
+
+          <Route path="/admin/ourclub/introculture/addintroculture" element={<AddIntroCulture />} />
+          <Route path="/admin/ourclub/introculture/editviewintroculture" element={<EditViewIntroCulture />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -19,6 +19,10 @@ const OurClub = () => {
           <button>Historia</button>
         </Link>
 
+        <Link className="links-options" to="/admin/ourclub/introculture">
+          <button>Intro Sección Cultura</button>
+        </Link>
+
         <Link className="links-options" to="/admin/ourclub/culture">
           <button>Cultura</button>
         </Link>

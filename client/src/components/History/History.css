@@ -1,109 +1,46 @@
 .history-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 150px;
-  width: 100%;
+    margin-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    text-align: justify;
+    font-family: LeagueSpartan-Regular;
+    font-size: 1.2rem;
 }
 
-.container-right-history {
-  position: relative;
-  height: 32em;
-  display: flex;
-  justify-content: center;
+.history-container h1 {
+    font-family: LeagueSpartan-Bold;
+
 }
 
-.container-left-history {
-  position: relative;
-  height: 32em;
-  display: flex;
-  justify-content: center;
-}
 
-.img-right-history {
-  position: absolute;
-  z-index: -1;
-  right: 5%;
-}
 
-.img-right-history img {
-  width: 500px;
-  height: 380px;
-}
+@media (max-width: 767.98px) {
+   .history-container {
+    margin-top: 20%;
+    font-size: 1em;
 
-.img-left-history {
-  position: absolute;
-  z-index: -1;
-  left: 5%;
-}
+   }
+   .history-container h1 {
+    font-family: LeagueSpartan-Bold;
+    font-size: 120%
 
-.img-left-history img {
-  width: 500px;
-  height: 380px;
 }
+   
+}
+      
 
-.text-history {
-  /* background-color: #8342ea; */
-  background-color: rgba(131, 66, 234, 0.3);
-  /* filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.5; */
-  padding: 50px 80px 50px 80px;
-  margin-top: 21%;
-  width: 500px;
-  height: 380px;
-  display: flex;
-  align-items: center;
-}
 
-.text-history p {
-  font-size: 13px;
-}
+@media (max-width: 575.98px) {
+    .history-container {
+        margin-top: 20%;
+        font-size: 15px
 
-.right-line {
-  position: absolute;
-  width: 200px;
-  height: 520px;
-  border-style: solid;
-  border-width: 30px;
-  border-color: #8342ea;
-  border-left: #8342ea;
-  right: 14.1%;
-  bottom: -62%;
+    }
+    .history-container h1 {
+        font-family: LeagueSpartan-Bold;
+        font-size: 100%
+    
+    }
 }
-
-.left-line {
-  position: absolute;
-  width: 200px;
-  height: 568px;
-  border-style: solid;
-  border-width: 30px;
-  border-color: #8342ea;
-  left: 14.1%;
-  border-right: #8342ea;
-  top: 157%;
-}
-
-.right-line-sec {
-  position: absolute;
-  width: 297px;
-  height: 617px;
-  border-style: solid;
-  border-width: 30px;
-  border-color: #8342ea;
-  border-left: #8342ea;
-  right: 6.6%;
-  bottom: -223%;
-}
-
-.text {
-  font-size: 52px;
-  margin-left: 37%;
-}
-
-.gracias {
-  color: #8342ea;
-}
-
-.espacio {
-  margin: -10.5% 0;
-}
+      

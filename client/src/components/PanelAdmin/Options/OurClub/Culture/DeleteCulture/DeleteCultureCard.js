@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { deleteMilestones, getAllMilestones } from "../../../../../../store/milestones";
-import "./DeleteCardMilestones.css";
+import { deleteCulture, getAllCulture } from "../../../../../../store/culture";
+import "./DeleteCultureCard.css";
 import Swal from "sweetalert2";
 
-const DeleteCardMilestones = ({ milestone }) => {
+const DeleteCultureCard = ({ culture }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ const DeleteCardMilestones = ({ milestone }) => {
   }, []);
 
   const handleDelete = (id) => {
-    dispatch(deleteMilestones(id))
+    dispatch(deleteCulture(id))
       .then(() =>
         Swal.fire({
           icon: "success",
@@ -26,15 +26,15 @@ const DeleteCardMilestones = ({ milestone }) => {
           timer: 1500,
         })
       )
-      .then(() => dispatch(getAllMilestones()));
+      .then(() => dispatch(getAllCulture()));
   };
 
   return (
     <div className="card-container">
-      <img src={milestone.image} alt={milestone.id} />
-      <button onClick={() => handleDelete(milestone.id)}>Borrar</button>
+      <img src={culture.image} alt={culture.id} />
+      <button onClick={() => handleDelete(culture.id)}>Borrar</button>
     </div>
   );
 };
 
-export default DeleteCardMilestones;
+export default DeleteCultureCard;

@@ -10,7 +10,7 @@ const introCulture = require("./introCulture");
 const initialVideo = require("./initialVideo");
 
 router.use("/residents", residents);
-router.use("/milestones", hitos);
+router.use("/hitos", hitos);
 router.use("/admin", users);
 router.use("/events", events);
 router.use("/history", history);
