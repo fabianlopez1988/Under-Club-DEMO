@@ -10,94 +10,58 @@
 }
 
 .intro {
-  height: 720px;
   background-color: rgba(131, 66, 234, 0.3);
   color: white;
   text-transform: uppercase;
   text-align: left;
-  padding: 50px 120px 30px 120px;
-  font-size: 10px;
+  padding: 5% 5% 5% 5%;
+  font-size: 60px;
 }
 
-/*
-.culture-section div {
-  width: 100%;
-  height: 720px;
-  /* text-align: center;
-  /* display: flex;
-  /* justify-content: center
-  /* align-items: center;
-  flex-direction: column;
-  position: absolute;
-} */
+.violet {
+  color: rgba(131, 66, 234, 0.7);
+}
+
+.culture-section {
+  margin-top: 10%;
+}
 
 .culture-section div h1 {
   text-transform: uppercase;
   font-size: 70px;
-  /* display: flex;
-  justify-content: flex-start; */
 }
 
 .culture-section div p {
   font-family: LeagueSpartan-Regular;
-  /* display: flex;
-  justify-content: center; */
-
 }
 
 .box {
   font-size: 30px;
-  /* width: 40%; */
-  height: 700px;
-  /* background-color: rgba(131, 66, 234, 0.3); */
-  /* padding: 10% 5% 10% 5%; */
-  /* margin: 5; */
- 
+  height: 650px;
 }
 
 .left {
-  /* float: left; */
-  /* position: relative;
-  left: 100px; 
-  margin-left: 5%;*/
   display: flex;
   flex-direction: column;
-  padding-left: 10%;
-  background-color: yellow;
-
+  padding-left: 15%;
 }
 
 .right {
-  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 10%;
+  padding-right: 15%;
   margin-top: 40%;
-  /* position: relative;
-  left: 1000px;
-  right: 100px;
-  bottom: 400px; */
-  /* float: right;
-  margin-right: 5%; */
 }
 
 .center-left {
-
-  background-color: blanchedalmond;
-  padding: 0 10% 0 10%;
-
-
-
+  margin: 0 10% 0 30%;
 }
 
 .center-right {
-
-  background-color: rgb(0, 255, 17);
-
+  margin-top: 0%;
+  margin-right: 40%;
 }
-
-
 
 .grid1 {
   display: grid;
@@ -106,9 +70,20 @@
 
 .grid2 {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
 }
 
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-lines {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
 .first-line {
   border-style: solid;
@@ -117,7 +92,8 @@
   border-left: rgba(131, 66, 234, 0.7);
   border-bottom: rgba(131, 66, 234, 0.7);
   width: 50%;
-  height: 30%;
+  height: 25%;
+  margin-top: 50%;
 }
 
 .first-line2 {
@@ -128,64 +104,88 @@
   border-top: rgba(131, 66, 234, 0.7);
   border-right: rgba(131, 66, 234, 0.7);
   width: 50%;
-  height: 30%;
+  height: 25%;
   display: flex;
-  
-}
-
-
-.container-lines {
-  display: flex;
-  padding-left: 5%;
-  padding-right: 5% ;
-
-
-}
-
-
-/* .first-line {
-  position: absolute;
-  top: 134%;
-  bottom: 20%;
-  right: 20%;
-  left: 50%;
-  width: 20%;
-  height: 204px;
-  border-style: solid;
-  border-width: 40px;
-  border-color: #8342ea;
-  border-left: #8342ea;
-  border-bottom: #8342ea;
+  margin-top: 50%;
 }
 
 .second-line {
-  position: absolute; 
-  top: 250%;
-  bottom: 20%;
-  right: 20%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
+  width: 55%;
+  height: 30%;
   border-style: solid;
   border-width: 40px;
   border-color: #8342ea;
   border-left: #8342ea;
   border-top: #8342ea;
+  margin-top: -5%;
 }
 
 .third-line {
-  position: absolute; 
-  top: 300%;
-  bottom: 20%;
-  right: 20%;
-  left: 20%; 
-  width: 400px;
-  height: 400px;
+  width: 48%;
+  height: 40%;
   border-style: solid;
   border-width: 40px;
   border-color: #8342ea;
   border-right: #8342ea;
   border-top: #8342ea;
+  margin-left: 50%;
+  margin-top: -20%;
 }
- */
 
+/* MEDIA QUERIES */
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .third-line {
+    margin-top: -20%;
+  }
+  .center-right {
+    margin-top: -10%;
+    margin-right: 20%;
+  }
+  .intro {
+    font-size: 40px;
+  }
+  .culture-section div h1 {
+    font-size: 40px;
+  }
+  .box {
+    font-size: 1.5rem;
+    height: 500px;
+  }
+}
+
+/* Tablet acostada */
+@media only screen and (min-width: 768) and (max-width: 1024px) {
+  .intro {
+    font-size: 20px;
+  }
+  .box {
+    font-size: 1rem;
+    height: 300px;
+  }
+  .center-right {
+    margin-top: -5%;
+    margin-right: 10%;
+  }
+  .right {
+    padding-right: 5%;
+  }
+  .culture-section div h1 {
+    font-size: 20px;
+  }
+
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 480) and (max-width: 768px) {
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320) and (max-width: 480px) {
+}
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+}
