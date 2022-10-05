@@ -47,6 +47,13 @@ Residents.init(
       validate: {
         notEmpty: true,
       },
+    },
+    pressKit: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
     }
   },
   { sequelize: db, modelName: "resident" }

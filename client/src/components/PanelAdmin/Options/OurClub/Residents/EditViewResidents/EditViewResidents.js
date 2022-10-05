@@ -17,6 +17,7 @@ function EditViewResidents() {
     const soundcloud = useInput()
     const instagram = useInput()
     const residentAdvisor = useInput()
+    const pressKit = useInput()
 
     const [baseImage, setBaseImage] = useState("")
 
@@ -48,7 +49,8 @@ function EditViewResidents() {
                 biography: biography.value.length === 0 ? residentRedux.biography : biography.value,
                 soundcloud: soundcloud.value.length === 0 ? residentRedux.soundcloud : soundcloud.value,
                 instagram: instagram.value.length === 0 ? residentRedux.instagram : instagram.value,
-                residentAdvisor : residentAdvisor.value.length === 0 ? residentRedux.residentAdvisor : residentAdvisor.value
+                residentAdvisor : residentAdvisor.value.length === 0 ? residentRedux.residentAdvisor : residentAdvisor.value,
+                pressKit: pressKit.value.length === 0 ? residentRedux.pressKit : pressKit.value
             })
         )
         .then(() =>
@@ -118,6 +120,12 @@ function EditViewResidents() {
           <Form.Label>Resident Advisor</Form.Label>
           <br></br>
           <input placeholder={residentRedux.residentAdvisor} {...residentAdvisor} />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Press Kit</Form.Label>
+          <br></br>
+          <input placeholder={residentRedux.pressKit} {...pressKit} />
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar

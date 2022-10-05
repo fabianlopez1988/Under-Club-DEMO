@@ -16,6 +16,7 @@ function AddResidents() {
   const soundcloud = useInput()
   const instagram = useInput()
   const residentAdvisor = useInput()
+  const pressKit = useInput()
 
   const [baseImage, setBaseImage] = useState("");
 
@@ -48,7 +49,8 @@ function AddResidents() {
         biography: biography.value.length === 0 ? errorAlert() : biography.value,
         instagram: instagram.value.length === 0 ? errorAlert() : instagram.value,
         soundcloud: soundcloud.value.length === 0 ? errorAlert() : soundcloud.value,
-        residentAdvisor: residentAdvisor.value.length === 0 ? errorAlert : residentAdvisor.value
+        residentAdvisor: residentAdvisor.value.length === 0 ? errorAlert : residentAdvisor.value,
+        pressKit: pressKit.value.length === 0 ? errorAlert() : pressKit.value
       })
     )
       .then(() =>
@@ -125,6 +127,15 @@ function AddResidents() {
             <input
               placeholder="https://. . ."
               {...residentAdvisor}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Press Kit</Form.Label>
+            <br></br>
+            <input
+              placeholder="https://. . ."
+              {...pressKit}
             />
           </Form.Group>
           <button
