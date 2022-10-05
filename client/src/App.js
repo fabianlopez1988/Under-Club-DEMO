@@ -8,10 +8,10 @@ import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
 import Login from "./components/LoginAdmin/Login";
 import Culture from "./components/Culture/Culture";
+import Events from "./components/Events/Events"
 
 import PanelAdmin from "./components/PanelAdmin/PanelAdmin";
 
-import Events from "./components/PanelAdmin/Options/Events/Events"
 import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo"
 import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub"
 import Users from "./components/PanelAdmin/Options/Users/Users"
@@ -39,6 +39,12 @@ import IntroCultureAdmin from "./components/PanelAdmin/Options/OurClub/IntroCult
 import AddIntroCulture from "./components/PanelAdmin/Options/OurClub/IntroCulture/AddIntroCulture/AddIntroCulture";
 import EditViewIntroCulture from "./components/PanelAdmin/Options/OurClub/IntroCulture/EditViewIntroCulture/EditViewIntroCulture";
 
+import EventsAdmin from "./components/PanelAdmin/Options/Events/EventsAdmin";
+import AddEvents from "./components/PanelAdmin/Options/Events/AddEvents/AddEvents";
+import EditEvents from "./components/PanelAdmin/Options/Events/EditEvents/EditEvents";
+import DeleteEvents from "./components/PanelAdmin/Options/Events/DeleteEvents/DeleteEvents";
+import UpdateEvents from "./components/PanelAdmin/Options/Events/UpdateEvents/UpdateEvents";
+
 function App() {
   return (
     <div className="App">
@@ -53,7 +59,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PanelAdmin/>} />
 
-          <Route path="/admin/events" element={<Events/>} />
+          <Route path="/admin/events" element={<EventsAdmin/>} />
           <Route path="/admin/initialvideo" element={<InitialVideo/>} />
           <Route path="/admin/ourclub" element={<OurClub/>} />
           <Route path="/admin/users" element={<Users/>} />
@@ -81,6 +87,13 @@ function App() {
 
           <Route path="/admin/ourclub/introculture/addintroculture" element={<AddIntroCulture />} />
           <Route path="/admin/ourclub/introculture/editviewintroculture" element={<EditViewIntroCulture />} />
+
+          <Route path="/admin/events/addevents" element={<AddEvents />} />
+          <Route path="/admin/events/updateevents" element={<UpdateEvents />} />
+          <Route path="/admin/events/updateevents/:id" element={<EditEvents />} />
+          <Route path="/admin/events/deleteevents" element={<DeleteEvents />} />
+
+
         </Routes>
       </BrowserRouter>
     </div>

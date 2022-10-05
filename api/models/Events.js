@@ -13,6 +13,8 @@ Events.init(
       type: Sequelize.STRING,
       //allowNull: false
     },
-  },{ sequelize: db, modelName: "event" });
+  },
+  { sequelize: db, modelName: "event" }
+);
 
 module.exports = Events;

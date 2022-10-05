@@ -11,31 +11,29 @@ import { userLogout } from "../../store/user";
 import "./NavBar.css";
 
 const NavBar = () => {
-
   const user = JSON.parse(localStorage.getItem("user"));
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogout = () =>{
-    dispatch(userLogout())
-    .then(()=> navigate("/login"))
-  }
+  const handleLogout = () => {
+    dispatch(userLogout()).then(() => navigate("/login"));
+  };
 
   return (
     <>
       <div className="container-general">
         <Navbar className="navbar" variant="dark" expand="lg" fixed="top">
           <Container className="style-navbar">
-          <div className="logo-fixed">
-            <Link to="/">
-              <img
-                src="https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg"
-                alt="logo"
-                // width="78"
-                // height="69"
-              />
-            </Link>
-          </div>
+            <div className="logo-fixed">
+              <Link to="/">
+                <img
+                  src="https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg"
+                  alt="logo"
+                  // width="78"
+                  // height="69"
+                />
+              </Link>
+            </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -48,21 +46,13 @@ const NavBar = () => {
                     Residentes
                   </NavDropdown.Item>
                 </NavDropdown>
-                {/* <Nav.Link href="#history">Nuestro Club</Nav.Link> */}
-                <Nav.Link
-                  href="https://tickets.underclub.com.ar/productora/eventos/13"
-                  target="_blank"
-                >
-                  Eventos
-                </Nav.Link>
+                <Nav.Link href="/events">Eventos</Nav.Link>
                 <Nav.Link href="#contacto">Contacto</Nav.Link>
-                {
-                  !user ? null : (
-                    <div onClick={handleLogout}>
-                      <Nav.Link>Cerrar Sesión</Nav.Link>
-                    </div>
-                  ) 
-                }
+                {!user ? null : (
+                  <div onClick={handleLogout}>
+                    <Nav.Link>Cerrar Sesión</Nav.Link>
+                  </div>
+                )}
                 <Nav.Link href="#streamings" id="button-streamings">
                   {<BsMusicPlayerFill />}
                 </Nav.Link>

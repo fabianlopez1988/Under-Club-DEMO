@@ -9,7 +9,7 @@ const IntroCulture = () => {
   // }, []);
 
   return (
-    <section className="intro-culture">
+    <section>
       <p>
         Durante 10 años, nos esforzamos en apoyar, contribuir, y desarrollar la
         cultura techno desde nuestro lugar. Abrirnos a un camino de aprendizaje,

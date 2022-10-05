@@ -5,6 +5,7 @@ import historyReducer from "./history";
 import introCultureReducer from "./introCulture";
 import milestonesReducer from "./milestones";
 import userReducer from "./user"
+import eventReducer from "./events";
 
 const store = configureStore({
   middleware: (getDefaultMiddleware) =>
@@ -17,6 +18,7 @@ const store = configureStore({
     milestones: milestonesReducer,
     culture: cultureReducer,
     introCulture: introCultureReducer,
+    events: eventReducer,
   },
 });
 
