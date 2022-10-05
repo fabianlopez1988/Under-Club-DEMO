@@ -1,58 +1,55 @@
-import React, { useEffect } from "react";
-import LoremIpsum from "react-lorem-ipsum";
 import "./History.css";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllHistory } from "../../store/history";
+import imagen from "../../assets/DemoSlider3.jpg";
 
 const History = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getAllHistory());
-  }, []);
-
-  const histories = useSelector((state) => state.history);
-
   return (
     <div className="history-container">
-      {histories?.data?.map((history) => (
-        <>
-          {history.id % 2 === 0 ? (
-            <div className="container-left-history">
-              <div className="img-left-history">
-                <img src={history.image} alt={history.id} />
-              </div>
-              {history.id === 2 ? (
-                <div className="text-history">
-                  <p>{history.history}</p>
-                </div>
-              ) : null}
-              {/* <div className="right-line"></div> */}
-            </div>
-          ) : (
-            <div className="container-right-history">
-              <div className="img-right-history">
-                <img src={history.image} alt={history.id} />
-              </div>
-              <div className="text-history">
-                <p>{history.history}</p>
-              </div>
-              {/* <div className="left-line"></div> */}
-            </div>
-          )}
-          <div className="right-line"></div>
-          <div className="left-line"></div>
-          <div className="right-line-sec"></div>
-        </>
-      ))}
-      <div className="text">
-        <p>
-          <span className="gracias">GRACIAS </span>POR
+      <div className="img-right-one">
+        <img src={imagen} alt="imagen" />
+      </div>
+      <div className="text-container">
+        <p className="text-history">
+          A tres años de la década del 2010 una nueva generación estaba
+          naciendo, y con ella la llegada de mucho jóvenes dispuestos a cambiar
+          el rumbo de la escena techno local.
         </p>
-        <br></br>
-        <p className="espacio">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div className="img-left-one">
+        <img src={imagen} alt="imagen-2" />
+        <div></div>
+        <div className="right-line"></div>
+      </div>
+      <div className="text-container">
+        <p className="text-history-center">
+          El esprítu de unión, amor y libertad, se encontraba vagando por las
+          noches de Buenos Aires a la espera de nuevas propuestas.
+        </p>
+      </div>
+      <div className="img-right-two">
+        <div className="left-line"></div>
+        <div></div>
+        <img src={imagen} alt="imagen-3" />
+      </div>
+      <div className="text-container">
+        <p className="text-history-last">
+          Fue el 4 de febrero en la ciudad de Haedo, Buenos Aires, donde Under
+          Club iba a dar sus primeros pasos de vida, y al año se instala en su
+          propia locación, situada en una de las esquinas más emblemáticas de
+          Palermo Hollywood.
+        </p>
+      </div>
+      <div className="img-left-two">
+        <img src={imagen} alt="imagen-3" />
+        <div></div>
+        <div className="right-line"></div>
+      </div>
+      <div className="gracias-container">
+        <p>
+          <span className="gracias">GRACIAS&nbsp;</span>POR
+        </p>
+      </div>
+      <div className="apoyo-container">
+        <p>
           EL APOYO
         </p>
       </div>

@@ -1,3 +1,8 @@
+body {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
 .history-container {
   display: flex;
   flex-direction: column;
@@ -5,105 +10,267 @@
   width: 100%;
 }
 
-.container-right-history {
-  position: relative;
-  height: 32em;
-  display: flex;
-  justify-content: center;
-}
-
-.container-left-history {
-  position: relative;
-  height: 32em;
-  display: flex;
-  justify-content: center;
-}
-
-.img-right-history {
-  position: absolute;
-  z-index: -1;
-  right: 5%;
-}
-
-.img-right-history img {
-  width: 500px;
+.history-container img {
+  width: 550px;
   height: 380px;
 }
 
-.img-left-history {
-  position: absolute;
-  z-index: -1;
-  left: 5%;
+.img-right-one {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -9%;
 }
 
-.img-left-history img {
-  width: 500px;
-  height: 380px;
+.img-left-one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -10%;
+  z-index: -1;
+}
+
+.img-right-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -10%;
+  z-index: -1;
+  width: 100%;
+}
+
+.img-left-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -9%;
+  z-index: -1;
+  height: 525px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  font-family: LeagueSpartan-Regular;
 }
 
 .text-history {
-  /* background-color: #8342ea; */
   background-color: rgba(131, 66, 234, 0.3);
-  /* filter: alpha(opacity=70);
-  -moz-opacity: 0.7;
-  opacity: 0.5; */
-  padding: 50px 80px 50px 80px;
-  margin-top: 21%;
-  width: 500px;
+  width: 550px;
   height: 380px;
+  padding: 50px 80px 50px 80px;
   display: flex;
   align-items: center;
+  font-family: LeagueSpartan-Regular;
+  font-size: 18px;
 }
 
-.text-history p {
-  font-size: 13px;
+.text-history-center {
+  background-color: rgba(131, 66, 234, 0.3);
+  width: 550px;
+  height: 380px;
+  padding: 50px 80px 50px 80px;
+  display: flex;
+  align-items: center;
+  margin-top: -9%;
+  font-family: LeagueSpartan-Regular;
+  font-size: 18px;
+}
+
+.text-history-last {
+  background-color: rgba(131, 66, 234, 0.3);
+  width: 550px;
+  height: 380px;
+  padding: 50px 80px 50px 80px;
+  display: flex;
+  align-items: center;
+  margin-top: -7%;
+  font-family: LeagueSpartan-Regular;
+  font-size: 18px;
 }
 
 .right-line {
-  position: absolute;
-  width: 200px;
-  height: 520px;
+  width: 30%;
   border-style: solid;
   border-width: 30px;
-  border-color: #8342ea;
-  border-left: #8342ea;
-  right: 14.1%;
-  bottom: -62%;
+  border-color: rgba(131, 66, 234, 0.3);
+  border-left: rgba(131, 66, 234, 0.3);
 }
 
 .left-line {
-  position: absolute;
-  width: 200px;
-  height: 568px;
+  width: 30%;
   border-style: solid;
   border-width: 30px;
-  border-color: #8342ea;
-  left: 14.1%;
-  border-right: #8342ea;
-  top: 157%;
+  border-color: rgba(131, 66, 234, 0.3);
+  border-right: rgba(131, 66, 234, 0.3);
+  margin-left: 70%;
 }
 
-.right-line-sec {
-  position: absolute;
-  width: 297px;
-  height: 617px;
-  border-style: solid;
-  border-width: 30px;
-  border-color: #8342ea;
-  border-left: #8342ea;
-  right: 6.6%;
-  bottom: -223%;
-}
-
-.text {
-  font-size: 52px;
-  margin-left: 37%;
+.gracias-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2%;
+  margin-bottom: 5%;
+  font-size: 60px;
+  line-height: 55%;
 }
 
 .gracias {
   color: #8342ea;
 }
 
-.espacio {
-  margin: -10.5% 0;
+.apoyo-container {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 60px;
+  padding-right: 14%;
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 450px;
+    height: 280px;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+  }
+
+  .text-history-last {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+  }
+
+  .img-right-two {
+    display: grid;
+    grid-template-columns: none;
+    margin-top: -10%;
+    z-index: -1;
+    width: 100%;
+    justify-items: end;
+  }
+
+  .gracias-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -22%;
+    margin-bottom: 5%;
+    font-size: 40px;
+    line-height: 1%;
+  }
+
+  .apoyo-container {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 350px;
+    height: 180px;
+  }
+
+  .img-right-one {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0%;
+  }
+
+  .img-left-one {
+    display: flex;
+    justify-content: flex-start;
+    grid-template-columns: none;
+    z-index: none;
+    margin-top: 0%;
+  }
+
+  .img-right-two {
+    display: flex;
+    justify-content: flex-end;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    width: none;
+  }
+  
+  .img-left-two {
+    display: flex;
+    justify-content: flex-start;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    height: none;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 220px;
+    padding: 40px 60px 40px 60px;
+    background-color: transparent;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 220px;
+    padding: 40px 60px 40px 60px;
+    margin-top: 0%;
+    background-color: transparent;
+  }
+  
+  .text-history-last {
+    width: 450px;
+    height: 220px;
+    padding: 40px 60px 40px 60px;
+    margin-top: 0%;
+    background-color: transparent;
+  }
+
+  .gracias-container {
+    margin-top: -50%;
+    font-size: 40px;
+    line-height: none;
+  }
+  
+  .apoyo-container {
+    font-size: 40px;
+  }
+  
+}
+
+/* MEDIA QUERIES /
+
+
+/ Tablet /
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+/ Celu acostado /
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+/ Celu 
+@media only screen and (max-width: 320px) {
+} */
