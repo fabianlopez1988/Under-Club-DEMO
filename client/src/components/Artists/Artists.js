@@ -32,13 +32,15 @@ const Artists = () => {
                       {res.name}
                     </Accordion.Header>
                     <Accordion.Body>
-                      <div className="accordion-left">{res.biography}</div>
+                      <div className="accordion-left">
+                      <a className="link" href={res.pressKit} target="_blank" rel="noreferrer" >PRESS KIT</a>
+                      <div >{res.biography}</div>
+                      </div>
                       <div className="accordion-right">
                         <ul>
-                          <li>{res.soundcloud}</li>
-                          <li>{res.instagram}</li>
-                          <li>{res.facebook}</li>
-                          <li>{res.residentAdvisor}</li>
+                          <li><a href={res.instagram} target="_blank" rel="noreferrer" >INSTAGRAM</a></li>
+                          <li><a href={res.soundcloud} target="_blank" rel="noreferrer" >SOUNDCLOUD</a></li>
+                          <li><a href={res.residentAdvisor} target="_blank" rel="noreferrer" >RESIDENT ADVISOR</a></li>
                         </ul>
                         <img src={res.photo} alt="foto" className="photo"></img>
                       </div>

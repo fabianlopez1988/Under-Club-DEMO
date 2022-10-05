@@ -12,9 +12,8 @@
   font-size: 2.5rem;
   padding-bottom: 1%;
   padding-top: 1%;
-  color: blueviolet;
-  border-bottom: 4px solid blueviolet;
-  text-transform: uppercase;
+  color: #8342ea;
+  border-bottom: 4px solid #8342ea;
   letter-spacing: 3px;
 }
 
@@ -24,7 +23,7 @@
 
 .accordion-button:hover {
   color: white;
-  filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px blueviolet);
+  filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px #8342ea);
 }
 
 .accordion-body {
@@ -53,7 +52,7 @@
 }
 
 .photo:hover {
-  filter: opacity(0.95) drop-shadow(4px 4px 2px blueviolet);
+  filter: opacity(0.95) drop-shadow(4px 4px 2px #8342ea);
   transition: 0.6s;
 }
 
@@ -77,16 +76,60 @@
 
 .accordion-right ul li a {
   text-decoration-line: none;
-  color: white;
-}
-
-.accordion-right ul li a:hover {
-  color: blueviolet;
+  color: #8342ea;
 }
 
 .text {
   padding-left: 2%;
 }
+
+.link {
+  /* padding: 0.5em 0.8em;
+  border: 2px solid #8342ea;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  transition: .3s;
+  z-index: 1;
+  text-decoration: none;
+  color: #8342ea; */
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2.em;
+  border: 3px solid #8342ea;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #8342ea;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: -1;
+}
+
+
+
+/* .link::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #8342ea;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.link:hover::before {
+  width: 105%;
+}
+
+.link:hover {
+  color: #111
+} */
 
 @media (max-width: 767.98px) {
   .titleResidents h1 {
@@ -98,7 +141,7 @@
     font-size: 35px;
     padding-bottom: 1%;
     padding-top: 1%;
-    color: blueviolet;
+    color: #8342ea;
     letter-spacing: 1px;
   }
   .artists-section {
@@ -153,7 +196,7 @@
     font-size: 30px;
     padding-bottom: 1%;
     padding-top: 1%;
-    color: blueviolet;
+    color: #8342ea;
     letter-spacing: 1px;
   }
   .artists-section {

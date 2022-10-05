@@ -26,12 +26,18 @@ Residents.init({
         //allowNull: false
     },
     residentAdvisor: {
-        type: Sequelize.STRING,
-        //allowNull: false
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
     },
-    facebook: {
-        type: Sequelize.STRING,
-        //allowNull: false
+    pressKit: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
     }
 },{sequelize: db, modelName: "resident"})
 
