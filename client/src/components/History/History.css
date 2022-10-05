@@ -1,3 +1,8 @@
+body {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
 .history-container {
     margin-top: 10%;
     padding-left: 5%;
@@ -8,39 +13,264 @@
     font-size: 1.2rem;
 }
 
-.history-container h1 {
-    font-family: LeagueSpartan-Bold;
-
+.history-container img {
+  width: 550px;
+  height: 380px;
 }
 
-
-
-@media (max-width: 767.98px) {
-   .history-container {
-    margin-top: 20%;
-    font-size: 1em;
-
-   }
-   .history-container h1 {
-    font-family: LeagueSpartan-Bold;
-    font-size: 120%
-
+.img-right-one {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -9%;
 }
-   
+
+.img-left-one {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -10%;
+  z-index: -1;
 }
-      
 
-
-@media (max-width: 575.98px) {
-    .history-container {
-        margin-top: 20%;
-        font-size: 15px
-
-    }
-    .history-container h1 {
-        font-family: LeagueSpartan-Bold;
-        font-size: 100%
-    
-    }
+.img-right-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -10%;
+  z-index: -1;
+  width: 100%;
 }
-      
+
+.img-left-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -9%;
+  z-index: -1;
+  height: 525px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  font-family: LeagueSpartan-Regular;
+}
+
+.text-history {
+  background-color: rgba(131, 66, 234, 0.3);
+  width: 550px;
+  height: 380px;
+  padding: 50px 80px 50px 80px;
+  display: flex;
+  align-items: center;
+  font-family: LeagueSpartan-Regular;
+  font-size: 18px;
+}
+
+.text-history-center {
+  background-color: rgba(131, 66, 234, 0.3);
+  width: 550px;
+  height: 380px;
+  padding: 50px 80px 50px 80px;
+  display: flex;
+  align-items: center;
+  margin-top: -9%;
+  font-family: LeagueSpartan-Regular;
+  font-size: 18px;
+}
+
+.text-history-last {
+  background-color: rgba(131, 66, 234, 0.3);
+  width: 550px;
+  height: 380px;
+  padding: 50px 80px 50px 80px;
+  display: flex;
+  align-items: center;
+  margin-top: -7%;
+  font-family: LeagueSpartan-Regular;
+  font-size: 18px;
+}
+
+.right-line {
+  width: 30%;
+  border-style: solid;
+  border-width: 30px;
+  border-color: rgba(131, 66, 234, 0.3);
+  border-left: rgba(131, 66, 234, 0.3);
+}
+
+.left-line {
+  width: 30%;
+  border-style: solid;
+  border-width: 30px;
+  border-color: rgba(131, 66, 234, 0.3);
+  border-right: rgba(131, 66, 234, 0.3);
+  margin-left: 70%;
+}
+
+.gracias-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2%;
+  margin-bottom: 5%;
+  font-size: 60px;
+  line-height: 55%;
+}
+
+.apoyo-container {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 60px;
+  padding-right: 14%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 450px;
+    height: 280px;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+  }
+
+  .text-history-last {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+  }
+
+  .img-right-two {
+    display: grid;
+    grid-template-columns: none;
+    margin-top: -10%;
+    z-index: -1;
+    width: 100%;
+    justify-items: end;
+  }
+
+  .gracias-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -22%;
+    margin-bottom: 5%;
+    font-size: 40px;
+    line-height: 1%;
+  }
+
+  .apoyo-container {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 350px;
+    height: 180px;
+  }
+
+  .img-right-one {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0%;
+  }
+
+  .img-left-one {
+    display: flex;
+    justify-content: flex-start;
+    grid-template-columns: none;
+    z-index: none;
+    margin-top: 0%;
+  }
+
+  .img-right-two {
+    display: flex;
+    justify-content: flex-end;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    width: none;
+  }
+  
+  .img-left-two {
+    display: flex;
+    justify-content: flex-start;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    height: none;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 220px;
+    padding: 40px 60px 40px 60px;
+    background-color: transparent;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 220px;
+    padding: 40px 60px 40px 60px;
+    margin-top: 0%;
+    background-color: transparent;
+  }
+  
+  .text-history-last {
+    width: 450px;
+    height: 220px;
+    padding: 40px 60px 40px 60px;
+    margin-top: 0%;
+    background-color: transparent;
+  }
+
+  .gracias-container {
+    margin-top: -50%;
+    font-size: 40px;
+    line-height: none;
+  }
+  
+  .apoyo-container {
+    font-size: 40px;
+  }
+  
+}
+
+/* MEDIA QUERIES /
+
+
+/ Tablet /
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+/ Celu acostado /
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+/ Celu 
+@media only screen and (max-width: 320px) {
+} */
+
