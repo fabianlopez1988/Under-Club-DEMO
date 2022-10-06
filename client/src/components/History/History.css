@@ -1,7 +1,7 @@
-body {
+/* body {
   margin-right: 10%;
   margin-left: 10%;
-}
+} */
 
 .history-container {
     margin-top: 10%;
@@ -9,8 +9,11 @@ body {
     padding-right: 5%;
     padding-bottom: 10%;
     text-align: justify;
-    font-family: LeagueSpartan-Regular;
+    /* font-family: LeagueSpartan-Regular; */
     font-size: 1.2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+
 }
 
 .history-container img {

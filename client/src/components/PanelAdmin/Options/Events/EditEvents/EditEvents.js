@@ -46,7 +46,7 @@ const EditEvents = () => {
     dispatch(
       updateEvent({
         flyer: blob === "" ? eventsRedux.flyer : blob,
-        date: date.value.length === 0 ? eventsRedux.date : date.value,
+        date: date.value === "" ? eventsRedux.date : date.value,
       })
     )
       .then(() =>

@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getAllCulture } from "../../../../../../store/culture";
-import DeleteCultureCard from "./DeleteCultureCard";
-import "./DeleteCulture.css";
+import { getAllEvent } from "../../../../../store/events";
+import DeleteEventCard from "./DeleteEventCard";
+import "./DeleteEvent.css";
 
-const DeleteCulture = () => {
+const DeleteEvent = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,22 +17,22 @@ const DeleteCulture = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(getAllCulture());
+    dispatch(getAllEvent());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const cultures = useSelector((state) => state.culture);
+  const events = useSelector((state) => state.events);
 
   return (
     <div className="delete-container">
-      <h1>Borrar Evento</h1>
+      <h1>Borrar Cultura</h1>
       <div className="grid">
-        {cultures?.data.map((culture) => (
-          <DeleteCultureCard key={culture.id} culture={culture} />
+        {events?.data.map((event) => (
+          <DeleteEventCard key={event.id} event={event} />
         ))}
       </div>
     </div>
   );
 };
 
-export default DeleteCulture;
+export default DeleteEvent;
