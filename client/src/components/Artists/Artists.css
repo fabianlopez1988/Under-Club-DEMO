@@ -15,6 +15,7 @@
   color: #8342ea;
   border-bottom: 4px solid #8342ea;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .accordion-button collapsed {
@@ -27,15 +28,20 @@
 }
 
 .accordion-body {
-  font-family: LeagueSpartan-Regular;
-  font-size: 1.5rem;
+  /* font-family: LeagueSpartan-Regular;
+  font-size: 1.1rem;
   padding-top: 2%;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
   justify-content: center;
   display: flex;
   align-items: center;
   align-items: flex-start;
-  text-align: justify;
+  text-align: justify; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 48rem;
+  margin-top: 5%;
+  background-color: red;
 }
 
 .artists-section {
@@ -57,35 +63,36 @@
 }
 
 .accordion-left {
-  width: 40%;
+  display: grid;
+  grid-template-rows: 6% 3fr 2fr;
+ /*  border-style: solid;
+  border-width: 30px;
+  border-bottom: #8342ea;
+  border-right: #8342ea;
+  border-left: #8342ea;
+  border-color: #8342ea; */
 }
 
 .accordion-right {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: end;
+  
 }
 
-.accordion-right ul {
-  list-style: none;
-  padding-right: 2%;
+.biography {
+  margin-top: 5%;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
 }
 
-.accordion-right ul li a {
-  text-decoration-line: none;
-  color: #8342ea;
+.container-artists {
+  background-color: green;
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
-.text {
-  padding-left: 2%;
-}
-
+/*Boton presskit*/
 .link {
-  /* padding: 0.5em 0.8em;
-  border: 2px solid #8342ea;
+  padding: 0.5em 1.2em;
+  border: 1px solid #8342ea;
   position: relative;
   overflow: hidden;
   background-color: transparent;
@@ -93,32 +100,25 @@
   transition: .3s;
   z-index: 1;
   text-decoration: none;
-  color: #8342ea; */
-  display: inline-block;
-  text-align: center;
-  font-weight: bold;
-  padding: 0.7em 2.em;
-  border: 3px solid #8342ea;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   color: #8342ea;
-  text-decoration: none;
-  transition: 0.3s ease all;
-  z-index: -1;
+  font-size: 1.2rem;
 }
 
+.link:hover {
+  color: white;
+  cursor: pointer;
+}
 
-
-/* .link::before {
+.link::before {
   content: "";
   width: 0;
-  height: 300%;
+  height: 105%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%);
   background: #8342ea;
-  transition: .5s ease;
+  transition: 0.5s ease;
   display: block;
   z-index: -1;
 }
@@ -127,9 +127,7 @@
   width: 105%;
 }
 
-.link:hover {
-  color: #111
-} */
+
 
 @media (max-width: 767.98px) {
   .titleResidents h1 {

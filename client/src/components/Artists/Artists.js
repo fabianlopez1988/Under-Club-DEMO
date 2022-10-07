@@ -9,7 +9,7 @@ const Artists = () => {
   useEffect(() => {
     axios.get("/api/residents").then((res) => setResident(res.data));
   }, []);
-  
+
   return (
     <div className="artists-container">
       <div className="titleResidents" id="residents">
@@ -33,15 +33,50 @@ const Artists = () => {
                     </Accordion.Header>
                     <Accordion.Body>
                       <div className="accordion-left">
-                      <a className="link" href={res.pressKit} target="_blank" rel="noreferrer" >PRESS KIT</a>
-                      <div >{res.biography}</div>
+                        <div className="container-artists">
+                          <a
+                            className="link"
+                            href={res.pressKit}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            PRESS KIT
+                          </a>
+                        </div>
+                        <div className="biography">{res.biography}</div>
+                        <div className="social-media">
+                          <ul>
+                            <li>
+                              <a
+                                href={res.instagram}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                INSTAGRAM
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href={res.soundcloud}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                SOUNDCLOUD
+                              </a>
+                            </li>
+                            <li>
+                              <a
+                                href={res.residentAdvisor}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                RESIDENT ADVISOR
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                       <div className="accordion-right">
-                        <ul>
-                          <li><a href={res.instagram} target="_blank" rel="noreferrer" >INSTAGRAM</a></li>
-                          <li><a href={res.soundcloud} target="_blank" rel="noreferrer" >SOUNDCLOUD</a></li>
-                          <li><a href={res.residentAdvisor} target="_blank" rel="noreferrer" >RESIDENT ADVISOR</a></li>
-                        </ul>
                         <img src={res.photo} alt="foto" className="photo"></img>
                       </div>
                     </Accordion.Body>
