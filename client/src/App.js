@@ -29,6 +29,11 @@ import AddMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/Ad
 import UpdateMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/UpdateMilestones/UpdateMilestones";
 import DeleteMilestones from "./components/PanelAdmin/Options/OurClub/Milestones/DeleteMilestones/DeleteMilestones";
 
+import AddResidents from "./components/PanelAdmin/Options/OurClub/Residents/AddResidents/AddResidents";
+import UpdateResidents from "./components/PanelAdmin/Options/OurClub/Residents/UpdateResidents/UpdateResidents";
+import EditViewResidents from "./components/PanelAdmin/Options/OurClub/Residents/EditViewResidents/EditViewResidents";
+import DeleteResidents from "./components/PanelAdmin/Options/OurClub/Residents/DeleteResidents/DeleteResidents";
+
 import CultureAdmin from "./components/PanelAdmin/Options/OurClub/Culture/CultureAdmin";
 import AddCulture from "./components/PanelAdmin/Options/OurClub/Culture/AddCulture/AddCulture";
 import DeleteCulture from "./components/PanelAdmin/Options/OurClub/Culture/DeleteCulture/DeleteCulture";
@@ -78,6 +83,11 @@ function App() {
           <Route path="/admin/ourclub/milestones/addmilestones" element={<AddMilestones/>} />
           <Route path="/admin/ourclub/milestones/updatemilestones" element={<UpdateMilestones/>} />
           <Route path="/admin/ourclub/milestones/deletemilestones" element={<DeleteMilestones/>} />
+
+          <Route path="/admin/ourclub/residents/addresidents" element={<AddResidents />} />
+          <Route path="/admin/ourclub/residents/updateresidents" element={<UpdateResidents/>} />
+          <Route path="/admin/ourclub/residents/updateresidents/:id" element={<EditViewResidents/>} />
+          <Route path="/admin/ourclub/residents/deleteresidents" element={<DeleteResidents/>} />
 
           <Route path="/admin/ourclub/culture/addculture" element={<AddCulture />} />
           <Route path="/admin/ourclub/culture/updateculture" element={<UpdateCulture />} />
