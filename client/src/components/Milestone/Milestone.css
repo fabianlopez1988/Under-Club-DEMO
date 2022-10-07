@@ -1,0 +1,314 @@
+.milestone-container {
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.milestone-container p {
+  padding: 40px 50px 40px 50px;
+}
+
+/*grillas para imagen y parrafo*/
+.grid-milestone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*estilo para imagen*/
+/* .milestone-container img {
+  width: 100%;
+  height: 100%;
+} */
+
+/*centra las imagenes*/
+.tresor-img {
+  padding-left: 5%;
+}
+.tierra-img {
+  padding-right: 5%;
+}
+/*tamaño modificado por su alto*/
+.bassiani-img {
+  height: 75%;
+  padding-right: 5%;
+}
+
+/*divide la grilla para la imagen en 50% y se da estilos para bassiani*/
+.img-milestone-container-bassiani {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22rem;
+}
+
+/*divide la grilla para la imagen en 50% y se da estilos*/
+.img-milestone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*divide la grilla para la imagen en 50% y se da estilos*/
+.parrafo-container {
+  font-size: 18px;
+  font-family: LeagueSpartan-Regular;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*grilla para las lineas*/
+.grid-line {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/*linea vertical para unir imagenes 1 y 3*/
+.line {
+  border-style: solid;
+  border-width: 30px;
+  border-color: #8343ea;
+  border-right: #8343ea;
+  border-bottom: #8343ea;
+  border-top: #8343ea;
+  height: 100px;
+}
+/*linea vertical para unir imagenes 2*/
+.line-center {
+  border-style: solid;
+  border-width: 30px;
+  border-color: #8343ea;
+  border-left: #8343ea;
+  border-bottom: #8343ea;
+  border-top: #8343ea;
+  height: 100px;
+}
+
+/*primera linea*/
+.line-one {
+  border-style: solid;
+  border-width: 30px;
+  border-color: #8343ea;
+  border-left: #8343ea;
+  border-bottom: #8343ea;
+  height: 300px;
+}
+/*segunda linea*/
+.line-two {
+  border-style: solid;
+  border-width: 30px;
+  border-color: #8343ea;
+  border-right: #8343ea;
+  height: 300px;
+  border-bottom: #8343ea;
+}
+/*tercera linea*/
+.line-three {
+  border-style: solid;
+  border-width: 30px;
+  border-color: #8343ea;
+  border-left: #8343ea;
+  border-bottom: #8343ea;
+  height: 300px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .parrafo-container {
+    font-size: 16px;
+  }
+  .tresor-img {
+    padding-left: 5%;
+    width: 50%;
+  }
+  .tierra-img {
+    padding-right: 5%;
+    width: 75%;
+  }
+  .bassiani-img {
+    height: 65%;
+    padding-right: 5%;
+  }
+
+  .milestone-container p {
+    padding: 0px;
+  }
+
+  .line {
+    border-width: 20px;
+  }
+
+  .line-center {
+    border-width: 20px;
+  }
+
+  .line-one {
+    border-width: 20px;
+  }
+
+  .line-two {
+    border-width: 20px;
+  }
+
+  .line-three {
+    border-width: 20px;
+  }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 480px) {
+  .milestone-container {
+    margin-top: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .grid-milestone {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+  }
+
+  .inversa {
+    flex-direction: column-reverse;
+  }
+
+  .img-milestone-container {
+    margin-top: 10%;
+    justify-content: flex-start;
+  }
+
+  .tierras {
+    justify-content: flex-end;
+  }
+
+  .parrafo-container {
+    font-size: 16px;
+    margin-top: 5%;
+  }
+  .tresor-img {
+    padding-left: 0px;
+    width: 50%;
+  }
+  .tierra-img {
+    padding-right: 0px;
+    width: 75%;
+  }
+  .bassiani-img {
+    height: 75%;
+    padding-right: 0px;
+  }
+
+  .img-milestone-container-bassiani {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15rem;
+    padding-right: 12%;
+  }
+
+  .milestone-container p {
+    padding: 0px;
+  }
+
+  .line {
+    border-width: 20px;
+  }
+
+  .line-center {
+    border-width: 20px;
+  }
+
+  .line-one {
+    border-width: 20px;
+    height: 200px;
+  }
+
+  .line-two {
+    border-width: 20px;
+    height: 200px;
+  }
+
+  .line-three {
+    border-width: 20px;
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .milestone-container {
+    margin-top: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .grid-milestone {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+  }
+
+  .inversa {
+    flex-direction: column-reverse;
+  }
+
+  .img-milestone-container {
+    margin-top: 10%;
+    justify-content: flex-start;
+  }
+
+  .tierras {
+    justify-content: flex-end;
+  }
+
+  .parrafo-container {
+    font-size: 16px;
+    margin-top: 5%;
+  }
+  .tresor-img {
+    padding-left: 0px;
+    width: 50%;
+  }
+  .tierra-img {
+    padding-right: 0px;
+    width: 75%;
+  }
+  .bassiani-img {
+    height: 75%;
+    padding-right: 0px;
+  }
+
+  .img-milestone-container-bassiani {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15rem;
+    padding-right: 12%;
+  }
+
+  .milestone-container p {
+    padding: 0px;
+  }
+
+  .line {
+    border-width: 20px;
+  }
+
+  .line-center {
+    border-width: 20px;
+  }
+
+  .line-one {
+    border-width: 20px;
+    height: 200px;
+  }
+
+  .line-two {
+    border-width: 20px;
+    height: 200px;
+  }
+
+  .line-three {
+    border-width: 20px;
+    height: 200px;
+  }
+}

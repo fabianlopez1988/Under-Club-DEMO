@@ -1,0 +1,16 @@
+.contact-container {
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.grid-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: blueviolet;
+}
+
+.grid-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}

@@ -40,14 +40,14 @@ const NavBar = () => {
                 <NavDropdown title="Nuestro Club" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/history">Historia</NavDropdown.Item>
                   <NavDropdown.Item href="/culture">Cultura</NavDropdown.Item>
-                  <NavDropdown.Item href="/hitos">Hitos</NavDropdown.Item>
+                  <NavDropdown.Item href="/milestones">Hitos</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="/artists">
                     Residentes
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="/events">Eventos</Nav.Link>
-                <Nav.Link href="#contacto">Contacto</Nav.Link>
+                <Nav.Link href="/contact">Contacto</Nav.Link>
                 {!user ? null : (
                   <div onClick={handleLogout}>
                     <Nav.Link>Cerrar Sesión</Nav.Link>

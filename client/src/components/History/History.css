@@ -1,16 +1,18 @@
-body {
+/* body {
   margin-right: 10%;
   margin-left: 10%;
-}
+} */
 
 .history-container {
-    margin-top: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 10%;
-    text-align: justify;
-    font-family: LeagueSpartan-Regular;
-    font-size: 1.2rem;
+  margin-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+  text-align: justify;
+  font-family: LeagueSpartan-Regular;
+  font-size: 1.2rem;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .history-container img {
@@ -62,6 +64,7 @@ body {
   align-items: center;
   font-family: LeagueSpartan-Regular;
   font-size: 18px;
+  z-index: 1;
 }
 
 .text-history-center {
@@ -74,6 +77,7 @@ body {
   margin-top: -9%;
   font-family: LeagueSpartan-Regular;
   font-size: 18px;
+  z-index: 1;
 }
 
 .text-history-last {
@@ -86,6 +90,7 @@ body {
   margin-top: -7%;
   font-family: LeagueSpartan-Regular;
   font-size: 18px;
+  z-index: 1;
 }
 
 .right-line {
@@ -113,6 +118,11 @@ body {
   margin-bottom: 5%;
   font-size: 60px;
   line-height: 55%;
+  font-family: LeagueSpartan-Bold;
+}
+
+.gracias {
+  color: #8342ea;
 }
 
 .apoyo-container {
@@ -120,9 +130,14 @@ body {
   justify-content: flex-end;
   font-size: 60px;
   padding-right: 14%;
+  font-family: LeagueSpartan-Bold;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .history-container {
+    margin-top: 15%;
+  }
+
   .left-line {
     display: none;
   }
@@ -179,6 +194,10 @@ body {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+  .history-container {
+    margin-top: 25%;
+  }
+
   .left-line {
     display: none;
   }
@@ -214,7 +233,7 @@ body {
     z-index: none;
     width: none;
   }
-  
+
   .img-left-two {
     display: flex;
     justify-content: flex-start;
@@ -226,25 +245,44 @@ body {
 
   .text-history {
     width: 450px;
-    height: 220px;
+    height: 170px;
     padding: 40px 60px 40px 60px;
     background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .text-history-center {
     width: 450px;
-    height: 220px;
-    padding: 40px 60px 40px 60px;
-    margin-top: 0%;
+    height: 140px;
+    padding: 40px 60px 40px 60px; 
     background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
-  
+
   .text-history-last {
     width: 450px;
     height: 220px;
-    padding: 40px 60px 40px 60px;
-    margin-top: 0%;
+    padding: 40px 60px 40px 60px; 
     background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   .gracias-container {
@@ -252,25 +290,217 @@ body {
     font-size: 40px;
     line-height: none;
   }
-  
+
   .apoyo-container {
     font-size: 40px;
   }
-  
 }
 
-/* MEDIA QUERIES /
+@media only screen and (min-width: 340px) and (max-width: 480px) {
+  .history-container {
+    margin-top: 30%;
+  }
 
+  .left-line {
+    display: none;
+  }
 
-/ Tablet /
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 350px;
+    height: 180px;
+  }
+
+  .img-right-one {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+  }
+
+  .img-left-one {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: none;
+    z-index: none;
+    margin-top: 0%;
+  }
+
+  .img-right-two {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    width: none;
+  }
+
+  .img-left-two {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    height: none;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 170px;
+    padding: 0px 20px 0px 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 140px;
+    padding: 0px 20px 0px 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .text-history-last {
+    width: 450px;
+    height: 220px;
+    padding: 0px 20px 0px 20px; 
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .gracias-container {
+    margin-top: -80%;
+    font-size: 40px;
+    line-height: none;
+  }
+
+  .apoyo-container {
+    font-size: 40px;
+  }
 }
 
-/ Celu acostado /
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 340px) {
+  .history-container {
+    margin-top: 30%;
+  }
+
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 350px;
+    height: 180px;
+  }
+
+  .img-right-one {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0%;
+  }
+
+  .img-left-one {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: none;
+    z-index: none;
+    margin-top: 0%;
+  }
+
+  .img-right-two {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    width: none;
+  }
+
+  .img-left-two {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: none;
+    margin-top: 0%;
+    z-index: none;
+    height: none;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 180px;
+    padding: 0px 20px 0px 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 150px;
+    padding: 0px 20px 0px 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .text-history-last {
+    width: 450px;
+    height: 230px;
+    padding: 0px 20px 0px 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(131, 66, 234, 0.3);
+    border-right: rgba(131, 66, 234, 0.3);
+    border-left: rgba(131, 66, 234,0.3);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .gracias-container {
+    margin-top: -100%;
+    font-size: 30px;
+    line-height: none;
+  }
+
+  .apoyo-container {
+    font-size: 30px;
+  }
+
 }
 
-/ Celu 
-@media only screen and (max-width: 320px) {
-} */
 
