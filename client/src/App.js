@@ -49,6 +49,8 @@ import AddEvents from "./components/PanelAdmin/Options/Events/AddEvents/AddEvent
 import EditEvents from "./components/PanelAdmin/Options/Events/EditEvents/EditEvents";
 import DeleteEvent from "./components/PanelAdmin/Options/Events/DeleteEvent/DeleteEvent";
 import UpdateEvents from "./components/PanelAdmin/Options/Events/UpdateEvents/UpdateEvents";
+import Milestone from "./components/Milestone/Milestone";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -61,6 +63,8 @@ function App() {
           <Route path="/history" element={<History />} />
           <Route path="/culture" element={<Culture />} /> 
           <Route path="/events" element={<Events />} />
+          <Route path="/milestones" element={<Milestone />} />
+          <Route path="/contact" element={<Contact />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PanelAdmin/>} />
