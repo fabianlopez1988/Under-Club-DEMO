@@ -23,7 +23,7 @@ const EventsAdmin = () => {
           <button>Editar Evento</button>
         </Link>
 
-        <Link className="links-options" to="/admin/events/deleteevents">
+        <Link className="links-options" to="/admin/events/deleteevent">
           <button>Borrar Evento</button>
         </Link>
 

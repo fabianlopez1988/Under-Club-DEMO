@@ -54,6 +54,19 @@ const eventsController = {
       console.log(error);
     }
   },
+  //traer evento por fecha cercana
+  // getNextEvent: async (req, res) => {
+  //   try {
+  //     const arrayEvents = await Events.findAll();
+  //     console.log(arrayEvents, "array events");
+  //     let arrayInOrder = arrayEvents.map((
+  //       event
+  //     ) => event.date.sort((a, b) => new Date(a).getTime() - new Date(b).getTime()))
+  //     return res.status(201).send(arrayInOrder);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // },
 };
 
 module.exports = eventsController;

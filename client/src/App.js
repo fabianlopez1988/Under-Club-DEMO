@@ -42,7 +42,7 @@ import EditViewIntroCulture from "./components/PanelAdmin/Options/OurClub/IntroC
 import EventsAdmin from "./components/PanelAdmin/Options/Events/EventsAdmin";
 import AddEvents from "./components/PanelAdmin/Options/Events/AddEvents/AddEvents";
 import EditEvents from "./components/PanelAdmin/Options/Events/EditEvents/EditEvents";
-import DeleteEvents from "./components/PanelAdmin/Options/Events/DeleteEvents/DeleteEvents";
+import DeleteEvent from "./components/PanelAdmin/Options/Events/DeleteEvent/DeleteEvent";
 import UpdateEvents from "./components/PanelAdmin/Options/Events/UpdateEvents/UpdateEvents";
 
 function App() {
@@ -55,6 +55,7 @@ function App() {
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
           <Route path="/culture" element={<Culture />} /> 
+          <Route path="/events" element={<Events />} />
 
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PanelAdmin/>} />
@@ -91,7 +92,7 @@ function App() {
           <Route path="/admin/events/addevents" element={<AddEvents />} />
           <Route path="/admin/events/updateevents" element={<UpdateEvents />} />
           <Route path="/admin/events/updateevents/:id" element={<EditEvents />} />
-          <Route path="/admin/events/deleteevents" element={<DeleteEvents />} />
+          <Route path="/admin/events/deleteevent" element={<DeleteEvent />} />
 
 
         </Routes>

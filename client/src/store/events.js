@@ -6,10 +6,10 @@ export const addEvent = createAsyncThunk("ADD_EVENT", (data) => {
 });
 
 export const updateEvent = createAsyncThunk("UPDATE_EVENT", (data, thunkAPI) => {
-  const {event} = thunkAPI.getState();
-  console.log(event, "EVENT");
+  const {events} = thunkAPI.getState();
+  console.log(events, "EVENT");
   console.log(data, "SOY DATA")
-  return axios.put(`/api/events/${event.id}`, data).then((update) => update.data);
+  return axios.put(`/api/events/${events.id}`, data).then((update) => update.data);
 });
 
 export const deleteEvent = createAsyncThunk("DELETE_EVENT", (id) => {
