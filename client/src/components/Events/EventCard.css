@@ -4,16 +4,66 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
+    padding-bottom: 5%;
+  }
 
 .flyers-grid img{
-    width: 200px;
-    height: 150px;
-    padding: 15px;
+    width: 600px;
+    padding: 5%;
+    border-radius: 8%;
 }
 
-  
-  .flyers-grid button {
+.flyers-grid img:hover {
+  opacity: 90%;
+}
+
+.event-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#tickets-button {
+  width: 100%;
+  border: none;
+  border: 3px solid blueviolet;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  margin-top: 30px;
+  color: black;
+  font-size: 20px;
+  border-radius: 4px;
+  transition: ease-out 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+#tickets-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  content: "";
+  background-color: blueviolet;
+  color: white;
+  opacity: 0;
+}
+
+#tickets-button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+
+/*   
+  .event-grid button {
+    width: 20%;
     border: none;
     border: 3px solid blueviolet;
     background: black;
@@ -27,7 +77,7 @@
     position: relative;
   }
   
-  .flyers-grid button:before {
+  .event-grid button:before {
     transition: 0.5s all ease;
     position: absolute;
     top: 0;
@@ -40,11 +90,11 @@
     opacity: 0;
   }
   
-  .flyers-grid button:hover:before {
+  .event-grid button:hover:before {
     transition: 0.5s all ease;
     left: 0;
     right: 0;
     opacity: 1;
     z-index: -1;
   }
-  
+   */
