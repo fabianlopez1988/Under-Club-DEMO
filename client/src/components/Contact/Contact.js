@@ -35,7 +35,7 @@ const Contact = () => {
           showConfirmButton: false,
           timer: 2500,
         })
-      )
+      );
     } else {
       errorAlert();
     }
