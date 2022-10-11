@@ -1,3 +1,9 @@
+.artists-container {
+  padding-top: 200px;
+  height: 100%;
+  width: 100%;
+}
+
 .titleResidents {
   margin-bottom: 5%;
 }
@@ -27,23 +33,6 @@
   filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px #8342ea);
 }
 
-.accordion-body {
-  /* font-family: LeagueSpartan-Regular;
-  font-size: 1.1rem;
-  padding-top: 2%;
-  padding-bottom: 10%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  align-items: flex-start;
-  text-align: justify; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 48rem;
-  margin-top: 5%;
-  background-color: red;
-}
-
 .artists-section {
   padding-left: 5%;
   padding-right: 5%;
@@ -52,19 +41,28 @@
   width: 100%;
 }
 
-.photo {
-  height: 550px;
-  width: 390px;
-}
-
-.photo:hover {
-  filter: opacity(0.95) drop-shadow(4px 4px 2px #8342ea);
-  transition: 0.6s;
+.container-artists-body {
+  /* 
+  padding-top: 2%;
+  padding-bottom: 10%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  text-align: justify; */
+  font-family: LeagueSpartan-Regular;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 48rem;
+  margin-top: 5%;
+  height: 50%;
+  font-size: 100%;
 }
 
 .accordion-left {
   display: grid;
-  grid-template-rows: 6% 3fr 2fr;
+  grid-template-rows: 6% 2fr 2fr;
  /*  border-style: solid;
   border-width: 30px;
   border-bottom: #8342ea;
@@ -73,20 +71,33 @@
   border-color: #8342ea; */
 }
 
-.accordion-right {
-  
+.container-artists {
+  display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .biography {
   margin-top: 5%;
-  font-size: 1.6rem;
+  font-size: 2.2em;
   line-height: 2.0rem;
+  font-family: LeagueSpartan-Regular;
+  width: 75%;
 }
 
-.container-artists {
-  background-color: green;
-  display: grid;
-  grid-template-columns: auto 1fr;
+a{
+  text-decoration: none;
+  color: #8342ea;
+}
+
+ul {
+  list-style: none;
+  float: right;
+  font-size: 1.4rem;
+  padding: 10%;;
+}
+
+.social-media {
+  border-left: 44px solid #8342ea;
 }
 
 /*Boton presskit*/
@@ -127,6 +138,36 @@
   width: 105%;
 }
 
+.accordion-right {
+  /* box-sizing: content-box; */
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.photo:hover {
+  filter: opacity(0.95) drop-shadow(4px 4px 2px #8342ea);
+  transition: 0.6s;
+}
+
+@media only screen and (min-width: 1220px) and (max-width: 1920px) {
+  .link{
+    width: 150%;
+    font-size: 190%;
+  }
+
+  .biography {
+    margin-top: 7%;
+    line-height: 150%;
+  }
+
+  ul {
+    font-size: 220%;
+  }
+}
 
 
 @media (max-width: 767.98px) {
@@ -239,16 +280,3 @@
   }
   
 }
-
-/* 
-#mostrar-bordes {
-  width: 200px;
-  height: 600px;
-  border-style: solid;
-  border-width: 30px;
-  border-color: #8345ea;
-  border-left: #8345ea;
-  position: absolute
-  /* border-top: #8345ea;
-  border-bottom: #8345ea;   
-} */

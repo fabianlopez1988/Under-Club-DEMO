@@ -32,6 +32,7 @@ const Artists = () => {
                       {res.name}
                     </Accordion.Header>
                     <Accordion.Body>
+                      <div className="container-artists-body">
                       <div className="accordion-left">
                         <div className="container-artists">
                           <a
@@ -78,6 +79,7 @@ const Artists = () => {
                       </div>
                       <div className="accordion-right">
                         <img src={res.photo} alt="foto" className="photo"></img>
+                      </div>
                       </div>
                     </Accordion.Body>
                   </Accordion.Item>
