@@ -1,5 +1,6 @@
 const Users = require("../models/Users");
 const passport = require("passport");
+const { sendMailToUnder } = require("../mail");
 
 const usersController = {
   //crea un user
@@ -79,6 +80,21 @@ const usersController = {
       return res.status(201).send(updateUser[1]);
     } catch (error) {
       console.log(error);
+    }
+  },
+
+  //recibe email 
+  sendMail: (req, res) => {
+    try {
+      const mail = {
+        person: req.body.mailPerson,
+        from: req.body.mailFrom,
+        body: req.body.mailBody,
+      };
+      sendMailToUnder(mail);
+      res.sendStatus(200);
+    } catch (err) {
+      res.status(500).send(err);
     }
   },
 };
