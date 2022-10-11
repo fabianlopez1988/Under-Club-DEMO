@@ -1,31 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Events.css";
-import axios from "axios";
 import EventCard from "./EventCard";
 import EventHeaderCard from "./EventHeaderCard";
+import { motion } from "framer-motion";
+
 
 const Events = () => {
-  // const [events, setEvents] = useState([]);
-
-  // const bigEvent = events.pop()
-  // console.log(events, "EVENTS");
-  
-  // useEffect(() => {
-  //   axios.get("/api/events").then((res) => setEvents(res.data, "RES.DATA"));
-  // }, []);
-  
   return (
-    <div className="events-container">
-      <section>
-        {/* <EventHeaderCard event={bigEvent}/> */}
+    <div className="events-container-component">
+      <motion.section
+      className="flyer-portada"
+         initial={{ y: "50%", opacity: 0, scale: 0.5 }}
+         animate={{y:0, opacity:1, scale:1}}
+         transition={{duration: 0.2, ease: "easeOut"}}>
         <EventHeaderCard />
-      </section>
-      {/* <section>
+      </motion.section>
+      <motion.section
+        initial={{ y: "50%", opacity: 0, scale: 0.5 }}
+        animate={{y:0, opacity:1, scale:1}}
+        transition={{duration: 0.2, ease: "easeOut"}}>
+      
         <EventCard />
-      </section> */}
-      {/* <section>{!events ? null : events.map((event) => 
-        <EventCard key={event.id} event={event} />
-      )}</section> */}
+      </motion.section>
     </div>
   );
 };

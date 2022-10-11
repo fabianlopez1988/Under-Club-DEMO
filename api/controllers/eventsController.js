@@ -1,4 +1,5 @@
 const Events = require("../models/Events");
+const { Op } = require("sequelize");
 
 const eventsController = {
   //crea un event
@@ -37,7 +38,14 @@ const eventsController = {
   //trae todos los events
   getAllEvents: async (req, res) => {
     try {
-      const getAllEvents = await Events.findAll();
+      const getAllEvents = await Events.findAll({
+        order: [["date", "ASC"]],
+        where: {
+          date: {
+            [Op.gte]: new Date(),
+          },
+        },
+      });
       return res.status(200).send(getAllEvents);
     } catch (error) {
       console.log(error);
@@ -54,15 +62,15 @@ const eventsController = {
       console.log(error);
     }
   },
-  //traer evento por fecha cercana
+  //traer eventos ordenados
   // getNextEvent: async (req, res) => {
   //   try {
   //     const arrayEvents = await Events.findAll();
-  //     console.log(arrayEvents, "array events");
-  //     let arrayInOrder = arrayEvents.map((
-  //       event
-  //     ) => event.date.sort((a, b) => new Date(a).getTime() - new Date(b).getTime()))
-  //     return res.status(201).send(arrayInOrder);
+  //     let dates = [];
+  //     arrayEvents.map((event) => dates.push(event.date))
+  //     console.log(dates)
+  //     let datesInOrder = dates.sort((a, b) => new Date(a).getTime() - new Date(b).getTime())
+  //     return res.status(201).send(datesInOrder);
   //   } catch (error) {
   //     console.log(error);
   //   }

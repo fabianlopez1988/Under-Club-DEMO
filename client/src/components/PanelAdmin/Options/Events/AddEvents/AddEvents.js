@@ -13,7 +13,9 @@ const AddEvents = () => {
 
   const date = useInput();
 
-  const [baseImage, setBaseImage] = useState("");
+  const [baseImageLarge, setBaseImageLarge] = useState("");
+
+  const [baseImageGrid, setBaseImageGrid] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -22,10 +24,16 @@ const AddEvents = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const uploadImage = (e) => {
+  const uploadImageLarge = (e) => {
     const file = e.target.files[0];
     const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
+    setBaseImageLarge(blob);
+  };
+
+  const uploadImageGrid = (e) => {
+    const file2 = e.target.files[0];
+    const blob2 = URL.createObjectURL(file2);
+    setBaseImageGrid(blob2);
   };
 
   const errorAlert = () => {
@@ -36,12 +44,12 @@ const AddEvents = () => {
     });
   };
 
-  const handleClick = (blob) => {
+  const handleClick = (blob, blob2) => {
     dispatch(
       addEvent({
-        flyer: blob ? blob : errorAlert(),
-        date: date.value.length === 0 ? errorAlert() : date.value, 
-        
+        flyerLarge: blob ? blob : errorAlert(),
+        flyerGrid: blob2 ? blob2 : errorAlert(),
+        date: date.value.length === 0 ? errorAlert() : date.value,
       })
     )
       .then(() =>
@@ -65,31 +73,43 @@ const AddEvents = () => {
         <Form onSubmit={handleSubmit}>
           <h1>Eventos</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Flyer</Form.Label>
+            <Form.Label>Flyer Portada</Form.Label>
             <br></br>
             <input
               type="file"
               onChange={(e) => {
-                uploadImage(e);
+                uploadImageLarge(e);
               }}
             ></input>
-            <img height={"200px"} src={baseImage} alt="" />
+            <img height={"200px"} src={baseImageLarge} alt="" />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Flyer Grilla (Cuadrado)</Form.Label>
+            <br></br>
+            <input
+              type="file"
+              onChange={(e) => {
+                uploadImageGrid(e);
+              }}
+            ></input>
+            <img height={"200px"} src={baseImageGrid} alt="" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Fecha del evento</Form.Label>
             <br></br>
-            <input type="date"
+            <input
+              type="date"
               placeholder="Ingrese la fecha del evento"
               {...date}
             ></input>
-          </Form.Group> 
-
+          </Form.Group>
 
           <button
             className="submit"
             type="submit"
-            onClick={() => handleClick(baseImage)}
+            onClick={() => handleClick(baseImageLarge, baseImageGrid)}
           >
             Guardar
           </button>

@@ -31,7 +31,7 @@ const DeleteEventCard = ({ event }) => {
 
   return (
     <div className="card-container">
-      <img src={event.flyer} alt={event.id} />
+      <img src={event.flyerGrid} alt={event.id} />
       <button onClick={() => handleDelete(event.id)}>Borrar</button>
     </div>
   );

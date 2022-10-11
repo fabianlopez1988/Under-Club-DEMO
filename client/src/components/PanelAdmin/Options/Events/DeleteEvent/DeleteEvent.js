@@ -25,7 +25,7 @@ const DeleteEvent = () => {
 
   return (
     <div className="delete-container">
-      <h1>Borrar Cultura</h1>
+      <h1>Borrar Evento</h1>
       <div className="grid">
         {events?.data.map((event) => (
           <DeleteEventCard key={event.id} event={event} />

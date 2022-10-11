@@ -19,7 +19,8 @@ const EditEvents = () => {
   const date = useInput();
   console.log(date, "SOY DATE");
 
-  const [baseImage, setBaseImage] = useState("");
+  const [baseImageLarge, setBaseImageLarge] = useState("");
+  const [baseImageGrid, setBaseImageGrid] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -34,18 +35,24 @@ const EditEvents = () => {
   }, []);
 
   const eventsRedux = useSelector((state) => state.events);
-  console.log(eventsRedux, "EVENTS REDUX");
 
-  const uploadImage = (e) => {
+  const uploadImageLarge = (e) => {
     const file = e.target.files[0];
     const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
+    setBaseImageLarge(blob);
   };
 
-  const handleClick = (blob) => {
+  const uploadImageGrid = (e) => {
+    const file2 = e.target.files[0];
+    const blob2 = URL.createObjectURL(file2);
+    setBaseImageGrid(blob2);
+  };
+
+  const handleClick = (blob, blob2) => {
     dispatch(
       updateEvent({
-        flyer: blob === "" ? eventsRedux.flyer : blob,
+        flyerLarge: blob === "" ? eventsRedux.flyerLarge : blob,
+        flyerGrid: blob2 === "" ? eventsRedux.flyerGrid : blob2,
         date: date.value === "" ? eventsRedux.date : date.value,
       })
     )
@@ -70,22 +77,40 @@ const EditEvents = () => {
       <Form onSubmit={handleSubmit}>
         <h1>Eventos</h1>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Flyer</Form.Label>
+          <Form.Label>Flyer Portada</Form.Label>
           <br></br>
           <input
             type="file"
             onChange={(e) => {
-              uploadImage(e);
+              uploadImageLarge(e);
             }}
           ></input>
-          {!baseImage ? (
+          {!baseImageLarge ? (
             <img
               height={"200px"}
-              src={eventsRedux.flyer}
+              src={eventsRedux.flyerLarge}
               alt={eventsRedux.id}
             />
           ) : null}
-          <img height={"200px"} src={baseImage} alt="" />
+          <img height={"200px"} src={baseImageLarge} alt="" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Flyer Grilla (Cuadrado)</Form.Label>
+          <br></br>
+          <input
+            type="file"
+            onChange={(e) => {
+              uploadImageGrid(e);
+            }}
+          ></input>
+          {!baseImageGrid ? (
+            <img
+              height={"200px"}
+              src={eventsRedux.flyerGrid}
+              alt={eventsRedux.id}
+            />
+          ) : null}
+          <img height={"200px"} src={baseImageGrid} alt="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>date</Form.Label>
@@ -94,7 +119,7 @@ const EditEvents = () => {
           {...date}></input>
         </Form.Group>
 
-        <button type="submit" onClick={() => handleClick(baseImage)}>
+        <button type="submit" onClick={() => handleClick(baseImageLarge, baseImageGrid)}>
           Guardar
         </button>
       </Form>

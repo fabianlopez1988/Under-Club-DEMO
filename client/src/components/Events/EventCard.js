@@ -1,36 +1,44 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import "./EventCard.css";
-import axios from "axios";
+import SpinnerComponent from "../SpinnerComponent/SpinnerComponent";
+import { getAllEvent } from "../../store/events";
 
 const EventCard = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-const [events, setEvents] = useState([]);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  if (isLoading) {
+    <SpinnerComponent />;
+  }
 
   useEffect(() => {
-    axios.get("/api/events").then((res) => setEvents(res.data, "RES.DATA"));
+    dispatch(getAllEvent()).then(() => setIsLoading(false));
   }, []);
-  
+
+  const events = useSelector((state) => state.events);
+
   return (
     <div className="flyers-grid">
-      {/* {
-        !events ? null : events.map((event) => (
-          <img src={event.flyer} alt="flyer"></img>
+      {events ? (
+        events.data.slice(1).map((event) => (
+          <div className="event-grid">
+            <img src={event.flyerGrid} alt="flyer" />
+            <a
+              href="https://tickets.underclub.com.ar/productora/eventos/13"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button id="tickets-button">Tickets</button>
+            </a>
+          </div>
         ))
-      } */}
-      {/* <section className="flyers-grid"> */}
-        {/* <img src={event.flyer} alt="flyer" />
-        <a
-          href="https://tickets.underclub.com.ar/productora/eventos/13"
-          target="_blank"
-        >
-          <button>Tickets</button>
-        </a> */}
-      {/* </section> */}
-      {/* <section className="flyer-grid">
-        <img src={event.flyer} alt="flyer" />
-
-        <button>Tickets</button>
-      </section> */}
+      ) : (
+        <h3>Flyer</h3>
+      )}
     </div>
   );
 };

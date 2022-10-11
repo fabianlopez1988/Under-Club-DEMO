@@ -19,7 +19,6 @@
 }
 
 .historyContainer {
-  padding-top: 8%;
   height: 100%;
   width: 100%;
   margin-top: 20%;
@@ -30,7 +29,7 @@
   padding-left: 18%;
   padding-right: 18%;
   padding-top: 8%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: LeagueSpartan-Regular;
   text-align: justify;
 }

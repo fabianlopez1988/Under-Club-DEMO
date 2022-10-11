@@ -7,12 +7,16 @@ Events.init(
   {
     date: {
       type: Sequelize.DATE,
-      //allowNull: false
+      allowNull: false
     },
-    flyer: {
+    flyerLarge: {
       type: Sequelize.STRING,
-      //allowNull: false
+      allowNull: false
     },
+    flyerGrid: {
+      type: Sequelize.STRING,
+      allowNull: false
+    }
   },
   { sequelize: db, modelName: "event" }
 );

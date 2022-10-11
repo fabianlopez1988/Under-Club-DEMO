@@ -31,7 +31,7 @@ const UpdateEvents = () => {
         {events?.data?.map((event) => (
               <div>
                 <Link to={`/admin/events/updateevents/${event.id}`}>
-                  <img src={event.flyer} alt={event.id} /> 
+                  <img src={event.flyerGrid} alt={event.id} /> 
                 </Link>
                 <div className="date">{event.date.split("T")[0]}</div>
               </div>
