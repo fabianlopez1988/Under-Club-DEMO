@@ -1,14 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import IntroCulture from "./IntroCulture/IntroCulture";
-import axios from "axios";
 import "./Culture.css";
+import { motion, useAnimation, useScroll } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Culture = () => {
-  // const [cultures, setCultures] = useState([]);
+  // const boxVariant = {
+  //   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  //   hidden: { opacity: 0, scale: 0 },
+  // };
+
+  // const control = useAnimation();
+  // const [ref, inView] = useInView();
 
   // useEffect(() => {
-  //   axios.get("/api/culture").then((res) => setCultures(res.data));
-  // }, []);
+  //   if (inView) {
+  //     control.start("visible");
+  //   } else {
+  //     control.start("hidden");
+  //   }
+  // }, [control, inView]);
 
   return (
     <div className="culture-container">
@@ -20,27 +31,52 @@ const Culture = () => {
         {
           <div>
             <div className="grid1">
-              <div className="box left">
+              <motion.div
+                className="box left"
+                // ref={ref}
+                // variants={boxVariant}
+                // initial="hidden"
+                // animate={control}
+              >
                 <h1>Permiso</h1>
                 <h1 className="violet">Perdón</h1>
                 <h1>Gracias</h1>
-                <p>Nuestro idioma debe estar presente en todo momento y en cada rincón de nuestro hogar. </p>
+                <p>
+                  Nuestro idioma debe estar presente en todo momento y en cada
+                  rincón de nuestro hogar.{" "}
+                </p>
                 {/* <h1>{cultures[0]?.title}</h1>
                 <p>{cultures[0]?.paragraph}</p> */}
-              </div>
-              <div className="container-lines">
+              </motion.div>
+              <motion.div
+                className="container-lines"
+                // ref={ref}
+                // variants={boxVariant}
+                // initial="hidden"
+                // animate={control}
+              >
                 <div className="first-line"></div>
                 <div className="first-line2"></div>
-              </div>
+              </motion.div>
 
-              <div className="box right">
+              <motion.div
+                className="box right"
+                // ref={ref}
+                // variants={boxVariant}
+                // initial="hidden"
+                // animate={control}
+              >
                 <h1>NO FOTOS</h1>
                 <h1 className="violet">NO</h1>
-                <h1>videos</h1>
-                <p>Cuidar el clima de conexión musical es parte de nuestra misión. Es por esta misma razón que no permitimos capturar momentos con aparatos tecnológicos. </p>
+                <h1>VIDEOS</h1>
+                <p>
+                  Cuidar el clima de conexión musical es parte de nuestra
+                  misión. Es por esta misma razón que no permitimos capturar
+                  momentos con aparatos tecnológicos.{" "}
+                </p>
                 {/* <h1>{cultures[2]?.title}</h1>
                 <p>{cultures[2]?.paragraph}</p> */}
-              </div>
+              </motion.div>
             </div>
 
             <div className="grid2">
@@ -48,22 +84,34 @@ const Culture = () => {
                 <h1>NO VIP</h1>
                 <h1>SOMOS TODOS</h1>
                 <h1 className="violet">iguales</h1>
-                <p>Es importante comprender que en nuestros encuentros somos todos iguales. No contamos con sectores exclusivos.</p>
+                <p>
+                  Es importante comprender que en nuestros encuentros somos
+                  todos iguales. No contamos con sectores exclusivos.
+                </p>
                 {/* <h1>{cultures[3]?.title}</h1>
                 <p>{cultures[3]?.paragraph}</p> */}
               </div>
               <div className="second-line"></div>
             </div>
 
-            <div className="grid3">
+            <motion.div className="grid3">
               <div className="third-line"></div>
               <div className="box center-right">
-                <h1><span className="violet">Green </span>club</h1>
-                <p>Somos conscientes del impacto que generamos en el medio ambiente. Hoy podemos decir que reciclamos la totalidad de los envases que utilizamos en cada uno de nuestros eventos (plástico, latas, y vidrios). Continuamos trabajando en alternativas que reduzcan el impacto ambiental y generen mayor conciencia acerca de la huella que dejamos.</p>
+                <h1>
+                  <span className="violet">Green </span>club
+                </h1>
+                <p>
+                  Somos conscientes del impacto que generamos en el medio
+                  ambiente. Hoy podemos decir que reciclamos la totalidad de los
+                  envases que utilizamos en cada uno de nuestros eventos
+                  (plástico, latas, y vidrios). Continuamos trabajando en
+                  alternativas que reduzcan el impacto ambiental y generen mayor
+                  conciencia acerca de la huella que dejamos.
+                </p>
                 {/* <h1>{cultures[1]?.title}</h1>
                 <p>{cultures[1]?.paragraph}</p> */}
               </div>
-            </div>
+            </motion.div>
           </div>
         }
       </section>
