@@ -1,4 +1,4 @@
-.w-100 { 
+/* .w-100 { 
     width: 80% !important;
 }
 
@@ -6,17 +6,28 @@
     margin-left: 10%;
 }
 
-.carousel-title {
-    font-size: 75px;
-    position: absolute;
-    top: 30%;
-    left: 60%;
-    text-align: left;
-    padding-right: 50%;
-}
 
 .carousel-container {
     position: relative;
     display: inline-block;
     text-align: center;
+} */
+
+.carousel-container {
+    height: 800px;
+    margin-top: 100px;
+    z-index: -1;
+}
+
+.carousel-title {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 75px;
+    padding-right: 10%;
+    padding-top: 10px;
+}
+
+
+#background {
+    background-image: url("../../assets/DemoSlider2.jpg");
 }
