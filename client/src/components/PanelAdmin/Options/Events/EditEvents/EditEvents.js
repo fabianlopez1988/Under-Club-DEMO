@@ -17,7 +17,6 @@ const EditEvents = () => {
   const navigate = useNavigate();
 
   const date = useInput();
-  console.log(date, "SOY DATE");
 
   const [baseImageLarge, setBaseImageLarge] = useState("");
   const [baseImageGrid, setBaseImageGrid] = useState("");
@@ -115,11 +114,13 @@ const EditEvents = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>date</Form.Label>
           <br></br>
-          <input type="date" placeholder={eventsRedux.date} 
-          {...date}></input>
+          <input type="date" placeholder={eventsRedux.date} {...date}></input>
         </Form.Group>
 
-        <button type="submit" onClick={() => handleClick(baseImageLarge, baseImageGrid)}>
+        <button
+          type="submit"
+          onClick={() => handleClick(baseImageLarge, baseImageGrid)}
+        >
           Guardar
         </button>
       </Form>

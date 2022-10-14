@@ -7,10 +7,10 @@ import CarouselHome from "../CarouselHome/CarouselHome";
 const Home = () => {
   return (
       <div>
-        {<Header />}
-        {<ShortHistory />}
-        {<CarouselHome />}
-        {<Footer />}
+        <Header />
+        <ShortHistory />
+        <CarouselHome />
+        <Footer />
       </div>
   );
 };

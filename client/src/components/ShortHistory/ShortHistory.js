@@ -1,8 +1,11 @@
 import React from "react";
 import "./ShortHistory.css";
+import Zoom from 'react-reveal/Zoom';
 
 const ShortHistory = () => {
   return (
+    <Zoom>
+
     <div className="historyContainer" id="history">
       <div className="titulo3Container">
         <h1 className="titulo3">UNDER CLUB</h1>
@@ -18,6 +21,7 @@ const ShortHistory = () => {
         <br></br>Joel Silva.
       </p>
     </div>
+    </Zoom>
   );
 };
 
