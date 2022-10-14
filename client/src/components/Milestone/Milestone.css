@@ -1,7 +1,5 @@
 .milestone-container {
   margin-top: 15%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .milestone-container p {
@@ -12,25 +10,29 @@
 .grid-milestone {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-
-/*estilo para imagen*/
-/* .milestone-container img {
-  width: 100%;
-  height: 100%;
-} */
 
 /*centra las imagenes*/
 .tresor-img {
   padding-left: 5%;
+  height: 20em;
 }
+
+.underground-img {
+  padding-left: 5%;
+  height: 20em;
+}
+
 .tierra-img {
   padding-right: 5%;
+  height: 15em;
 }
 /*tamaño modificado por su alto*/
 .bassiani-img {
-  height: 75%;
-  padding-right: 5%;
+   height: 60%; 
+  padding-right: 3%;
 }
 
 /*divide la grilla para la imagen en 50% y se da estilos para bassiani*/
@@ -38,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 22rem;
+  /* height: 22rem; */
 }
 
 /*divide la grilla para la imagen en 50% y se da estilos*/
@@ -113,25 +115,138 @@
   height: 300px;
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .parrafo-container {
-    font-size: 16px;
-  }
-  .tresor-img {
-    padding-left: 5%;
-    width: 50%;
-  }
+.banner-milestones{
+  background-color: rgba(131, 66, 234, 0.3);
+  text-align: left;
+  margin-bottom: 5%;
+}
+
+.banner-milestones-text {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: white;
+  padding: 5% !important;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
   .tierra-img {
-    padding-right: 5%;
-    width: 75%;
+    height: 60%;
   }
-  .bassiani-img {
-    height: 65%;
-    padding-right: 5%;
+
+.banner-milestones-text {
+  font-size: 40px;
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .milestone-container {
+    margin-top: 15%;
   }
 
   .milestone-container p {
-    padding: 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .grid-milestone {
+    grid-template-columns: 0.5fr 1fr;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .inversa{
+    grid-template-columns: 1fr 0.5fr;
+  }
+
+  .tresor-img {
+    height: 20em;
+  }
+
+  .underground-img {
+    padding-left: 5%;
+    height: 20em;
+  }
+
+  .tierra-img {
+    padding-right: 5%;
+    height: 10em;
+  }
+
+  .bassiani-img {
+     height: 55%; 
+  }
+
+  .parrafo-container {
+    font-size: 16px;
+  }
+
+  .grid-line {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+  }
+
+  .banner-milestones-text {
+    font-size: 30px;
+  }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .milestone-container {
+    margin-top: 25%;
+  }
+
+  .milestone-container p {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .grid-milestone {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+  }
+
+  .inversa {
+    flex-direction: column-reverse;
+  }
+
+  .img-milestone-container {
+    margin-top: 10%;
+    justify-content: flex-start;
+  }
+
+  .tierras {
+    justify-content: flex-end;
+  }
+
+  .parrafo-container {
+    font-size: 16px;
+    margin-top: 5%;
+  }
+  .tresor-img {
+    padding-left: 5%;
+    height: 20em;
+  }
+  .tierra-img {
+    height: 12em;
+  }
+  .bassiani-img {
+    height: 16em;
+    width: 11em;
+  }
+
+  .underground-img {
+    padding-left: 5%;
+    height: 18em;
+  }
+
+  .img-milestone-container-bassiani {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15rem;
+    padding-right: 6%;
   }
 
   .line {
@@ -144,22 +259,32 @@
 
   .line-one {
     border-width: 20px;
+    height: 200px;
   }
 
   .line-two {
     border-width: 20px;
+    height: 200px;
   }
 
   .line-three {
     border-width: 20px;
+    height: 200px;
+  }
+
+  .banner-milestones-text {
+    font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 340px) and (max-width: 480px) {
   .milestone-container {
     margin-top: 25%;
-    margin-left: 5%;
-    margin-right: 5%;
+  }
+
+  .milestone-container p {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .grid-milestone {
@@ -186,16 +311,21 @@
     margin-top: 5%;
   }
   .tresor-img {
-    padding-left: 0px;
-    width: 50%;
+    padding-left: 5%;
+    height: 15em;
   }
   .tierra-img {
-    padding-right: 0px;
-    width: 75%;
+    height: 9em;
+    padding-right: 5%;
   }
   .bassiani-img {
-    height: 75%;
-    padding-right: 0px;
+    height: 14em;
+    padding-right: 0%;
+  }
+
+  .underground-img {
+    padding-left: 5%;
+    height: 14em;
   }
 
   .img-milestone-container-bassiani {
@@ -206,9 +336,6 @@
     padding-right: 12%;
   }
 
-  .milestone-container p {
-    padding: 0px;
-  }
 
   .line {
     border-width: 20px;
@@ -231,14 +358,21 @@
   .line-three {
     border-width: 20px;
     height: 200px;
+  }
+
+  .banner-milestones-text {
+    font-size: 20px;
   }
 }
 
 @media only screen and (max-width: 340px) {
   .milestone-container {
     margin-top: 25%;
-    margin-left: 5%;
-    margin-right: 5%;
+  }
+
+  .milestone-container p {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .grid-milestone {
@@ -265,16 +399,21 @@
     margin-top: 5%;
   }
   .tresor-img {
-    padding-left: 0px;
-    width: 50%;
+    padding-left: 5%;
+    height: 15em;
   }
   .tierra-img {
-    padding-right: 0px;
-    width: 75%;
+    height: 9em;
+    padding-right: 5%;
   }
   .bassiani-img {
-    height: 75%;
-    padding-right: 0px;
+    height: 14em;
+    padding-right: 0%;
+  }
+
+  .underground-img {
+    padding-left: 5%;
+    height: 14em;
   }
 
   .img-milestone-container-bassiani {
@@ -283,10 +422,6 @@
     align-items: center;
     height: 15rem;
     padding-right: 12%;
-  }
-
-  .milestone-container p {
-    padding: 0px;
   }
 
   .line {
@@ -310,5 +445,9 @@
   .line-three {
     border-width: 20px;
     height: 200px;
+  }
+
+  .banner-milestones-text {
+    font-size: 15px;
   }
 }
