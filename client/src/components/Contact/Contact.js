@@ -47,7 +47,7 @@ const Contact = () => {
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7190273306924!2d-58.442355785261284!3d-34.585975380464106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f2ccacaeb1%3A0xf70477b3206c27e!2sUnder%20Club!5e0!3m2!1ses-419!2sar!4v1665092399767!5m2!1ses-419!2sar"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: "100%",filter: "grayscale(100%)" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

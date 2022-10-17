@@ -19,6 +19,13 @@ const Culture = () => {
       <section className="culture-section ">
         {
           <div>
+            <div className="footer-intro">
+              <div>AMOR</div>
+              <div id="line-footer-intro"></div>
+              <div>RESPETO</div>
+              <div id="line-footer-intro"></div>
+              <div>HUMILDAD</div>
+            </div>
             <div className="grid1">
               <Fade top>
                 <div className="box left">

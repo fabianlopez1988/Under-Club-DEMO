@@ -47,7 +47,7 @@ const ShortHistory = () => {
       </div>
 
     </Zoom>
-      <Rotate>
+      <Zoom>
 
       <p id="paragraph-container">
         “Entonces ahí te das cuenta que hay algo más, que no es solo un Club de
@@ -55,7 +55,7 @@ const ShortHistory = () => {
         personas”.
         <br></br>Joel Silva.
       </p>
-      </Rotate>
+      </Zoom>
     </>
   );
 };

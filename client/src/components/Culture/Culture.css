@@ -17,9 +17,9 @@
   color: rgba(131, 66, 234);
 }
 
-.culture-section {
+/* .culture-section {
   margin-top: 10%;
-}
+} */
 
 .culture-section div h1 {
   text-transform: uppercase;
@@ -129,6 +129,31 @@
   border-top: rgba(131, 66, 234, 0.7);
   margin-left: 50%;
   margin-top: -20%;
+}
+
+.footer-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  color: #8342ea;
+  font-size: 50px;
+  margin: 2% 5% 10% 2%;
+  column-gap: 2%;
+  align-items: center;
+}
+
+.footer-intro div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#line-footer-intro {
+  border: 20px #8342ea solid;
+  opacity: 0.3;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3%;
 }
 
 /* MEDIA QUERIES */
