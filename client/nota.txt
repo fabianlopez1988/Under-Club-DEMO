@@ -1,11 +1,24 @@
-MEDIA QUERIES
+/* MEDIA QUERIES */
 
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) { ... }
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+}
 
-// Medium devices (tablets, 768px and up)
-@media (max-width: 768px) { ... } */
 
-// DESKTOP
-@media (max-width: 992px) { }
+/* Tablet acostada */
+@media only screen and (min-width: 768.99px) and (max-width: 1023.99px) {
+}
 
+
+  /* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+}
