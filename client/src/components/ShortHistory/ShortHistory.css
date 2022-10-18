@@ -34,7 +34,7 @@
 #grid-line-col{
   border-left: 45px solid #8342ea;
   border-bottom: 45px solid #8342ea;
-  opacity: 0.7;
+  opacity: 0.4;
 }
 
 #paragraph-container {
@@ -45,138 +45,114 @@
   text-align: justify;
 }
 
-/* 
 
-/* .titulo3 {
-  font-size: 75px;
-  display: grid
-}
+/* MEDIA QUERIES */
 
-.titulo4 {
-  font-size: 75px;
-}
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
 
-.titulo3Container {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 8%;
-}
-
-.titulo4Container {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 8%;
-}
-
-.historyContainer {
-  height: 100%;
-  width: 100%;
-  margin-top: 20%;
-  margin-bottom: 20%;
-  display: grid;
-}
-
-.short-history-container p {
-  padding-left: 18%;
-  padding-right: 18%;
-  padding-top: 8%;
-  font-size: 2rem;
-  font-family: LeagueSpartan-Regular;
-  text-align: justify;
-}
-
-.title-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  column-gap: 3%;
-  grid-template-rows: 1fr 1fr;
+  .short-history-container h1 {
+    font-size: 75px;
+  }
+  
+  
+  #title2 {
+    padding-top: 11%;
+    margin-bottom: 0;
+  }
+  
+  
+  #grid-line-col{
+    border-left: 40px solid #8342ea;
+    border-bottom: 40px solid #8342ea;
+  }
 
 }
 
-.grid-line-short {
-  display:grid;
-  border-left: 45px solid #8342ea;
-  border-bottom: 45px solid #8342ea;
+/* Tablet acostada */
+@media only screen and (min-width: 768.99px) and (max-width: 1023.99px) {
+  .short-history-container h1 {
+    font-size: 40px;
+  }
+  
+  
+  
+  #grid-line-col{
+    border-left: 30px solid #8342ea;
+    border-bottom: 30px solid #8342ea;
+  }
+  
+  #paragraph-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.5rem;
+  }
 }
 
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
 
-DESKTOP
-@media (max-width: 991.98px) {
-  .titulo3 {
-      font-size: 40px;
-    }
-    
-    .titulo4 {
-      font-size: 40px;
-    }
-
-    .historyContainer p {
-      padding-left: 5%;
-      padding-right: 5%;
-      padding-top: 5%;
-      font-size: 100%;
-    }
-    .titulo3Container {
-      margin-left: 5%;
-    }
-    
-    .titulo4Container {
-      margin-right: 5%;
-    }
- 
+  .short-history-container h1 {
+    font-size: 30px;
+  }
+  
+  
+  
+  #grid-line-col{
+    border-left: 20px solid #8342ea;
+    border-bottom: 20px solid #8342ea;
+  }
+  
+  #paragraph-container {
+    font-size: 1.2rem;
+  }
+  
 }
 
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  
+  .short-history-container h1 {
+    font-size: 20px;
+  }
+  
+  
+  
+  #grid-line-col{
+    border-left: 15px solid #8342ea;
+    border-bottom: 15px solid #8342ea;
+  }
+  
+  #paragraph-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 16px;
+  }
+  .short-history-container {
+    padding-left: 10%;
+  }
 
-@media (max-width: 767.98px) {
-    .titulo3 {
-        font-size: 40px;
-      }
-      
-      .titulo4 {
-        font-size: 40px;
-      }
-
-      .historyContainer p {
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-top: 5%;
-        font-size: 0.8rem;
-      }
-      .titulo3Container {
-        margin-left: 5%;
-      }
-      
-      .titulo4Container {
-        margin-right: 5%;
-      }
-   
+  
 }
-      
 
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .short-history-container h1 {
+    font-size: 20px;
+  }
+  
+  #grid-line-col{
+    border-left: 15px solid #8342ea;
+    border-bottom: 15px solid #8342ea;
+  }
+  
+  #paragraph-container {
+    padding-left: 12%;
+    padding-right: 12%;
+    font-size: 16px;
+  }
+  .short-history-container {
+    padding-left: 12%;
+  }
 
-@media (max-width: 575.98px) {
-    .titulo3 {
-        font-size: 20px;
-      }
-      
-      .titulo4 {
-        font-size: 20px;
-      }
-      .historyContainer p {
-        padding-left: 4%;
-        padding-right: 4%;
-        padding-top: 3%;
-        margin-bottom: 1%;
-        font-size: 16px;
-      }
-      .titulo3Container {
-
-        margin-left: 4%;
-      }
-      
-      .titulo4Container {
-        margin-right: 4%;
-      }
-      
 }
-       */ 
