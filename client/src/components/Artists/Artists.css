@@ -83,7 +83,7 @@
   font-family: LeagueSpartan-Regular;
   width: 75%;
 }
-
+/* 
 a{
   text-decoration: none;
   color: #8342ea;
@@ -94,7 +94,7 @@ ul {
   float: right;
   font-size: 1.4rem;
   padding: 10%;;
-}
+} */
 
 .social-media {
   border-left: 44px solid #8342ea;
@@ -164,9 +164,9 @@ ul {
     line-height: 150%;
   }
 
-  ul {
+  /* ul {
     font-size: 220%;
-  }
+  } */
 }
 
 

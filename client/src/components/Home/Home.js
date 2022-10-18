@@ -9,7 +9,7 @@ const Home = () => {
       <div>
         <Header />
         <ShortHistory />
-        <CarouselHome />
+        {/* <CarouselHome /> */}
         <Footer />
       </div>
   );

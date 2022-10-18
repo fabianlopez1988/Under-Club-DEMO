@@ -1,68 +1,101 @@
-.navbar {
-  background-color: none !important;
-  color: white;
-  display: flex;
-}
-
-.style-navbar {
-  display: flex;
-  margin-left: 2%;
-  margin-right: 2%;
-  width: 100%;
-}
-/* 
-.navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-sm,
-.navbar > .container-md,
-.navbar > .container-lg,
-.navbar > .container-xl,
-.navbar > .container-xxl {
-  flex-direction: row;
-} */
-
-.navbar-collapse {
-  flex-grow: 0;
-}
-
-#button-streamings {
-  width: 40px;
-  height: 40px;
-}
-
-
-/* .logo-fixed {
+.navbar-container {
   position: fixed;
-} */
+  z-index: 2;
+  justify-content: center;
+  width: 100%;
+  font-size: 25px;
+}
 
-/* @media (max-width: 767.98px) {
-  .navbar > .container,
-  .navbar > .container-fluid,
-  .navbar > .container-sm,
-  .navbar > .container-md,
-  .navbar > .container-lg,
-  .navbar > .container-xl,
-  .navbar > .container-xxl {
-    flex-direction: initial;
-  }
-  .logo-fixed img {
-    width: 95%;
-    height: 95%;
-  }
-} */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 5%;
+  padding-right: 10%;
+}
 
-/* @media (max-width: 575.98px) {
-  .navbar > .container,
-  .navbar > .container-fluid,
-  .navbar > .container-sm,
-  .navbar > .container-md,
-  .navbar > .container-lg,
-  .navbar > .container-xl,
-  .navbar > .container-xxl {
-    flex-direction: initial;
+nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.ul-navbar {
+  list-style: none;
+}
+
+.ul-navbar li ul {
+  list-style: none;
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.ul-navbar li:hover > ul {
+  display: block;
+}
+
+.ul-navbar li a {
+  text-decoration: none;
+  color: white;
+}
+
+.ul-navbar li ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.ul-navbar li a:hover {
+  color: #8342ea;
+  transition: 0.3s;
+}
+
+.ul-navbar li ul li a:hover {
+  color: #8342ea;
+  transition: 0.3s;
+}
+
+#our-club-navbar:hover {
+  color: #8342ea;
+  transition: 0.3s;
+}
+
+.logo-fixed img {
+  height: 100px;
+}
+
+/* MEDIA QUERIES */
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .navbar-container {
+    font-size: 20px;
   }
+  
+  nav {
+    padding-top: 20px;
+  }
+
   .logo-fixed img {
-    width: 85%;
-    height: 85%;
+    height: 75px;
   }
-} */
+}
+
+
+/* Tablet acostada */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+
+  /* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+}

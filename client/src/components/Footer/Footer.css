@@ -12,7 +12,12 @@
 
 
 #links h1:hover {
-  color: #8342ea
+  color: #8342ea;
+  transition: .3s
+}
+
+#links a {
+  text-decoration: none;
 }
 
 #link-to-contact {
@@ -20,6 +25,7 @@
   justify-content: flex-end;
   padding-bottom: 18%;
 }
+
 
 #link-to-contact h1 {
   color: black;
@@ -30,6 +36,11 @@
   align-items: center;
   justify-content: center;
 }
+
+#link-to-contact a {
+  text-decoration: none;
+}
+
 
 
 /* MEDIA QUERIES */
