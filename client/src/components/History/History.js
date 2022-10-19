@@ -14,11 +14,15 @@ const History = () => {
           el rumbo de la escena techno local.
         </p>
       </div>
+
       <div className="img-left-one">
-        <img src={imagen} alt="imagen-2" />
+        <div className="img-left-two-container">
+          <img src={imagen} alt="imagen-2" />
+        </div>
         <div></div>
         <div className="right-line"></div>
       </div>
+
       <div className="text-container">
         <p className="text-history-center">
           El esprítu de unión, amor y libertad, se encontraba vagando por las
@@ -28,7 +32,9 @@ const History = () => {
       <div className="img-right-two">
         <div className="left-line"></div>
         <div></div>
-        <img src={imagen} alt="imagen-3" />
+        <div className="img-right-three-container">
+          <img src={imagen} alt="imagen-3" />
+        </div>
       </div>
       <div className="text-container">
         <p className="text-history-last">
@@ -39,22 +45,49 @@ const History = () => {
         </p>
       </div>
       <div className="img-left-two">
-        <img src={imagen} alt="imagen-3" />
-        <div></div>
+        <div className="img-left-three-container">
+          <img src={imagen} alt="imagen-3" />
+        </div>
+        <div className="line-ultima"></div>
         <div className="right-line"></div>
       </div>
-      <div className="gracias-container">
+
+      <div className="grid-colum-gracias-container">
+        <div className="grid-row-gracias">
+          <div className="grid-column-gracias">
+            <div>
+              <p className="gracias">GRACIAS</p>
+            </div>
+            <div>
+              <p>POR</p>
+            </div>
+            <div></div>
+          </div>
+          <div className="grid-column-apoyo">
+            <div></div>
+            <div>
+              <p>EL</p>
+            </div>
+            <div>
+              <p>APOYO</p>
+            </div>
+          </div>
+        </div>
+
+        <div></div>
+        <div></div>
+      </div>
+
+      {/* <div className="gracias-container">
         <p>
           <span className="gracias">GRACIAS&nbsp;</span>POR
         </p>
       </div>
       <div className="apoyo-container">
-        <p>
-          EL APOYO
-        </p>
-      </div>
+        <p>EL APOYO</p>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default History
+export default History;

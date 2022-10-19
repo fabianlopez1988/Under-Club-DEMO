@@ -27,6 +27,7 @@
   margin-top: -10%;
   z-index: -1;
 }
+  
 
 .img-right-two {
   display: grid;
@@ -41,7 +42,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: -9%;
   z-index: -1;
-  height: 525px;
+  height: 700px;
 }
 
 .text-container {
@@ -105,27 +106,140 @@
   margin-left: 70%;
 }
 
-.gracias-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: -2%;
-  margin-bottom: 5%;
+.grid-colum-gracias-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: -3%;
+  margin-left: 17%;
+}
+
+.grid-row-gracias {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   font-size: 60px;
-  line-height: 55%;
   font-family: LeagueSpartan-Bold;
+}
+
+.grid-column-gracias {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.2fr;
+  column-gap: 3%;
+}
+
+.grid-column-apoyo {
+  display: grid;
+  grid-template-columns: 1.1fr 0.2fr 1fr;
+  column-gap: 3%;
 }
 
 .gracias {
   color: #8342ea;
 }
 
-.apoyo-container {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 60px;
-  padding-right: 14%;
-  font-family: LeagueSpartan-Bold;
+.line-ultima {
+  border-bottom: 30px solid rgba(131, 66, 234, 0.3);
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 2000px) {
+  .img-left-one {
+    margin-top: -18%;
+    height: 700px;
+  }
+
+  .text-history-center {
+    margin-top: -16%;
+  }
+
+  .img-left-two-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-right-two {
+    margin-top: -18.5%;
+    height: 700px;
+  }
+
+  .text-history-last {
+    margin-top: -17%;
+  }
+
+  .img-right-three-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-left-two {
+    margin-top: -18%;
+    height: 800px;
+  }
+
+  .img-left-three-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -14%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1299px) {
+  .history-container {
+    margin-top: 15%;
+  }
+
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  .history-container img {
+    width: 450px;
+    height: 280px;
+  }
+
+  .text-history {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+    font-size: 18px;
+  }
+
+  .text-history-center {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+    font-size: 18px;
+  }
+
+  .text-history-last {
+    width: 450px;
+    height: 280px;
+    padding: 60px 40px 60px 40px;
+    font-size: 18px;
+  }
+
+  .img-right-two {
+    display: grid;
+    grid-template-columns: none;
+    margin-top: -10%;
+    z-index: -1;
+    width: 100%;
+    justify-items: end;
+  }
+
+  .line-ultima {
+    border-bottom: none;
+  }
+
+  .grid-colum-gracias-container {
+    margin-top: -20%;
+    margin-left: 25%;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -150,18 +264,21 @@
     width: 450px;
     height: 280px;
     padding: 60px 40px 60px 40px;
+    font-size: 18px;
   }
 
   .text-history-center {
     width: 450px;
     height: 280px;
     padding: 60px 40px 60px 40px;
+    font-size: 18px;
   }
 
   .text-history-last {
     width: 450px;
     height: 280px;
     padding: 60px 40px 60px 40px;
+    font-size: 18px;
   }
 
   .img-right-two {
@@ -173,18 +290,12 @@
     justify-items: end;
   }
 
-  .gracias-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -22%;
-    margin-bottom: 5%;
-    font-size: 40px;
-    line-height: 1%;
+  .line-ultima {
+    border-bottom: none;
   }
 
-  .apoyo-container {
-    font-size: 40px;
+  .grid-colum-gracias-container {
+    margin-top: -20%;
   }
 }
 
@@ -247,47 +358,65 @@
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
   .text-history-center {
     width: 450px;
     height: 140px;
-    padding: 40px 60px 40px 60px; 
+    padding: 40px 60px 40px 60px;
     background-color: transparent;
     border-style: solid;
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
   .text-history-last {
     width: 450px;
     height: 220px;
-    padding: 40px 60px 40px 60px; 
+    padding: 40px 60px 40px 60px;
     background-color: transparent;
     border-style: solid;
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
-  .gracias-container {
-    margin-top: -50%;
-    font-size: 40px;
-    line-height: none;
+  .grid-colum-gracias-container {
+    margin-left: 25%;
   }
 
-  .apoyo-container {
-    font-size: 40px;
+  .grid-row-gracias {
+    display: flex;
+    grid-template-rows: none;
+    font-size: 30px;
+    font-family: LeagueSpartan-Bold;
+    flex-direction: column;
+  }
+
+  .line-ultima {
+    border-bottom: none;
+  }
+
+  .img-left-three-container {
+    margin-top: 0%;
+  }
+
+  .img-left-two {
+    margin-top: 0%;
+    height: 240px;
   }
 }
 
@@ -305,7 +434,7 @@
   }
 
   .history-container img {
-    width: 350px;
+    width: 269.66px;
     height: 180px;
   }
 
@@ -350,9 +479,10 @@
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
   .text-history-center {
@@ -364,33 +494,50 @@
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
   .text-history-last {
     width: 450px;
     height: 220px;
-    padding: 0px 20px 0px 20px; 
+    padding: 0px 20px 0px 20px;
     background-color: transparent;
     border-style: solid;
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
-  .gracias-container {
-    margin-top: -80%;
-    font-size: 40px;
-    line-height: none;
+  .grid-colum-gracias-container {
+    margin-left: 25%;
   }
 
-  .apoyo-container {
-    font-size: 40px;
+  .grid-row-gracias {
+    display: flex;
+    grid-template-rows: none;
+    font-size: 25px;
+    font-family: LeagueSpartan-Bold;
+    flex-direction: column;
+  }
+
+  .line-ultima {
+    border-bottom: none;
+  }
+
+  .img-left-three-container {
+    margin-top: 0%;
+  }
+
+  .img-left-two {
+    margin-top: 0%;
+    height: 240px;
   }
 }
 
@@ -408,7 +555,7 @@
   }
 
   .history-container img {
-    width: 350px;
+    width: 269.66px;
     height: 180px;
   }
 
@@ -453,9 +600,10 @@
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
   .text-history-center {
@@ -467,9 +615,10 @@
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
   .text-history-last {
@@ -481,21 +630,30 @@
     border-width: 5px;
     border-color: rgba(131, 66, 234, 0.3);
     border-right: rgba(131, 66, 234, 0.3);
-    border-left: rgba(131, 66, 234,0.3);
+    border-left: rgba(131, 66, 234, 0.3);
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 16px;
   }
 
-  .gracias-container {
-    margin-top: -100%;
-    font-size: 30px;
-    line-height: none;
+  .grid-row-gracias {
+    display: flex;
+    grid-template-rows: none;
+    font-size: 25px;
+    font-family: LeagueSpartan-Bold;
+    flex-direction: column;
   }
 
-  .apoyo-container {
-    font-size: 30px;
+  .line-ultima {
+    border-bottom: none;
   }
 
+  .img-left-three-container {
+    margin-top: 0%;
+  }
+
+  .img-left-two {
+    margin-top: 0%;
+    height: 240px;
+  }
 }
-
-
