@@ -52,6 +52,13 @@ import UpdateEvents from "./components/PanelAdmin/Options/Events/UpdateEvents/Up
 import Milestone from "./components/Milestone/Milestone";
 import Contact from "./components/Contact/Contact";
 
+import PodcastAdmin from "./components/PanelAdmin/Options/OurClub/Podcast/PodcastAdmin";
+import AddPodcast from "./components/PanelAdmin/Options/OurClub/Podcast/AddPodcast/AddPodcast";
+import DeletePodcast from "./components/PanelAdmin/Options/OurClub/Podcast/DeletePodcast/DeletePodcast";
+import UpdatePodcast from "./components/PanelAdmin/Options/OurClub/Podcast/UpdatePodcast/UpdatePodcast";
+import EditViewPodcast from "./components/PanelAdmin/Options/OurClub/Podcast/EditViewPodcast/EditViewPodcast";
+
+
 function App() {
   return (
     <div className="App">
@@ -79,6 +86,7 @@ function App() {
           <Route path="/admin/ourclub/culture" element={<CultureAdmin/>} />
           <Route path="/admin/ourclub/history" element={<HistoryAdmin />} />
           <Route path="/admin/ourclub/introculture" element={<IntroCultureAdmin/>} />
+          <Route path="/admin/ourclub/podcast" element={<PodcastAdmin/>} />
 
           <Route path="/admin/ourclub/history/addhistory" element={<AddHistory />} />
           <Route path="/admin/ourclub/history/updatehistory" element={<UpdateHistory />} />
@@ -107,6 +115,11 @@ function App() {
           <Route path="/admin/events/updateevents" element={<UpdateEvents />} />
           <Route path="/admin/events/updateevents/:id" element={<EditEvents />} />
           <Route path="/admin/events/deleteevent" element={<DeleteEvent />} />
+
+          <Route path="/admin/ourclub/podcast/addpodcast" element={<AddPodcast />} />
+          <Route path="/admin/ourclub/podcast/updatepodcast" element={<UpdatePodcast />} />
+          <Route path="/admin/ourclub/podcast/updatepodcast/:id" element={<EditViewPodcast />} />
+          <Route path="/admin/ourclub/podcast/deletepodcast" element={<DeletePodcast />} />
 
 
         </Routes>

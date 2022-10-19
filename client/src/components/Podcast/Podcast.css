@@ -1,0 +1,32 @@
+.intro-podcast {
+    height: 720px;
+    width: 100%;
+    padding: 5% 5% 2% 5%;
+    display: grid;
+    grid-template-rows: 0.25fr 1fr;
+}
+
+.intro-podcast-title-paragraph_container {
+    display: grid;
+    grid-template-columns: 0.15fr 0.25fr 1fr;
+}
+
+.intro-podcast_title {
+    font-size: 75px;
+}
+
+.intro-podcast-paragraph_container{
+    display: flex;
+    align-items: flex-end;
+}
+
+.intro-podcast_paragraph {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+
+.intro-podcast_line {
+    opacity: 0.4;
+    border-left: 45px solid #8342ea;
+    border-bottom: 45px solid #8342ea;
+}
