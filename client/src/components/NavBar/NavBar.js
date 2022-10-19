@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BsMusicPlayerFill } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { userLogout } from "../../store/user";
@@ -71,20 +72,36 @@ const NavBar = () => {
                 alt="logo"
               />
             </Link>
+            {/* <button className="nav-toggle">
+              <GiHamburgerMenu />
+            </button> */}
           </div>
-          <ul className="ul-navbar">
-            <li id="our-club-navbar">Nuestro Club
+          <ul className="ul-navbar nav-menu_visible">
+            <li id="our-club-navbar">
+              Nuestro Club
               <ul>
-              <li><a href="/history">Historia</a></li>
-              <li><a href="/culture">Cultura</a></li>
-              <li><a href="/milestones">Hitos</a></li>
-              <li><a href="/artists">Residentes</a></li>
+                <li>
+                  <a href="/history">Historia</a>
+                </li>
+                <li>
+                  <a href="/culture">Cultura</a>
+                </li>
+                <li>
+                  <a href="/milestones">Hitos</a>
+                </li>
+                <li>
+                  <a href="/artists">Residentes</a>
+                </li>
               </ul>
             </li>
 
-            <li><a href="/events">Eventos</a></li>
+            <li>
+              <a href="/events">Eventos</a>
+            </li>
 
-            <li><a href="/contact">Contacto</a></li>
+            <li>
+              <a href="/contact">Contacto</a>
+            </li>
           </ul>
         </nav>
       </div>

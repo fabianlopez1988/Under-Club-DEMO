@@ -22,6 +22,8 @@ nav ul li {
 
 .ul-navbar {
   list-style: none;
+  left: 100%;
+  transition: left 0.3s;
 }
 
 .ul-navbar li ul {
@@ -55,6 +57,10 @@ nav ul li {
   transition: 0.3s;
 }
 
+#our-club-navbar {
+  cursor: pointer;
+}
+
 #our-club-navbar:hover {
   color: #8342ea;
   transition: 0.3s;
@@ -62,6 +68,16 @@ nav ul li {
 
 .logo-fixed img {
   height: 100px;
+}
+
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  display: none;
 }
 
 /* MEDIA QUERIES */
@@ -84,18 +100,89 @@ nav ul li {
 
 /* Tablet acostada */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-container {
+    font-size: 20px;
+  }
+  
+  nav {
+    padding-top: 20px;
+  }
+
+  .logo-fixed img {
+    height: 60px;
+  }
 }
 
 
   /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+  
+  nav {
+    padding-top: 20px;
+    padding-right: 2%;
+  }
+
+  .logo-fixed img {
+    height: 50px;
+  }
+  nav ul li {
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav-toggle {
+    
+  }
+
 }
 
 /* Celu acostado */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
+  .navbar-container {
+    font-size: 16px;
+  }
+  
+  nav {
+    padding-top: 15px;
+  }
+
+  .logo-fixed img {
+    height: 40px;
+  }
+
+  .ul-navbar {
+  padding-left: 10px;
+  padding-right: 5px;
+  }
+  
+  nav ul li {
+    padding: 10px 0px 10px 10px;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu_visible {
+    left: 0;
+  }
 }
 
 
 /* Celu */
 @media only screen and (max-width: 320px) {
+  .navbar-container {
+    font-size: 16px;
+  }
+  
+  nav {
+    padding-top: 15px;
+  }
+
+  .logo-fixed img {
+    height: 40px;
+  }
+  .nav-toggle {
+    display: block
+  }
 }
