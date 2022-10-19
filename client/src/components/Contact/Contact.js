@@ -4,6 +4,7 @@ import useInput from "../../utils/useInput";
 import { useDispatch } from "react-redux";
 import { sendMailToUnder } from "../../store/user";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom"
 
 const Contact = () => {
   const name = useInput();
@@ -11,6 +12,8 @@ const Contact = () => {
   const comment = useInput();
 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const errorAlert = () => {
     Swal.fire({
@@ -20,6 +23,7 @@ const Contact = () => {
     });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const mail = {
@@ -28,14 +32,15 @@ const Contact = () => {
       mailBody: comment.value,
     };
     if (name.value.length && email.value.length && comment.value.length) {
-      dispatch(sendMailToUnder(mail)).then(() =>
-        Swal.fire({
-          icon: "success",
-          title: "Enviado",
-          showConfirmButton: false,
-          timer: 2500,
-        })
-      );
+      dispatch(sendMailToUnder(mail))
+        .then(() =>
+          Swal.fire({
+            icon: "success",
+            title: "Enviado",
+            showConfirmButton: false,
+            timer: 2500,
+          })
+        ).then(() => navigate("/"))
     } else {
       errorAlert();
     }
@@ -108,6 +113,7 @@ const Contact = () => {
       </div>
       <div className="grid-bottom">
         <div className="grid-line-bottom"></div>
+        
         <div className="form-contact-container">
           <div></div>
           <div className="grid-contact-right">

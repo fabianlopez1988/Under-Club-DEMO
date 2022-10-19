@@ -6,12 +6,20 @@
   padding: 40px 50px 40px 50px;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: rgba(131, 66, 234, 0.3);
+  transform-origin: 0%;
+}
+
 /*grillas para imagen y parrafo*/
 .grid-milestone {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 /*centra las imagenes*/
@@ -31,7 +39,7 @@
 }
 /*tamaño modificado por su alto*/
 .bassiani-img {
-   height: 60%; 
+  height: 55%;
   padding-right: 3%;
 }
 
@@ -52,12 +60,24 @@
 
 /*divide la grilla para la imagen en 50% y se da estilos*/
 .parrafo-container {
-  font-size: 18px;
+  font-size: 24px;
   font-family: LeagueSpartan-Regular;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 70%;
+}
+
+.parrafo-container-left-milestone {
+  font-size: 24px;
+  font-family: LeagueSpartan-Regular;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-left: 25%;
 }
 
 /*grilla para las lineas*/
@@ -69,56 +89,71 @@
 /*linea vertical para unir imagenes 1 y 3*/
 .line {
   border-style: solid;
-  border-width: 30px;
-  border-color: #8343ea;
-  border-right: #8343ea;
-  border-bottom: #8343ea;
-  border-top: #8343ea;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
   height: 100px;
+  margin-top: -7%;
 }
+
 /*linea vertical para unir imagenes 2*/
 .line-center {
   border-style: solid;
-  border-width: 30px;
-  border-color: #8343ea;
-  border-left: #8343ea;
-  border-bottom: #8343ea;
-  border-top: #8343ea;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
   height: 100px;
+  margin-top: -8%;
 }
 
 /*primera linea*/
 .line-one {
   border-style: solid;
-  border-width: 30px;
-  border-color: #8343ea;
-  border-left: #8343ea;
-  border-bottom: #8343ea;
-  height: 300px;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  height: 350px;
+  margin-bottom: -10%;
 }
 /*segunda linea*/
 .line-two {
   border-style: solid;
-  border-width: 30px;
-  border-color: #8343ea;
-  border-right: #8343ea;
-  height: 300px;
-  border-bottom: #8343ea;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  height: 370px;
+  margin-bottom: -12%;
+  border-bottom: rgba(131, 66, 234, 0.4);
+}
+
+.line-under {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
+  height: 220px;
+  margin-top: -13%;
 }
 /*tercera linea*/
 .line-three {
   border-style: solid;
-  border-width: 30px;
-  border-color: #8343ea;
-  border-left: #8343ea;
-  border-bottom: #8343ea;
-  height: 300px;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  height: 100px;
 }
 
-.banner-milestones{
+.banner-milestones {
   background-color: rgba(131, 66, 234, 0.3);
-  text-align: left;
-  margin-bottom: 5%;
+  /* text-align: left; */
 }
 
 .banner-milestones-text {
@@ -126,16 +161,40 @@
   font-size: 50px;
   color: white;
   padding: 5% !important;
+  margin-bottom: 0rem;
+}
+
+.line-center-gracias {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+  border-top: rgba(131, 66, 234, 0.4);
+  height: 55px;
+}
+
+.line-four-small {
+  border-style: solid;
+  border-width: 45px;
+  border-color: rgba(131, 66, 234, 0.4);
+  border-right: rgba(131, 66, 234, 0.4);
+  border-left: rgba(131, 66, 234, 0.4);
+  border-bottom: rgba(131, 66, 234, 0.4);
+}
+
+.text-gracias-milestone{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -1%;
+  margin-right: 5%;
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #8542ea;
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-  .tierra-img {
-    height: 60%;
-  }
 
-.banner-milestones-text {
-  font-size: 40px;
-}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -154,7 +213,7 @@
     margin-bottom: 2%;
   }
 
-  .inversa{
+  .inversa {
     grid-template-columns: 1fr 0.5fr;
   }
 
@@ -173,7 +232,7 @@
   }
 
   .bassiani-img {
-     height: 55%; 
+    height: 55%;
   }
 
   .parrafo-container {
@@ -186,9 +245,8 @@
   }
 
   .banner-milestones-text {
-    font-size: 30px;
+    font-size: 25px;
   }
-
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
@@ -336,7 +394,6 @@
     padding-right: 12%;
   }
 
-
   .line {
     border-width: 20px;
   }
@@ -361,7 +418,7 @@
   }
 
   .banner-milestones-text {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -448,6 +505,6 @@
   }
 
   .banner-milestones-text {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
