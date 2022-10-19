@@ -31,6 +31,7 @@
 
 .line-division {
   border-left: 30px solid #8342ea;
+  opacity: 0.4;
 }
 
 .grid-right-top {
@@ -52,6 +53,7 @@
 .grid-line-bottom {
   border-left: 30px solid #8342ea;
   border-bottom: 30px solid #8342ea;
+  opacity: 0.4;
 }
 
 .form-contact-container {
