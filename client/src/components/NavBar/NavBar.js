@@ -81,26 +81,38 @@ const NavBar = () => {
               Nuestro Club
               <ul>
                 <li>
-                  <a href="/history">Historia</a>
+                  <Link to="/history">
+                    <a>Historia</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/culture">Cultura</a>
+                  <Link to="/culture">
+                    <a>Cultura</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/milestones">Hitos</a>
+                  <Link to="/milestones">
+                    <a>Hitos</a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/artists">Residentes</a>
+                  <Link to="/artists">
+                    <a>Residentes</a>
+                  </Link>
                 </li>
               </ul>
             </li>
 
             <li>
-              <a href="/events">Eventos</a>
+              <Link to="/events">
+                <a>Eventos</a>
+              </Link>
             </li>
 
             <li>
-              <a href="/contact">Contacto</a>
+              <Link to="/contact">
+                <a>Contacto</a>
+              </Link>
             </li>
           </ul>
         </nav>
