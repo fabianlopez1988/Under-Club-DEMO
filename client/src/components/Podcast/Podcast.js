@@ -66,7 +66,7 @@ const Podcast = () => {
                   <div>
                     <p>{podcast.intro}</p>
                   </div>
-                  <div>
+                  <div className="podcast-container_button">
                     <a href={podcast.url} target="_blank" rel="noreferrer">
                       <button
                         className="podcast-container_intro_button"
