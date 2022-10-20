@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import foto from "../../assets/UCfooter.jpg";
 import "./Footer.css";
 import {
@@ -54,12 +55,11 @@ const Footer = () => {
         </div>
         <div></div>
         <div id="link-to-contact">
-          <a
-            href="/contact"
-            rel="noreferrer"
-          >
-            <h1>ESCRIBINOS</h1>
-          </a>
+          <Link to="/contact">
+            <a>
+              <h1>ESCRIBINOS</h1>
+            </a>
+          </Link>
         </div>
 
         <div>

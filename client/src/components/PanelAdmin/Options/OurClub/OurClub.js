@@ -35,6 +35,10 @@ const OurClub = () => {
           <button>Residentes</button>
         </Link>
 
+        <Link className="links-options" to="/admin/ourclub/podcast">
+          <button>Podcast</button>
+        </Link>
+
         <Link className="links-options" to="/admin">
           <button style={{ marginTop: "15%" }}>Volver Atrás</button>
         </Link>
