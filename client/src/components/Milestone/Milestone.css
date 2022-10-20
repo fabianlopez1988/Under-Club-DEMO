@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   height: 10px;
-  background: rgba(131, 66, 234, 0.3);
+  background: #8542ea;
   transform-origin: 0%;
 }
 
@@ -95,7 +95,7 @@
   border-bottom: rgba(131, 66, 234, 0.4);
   border-top: rgba(131, 66, 234, 0.4);
   height: 100px;
-  margin-top: -7%;
+  margin-top: -4%;
 }
 
 /*linea vertical para unir imagenes 2*/
@@ -183,7 +183,7 @@
   border-bottom: rgba(131, 66, 234, 0.4);
 }
 
-.text-gracias-milestone{
+.text-gracias-milestone {
   display: flex;
   justify-content: flex-end;
   margin-top: -1%;
@@ -193,50 +193,69 @@
   color: #8542ea;
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  .bassiani-img {
+    height: 20em;
+    padding-right: 3%;
+  }
 
+  .parrafo-container {
+    font-size: 20px;
+    width: 100%;
+  }
+  
+
+  .line-two {
+    margin-bottom: -8%;
+  }
+
+  .line-under {
+    margin-top: -8%;
+  }
+  .banner-milestones {
+    width: 100%;
+  }
+
+  .parrafo-container-left-milestone {
+    font-size: 20px;
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .banner-milestones-text {
+    font-size: 30px;
+  }
+
+  .text-gracias-milestone {
+    margin-top: 2%;
+    margin-right: 5%;
+    font-size: 30px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .milestone-container {
-    margin-top: 15%;
-  }
-
-  .milestone-container p {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
   .grid-milestone {
+    display: grid;
     grid-template-columns: 0.5fr 1fr;
-    margin-top: 2%;
-    margin-bottom: 2%;
-  }
-
-  .inversa {
-    grid-template-columns: 1fr 0.5fr;
-  }
-
-  .tresor-img {
-    height: 20em;
   }
 
   .underground-img {
     padding-left: 5%;
-    height: 20em;
-  }
-
-  .tierra-img {
-    padding-right: 5%;
-    height: 10em;
+    height: 17em;
   }
 
   .bassiani-img {
-    height: 55%;
+    height: 18em;
+    padding-right: 3%;
   }
 
-  .parrafo-container {
-    font-size: 16px;
+  .tierra-img {
+    padding-right: 8%;
+    height: 8em;
+  }
+
+  .inversa {
+    grid-template-columns: 1fr 0.5fr;
   }
 
   .grid-line {
@@ -244,267 +263,413 @@
     grid-template-columns: 0.5fr 2fr 0.5fr;
   }
 
+  .line {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 80px;
+    margin-top: -2%;
+  }
+
+  .line-center {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 80px;
+    margin-top: -8%;
+  }
+
+  .line-one {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    height: 330px;
+    margin-bottom: -10%;
+  }
+
+  .line-two {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    height: 350px;
+    margin-bottom: -10%;
+    border-bottom: rgba(131, 66, 234, 0.4);
+  }
+
+  .line-under {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 200px;
+    margin-top: -10%;
+  }
+
+  .line-three {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    height: 80px;
+  }
+
+  .parrafo-container {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .banner-milestones {
+    width: 100%;
+  }
+
+  .parrafo-container-left-milestone {
+    font-size: 18px;
+    width: 100%;
+    margin-left: 5%;
+  }
+
   .banner-milestones-text {
     font-size: 25px;
+  }
+
+  .text-gracias-milestone {
+    margin-top: 2%;
+    margin-right: 5%;
+    font-size: 25px;
+  }
+
+  .line-center-gracias {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
+    border-top: rgba(131, 66, 234, 0.4);
+    height: 55px;
+  }
+
+  .line-four-small {
+    border-style: solid;
+    border-width: 30px;
+    border-color: rgba(131, 66, 234, 0.4);
+    border-right: rgba(131, 66, 234, 0.4);
+    border-left: rgba(131, 66, 234, 0.4);
+    border-bottom: rgba(131, 66, 234, 0.4);
   }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  .milestone-container {
-    margin-top: 25%;
-  }
-
-  .milestone-container p {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-
   .grid-milestone {
     display: flex;
     grid-template-columns: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .inversa {
-    flex-direction: column-reverse;
-  }
-
-  .img-milestone-container {
-    margin-top: 10%;
-    justify-content: flex-start;
-  }
-
-  .tierras {
-    justify-content: flex-end;
-  }
-
-  .parrafo-container {
-    font-size: 16px;
-    margin-top: 5%;
-  }
   .tresor-img {
-    padding-left: 5%;
-    height: 20em;
-  }
-  .tierra-img {
-    height: 12em;
-  }
-  .bassiani-img {
-    height: 16em;
-    width: 11em;
+    padding-left: 0%;
   }
 
   .underground-img {
-    padding-left: 5%;
-    height: 18em;
+    padding-left: 0%;
+    height: 17em;
   }
 
-  .img-milestone-container-bassiani {
+  .bassiani-img {
+    height: 18em;
+    padding-right: 0%;
+  }
+
+  .tierra-img {
+    padding-right: 0%;
+    height: 10em;
+  }
+
+  .inversa {
+    grid-template-columns: none;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
-    height: 15rem;
-    padding-right: 6%;
+  }
+
+  .grid-line {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    height: 40px;
   }
 
   .line {
-    border-width: 20px;
+    border-style: none;
   }
 
   .line-center {
-    border-width: 20px;
+    border-style: none;
   }
 
   .line-one {
-    border-width: 20px;
-    height: 200px;
+    border-style: none;
   }
 
   .line-two {
-    border-width: 20px;
-    height: 200px;
+    border-style: none;
+  }
+
+  .line-under {
+    border-style: none;
   }
 
   .line-three {
-    border-width: 20px;
-    height: 200px;
+    border-style: none;
+  }
+
+  .parrafo-container {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .banner-milestones {
+    width: 100%;
+  }
+
+  .parrafo-container-left-milestone {
+    font-size: 18px;
+    width: 100%;
+    margin-left: 5%;
   }
 
   .banner-milestones-text {
-    font-size: 20px;
+    font-size: 25px;
+  }
+
+  .text-gracias-milestone {
+    margin-right: -100%;
+  }
+
+  .line-center-gracias {
+    border-style: none;
+  }
+
+  .line-four-small {
+    border-style: none;
   }
 }
 
 @media only screen and (min-width: 340px) and (max-width: 480px) {
   .milestone-container {
-    margin-top: 25%;
-  }
-
-  .milestone-container p {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 25%;
   }
 
   .grid-milestone {
     display: flex;
     grid-template-columns: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tresor-img {
+    padding-left: 0%;
+  }
+
+  .underground-img {
+    padding-left: 0%;
+    height: 17em;
+  }
+
+  .bassiani-img {
+    height: 18em;
+    padding-right: 0%;
+  }
+
+  .tierra-img {
+    padding-right: 0%;
+    height: 10em;
   }
 
   .inversa {
+    grid-template-columns: none;
+    display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 
-  .img-milestone-container {
-    margin-top: 10%;
-    justify-content: flex-start;
+  .grid-line {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    height: 40px;
   }
 
-  .tierras {
-    justify-content: flex-end;
+  .line {
+    border-style: none;
+  }
+
+  .line-center {
+    border-style: none;
+  }
+
+  .line-one {
+    border-style: none;
+  }
+
+  .line-two {
+    border-style: none;
+  }
+
+  .line-under {
+    border-style: none;
+  }
+
+  .line-three {
+    border-style: none;
   }
 
   .parrafo-container {
     font-size: 16px;
-    margin-top: 5%;
-  }
-  .tresor-img {
-    padding-left: 5%;
-    height: 15em;
-  }
-  .tierra-img {
-    height: 9em;
-    padding-right: 5%;
-  }
-  .bassiani-img {
-    height: 14em;
-    padding-right: 0%;
+    width: 100%;
   }
 
-  .underground-img {
-    padding-left: 5%;
-    height: 14em;
+  .banner-milestones {
+    width: 100%;
   }
 
-  .img-milestone-container-bassiani {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 15rem;
-    padding-right: 12%;
-  }
-
-  .line {
-    border-width: 20px;
-  }
-
-  .line-center {
-    border-width: 20px;
-  }
-
-  .line-one {
-    border-width: 20px;
-    height: 200px;
-  }
-
-  .line-two {
-    border-width: 20px;
-    height: 200px;
-  }
-
-  .line-three {
-    border-width: 20px;
-    height: 200px;
+  .parrafo-container-left-milestone {
+    font-size: 16px;
+    width: 100%;
+    margin-left: 5%;
   }
 
   .banner-milestones-text {
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  .text-gracias-milestone {
+    margin-right: -120%;
+    font-size: 35px;
+  }
+
+  .line-center-gracias {
+    border-style: none;
+  }
+
+  .line-four-small {
+    border-style: none;
   }
 }
 
 @media only screen and (max-width: 340px) {
   .milestone-container {
-    margin-top: 25%;
-  }
-
-  .milestone-container p {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 25%;
   }
 
   .grid-milestone {
     display: flex;
     grid-template-columns: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tresor-img {
+    padding-left: 0%;
+  }
+
+  .underground-img {
+    padding-left: 0%;
+    height: 17em;
+  }
+
+  .bassiani-img {
+    height: 18em;
+    padding-right: 0%;
+  }
+
+  .tierra-img {
+    padding-right: 0%;
+    height: 10em;
   }
 
   .inversa {
+    grid-template-columns: none;
+    display: flex;
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
   }
 
-  .img-milestone-container {
-    margin-top: 10%;
-    justify-content: flex-start;
+  .grid-line {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    height: 40px;
   }
 
-  .tierras {
-    justify-content: flex-end;
+  .line {
+    border-style: none;
+  }
+
+  .line-center {
+    border-style: none;
+  }
+
+  .line-one {
+    border-style: none;
+  }
+
+  .line-two {
+    border-style: none;
+  }
+
+  .line-under {
+    border-style: none;
+  }
+
+  .line-three {
+    border-style: none;
   }
 
   .parrafo-container {
     font-size: 16px;
-    margin-top: 5%;
-  }
-  .tresor-img {
-    padding-left: 5%;
-    height: 15em;
-  }
-  .tierra-img {
-    height: 9em;
-    padding-right: 5%;
-  }
-  .bassiani-img {
-    height: 14em;
-    padding-right: 0%;
+    width: 100%;
   }
 
-  .underground-img {
-    padding-left: 5%;
-    height: 14em;
+  .banner-milestones {
+    width: 100%;
   }
 
-  .img-milestone-container-bassiani {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 15rem;
-    padding-right: 12%;
-  }
-
-  .line {
-    border-width: 20px;
-  }
-
-  .line-center {
-    border-width: 20px;
-  }
-
-  .line-one {
-    border-width: 20px;
-    height: 200px;
-  }
-
-  .line-two {
-    border-width: 20px;
-    height: 200px;
-  }
-
-  .line-three {
-    border-width: 20px;
-    height: 200px;
+  .parrafo-container-left-milestone {
+    font-size: 16px;
+    width: 100%;
+    margin-left: 5%;
   }
 
   .banner-milestones-text {
-    font-size: 18px;
+    font-size: 22px;
+  }
+
+  .text-gracias-milestone {
+    margin-right: -150%;
+    font-size: 35px;
+  }
+
+  .line-center-gracias {
+    border-style: none;
+  }
+
+  .line-four-small {
+    border-style: none;
   }
 }
