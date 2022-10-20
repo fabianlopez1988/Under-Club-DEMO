@@ -23,7 +23,6 @@ const Podcast = () => {
   }, []);
 
   const podcasts = useSelector((state) => state.podcast);
-  console.log(podcasts);
 
   return (
     <div>

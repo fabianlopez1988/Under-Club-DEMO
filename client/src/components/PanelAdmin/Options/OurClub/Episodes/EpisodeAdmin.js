@@ -20,11 +20,11 @@ function PodcastAdmin() {
       </Link>
 
       <Link className="links-options" to="/admin/ourclub/episode/updateepisode">
-        <button>Editar un episodio</button>
+        <button>Editar un Episodio</button>
       </Link>
 
       <Link className="links-options" to="/admin/ourclub/episode/deleteepisode">
-        <button>Borrar un episodio</button>
+        <button>Borrar un Episodio</button>
       </Link>
 
       <Link className="links-options" to="/admin/ourclub">

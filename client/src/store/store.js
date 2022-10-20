@@ -8,6 +8,7 @@ import residentsReducer from "./residents";
 import userReducer from "./user"
 import eventReducer from "./events";
 import podcastReducer from "./podcast";
+import episodeReducer from "./episodes";
 
 const store = configureStore({
   middleware: (getDefaultMiddleware) =>
@@ -22,7 +23,8 @@ const store = configureStore({
     culture: cultureReducer,
     introCulture: introCultureReducer,
     events: eventReducer,
-    podcast: podcastReducer
+    podcast: podcastReducer,
+    episode: episodeReducer
   },
 });
 

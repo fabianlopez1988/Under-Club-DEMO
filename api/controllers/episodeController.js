@@ -1,8 +1,8 @@
-const Episode = require("../models/Podcast");
+const Episode = require("../models/Episode");
 
 const episodeController = {
   //crear episode
-  createPodcast: async (req, res) => {
+  createEpisode: async (req, res) => {
     try {
       const newEpisode = await Episode.create(req.body);
       return res.status(200).send(newEpisode);
@@ -11,7 +11,7 @@ const episodeController = {
     }
   },
   //trae todos los Episodes
-  getAllEpisode: async (req, res) => {
+  getAllEpisodes: async (req, res) => {
     try {
       const allEpisodes = await Episode.findAll();
       return res.status(200).send(allEpisodes);

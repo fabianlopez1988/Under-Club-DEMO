@@ -1,13 +1,13 @@
-import "./AddPodcast.css";
+import "./AddEpisode.css";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import useInput from "../../../../../../utils/useInput";
-import { addPodcast } from "../../../../../../store/podcast";
+import { addEpisode } from "../../../../../../store/episodes";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
-const AddPodcast = () => {
+const AddEpisode = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -33,14 +33,14 @@ const AddPodcast = () => {
   const errorAlert = () => {
     Swal.fire({
       icon: "error",
-      // url: "Oops...",
+      title: "Oops...",
       text: "Debes completar todos los campos!",
     });
   };
 
   const handleClick = (blob) => {
     dispatch(
-      addPodcast({
+      addEpisode({
         flyer: blob ? blob : errorAlert(),
         intro: intro.value.length === 0 ? errorAlert() : intro.value,
         url: url.value.length === 0 ? errorAlert() : url.value, 
@@ -49,12 +49,12 @@ const AddPodcast = () => {
       .then(() =>
         Swal.fire({
           icon: "success",
-          url: "Creado",
+          title: "Creado",
           showConfirmButton: false,
           timer: 2500,
         })
       )
-      .then(() => navigate("/admin/ourclub/podcast"));
+      .then(() => navigate("/admin/ourclub/episodes"));
   };
 
   const handleSubmit = (e) => {
@@ -63,9 +63,9 @@ const AddPodcast = () => {
 
   return (
     <>
-      <div className="add-podcast-container">
+      <div className="add-episode-container">
         <Form onSubmit={handleSubmit}>
-          <h1>Podcast</h1>
+          <h1>Episodios</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Flyer</Form.Label>
             <br></br>
@@ -82,7 +82,7 @@ const AddPodcast = () => {
             <Form.Label>url</Form.Label>
             <br></br>
             <input
-              placeholder="Ingrese la URL del podcast"
+              placeholder="Ingrese la URL del episodio"
               {...url}
             ></input>
           </Form.Group> 
@@ -92,7 +92,7 @@ const AddPodcast = () => {
             <Form.Label>Intro</Form.Label>
             <br></br>
             <textarea
-              placeholder="Escriba una breve introducción del podcast..."
+              placeholder="Escriba una breve introducción del episodio..."
               {...intro}
             ></textarea>
           </Form.Group>
@@ -109,4 +109,4 @@ const AddPodcast = () => {
   );
 };
 
-export default AddPodcast;
+export default AddEpisode;

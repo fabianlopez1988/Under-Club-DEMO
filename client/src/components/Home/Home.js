@@ -13,8 +13,8 @@ const Home = () => {
         <ShortHistory />
         {/* <CarouselHome /> */}
         <Podcast />
-        <Footer />
         <Episodes />
+        <Footer />
       </div>
   );
 };

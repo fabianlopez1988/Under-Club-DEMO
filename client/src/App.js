@@ -58,6 +58,11 @@ import DeletePodcast from "./components/PanelAdmin/Options/OurClub/Podcast/Delet
 import UpdatePodcast from "./components/PanelAdmin/Options/OurClub/Podcast/UpdatePodcast/UpdatePodcast";
 import EditViewPodcast from "./components/PanelAdmin/Options/OurClub/Podcast/EditViewPodcast/EditViewPodcast";
 
+import EpisodeAdmin from "./components/PanelAdmin/Options/OurClub/Episodes/EpisodeAdmin";
+import AddEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/AddEpisode/AddEpisode";
+import DeleteEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/DeleteEpisode/DeleteEpisode";
+import UpdateEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/UpdateEpisode/UpdateEpisode";
+import EditViewEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/EditViewEpisode/EditViewEpisode";
 
 function App() {
   return (
@@ -87,6 +92,7 @@ function App() {
           <Route path="/admin/ourclub/history" element={<HistoryAdmin />} />
           <Route path="/admin/ourclub/introculture" element={<IntroCultureAdmin/>} />
           <Route path="/admin/ourclub/podcast" element={<PodcastAdmin/>} />
+          <Route path="/admin/ourclub/episodes" element={<EpisodeAdmin/>} />
 
           <Route path="/admin/ourclub/history/addhistory" element={<AddHistory />} />
           <Route path="/admin/ourclub/history/updatehistory" element={<UpdateHistory />} />
@@ -120,6 +126,11 @@ function App() {
           <Route path="/admin/ourclub/podcast/updatepodcast" element={<UpdatePodcast />} />
           <Route path="/admin/ourclub/podcast/updatepodcast/:id" element={<EditViewPodcast />} />
           <Route path="/admin/ourclub/podcast/deletepodcast" element={<DeletePodcast />} />
+
+          <Route path="/admin/ourclub/episode/addepisode" element={<AddEpisode />} />
+          <Route path="/admin/ourclub/episode/updateepisode" element={<UpdateEpisode />} />
+          <Route path="/admin/ourclub/episode/updateepisode/:id" element={<EditViewEpisode />} />
+          <Route path="/admin/ourclub/episode/deleteepisode" element={<DeleteEpisode />} />
 
 
         </Routes>

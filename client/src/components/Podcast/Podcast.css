@@ -47,6 +47,7 @@
   overflow: hidden;
   display: grid;
   grid-template-rows: 1fr 0.15fr;
+
 }
 
 .podcast-container_intro p {

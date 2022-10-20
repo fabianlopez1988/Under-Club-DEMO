@@ -9,6 +9,7 @@ const culture = require("./culture");
 const introCulture = require("./introCulture");
 const initialVideo = require("./initialVideo");
 const podcast = require("./podcast");
+const episode = require("./episode");
 
 router.use("/residents", residents);
 router.use("/hitos", hitos);
@@ -18,5 +19,6 @@ router.use("/history", history);
 router.use("/culture", culture);
 router.use("/introculture", introCulture);
 router.use("/podcast", podcast);
+router.use("/episode", episode);
 
 module.exports = router;
