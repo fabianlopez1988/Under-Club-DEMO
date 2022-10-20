@@ -21,7 +21,6 @@ const UpdatePodcast = () => {
   }, []);
 
   const podcasts = useSelector((state) => state.podcast);
-  console.log(podcasts);
 
   return (
     <div className="update-podcast-container">

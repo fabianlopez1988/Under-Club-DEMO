@@ -1,18 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllPodcast } from "../../store/podcast";
+import { useNavigate, Link } from "react-router-dom";
+
 import "./Podcast.css";
+import Carousel from "react-bootstrap/Carousel";
 
 const Podcast = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  useEffect(() => {
+    if (!user) navigate("/");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    dispatch(getAllPodcast());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const podcasts = useSelector((state) => state.podcast);
+  console.log(podcasts);
+
   return (
     <div>
-      <section className="intro-podcast">
+      <section className="podcast">
         <div>
-          <h1 className="intro-podcast_title">PODCAST</h1>
+          <h1 className="podcast_title">PODCAST</h1>
         </div>
-        <div className="intro-podcast-title-paragraph_container">
-          <div className="intro-podcast_line"></div>
+        <div className="podcast-title-paragraph_container">
+          <div className="podcast_line"></div>
           <div></div>
-          <div className="intro-podcast-paragraph_container">
-            <p className="intro-podcast_paragraph">
+          <div className="podcast-paragraph_container">
+            <p className="podcast_paragraph">
               Under Club pertenece al puñado de clubes que han sabido construir
               una identidad sonora en conjunto con su público.<br></br>
               <br></br>
@@ -28,7 +51,36 @@ const Podcast = () => {
         </div>
       </section>
       <section>
-        
+        <Carousel>
+          {podcasts?.data?.map((podcast) => (
+            <Carousel.Item>
+              <div className="podcast-container">
+                <div>
+                  <img
+                    className="d-block w-100"
+                    src={podcast.flyer}
+                    alt={podcast.id}
+                  />
+                </div>
+                <div className="podcast-container_intro">
+                  <div>
+                    <p>{podcast.intro}</p>
+                  </div>
+                  <div>
+                    <a href={podcast.url} target="_blank" rel="noreferrer">
+                      <button
+                        className="podcast-container_intro_button"
+                        src={podcast.url}
+                      >
+                        ESCUCHAR
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </section>
     </div>
   );

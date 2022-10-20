@@ -1,32 +1,102 @@
-.intro-podcast {
-    height: 720px;
-    width: 100%;
-    padding: 5% 5% 2% 5%;
-    display: grid;
-    grid-template-rows: 0.25fr 1fr;
+.podcast {
+  height: 720px;
+  width: 100%;
+  padding: 5% 5% 2% 5%;
+  display: grid;
+  grid-template-rows: 0.25fr 1fr;
 }
 
-.intro-podcast-title-paragraph_container {
-    display: grid;
-    grid-template-columns: 0.15fr 0.25fr 1fr;
+.podcast-title-paragraph_container {
+  display: grid;
+  grid-template-columns: 0.15fr 0.25fr 1fr;
 }
 
-.intro-podcast_title {
-    font-size: 75px;
+.podcast_title {
+  font-size: 75px;
 }
 
-.intro-podcast-paragraph_container{
-    display: flex;
-    align-items: flex-end;
+.podcast-paragraph_container {
+  display: flex;
+  align-items: flex-end;
 }
 
-.intro-podcast_paragraph {
-    font-size: 1.8rem;
-    margin-bottom: 0;
+.podcast_paragraph {
+  font-size: 1.8rem;
+  margin-bottom: 0;
 }
 
-.intro-podcast_line {
-    opacity: 0.4;
-    border-left: 45px solid #8342ea;
-    border-bottom: 45px solid #8342ea;
+.podcast_line {
+  opacity: 0.4;
+  border-left: 45px solid #8342ea;
+  border-bottom: 45px solid #8342ea;
+}
+
+.podcast-container {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+.podcast-container_intro {
+  height: 600px;
+  background-color: rgba(131, 66, 234, 0.3);
+  padding: 10% 10%;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: 1fr 0.15fr;
+}
+
+.podcast-container_intro p {
+    height: auto;
+    font-size: 25px;
+    font-family: LeagueSpartan-Regular;
+    word-wrap: break-word;
+}
+
+.podcast-container_intro_button {
+  text-transform: uppercase;
+  width: 30%;
+  border: none;
+  background: rgb(255, 255, 255);
+  padding: 2%;
+  color: black;
+  font-size: 20px;
+  border-radius: 25px;
+  transition: ease-out 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+.podcast-container_intro_button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  content: "";
+  background-color: blueviolet;
+  color: white;
+  opacity: 0;
+  border-radius: 25px;
+}
+
+.podcast-container_intro_button:hover:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-item {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
