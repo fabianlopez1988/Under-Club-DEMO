@@ -55,9 +55,9 @@ const Podcast = () => {
           {podcasts?.data?.map((podcast) => (
             <Carousel.Item>
               <div className="podcast-container">
-                <div>
+                <div className="podcast-container-flyer">
                   <img
-                    className="d-block w-100"
+                    className=""
                     src={podcast.flyer}
                     alt={podcast.id}
                   />

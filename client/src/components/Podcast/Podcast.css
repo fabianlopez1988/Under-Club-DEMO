@@ -1,4 +1,5 @@
 .podcast {
+  margin-top: 10%;
   height: 720px;
   width: 100%;
   padding: 5% 5% 2% 5%;
@@ -21,7 +22,7 @@
 }
 
 .podcast_paragraph {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 0;
 }
 
@@ -33,14 +34,14 @@
 
 .podcast-container {
   display: grid;
-  grid-template-columns: 1fr 0.75fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   margin: 5%;
 }
 
 .podcast-container_intro {
-  height: 600px;
+  height: 650px;
   background-color: rgba(131, 66, 234, 0.3);
   padding: 10% 10%;
   overflow: hidden;
@@ -92,6 +93,7 @@
   z-index: -1;
 }
 
+
 .carousel-control-prev, .carousel-control-next {
     width: 5%;
 }
@@ -99,4 +101,44 @@
 .carousel-item {
     padding-top: 5%;
     padding-bottom: 5%;
+}
+
+.podcast-container-flyer {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.podcast-container-flyer img{
+  height: 170%;
+  width: 100%;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+
+/* Tablet acostada */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
+
+
+  /* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+
+
+/* Celu */
+@media only screen and (max-width: 320px) {
 }
