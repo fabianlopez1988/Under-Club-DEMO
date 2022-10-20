@@ -38,7 +38,6 @@ const podcastController = {
         returning: true,
         plain: true,
       });
-      console.log(editPodcast);
       return res.status(201).send(editPodcast[1]);
     } catch (error) {
       console.log(error);
