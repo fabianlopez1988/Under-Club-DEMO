@@ -13,56 +13,55 @@
   font-family: LeagueSpartan-Bold;
 }
 
-
-#line-container{
+#line-container {
   display: grid;
-  grid-template-rows: 1fr 1fr ;
+  grid-template-rows: 1fr 1fr;
 }
 
 #title2 {
-  padding-top: 11%;
+  padding-top: 10%;
   margin-bottom: 0;
 }
 
-#grid-col-container-line{
+#grid-col-container-line {
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   column-gap: 2%;
 }
 
-
-#grid-line-col{
+#grid-line-col {
   border-left: 45px solid #8342ea;
   border-bottom: 45px solid #8342ea;
   opacity: 0.4;
 }
 
 #paragraph-container {
-  padding-left: 18%;
+  padding-left: 15%;
   padding-right: 18%;
   font-size: 2rem;
   font-family: LeagueSpartan-Bold;
   text-align: justify;
 }
 
+#title2-container {
+  /* display: flex;
+  justify-content: flex-end; */
+}
 
 /* MEDIA QUERIES */
 
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-
   .short-history-container h1 {
     font-size: 75px;
   }
-  
-  
+
   #title2 {
     padding-top: 11%;
     margin-bottom: 0;
   }
-  
-  
-  #grid-line-col{
+
+  #grid-line-col {
     border-left: 40px solid #8342ea;
     border-bottom: 40px solid #8342ea;
   }
@@ -76,14 +75,12 @@
   .short-history-container h1 {
     font-size: 40px;
   }
-  
-  
-  
-  #grid-line-col{
+
+  #grid-line-col {
     border-left: 30px solid #8342ea;
     border-bottom: 30px solid #8342ea;
   }
-  
+
   #paragraph-container {
     padding-left: 10%;
     padding-right: 10%;
@@ -93,48 +90,36 @@
 
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-
   .short-history-container h1 {
     font-size: 30px;
   }
-  
-  
-  
-  #grid-line-col{
+
+  #grid-line-col {
     border-left: 20px solid #8342ea;
     border-bottom: 20px solid #8342ea;
   }
-  
+
   #paragraph-container {
     font-size: 1.2rem;
   }
-  
 }
 
 /* Celu acostado */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  
   .short-history-container h1 {
     font-size: 20px;
   }
-  
-  
-  
-  #grid-line-col{
+
+  #grid-line-col {
     border-left: 15px solid #8342ea;
     border-bottom: 15px solid #8342ea;
   }
-  
+
   #paragraph-container {
     padding-left: 10%;
     padding-right: 10%;
     font-size: 16px;
   }
-  .short-history-container {
-    padding-left: 10%;
-  }
-
-  
 }
 
 /* Celu */
@@ -142,12 +127,12 @@
   .short-history-container h1 {
     font-size: 20px;
   }
-  
-  #grid-line-col{
+
+  #grid-line-col {
     border-left: 15px solid #8342ea;
     border-bottom: 15px solid #8342ea;
   }
-  
+
   #paragraph-container {
     padding-left: 12%;
     padding-right: 12%;
@@ -156,5 +141,4 @@
   .short-history-container {
     padding-left: 12%;
   }
-
 }

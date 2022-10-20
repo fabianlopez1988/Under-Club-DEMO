@@ -130,7 +130,7 @@
 
 .episode-container-flyer img {
   height: 160%;
-  width: 100%;
+  width: 85%;
   margin-left: 10%;
 }
 
@@ -159,6 +159,11 @@
 
 /* Tablet acostada */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .episode {
+
+    grid-template-rows: 0.25fr 1fr;
+  }
+
   .episode-container {
     margin: 2%;
   }
@@ -167,35 +172,33 @@
   }
   .episode-container_intro {
     padding: 5%;
-    height: 80%;
+    height: 60%;
+    margin-left: -15%;
   }
   .episode-container_intro p {
     font-size: 16px;
   }
   .episode-container-flyer img {
-    height: 90%;
+    height: 80%;
     width: 100%;
   }
   .episode_paragraph {
     font-size: 1.4rem;
   }
   .episode-container_intro_button {
-    width: 40%;
+    width: 25%;
   }
   .episode_line {
     border-right: 30px solid #8342ea;
     border-bottom: 30px solid #8342ea;
   }
-  .episode-title-paragraph_container {
-    grid-template-columns: 0.25fr 0.15fr 1fr;
-  }
+
 }
 
 /* Tablet */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  .episode {
-    grid-template-rows: 0.1fr 0.65fr;
-    height: 500px;
+  .episode-container {
+    margin: 2%;
   }
   .episode_title {
     font-size: 30px;
@@ -203,33 +206,40 @@
   .episode-container_intro {
     padding: 8%;
     height: 400px;
+    margin-right: 10%;
+    margin-left: 10%;
   }
   .episode-container_intro p {
     font-size: 18px;
   }
   .episode-container-flyer img {
     height: 80%;
-    width: 100%;
+    width: 80%;
+    margin:0;
   }
   .episode_paragraph {
     font-size: 1.2rem;
   }
   .episode-container_intro_button {
-    width: 150px;
+    width: 80px;
   }
   .episode_line {
-    border-right: 20px solid #8342ea;
-    border-bottom: 20px solid #8342ea;
+    border-right: 30px solid #8342ea;
+    border-bottom: 30px solid #8342ea;
   }
   .episode-title-paragraph_container {
-    grid-template-columns: 0.25fr 0.15fr 1fr;
+    grid-template-columns: 1fr 0.15fr 0.25fr;
   }
+
   .episode-container {
     display: block;
   }
   .episode-container_button {
     display: flex;
     justify-content: center;
+  }
+  .episode-section-carousel {
+    margin-top: 20%;
   }
 }
 
@@ -240,34 +250,43 @@
     grid-template-rows: 0.5fr 1fr;
     height: 500px;
   }
+  .episode-container {
+    margin: 2%;
+  }
   .episode_title {
     font-size: 20px;
   }
   .episode-container_intro {
     padding: 8%;
-    height: 400px;
+    height: 300px;
+    margin-right: 10%;
+    margin-left: 10%;
   }
   .episode-container_intro p {
     font-size: 16px;
   }
+  .episode-container-flyer{
+    height: 400px;
+  }
   .episode-container-flyer img {
     height: 80%;
-    width: 100%;
+    width: 80%;
+    margin:0;
   }
   .episode_paragraph {
-    padding-top: 5%;
     font-size: 16px;
   }
   .episode-container_intro_button {
-    width: 150px;
+    width: 80px;
   }
   .episode_line {
     border-right: 15px solid #8342ea;
     border-bottom: 15px solid #8342ea;
   }
   .episode-title-paragraph_container {
-    grid-template-columns: 0.25fr 0.02fr 1fr;
+    grid-template-columns: 1fr 0.02fr 0.25fr;
   }
+
   .episode-container {
     display: block;
   }
@@ -275,6 +294,10 @@
     display: flex;
     justify-content: center;
   }
+  .episode-container-intro_grid {
+    grid-template-columns: none;
+  }
+
 }
 
 /* Celu */
@@ -284,34 +307,43 @@
     grid-template-rows: 0.5fr 1fr;
     height: 500px;
   }
+  .episode-container {
+    margin: 2%;
+  }
   .episode_title {
     font-size: 20px;
   }
   .episode-container_intro {
     padding: 8%;
-    height: 400px;
+    height: 300px;
+    margin-right: 10%;
+    margin-left: 10%;
   }
   .episode-container_intro p {
     font-size: 16px;
   }
+  .episode-container-flyer{
+    height: 400px;
+  }
   .episode-container-flyer img {
     height: 80%;
-    width: 100%;
+    width: 80%;
+    margin:0;
   }
   .episode_paragraph {
-    padding-top: 5%;
     font-size: 16px;
   }
   .episode-container_intro_button {
-    width: 150px;
+    width: 80px;
   }
   .episode_line {
     border-right: 15px solid #8342ea;
     border-bottom: 15px solid #8342ea;
   }
   .episode-title-paragraph_container {
-    grid-template-columns: 0.25fr 0.02fr 1fr;
+    grid-template-columns: 1fr 0.02fr 0.25fr;
   }
+
   .episode-container {
     display: block;
   }
@@ -319,4 +351,8 @@
     display: flex;
     justify-content: center;
   }
+  .episode-container-intro_grid {
+    grid-template-columns: none;
+  }
+  
 }

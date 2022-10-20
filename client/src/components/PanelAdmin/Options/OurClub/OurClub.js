@@ -40,7 +40,7 @@ const OurClub = () => {
         </Link>
 
         <Link className="links-options" to="/admin/ourclub/episodes">
-          <button>Episodes</button>
+          <button>Episodios</button>
         </Link>
 
         <Link className="links-options" to="/admin">

@@ -49,7 +49,7 @@ const Episodes = () => {
           <div className="episode_line"></div>
         </div>
       </section>
-      <section>
+      <section className="episode-section-carousel">
         <Carousel>
           {episodes?.data?.map((episode) => (
             <Carousel.Item>
