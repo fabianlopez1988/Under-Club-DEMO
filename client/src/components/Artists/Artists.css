@@ -1,103 +1,63 @@
 .artists-container {
-  padding-top: 200px;
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+  padding: 10% 6%;
+  margin: 0 auto;
 }
 
-.titleResidents {
-  margin-bottom: 5%;
-}
-
-.titleResidents h1 {
+h1 {
   font-size: 5rem;
   padding-bottom: 5%;
-  letter-spacing: 5px;
+  letter-spacing: 0.4rem;
 }
 
 .accordion-button {
   font-size: 2.5rem;
-  padding-bottom: 1%;
-  padding-top: 1%;
   color: #8342ea;
   border-bottom: 4px solid #8342ea;
-  letter-spacing: 3px;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
+  padding-bottom: 1%;
 }
 
-.accordion-button collapsed {
+/* .accordion-button collapsed {
   text-decoration-line: underline;
-}
+} */
 
 .accordion-button:hover {
   color: white;
-  filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px #8342ea);
+  /* filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px #8342ea); */
 }
 
-.artists-section {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 8%;
-  position: relative;
-  width: 100%;
-}
-
-.container-artists-body {
-  /* 
-  padding-top: 2%;
-  padding-bottom: 10%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  align-items: flex-start;
-  font-size: 1.1rem;
-  text-align: justify; */
-  font-family: LeagueSpartan-Regular;
+.accordion-body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 48rem;
-  margin-top: 5%;
-  height: 50%;
-  font-size: 100%;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: minmax(100px, 800px);
+}
+
+.accordion-right {
+display: flex;
+align-items: center;
+justify-content: center;
+height: auto
+}
+
+.photo{
+  width: 94%;
+  height: 94%;
+  margin: 0 auto;
+}
+
+.photo:hover {
+  filter: opacity(0.95) drop-shadow(4px 4px 2px #8342ea);
+  transition: 0.6s;
 }
 
 .accordion-left {
-  display: grid;
-  grid-template-rows: 6% 2fr 2fr;
- /*  border-style: solid;
-  border-width: 30px;
-  border-bottom: #8342ea;
-  border-right: #8342ea;
-  border-left: #8342ea;
-  border-color: #8342ea; */
-}
-
-.container-artists {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-.biography {
-  margin-top: 5%;
-  font-size: 2.2em;
-  line-height: 2.0rem;
   font-family: LeagueSpartan-Regular;
-  width: 75%;
-}
-
-a{
-  text-decoration: none;
-  color: #8342ea;
-}
-
-ul {
-  list-style: none;
-  float: right;
-  font-size: 1.4rem;
-  padding: 10%;;
-}
-
-.social-media {
-  border-left: 44px solid #8342ea;
+  font-size: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: 10% 1fr 1fr;
 }
 
 /*Boton presskit*/
@@ -112,7 +72,10 @@ ul {
   z-index: 1;
   text-decoration: none;
   color: #8342ea;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  width: 10rem;
+  height: 3.1rem;
+  margin: 3% 0;
 }
 
 .link:hover {
@@ -138,145 +101,468 @@ ul {
   width: 105%;
 }
 
-.accordion-right {
-  /* box-sizing: content-box; */
+.biography {
+  margin-top: 7%;
+  margin-bottom: 7%;
+  font-size: 1.7em;
+  line-height: 2.2rem;
+  font-family: LeagueSpartan-Regular;
+  width: 80%;
 }
 
-.photo {
-  width: 100%;
-  height: 100%;
-  
+a{
+  text-decoration: none;
+  color: #8342ea;
 }
 
-.photo:hover {
-  filter: opacity(0.95) drop-shadow(4px 4px 2px #8342ea);
-  transition: 0.6s;
+ul {
+  list-style: none;
+  float: right;
+  font-size: 1.5rem;
+  padding: 10%;
+  margin: 0 10%;
 }
 
-@media only screen and (min-width: 1220px) and (max-width: 1920px) {
-  .link{
-    width: 150%;
-    font-size: 190%;
+.social-media {
+  border-left: 44px solid #8342ea;
+  margin-bottom: 3.5%;
+}
+
+.container-artists {
+  display: flex;
+
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1290px) and (max-width: 1420px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 745px);
   }
 
   .biography {
-    margin-top: 7%;
-    line-height: 150%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    font-size: 1.6rem;
+  }
+
+  .social-media {
+    border-left: 40px solid #8342ea;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1290px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 730px);
+  }
+
+  .biography {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.5rem;
   }
 
   ul {
-    font-size: 220%;
+    font-size: 1.4rem;
+  }
+
+  .link {
+    font-size: 1.3rem;
+    width: 8.8rem;
+    height: 2.9rem;
+    margin: 4% 0;
+  }
+
+  h1 {
+    font-size: 4.2rem;
   }
 }
 
-
-@media (max-width: 767.98px) {
-  .titleResidents h1 {
-    font-size: 45px;
-    padding-bottom: 2%;
-    letter-spacing: 3px;
-  }
-  .accordion-button {
-    font-size: 35px;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: #8342ea;
-    letter-spacing: 1px;
-  }
-  .artists-section {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 15%;
-    position: relative;
-  }
-  .accordionArtists {
-    padding-top: 5%;
-  }
-  .artists-section div div {
-    padding-top: 10px;
-  }
-    .accordion-body {
-    font-family: LeagueSpartan-Regular;
-    font-size: 15px;
-    padding-right: 1%;
-    display: flex;
-    align-items: center;
-    align-items: flex-start;
-    text-align: justify;
-    width: 100%;
-
-  } 
-  .photo {
-    height: 70%;
-    width: 70%;
-  }
-  .accordion-right {
-    display: flex;
-    width: 100%;
-  }
-  .accordion-left {
-    width: 100%;
-  }
-  .accordion-right ul {
-        margin-bottom: 0px;
-  }
-}
-
-
-
-/* PANTALLA CELU */
-
-@media (max-width: 575.98px) {
-  .titleResidents h1 {
-    font-size: 40px;
-    padding-top: 20%;
-  }
-  .accordion-button {
-    font-size: 30px;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: #8342ea;
-    letter-spacing: 1px;
-  }
-  .artists-section {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    position: relative;
-  }
-  .accordionArtists {
-    padding-top: 5%;
-  }
-  .artists-section div div {
-    padding-top: 10px;
-  }
+/* Notebook */
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
   .accordion-body {
-    font-family: LeagueSpartan-Regular;
-    font-size: 15px;
-    padding-right: 1%;
-    display: flex;
-    align-items: center;
-    align-items: flex-start;
-    text-align: justify;
-    width: 100%;
-    flex-direction: column;
+    grid-template-rows: minmax(100px, 700px);
   }
-  .photo {
-    height: 50%;
-    width: 50%;
+
+  .biography {
+    font-size: 1.3rem;
+    margin-top: 4%;
+    margin-bottom: 4%;
   }
-  .accordion-right {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    justify-content: center;
-    text-align: end;
+
+  ul {
+    font-size: 1.3rem;
   }
-  .accordion-left {
-    width: 100%;
+
+  .link {
+    font-size: 1.3rem;
+    width: 8.7rem;
+    height: 2.9rem;
+    margin: 4% 0;
   }
-  .accordion-right ul {
-        margin-bottom: 0px;
+
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  .accordion-button {
+    font-size: 2.1rem;
+  }
+
+  .social-media {
+    border-left: 35px solid #8342ea;
+  } 
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1100px){
+  .accordion-body {
+    grid-template-rows: minmax(100px, 610px);
+  }
+
+  .biography {
+    font-size: 1.2rem;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    line-height: 2.0rem;
+    width: 82%;
+  }
+
+  ul {
+    font-size: 1.2rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+    width: 8.3rem;
+    height: 2.8rem;
+    margin: 4% 0;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .accordion-button {
+    font-size: 2.0rem;
+  }
+
+  .social-media {
+    border-left: 33px solid #8342ea;
+  } 
+}
+
+
+
+/* Tablet acostada */
+@media only screen and (min-width: 930px) and (max-width: 1024px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 560px);
+  }
+
+  .biography {
+    font-size: 1.2rem;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    line-height: 1.8rem;
+    width: 86%;
+  }
+
+  ul {
+    font-size: 1.1rem;
+  }
+
+  .link {
+    font-size: 1.1rem;
+    width: 7.5rem;
+    height: 2.4rem;
+    margin: 4% 0;
+  }
+
+  h1 {
+    font-size: 3.4rem;
+  }
+
+  .accordion-button {
+    font-size: 1.7rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: 25px solid #8342ea;
+    margin-bottom: 4.5%;
   }
   
+}
+
+@media only screen and (min-width: 840px) and (max-width: 930px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 515px);
+  }
+
+  .biography {
+    font-size: 1.1rem;
+    margin-top: 5%;
+    margin-bottom: 3.5%;
+    line-height: 1.6rem;
+    width: 87%;
+  }
+
+  ul {
+    font-size: 1.0rem;
+    padding: 9%;
+  margin: 0 7%;
+  }
+
+  .link {
+    font-size: 1.0rem;
+    width: 7.1rem;
+    height: 2.3rem;
+    margin: 4% 0;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .accordion-button {
+    font-size: 1.6rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: 24px solid #8342ea;
+    margin-bottom: 4.5%;
+  }
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 840px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 460px);
+  }
+
+  .biography {
+    font-size: 1.0rem;
+    margin-top: 5%;
+    margin-bottom: 3.5%;
+    line-height: 1.4rem;
+    width: 87%;
+  }
+
+  ul {
+    font-size: 0.9rem;
+    padding: 9%;
+  margin: 0 7%;
+  }
+
+  .link {
+    font-size: 0.9rem;
+    width: 6.5rem;
+    height: 2.2rem;
+    margin: 4% 0;
+  }
+
+  h1 {
+    font-size: 3.0rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .accordion-button {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: 23px solid #8342ea;
+    margin-bottom: 4.5%;
+  }
+  
+}
+
+@media only screen and (min-width: 670px) and (max-width: 768px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 390px);
+  }
+
+  .biography {
+    font-size: 1.0rem;
+    margin-top: 7%;
+    margin-bottom: 3.5%;
+    line-height: 1.3rem;
+    width: 92%;
+  }
+
+  ul {
+    font-size: 0.8rem;
+    padding: 9%;
+  margin: 0 7%;
+  }
+
+  .link {
+    font-size: 0.8rem;
+    width: 5.6rem;
+    height: 2.0rem;
+    margin: 4% 0;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .accordion-button {
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: none;
+    margin-bottom: 4.5%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 670px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 350px);
+  }
+
+  .biography {
+    font-size: 0.9rem;
+    margin-top: 7%;
+    margin-bottom: 0%;
+    line-height: 1.3rem;
+    width: 92%;
+  }
+
+  ul {
+    font-size: 0.8rem;
+    padding: 4%;
+    margin: 0 7%;
+  }
+
+  .link {
+    font-size: 0.8rem;
+    width: 5.2rem;
+    height: 1.9rem;
+    margin: 4% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .accordion-button {
+    font-size: 1.4rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: none;
+    margin-bottom: 4.5%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 560px) {
+  .accordion-body {
+    grid-template-rows: minmax(100px, 320px);
+  }
+
+  .biography {
+    font-size: 0.8rem;
+    margin-top: 7%;
+    margin-bottom: 0%;
+    line-height: 1.2rem;
+    width: 92%;
+  }
+
+  ul {
+    font-size: 0.7rem;
+    padding: 4%;
+    margin: 0 7%;
+  }
+
+  .link {
+    font-size: 0.7rem;
+    width: 4.9rem;
+    height: 1.7rem;
+    margin: 4% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .accordion-button {
+    font-size: 1.3rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: none;
+    margin-bottom: 4.5%;
+  }
+}
+
+/* Celu acostado */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .accordion-body {
+    display: grid;
+    grid-template-rows: minmax(100px, 300px);
+    grid-template-columns: minmax(100px, 320px);
+  }
+
+  .photo{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+  }
+
+  .biography {
+    font-size: 0.8rem;
+    margin-top: 7%;
+    margin-bottom: 0%;
+    line-height: 1.2rem;
+    width: 100%;
+
+    grid-column: 1/3;
+  }
+
+  ul {
+    font-size: 0.7rem;
+    padding: 4%;
+    margin: 0 7%;
+    float: left;
+  }
+
+  .link {
+    font-size: 0.7rem;
+    width: 4.9rem;
+    height: 1.7rem;
+    margin: 4% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .accordion-button {
+    font-size: 1.3rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: none;
+    margin-bottom: 0%;
+  }
 }

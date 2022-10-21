@@ -5,14 +5,13 @@ import axios from "axios";
 
 const Artists = () => {
   const [resident, setResident] = useState([]);
-
+  
+  console.log(resident)
   useEffect(() => {
     axios.get("/api/residents").then((res) => setResident(res.data));
   }, []);
-
   return (
     <div className="artists-container">
-      <div className="titleResidents" id="residents">
         <section className="artists-section">
           <h1>
             RESIDENTES<br></br>
@@ -21,18 +20,10 @@ const Artists = () => {
           {!resident
             ? null
             : resident.map((res) => (
-                <Accordion
-                  defaultActiveKey="0"
-                  className="accordionArtists"
-                  bsPrefix={{ background: "#d0f1f7" }}
-                  flush
-                >
-                  <Accordion.Item eventKey="1">
-                    <Accordion.Header style={{ fontSize: " 2.5rem" }}>
-                      {res.name}
-                    </Accordion.Header>
-                    <Accordion.Body>
-                      <div className="container-artists-body">
+              <Accordion bsPrefix={{ background: "#d0f1f7" }} flush >
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>{res.name}</Accordion.Header>
+                <Accordion.Body>
                       <div className="accordion-left">
                         <div className="container-artists">
                           <a
@@ -80,13 +71,11 @@ const Artists = () => {
                       <div className="accordion-right">
                         <img src={res.photo} alt="foto" className="photo"></img>
                       </div>
-                      </div>
                     </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
+              </Accordion.Item>
+            </Accordion>
               ))}
         </section>
-      </div>
     </div>
   );
 };
