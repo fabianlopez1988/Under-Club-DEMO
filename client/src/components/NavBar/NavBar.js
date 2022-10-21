@@ -10,6 +10,7 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { userLogout } from "../../store/user";
 import "./NavBar.css";
+import gifWaveform from "../../assets/WaveBlanco.gif";
 
 const NavBar = () => {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -113,6 +114,9 @@ const NavBar = () => {
               <Link to="/contact">
                 <a>Contacto</a>
               </Link>
+            </li>
+            <li>
+              <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>
           </ul>
         </nav>

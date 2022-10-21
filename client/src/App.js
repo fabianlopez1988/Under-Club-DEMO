@@ -8,18 +8,18 @@ import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
 import Login from "./components/LoginAdmin/Login";
 import Culture from "./components/Culture/Culture";
-import Events from "./components/Events/Events"
+import Events from "./components/Events/Events";
 
 import PanelAdmin from "./components/PanelAdmin/PanelAdmin";
 
-import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo"
-import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub"
-import Users from "./components/PanelAdmin/Options/Users/Users"
+import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo";
+import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub";
+import Users from "./components/PanelAdmin/Options/Users/Users";
 import Residents from "./components/PanelAdmin/Options/OurClub/Residents/Residents";
 import Milestones from "./components/PanelAdmin/Options/OurClub/Milestones/Milestones";
 // import CarouselHome from "./components/CarouselHome/CarouselHome";
 // import Culture from "./components/PanelAdmin/Options/OurClub/Culture/AddCulture";
-import HistoryAdmin from "./components/PanelAdmin/Options/OurClub/History/History"
+import HistoryAdmin from "./components/PanelAdmin/Options/OurClub/History/History";
 import AddHistory from "./components/PanelAdmin/Options/OurClub/History/AddHistory/AddHistory";
 import DeleteHistory from "./components/PanelAdmin/Options/OurClub/History/DeleteHistory/DeleteHistory";
 import UpdateHistory from "./components/PanelAdmin/Options/OurClub/History/UpdateHistory/UpdateHistory";
@@ -58,70 +58,167 @@ import DeletePodcast from "./components/PanelAdmin/Options/OurClub/Podcast/Delet
 import UpdatePodcast from "./components/PanelAdmin/Options/OurClub/Podcast/UpdatePodcast/UpdatePodcast";
 import EditViewPodcast from "./components/PanelAdmin/Options/OurClub/Podcast/EditViewPodcast/EditViewPodcast";
 
+import EpisodeAdmin from "./components/PanelAdmin/Options/OurClub/Episodes/EpisodeAdmin";
+import AddEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/AddEpisode/AddEpisode";
+import DeleteEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/DeleteEpisode/DeleteEpisode";
+import UpdateEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/UpdateEpisode/UpdateEpisode";
+import EditViewEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/EditViewEpisode/EditViewEpisode";
+
+import { motion, useScroll } from "framer-motion";
 
 function App() {
+  const { scrollYProgress } = useScroll();
+
   return (
     <div className="App">
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <BrowserRouter>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/history" element={<History />} />
-          <Route path="/culture" element={<Culture />} /> 
+          <Route path="/culture" element={<Culture />} />
           <Route path="/events" element={<Events />} />
           <Route path="/milestones" element={<Milestone />} />
           <Route path="/contact" element={<Contact />} />
 
           <Route path="/login" element={<Login />} />
-          <Route path="/admin" element={<PanelAdmin/>} />
+          <Route path="/admin" element={<PanelAdmin />} />
 
-          <Route path="/admin/events" element={<EventsAdmin/>} />
-          <Route path="/admin/initialvideo" element={<InitialVideo/>} />
-          <Route path="/admin/ourclub" element={<OurClub/>} />
-          <Route path="/admin/users" element={<Users/>} />
+          <Route path="/admin/events" element={<EventsAdmin />} />
+          <Route path="/admin/initialvideo" element={<InitialVideo />} />
+          <Route path="/admin/ourclub" element={<OurClub />} />
+          <Route path="/admin/users" element={<Users />} />
 
-          <Route path="/admin/ourclub/residents" element={<Residents/>} />
-          <Route path="/admin/ourclub/milestones" element={<Milestones/>} />
-          <Route path="/admin/ourclub/culture" element={<CultureAdmin/>} />
+          <Route path="/admin/ourclub/residents" element={<Residents />} />
+          <Route path="/admin/ourclub/milestones" element={<Milestones />} />
+          <Route path="/admin/ourclub/culture" element={<CultureAdmin />} />
           <Route path="/admin/ourclub/history" element={<HistoryAdmin />} />
-          <Route path="/admin/ourclub/introculture" element={<IntroCultureAdmin/>} />
-          <Route path="/admin/ourclub/podcast" element={<PodcastAdmin/>} />
+          <Route
+            path="/admin/ourclub/introculture"
+            element={<IntroCultureAdmin />}
+          />
+          <Route path="/admin/ourclub/podcast" element={<PodcastAdmin />} />
+          <Route path="/admin/ourclub/episodes" element={<EpisodeAdmin />} />
 
-          <Route path="/admin/ourclub/history/addhistory" element={<AddHistory />} />
-          <Route path="/admin/ourclub/history/updatehistory" element={<UpdateHistory />} />
-          <Route path="/admin/ourclub/history/updatehistory/:id" element={<EditViewHistory />} />
-          <Route path="/admin/ourclub/history/deletehistory" element={<DeleteHistory />} />
+          <Route
+            path="/admin/ourclub/history/addhistory"
+            element={<AddHistory />}
+          />
+          <Route
+            path="/admin/ourclub/history/updatehistory"
+            element={<UpdateHistory />}
+          />
+          <Route
+            path="/admin/ourclub/history/updatehistory/:id"
+            element={<EditViewHistory />}
+          />
+          <Route
+            path="/admin/ourclub/history/deletehistory"
+            element={<DeleteHistory />}
+          />
 
-          <Route path="/admin/ourclub/milestones/addmilestones" element={<AddMilestones/>} />
-          <Route path="/admin/ourclub/milestones/updatemilestones" element={<UpdateMilestones/>} />
-          <Route path="/admin/ourclub/milestones/deletemilestones" element={<DeleteMilestones/>} />
+          <Route
+            path="/admin/ourclub/milestones/addmilestones"
+            element={<AddMilestones />}
+          />
+          <Route
+            path="/admin/ourclub/milestones/updatemilestones"
+            element={<UpdateMilestones />}
+          />
+          <Route
+            path="/admin/ourclub/milestones/deletemilestones"
+            element={<DeleteMilestones />}
+          />
 
-          <Route path="/admin/ourclub/residents/addresidents" element={<AddResidents />} />
-          <Route path="/admin/ourclub/residents/updateresidents" element={<UpdateResidents/>} />
-          <Route path="/admin/ourclub/residents/updateresidents/:id" element={<EditViewResidents/>} />
-          <Route path="/admin/ourclub/residents/deleteresidents" element={<DeleteResidents/>} />
+          <Route
+            path="/admin/ourclub/residents/addresidents"
+            element={<AddResidents />}
+          />
+          <Route
+            path="/admin/ourclub/residents/updateresidents"
+            element={<UpdateResidents />}
+          />
+          <Route
+            path="/admin/ourclub/residents/updateresidents/:id"
+            element={<EditViewResidents />}
+          />
+          <Route
+            path="/admin/ourclub/residents/deleteresidents"
+            element={<DeleteResidents />}
+          />
 
-          <Route path="/admin/ourclub/culture/addculture" element={<AddCulture />} />
-          <Route path="/admin/ourclub/culture/updateculture" element={<UpdateCulture />} />
-          <Route path="/admin/ourclub/culture/updateculture/:id" element={<EditViewCulture />} />
-          <Route path="/admin/ourclub/culture/deleteculture" element={<DeleteCulture />} />
+          <Route
+            path="/admin/ourclub/culture/addculture"
+            element={<AddCulture />}
+          />
+          <Route
+            path="/admin/ourclub/culture/updateculture"
+            element={<UpdateCulture />}
+          />
+          <Route
+            path="/admin/ourclub/culture/updateculture/:id"
+            element={<EditViewCulture />}
+          />
+          <Route
+            path="/admin/ourclub/culture/deleteculture"
+            element={<DeleteCulture />}
+          />
 
-
-          <Route path="/admin/ourclub/introculture/addintroculture" element={<AddIntroCulture />} />
-          <Route path="/admin/ourclub/introculture/editviewintroculture" element={<EditViewIntroCulture />} />
+          <Route
+            path="/admin/ourclub/introculture/addintroculture"
+            element={<AddIntroCulture />}
+          />
+          <Route
+            path="/admin/ourclub/introculture/editviewintroculture"
+            element={<EditViewIntroCulture />}
+          />
 
           <Route path="/admin/events/addevents" element={<AddEvents />} />
           <Route path="/admin/events/updateevents" element={<UpdateEvents />} />
-          <Route path="/admin/events/updateevents/:id" element={<EditEvents />} />
+          <Route
+            path="/admin/events/updateevents/:id"
+            element={<EditEvents />}
+          />
           <Route path="/admin/events/deleteevent" element={<DeleteEvent />} />
 
-          <Route path="/admin/ourclub/podcast/addpodcast" element={<AddPodcast />} />
-          <Route path="/admin/ourclub/podcast/updatepodcast" element={<UpdatePodcast />} />
-          <Route path="/admin/ourclub/podcast/updatepodcast/:id" element={<EditViewPodcast />} />
-          <Route path="/admin/ourclub/podcast/deletepodcast" element={<DeletePodcast />} />
+          <Route
+            path="/admin/ourclub/podcast/addpodcast"
+            element={<AddPodcast />}
+          />
+          <Route
+            path="/admin/ourclub/podcast/updatepodcast"
+            element={<UpdatePodcast />}
+          />
+          <Route
+            path="/admin/ourclub/podcast/updatepodcast/:id"
+            element={<EditViewPodcast />}
+          />
+          <Route
+            path="/admin/ourclub/podcast/deletepodcast"
+            element={<DeletePodcast />}
+          />
 
-
+          <Route
+            path="/admin/ourclub/episode/addepisode"
+            element={<AddEpisode />}
+          />
+          <Route
+            path="/admin/ourclub/episode/updateepisode"
+            element={<UpdateEpisode />}
+          />
+          <Route
+            path="/admin/ourclub/episode/updateepisode/:id"
+            element={<EditViewEpisode />}
+          />
+          <Route
+            path="/admin/ourclub/episode/deleteepisode"
+            element={<DeleteEpisode />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

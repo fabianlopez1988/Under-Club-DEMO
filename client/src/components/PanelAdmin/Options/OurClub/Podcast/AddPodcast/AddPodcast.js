@@ -65,7 +65,7 @@ const AddPodcast = () => {
     <>
       <div className="add-podcast-container">
         <Form onSubmit={handleSubmit}>
-          <h1>Cultura</h1>
+          <h1>Podcast</h1>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Flyer</Form.Label>
             <br></br>

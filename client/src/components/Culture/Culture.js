@@ -8,6 +8,7 @@ import Spin from "react-reveal/Spin";
 import Fade from "react-reveal/Fade";
 
 const Culture = () => {
+  
   return (
     <div className="culture-container">
       <Zoom>

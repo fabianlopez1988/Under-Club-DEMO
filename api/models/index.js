@@ -6,5 +6,6 @@ const Residents = require("./Residents");
 const Users = require ("./Users");
 const InitialVideo = require("./InitialVideo");
 const Podcast = require("./Podcast");
+const Episode = require("./Episode");
 
-module.exports = { Culture, Events, History, Hitos, Residents, Users, InitialVideo, Podcast };
+module.exports = { Culture, Events, History, Hitos, Residents, Users, InitialVideo, Podcast, Episode };

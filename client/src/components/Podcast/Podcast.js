@@ -23,7 +23,6 @@ const Podcast = () => {
   }, []);
 
   const podcasts = useSelector((state) => state.podcast);
-  console.log(podcasts);
 
   return (
     <div>
@@ -66,7 +65,7 @@ const Podcast = () => {
                   <div>
                     <p>{podcast.intro}</p>
                   </div>
-                  <div>
+                  <div className="podcast-container_button">
                     <a href={podcast.url} target="_blank" rel="noreferrer">
                       <button
                         className="podcast-container_intro_button"

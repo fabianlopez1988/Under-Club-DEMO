@@ -4,6 +4,7 @@ import ShortHistory from "../ShortHistory/ShortHistory";
 import Footer from "../Footer/Footer";
 import CarouselHome from "../CarouselHome/CarouselHome";
 import Podcast from "../Podcast/Podcast";
+import Episodes from "../Episodes/Episodes";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <ShortHistory />
         {/* <CarouselHome /> */}
         <Podcast />
+        <Episodes />
         <Footer />
       </div>
   );
