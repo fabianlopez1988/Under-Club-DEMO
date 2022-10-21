@@ -12,7 +12,7 @@ nav {
   justify-content: space-between;
   padding-top: 40px;
   padding-left: 5%;
-  padding-right: 10%;
+  padding-right: 5%;
 }
 
 nav ul li {
@@ -79,6 +79,11 @@ nav ul li {
   line-height: 60px;
   display: none;
 }
+.navbar-waveform {
+  height: 80px;
+  width: 80px;
+}
+
 
 /* MEDIA QUERIES */
 
