@@ -13,7 +13,7 @@ const Artists = () => {
   return (
     <div className="artists-container">
         <section className="artists-section">
-          <h1>
+          <h1 className="artists-section-title">
             RESIDENTES<br></br>
             (A-Z)
           </h1>
@@ -27,7 +27,7 @@ const Artists = () => {
                       <div className="accordion-left">
                         <div className="container-artists">
                           <a
-                            className="link"
+                            className="link artists-tag-a"
                             href={res.pressKit}
                             target="_blank"
                             rel="noreferrer"
@@ -39,7 +39,7 @@ const Artists = () => {
                         <div className="social-media">
                           <ul>
                             <li>
-                              <a
+                              <a className="artists-tag-a"
                                 href={res.instagram}
                                 target="_blank"
                                 rel="noreferrer"
@@ -48,7 +48,7 @@ const Artists = () => {
                               </a>
                             </li>
                             <li>
-                              <a
+                              <a className="artists-tag-a"
                                 href={res.soundcloud}
                                 target="_blank"
                                 rel="noreferrer"
@@ -57,7 +57,7 @@ const Artists = () => {
                               </a>
                             </li>
                             <li>
-                              <a
+                              <a className="artists-tag-a"
                                 href={res.residentAdvisor}
                                 target="_blank"
                                 rel="noreferrer"
