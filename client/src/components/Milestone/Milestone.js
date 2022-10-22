@@ -160,31 +160,26 @@ const Milestone = () => {
         </motion.div>
       </div>
 
-      
       <div className="banner-milestones">
         <p className="banner-milestones-text">
-          TRAS CASI 10 AÑOS DE ARDUO TRABAJO, NOS ENORGULLECE MIRAR ATRÁS Y VER
-          TODO LO QUE HEMOS LOGRADO CONSTRUIR HASTA EL MOMENTO.
-          <br></br>
-          <br></br>A TODOS AQUELLOS QUE NOS PERMITEN CONTINUAR CRECIENDO Y
-          DESARROLLANDO NUESTRO SUEÑO:
+          Tras casi 10 años de arduo trabajo, nos enorgullece mirar atrás y ver
+          todo lo que hemos logrado construir hasta el momento.<br></br>
+          <br></br> A todos aquellos que nos permiten continuar creciendo y
+          desarrollando nuestro sueño:
         </p>
       </div>
 
-      
       <div className="grid-line">
         <div></div>
         <div className="line-center-gracias"></div>
         <div></div>
       </div>
 
-      <div className="grid-line" style={{marginBottom: "5%"}}>
+      <div className="grid-line" style={{ marginBottom: "5%" }}>
         <div className="text-gracias-milestone">GRACIAS</div>
         <div className="line-four-small"></div>
         <div></div>
       </div>
-
-
     </div>
   );
 };

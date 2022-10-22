@@ -12,6 +12,7 @@ const AddEvents = () => {
   const navigate = useNavigate();
 
   const date = useInput();
+  const url = useInput();
 
   const [baseImageLarge, setBaseImageLarge] = useState("");
 
@@ -50,6 +51,7 @@ const AddEvents = () => {
         flyerLarge: blob ? blob : errorAlert(),
         flyerGrid: blob2 ? blob2 : errorAlert(),
         date: date.value.length === 0 ? errorAlert() : date.value,
+        url: url.value.length === 0 ? errorAlert() : url.value,
       })
     )
       .then(() =>
@@ -103,6 +105,16 @@ const AddEvents = () => {
               type="date"
               placeholder="Ingrese la fecha del evento"
               {...date}
+            ></input>
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Url del evento</Form.Label>
+            <br></br>
+            <input
+              type="text"
+              placeholder="Ingrese la url del evento"
+              {...url}
             ></input>
           </Form.Group>
 

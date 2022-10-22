@@ -11,7 +11,7 @@ const Home = () => {
       <div>
         <Header />
         <ShortHistory />
-        {/* <CarouselHome /> */}
+        <CarouselHome />
         <Podcast />
         <Episodes />
         <Footer />
