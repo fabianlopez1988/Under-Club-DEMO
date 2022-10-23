@@ -2,8 +2,24 @@
   padding-top: 15%;
 }
 
-.milestone-container p {
+/* .milestone-container p {
   padding: 40px 50px 40px 50px;
+} */
+
+.parrafo-container h6 {
+  padding: 40px 50px 40px 50px;
+}
+
+.parrafo-container span {
+  font-size: 24px;
+}
+
+.parrafo-container-left-milestone h6 {
+  padding: 40px 50px 40px 50px;
+}
+
+.parrafo-container-left-milestone span {
+  font-size: 24px;
 }
 
 .progress-bar {
@@ -60,9 +76,7 @@
 
 /*divide la grilla para la imagen en 50% y se da estilos*/
 .parrafo-container {
-  font-size: 24px;
   font-family: LeagueSpartan-Regular;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +141,7 @@
   border-color: rgba(131, 66, 234, 0.4);
   border-right: rgba(131, 66, 234, 0.4);
   height: 370px;
-  margin-bottom: -12%;
+  margin-bottom: -8%;
   border-bottom: rgba(131, 66, 234, 0.4);
 }
 
@@ -139,7 +153,7 @@
   border-bottom: rgba(131, 66, 234, 0.4);
   border-top: rgba(131, 66, 234, 0.4);
   height: 220px;
-  margin-top: -13%;
+  margin-top: -8%;
 }
 /*tercera linea*/
 .line-three {
@@ -193,6 +207,12 @@
   color: #8542ea;
 }
 
+.logo-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
   .bassiani-img {
     height: 20em;
@@ -200,23 +220,42 @@
   }
 
   .parrafo-container {
-    font-size: 20px;
     width: 100%;
+    margin-left: -10%;
+  }
+
+  .parrafo-container span {
+    font-size: 20px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 20px;
+  }
+
+  .line {
+    margin-top: 0%;
+  }
+
+  .line-one {
+    margin-bottom: 0%;
+  }
+
+  .line-center {
+    margin-top: 0%;
   }
 
   .line-two {
-    margin-bottom: -8%;
+    margin-bottom: 0%;
   }
 
   .line-under {
-    margin-top: -8%;
+    margin-top: 0%;
   }
   .banner-milestones {
     width: 100%;
   }
 
   .parrafo-container-left-milestone {
-    font-size: 20px;
     width: 100%;
     margin-left: 10%;
   }
@@ -281,7 +320,7 @@
     border-bottom: rgba(131, 66, 234, 0.4);
     border-top: rgba(131, 66, 234, 0.4);
     height: 80px;
-    margin-top: -8%;
+    margin-top: -1%;
   }
 
   .line-one {
@@ -291,7 +330,7 @@
     border-left: rgba(131, 66, 234, 0.4);
     border-bottom: rgba(131, 66, 234, 0.4);
     height: 330px;
-    margin-bottom: -10%;
+    margin-bottom: -2%;
   }
 
   .line-two {
@@ -300,7 +339,7 @@
     border-color: rgba(131, 66, 234, 0.4);
     border-right: rgba(131, 66, 234, 0.4);
     height: 350px;
-    margin-bottom: -10%;
+    margin-bottom: -3%;
     border-bottom: rgba(131, 66, 234, 0.4);
   }
 
@@ -312,7 +351,7 @@
     border-bottom: rgba(131, 66, 234, 0.4);
     border-top: rgba(131, 66, 234, 0.4);
     height: 200px;
-    margin-top: -10%;
+    margin-top: -4%;
   }
 
   .line-three {
@@ -325,8 +364,16 @@
   }
 
   .parrafo-container {
-    font-size: 18px;
     width: 100%;
+    margin-left: 0%;
+  }
+
+  .parrafo-container span {
+    font-size: 18px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 18px;
   }
 
   .banner-milestones {
@@ -334,7 +381,6 @@
   }
 
   .parrafo-container-left-milestone {
-    font-size: 18px;
     width: 100%;
     margin-left: 5%;
   }
@@ -347,6 +393,10 @@
     margin-top: 2%;
     margin-right: 5%;
     font-size: 25px;
+  }
+
+  .line {
+    margin-top: 5%;
   }
 
   .line-center-gracias {
@@ -436,8 +486,11 @@
   }
 
   .parrafo-container {
-    font-size: 18px;
     width: 100%;
+  }
+
+  .parrafo-container span {
+    font-size: 18px;
   }
 
   .banner-milestones {
@@ -445,9 +498,12 @@
   }
 
   .parrafo-container-left-milestone {
-    font-size: 18px;
     width: 100%;
     margin-left: 5%;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 18px;
   }
 
   .banner-milestones-text {
@@ -538,8 +594,15 @@
   }
 
   .parrafo-container {
-    font-size: 16px;
     width: 100%;
+  }
+
+  .parrafo-container span {
+    font-size: 16px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 16px;
   }
 
   .banner-milestones {
@@ -547,7 +610,6 @@
   }
 
   .parrafo-container-left-milestone {
-    font-size: 16px;
     width: 100%;
     margin-left: 5%;
   }
@@ -641,8 +703,15 @@
   }
 
   .parrafo-container {
-    font-size: 16px;
     width: 100%;
+  }
+
+  .parrafo-container span {
+    font-size: 16px;
+  }
+
+  .parrafo-container-left-milestone span {
+    font-size: 16px;
   }
 
   .banner-milestones {
