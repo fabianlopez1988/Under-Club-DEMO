@@ -130,7 +130,7 @@
 }
 
 .form-button-contact button {
-  text-transform: uppercase;  
+  text-transform: uppercase;
   border: none;
   background: rgb(255, 255, 255);
   padding: 20%;
@@ -165,36 +165,59 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-}
-  
-@media only screen and (min-width: 480px) and (max-width: 768px) {
-  .contact-container {
-    margin-top: 20%;
+  .grid-right h1 {
+    font-size: 18px;
   }
 
+  .line-division {
+    border-left: 25px solid #8342ea;
+    opacity: 0.4;
+  }
+
+  .grid-line-bottom {
+    border-left: 25px solid #8342ea;
+    border-bottom: 25px solid #8342ea;
+    opacity: 0.4;
+  }
+
+  .title-contact {
+    font-size: 3em;
+  }
+
+  .label-contact {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .grid-top {
     display: flex;
     grid-template-columns: none;
-    column-gap: 0%;
+    column-gap: none;
     margin-bottom: 2%;
     flex-direction: column;
   }
 
   .map-container {
-    height: 415px;
+    height: 500px;
+    margin-top: 15%;
   }
 
-  .grid-right {
-    display: flex;
-    grid-template-rows: none;
-    flex-direction: column;
+  .grid-right h1 {
+    font-size: 18px;
+  }
+
+  .line-division {
+    border-left: 25px solid #8342ea;
+    opacity: 0.4;
   }
 
   .grid-bottom {
     display: flex;
     grid-template-columns: none;
-    height: none;
+    height: 400px;
     margin-bottom: 5%;
+    margin-top: 5%;
     column-gap: none;
     flex-direction: column;
   }
@@ -202,155 +225,115 @@
   .grid-line-bottom {
     border-left: none;
     border-bottom: none;
+    opacity: none;
   }
 
-  .form-contact-container {
-    display: flex;
-    grid-template-rows: none;
-    flex-direction: column;
+  .title-contact {
+    font-size: 3em;
   }
 
   .grid-contact-right {
-    height: 415px;
-    margin-top: 1%;
+    width: 90%;
+  }
+
+  .label-contact {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 340px) and (max-width: 480px) {
+  .grid-top {
+    display: flex;
+    grid-template-columns: none;
+    column-gap: none;
+    margin-bottom: 2%;
+    flex-direction: column;
+  }
+
+  .map-container {
+    height: 400px;
+    margin-top: 15%;
+  }
+
+  .grid-right h1 {
+    font-size: 16px;
+  }
+
+  .line-division {
+    border-left: 25px solid #8342ea;
+    opacity: 0.4;
+  }
+
+  .grid-bottom {
+    display: flex;
+    grid-template-columns: none;
+    height: 400px;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    column-gap: none;
+    flex-direction: column;
+  }
+
+  .grid-line-bottom {
+    border-left: none;
+    border-bottom: none;
+    opacity: none;
   }
 
   .title-contact {
     font-size: 2em;
   }
 
-  .label-contact {
-    font-size: 1.2em;
-  }
-
-  .input-comment {
-    min-height: 10.1em;
-  }
-
-  .grid-right h1 {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 340px) and (max-width: 480px) {
-  .contact-container {
-    margin-top: 20%;
-  }
-
-  .grid-top {
-    display: flex;
-    grid-template-columns: none;
-    column-gap: 0%;
-    margin-bottom: 2%;
-    flex-direction: column;
-  }
-
-  .map-container {
-    height: 415px;
-  }
-
-  .grid-right {
-    display: flex;
-    grid-template-rows: none;
-    flex-direction: column;
-  }
-
-  .grid-bottom {
-    display: flex;
-    grid-template-columns: none;
-    height: none;
-    margin-bottom: 5%;
-    column-gap: none;
-    flex-direction: column;
-  }
-
-  .grid-line-bottom {
-    border-left: none;
-    border-bottom: none;
-  }
-
-  .form-contact-container {
-    display: flex;
-    grid-template-rows: none;
-    flex-direction: column;
+  .grid-contact-right {
+    width: 90%;
   }
 
   .form-contact {
     display: flex;
     grid-template-columns: none;
     column-gap: none;
-    margin-top: none;
+    margin-bottom: -3%;
     flex-direction: column;
   }
 
-  .grid-contact-right {
-    height: 465px;
-    margin-top: 1%;
-    border: 3px solid #8342ea;
-  }
-
-  .title-contact {
-    font-size: 1.5em;
+  .form-button-contact {
+    margin-bottom: 5%;
   }
 
   .label-contact {
-    font-size: 1em;
-  }
-
-  .input-comment {
-    min-height: 7em;
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .input-email {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .input-name {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .grid-right h1 {
-    font-size: 16px;
-  }
-
-  .form-button-contact button {
-    font-size: 16px;
-    padding: 5px;
+    font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 340px) {
-  .contact-container {
-    margin-top: 20%;
-  }
-
   .grid-top {
     display: flex;
     grid-template-columns: none;
-    column-gap: 0%;
+    column-gap: none;
     margin-bottom: 2%;
     flex-direction: column;
   }
 
   .map-container {
-    height: 415px;
+    height: 400px;
+    margin-top: 15%;
   }
 
-  .grid-right {
-    display: flex;
-    grid-template-rows: none;
-    flex-direction: column;
+  .grid-right h1 {
+    font-size: 16px;
+  }
+
+  .line-division {
+    border-left: 25px solid #8342ea;
+    opacity: 0.4;
   }
 
   .grid-bottom {
     display: flex;
     grid-template-columns: none;
-    height: none;
+    height: 400px;
     margin-bottom: 5%;
+    margin-top: 10%;
     column-gap: none;
     flex-direction: column;
   }
@@ -358,58 +341,30 @@
   .grid-line-bottom {
     border-left: none;
     border-bottom: none;
+    opacity: none;
   }
 
-  .form-contact-container {
-    display: flex;
-    grid-template-rows: none;
-    flex-direction: column;
+  .title-contact {
+    font-size: 2em;
+  }
+
+  .grid-contact-right {
+    width: 90%;
   }
 
   .form-contact {
     display: flex;
     grid-template-columns: none;
     column-gap: none;
-    margin-top: none;
+    margin-bottom: -3%;
     flex-direction: column;
   }
 
-  .grid-contact-right {
-    height: 465px;
-    margin-top: 1%;
-    border: 3px solid #8342ea;
-  }
-
-  .title-contact {
-    font-size: 1.5em;
+  .form-button-contact {
+    margin-bottom: 5%;
   }
 
   .label-contact {
-    font-size: 1em;
-  }
-
-  .input-comment {
-    min-height: 7em;
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .input-email {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .input-name {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .grid-right h1 {
-    font-size: 16px;
-  }
-
-  .form-button-contact button {
-    font-size: 16px;
-    padding: 5px;
+    font-size: 18px;
   }
 }
