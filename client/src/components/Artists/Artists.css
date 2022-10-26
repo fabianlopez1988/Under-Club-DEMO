@@ -1,3 +1,31 @@
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.biography::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.biography::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.biography::-webkit-scrollbar-button:increment,.biography::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.biography::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.biography::-webkit-scrollbar-thumb {
+  background-color: #f1f2f3 ;
+  border-radius: 20px;
+  border: 2px solid #666565;
+}
+
+.biography::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
 .artists-container {
   box-sizing: border-box;
   padding: 10% 6%;
@@ -108,6 +136,7 @@ height: auto
   line-height: 2.2rem;
   font-family: LeagueSpartan-Regular;
   width: 80%;
+  overflow-y: auto;
 }
 
 .artists-tag-a{
@@ -350,7 +379,7 @@ height: auto
   .biography {
     font-size: 1.0rem;
     margin-top: 5%;
-    margin-bottom: 3.5%;
+    margin-bottom: 4.5%;
     line-height: 1.4rem;
     width: 87%;
   }
@@ -358,7 +387,7 @@ height: auto
   .social-media ul {
     font-size: 0.9rem;
     padding: 9%;
-  margin: 0 7%;
+    margin: 0 7%;
   }
 
   .link {
@@ -387,13 +416,13 @@ height: auto
 
 @media only screen and (min-width: 670px) and (max-width: 768px) {
   .accordion-body {
-    grid-template-rows: minmax(100px, 390px);
+    grid-template-rows: minmax(100px, 360px);
   }
 
   .biography {
     font-size: 1.0rem;
-    margin-top: 7%;
-    margin-bottom: 3.5%;
+    margin-top: 9.5%;
+    margin-bottom: 3%;
     line-height: 1.3rem;
     width: 92%;
   }
@@ -401,7 +430,7 @@ height: auto
   .social-media ul {
     font-size: 0.8rem;
     padding: 9%;
-  margin: 0 7%;
+    margin: 0 7%;
   }
 
   .link {
@@ -427,14 +456,14 @@ height: auto
   }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 670px) {
+@media only screen and (min-width: 560px) and (max-width: 670px) {
   .accordion-body {
-    grid-template-rows: minmax(100px, 350px);
+    grid-template-rows: minmax(100px, 320px);
   }
 
   .biography {
-    font-size: 0.9rem;
-    margin-top: 7%;
+    font-size: 1.0rem;
+    margin-top: 10.5%;
     margin-bottom: 0%;
     line-height: 1.3rem;
     width: 92%;
@@ -442,7 +471,7 @@ height: auto
 
   .social-media ul {
     font-size: 0.8rem;
-    padding: 4%;
+    padding: 10.5%;
     margin: 0 7%;
   }
 
@@ -455,7 +484,7 @@ height: auto
   }
 
   .artists-section-title {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     letter-spacing: 0.2rem;
   }
 
@@ -472,25 +501,26 @@ height: auto
 
 @media only screen and (min-width: 480px) and (max-width: 560px) {
   .accordion-body {
-    grid-template-rows: minmax(100px, 320px);
+    grid-template-rows: minmax(100px, 260px);
   }
 
   .biography {
-    font-size: 0.8rem;
-    margin-top: 7%;
-    margin-bottom: 0%;
+    font-size: 0.9rem;
+    margin-top: 10%;
+    margin-bottom: 1.5%;
     line-height: 1.2rem;
     width: 92%;
+    height: 80%;
   }
 
   .social-media ul {
-    font-size: 0.7rem;
-    padding: 4%;
+    font-size: 0.75rem;
+    padding: 11%;
     margin: 0 7%;
   }
 
   .link {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     width: 4.9rem;
     height: 1.7rem;
     margin: 4% 0;
@@ -498,12 +528,12 @@ height: auto
   }
 
   .artists-section-title {
-    font-size: 2.3rem;
+    font-size: 2.0rem;
     letter-spacing: 0.2rem;
   }
 
   .accordion-button {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     border-bottom: 2px solid #8342ea;
   }
 
@@ -511,54 +541,71 @@ height: auto
     border-left: none;
     margin-bottom: 4.5%;
   }
+
+  .photo {
+    width: 90%;
+    height: 92%;
+    margin: 0 auto;
+}
 }
 
 /* Celu acostado */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .accordion-body {
     display: grid;
-    grid-template-rows: minmax(100px, 300px);
-    grid-template-columns: minmax(100px, 320px);
+    grid-template-rows: minmax(100px, 275px);
+    grid-template-columns: minmax(100px, 410px);
+  }
+
+  .accordion-left {
+    display:block;
+    grid-template-rows: none;
+  }
+
+  .accordion-right {
+    display: grid;
+    justify-content: flex-end;
+    align-items: normal;
   }
 
   .photo{
-    width: 70%;
-    height: 70%;
-    margin: 0 auto;
+    width: 80%;
+    height: 80%;
   }
 
   .biography {
     font-size: 0.8rem;
-    margin-top: 7%;
+    margin-top: 1.5%;
     margin-bottom: 0%;
     line-height: 1.2rem;
     width: 100%;
-
-    grid-column: 1/3;
+    height: 70%;
+    overflow: scroll;
   }
 
   .social-media ul {
-    font-size: 0.7rem;
-    padding: 4%;
-    margin: 0 7%;
+    font-size: 0.8rem;
     float: left;
+    padding-top: 45%;
+    padding-left: 6%;
+    padding-bottom: 0%;
   }
 
   .link {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     width: 4.9rem;
     height: 1.7rem;
-    margin: 4% 0;
+    margin: 3% 0;
     padding: 0.4em 0.9em;
   }
 
   .artists-section-title {
-    font-size: 2.3rem;
+    font-size: 1.9rem;
     letter-spacing: 0.2rem;
   }
 
   .accordion-button {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     border-bottom: 2px solid #8342ea;
   }
 
