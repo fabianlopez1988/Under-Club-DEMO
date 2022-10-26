@@ -7,9 +7,8 @@
 .intro {
   background-color: rgba(131, 66, 234, 0.3);
   color: white;
-  text-transform: uppercase;
   text-align: left;
-  padding: 5% 5% 5% 5%;
+  padding: 5% 10% 5% 10%;
   font-size: 50px;
 }
 
@@ -128,7 +127,7 @@
   border-right: rgba(131, 66, 234, 0.4);
   border-top: rgba(131, 66, 234, 0.4);
   margin-left: 50%;
-  margin-top: -20%;
+  margin-top: -15%;
 }
 
 .footer-intro {

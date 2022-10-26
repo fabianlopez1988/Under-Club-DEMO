@@ -19,9 +19,6 @@ const boxVariantCenter = {
   hidden: { opacity: 0, scale: 0 },
 };
 
-
-
-
 const History = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -35,7 +32,12 @@ const History = () => {
   }, [control, inView]);
 
   return (
-    <div className="history-container">
+    <motion.div
+      className="history-container"
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    >
       <motion.div
         className="img-right-one"
         ref={ref}
@@ -67,7 +69,6 @@ const History = () => {
         <div></div>
         <div className="right-line"></div>
       </div>
-
       <div className="text-container">
         <p className="text-history-center">
           El esprítu de unión, amor y libertad, se encontraba vagando por las
@@ -91,7 +92,6 @@ const History = () => {
           Palermo Hollywood.
         </p>
       </div>
-
       <div className="img-left-two">
         <div className="img-left-three-container">
           <img src={imagen} alt="imagen-3" />
@@ -125,7 +125,7 @@ const History = () => {
         <div></div>
         <div></div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

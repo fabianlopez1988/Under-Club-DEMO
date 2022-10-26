@@ -17,6 +17,7 @@ const EditEvents = () => {
   const navigate = useNavigate();
 
   const date = useInput();
+  const url = useInput();
 
   const [baseImageLarge, setBaseImageLarge] = useState("");
   const [baseImageGrid, setBaseImageGrid] = useState("");
@@ -53,6 +54,7 @@ const EditEvents = () => {
         flyerLarge: blob === "" ? eventsRedux.flyerLarge : blob,
         flyerGrid: blob2 === "" ? eventsRedux.flyerGrid : blob2,
         date: date.value === "" ? eventsRedux.date : date.value,
+        url: url.value === "" ? eventsRedux.url : url.value,
       })
     )
       .then(() =>
@@ -115,6 +117,12 @@ const EditEvents = () => {
           <Form.Label>date</Form.Label>
           <br></br>
           <input type="date" placeholder={eventsRedux.date} {...date}></input>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Url</Form.Label>
+          <br></br>
+          <input type="text" placeholder={eventsRedux.url} {...url}></input>
         </Form.Group>
 
         <button

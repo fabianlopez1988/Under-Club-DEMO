@@ -6,11 +6,16 @@ import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
 import Spin from "react-reveal/Spin";
 import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
+
 
 const Culture = () => {
   
   return (
-    <div className="culture-container">
+    <motion.div className="culture-container"
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition: { duration: 0.1}}}>
       <Zoom>
         <section className="intro">
           <IntroCulture />
@@ -43,14 +48,14 @@ const Culture = () => {
               <p>{cultures[0]?.paragraph}</p> */}
                 </div>
               </Fade>
-              <Slide right>
+              <Fade right>
                 <div className="container-lines">
                   <div className="first-line"></div>
                   <div className="first-line2"></div>
                 </div>
-              </Slide>
+              </Fade>
 
-              <Flip right>
+              <Zoom>
                 <div className="box right">
                   <h1>NO FOTOS</h1>
                   <h1 className="violet">NO</h1>
@@ -63,7 +68,7 @@ const Culture = () => {
                   {/* <h1>{cultures[2]?.title}</h1>
               <p>{cultures[2]?.paragraph}</p> */}
                 </div>
-              </Flip>
+              </Zoom>
             </div>
 
             <Zoom>
@@ -79,9 +84,9 @@ const Culture = () => {
                   {/* <h1>{cultures[3]?.title}</h1>
               <p>{cultures[3]?.paragraph}</p> */}
                 </div>
-                <Spin>
+                <Zoom>
                   <div className="second-line"></div>
-                </Spin>
+                </Zoom>
               </div>
             </Zoom>
 
@@ -110,7 +115,7 @@ const Culture = () => {
           </div>
         }
       </section>
-    </div>
+    </motion.div>
     // <div className="culture-container">
     //   <section className="intro">
     //     <IntroCulture />

@@ -3,14 +3,14 @@
   z-index: 2;
   justify-content: center;
   width: 100%;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 15px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -67,7 +67,7 @@ nav ul li {
 }
 
 .logo-fixed img {
-  height: 100px;
+  height: 80px;
 }
 
 .nav-toggle {
