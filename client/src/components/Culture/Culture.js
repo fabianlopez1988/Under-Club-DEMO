@@ -6,11 +6,16 @@ import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
 import Spin from "react-reveal/Spin";
 import Fade from "react-reveal/Fade";
+import { motion } from "framer-motion";
+
 
 const Culture = () => {
   
   return (
-    <div className="culture-container">
+    <motion.div className="culture-container"
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition: { duration: 0.1}}}>
       <Zoom>
         <section className="intro">
           <IntroCulture />
@@ -110,7 +115,7 @@ const Culture = () => {
           </div>
         }
       </section>
-    </div>
+    </motion.div>
     // <div className="culture-container">
     //   <section className="intro">
     //     <IntroCulture />

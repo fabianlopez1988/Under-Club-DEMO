@@ -2,16 +2,19 @@ import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import "./Artists.css";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const Artists = () => {
   const [resident, setResident] = useState([]);
   
-  console.log(resident)
   useEffect(() => {
     axios.get("/api/residents").then((res) => setResident(res.data));
   }, []);
   return (
-    <div className="artists-container">
+    <motion.div className="artists-container"
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition: { duration: 0.1 }}}>
         <section className="artists-section">
           <h1 className="artists-section-title">
             RESIDENTES<br></br>
@@ -76,7 +79,7 @@ const Artists = () => {
             </Accordion>
               ))}
         </section>
-    </div>
+    </motion.div>
   );
 };
 

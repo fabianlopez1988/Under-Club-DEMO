@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { sendMailToUnder } from "../../store/user";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom"
+import { motion } from "framer-motion"
 
 const Contact = () => {
   const name = useInput();
@@ -47,7 +48,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <motion.div className="contact-container"
+    initial={{width: 0}}
+    animate={{width: "100%"}}
+    exit={{x: window.innerWidth, transition: { duration: 0.1}}}>
       <div className="grid-top">
         <div className="map-container">
           <iframe
@@ -173,7 +177,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
