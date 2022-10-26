@@ -1,18 +1,51 @@
 import "./History.css";
 import imagen from "../../assets/DemoSlider3.jpg";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const boxVariantRight = {
+  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.9 } },
+  hidden: { opacity: 0, scale: 0, x: 500 },
+};
+
+const boxVariantLeft = {
+  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.9 } },
+  hidden: { opacity: 0, scale: 0, x: -500 },
+};
+
+const boxVariantCenter = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.9, delay: 3000 } },
+  hidden: { opacity: 0, scale: 0 },
+};
+
+
+
 
 const History = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <div className="history-container">
-      <Fade top>
-
-      <div className="img-right-one">
+      <motion.div
+        className="img-right-one"
+        ref={ref}
+        variants={boxVariantRight}
+        initial="hidden"
+        animate={control}
+      >
         <img src={imagen} alt="imagen" />
-      </div>
-      </Fade>
-      <Fade left>
+      </motion.div>
+
       <div className="text-container">
         <p className="text-history">
           A tres años de la década del 2010 una nueva generación estaba
@@ -20,17 +53,20 @@ const History = () => {
           el rumbo de la escena techno local.
         </p>
       </div>
-      </Fade>
-
 
       <div className="img-left-one">
-        <div className="img-left-two-container">
+        <motion.div
+          className="img-left-two-container"
+          ref={ref}
+          variants={boxVariantLeft}
+          initial="hidden"
+          animate={control}
+        >
           <img src={imagen} alt="imagen-2" />
-        </div>
+        </motion.div>
         <div></div>
         <div className="right-line"></div>
       </div>
-      <Zoom>
 
       <div className="text-container">
         <p className="text-history-center">
@@ -38,21 +74,14 @@ const History = () => {
           noches de Buenos Aires a la espera de nuevas propuestas.
         </p>
       </div>
-      </Zoom>
-      <Fade right>
-        
-      </Fade>
-      <div className="img-right-two">
-        <Fade left>
 
+      <div className="img-right-two">
         <div className="left-line"></div>
-        </Fade>
         <div></div>
         <div className="img-right-three-container">
           <img src={imagen} alt="imagen-3" />
         </div>
       </div>
-      <Zoom>
 
       <div className="text-container">
         <p className="text-history-last">
@@ -62,7 +91,7 @@ const History = () => {
           Palermo Hollywood.
         </p>
       </div>
-      </Zoom>
+
       <div className="img-left-two">
         <div className="img-left-three-container">
           <img src={imagen} alt="imagen-3" />
@@ -96,15 +125,6 @@ const History = () => {
         <div></div>
         <div></div>
       </div>
-
-      {/* <div className="gracias-container">
-        <p>
-          <span className="gracias">GRACIAS&nbsp;</span>POR
-        </p>
-      </div>
-      <div className="apoyo-container">
-        <p>EL APOYO</p>
-      </div> */}
     </div>
   );
 };
