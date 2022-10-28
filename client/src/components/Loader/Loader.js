@@ -46,7 +46,7 @@ const Loader = () => {
         animate={{ y: 0, opacity: 1, scale: 1 }}
         exit={{ y: "70%", opacity: 0 }}
       >
-        <Box className="rainbow" h="20px" w="20px">
+        <Box className="" h="20px" w="20px">
           <ChakraBox
             as={motion.h2}
             animate={{
@@ -58,7 +58,7 @@ const Loader = () => {
               ease: "easeInOut",
             }}
             color="white"
-            fontSize="10px"
+            fontSize="40px"
             fontWeight="extrabold"
             className="sf"
           >
