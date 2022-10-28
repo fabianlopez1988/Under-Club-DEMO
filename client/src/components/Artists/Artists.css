@@ -569,8 +569,8 @@ height: auto
   }
 
   .photo{
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
   }
 
   .biography {
@@ -580,21 +580,20 @@ height: auto
     line-height: 1.2rem;
     width: 100%;
     height: 70%;
-    overflow: scroll;
+
   }
 
   .social-media ul {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     float: left;
-    padding-top: 45%;
-    padding-left: 6%;
+    padding-top: 36%;
     padding-bottom: 0%;
   }
 
   .link {
-    font-size: 0.8rem;
-    width: 4.9rem;
-    height: 1.7rem;
+    font-size: 0.7rem;
+    width: 4.5rem;
+    height: 1.6rem;
     margin: 3% 0;
     padding: 0.4em 0.9em;
   }
@@ -606,6 +605,71 @@ height: auto
 
   .accordion-button {
     font-size: 1.1rem;
+    border-bottom: 2px solid #8342ea;
+  }
+
+  .social-media {
+    border-left: none;
+    margin-bottom: 0%;
+  }
+}
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+  .accordion-body {
+    display: grid;
+    grid-template-rows: minmax(100px, 275px);
+    grid-template-columns: minmax(100px, 410px);
+  }
+
+  .accordion-left {
+    display:block;
+    grid-template-rows: none;
+  }
+
+  .accordion-right {
+    display: grid;
+    justify-content: flex-end;
+    align-items: normal;
+  }
+
+  .photo{
+    width: 75%;
+    height: 75%;
+  }
+
+  .biography {
+    font-size: 0.8rem;
+    margin-top: 1.5%;
+    margin-bottom: 0%;
+    line-height: 1.2rem;
+    width: 100%;
+    height: 70%;
+
+  }
+
+  .social-media ul {
+    font-size: 0.6rem;
+    float: left;
+    padding-top: 40%;
+    padding-bottom: 0%;
+  }
+
+  .link {
+    font-size: 0.6rem;
+    width: 3.8rem;
+    height: 1.4rem;
+    margin: 3% 0;
+    padding: 0.4em 0.9em;
+  }
+
+  .artists-section-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .accordion-button {
+    font-size: 0.9rem;
     border-bottom: 2px solid #8342ea;
   }
 

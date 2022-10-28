@@ -67,7 +67,7 @@ nav ul li {
 }
 
 .logo-fixed img {
-  height: 80px;
+  height: 60px;
 }
 
 .nav-toggle {
@@ -89,16 +89,16 @@ nav ul li {
 
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  .navbar-container {
+  /* .navbar-container {
     font-size: 20px;
-  }
+  } */
   
   nav {
-    padding-top: 20px;
+    padding-top: 16px;
   }
 
   .logo-fixed img {
-    height: 75px;
+    height: 56px;
   }
 }
 
@@ -106,41 +106,66 @@ nav ul li {
 /* Tablet acostada */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .navbar-container {
-    font-size: 20px;
+    font-size: 19px;
   }
   
   nav {
-    padding-top: 20px;
+    padding-top: 14px;
   }
 
   .logo-fixed img {
-    height: 60px;
+    height: 52px;
   }
 }
 
 
   /* Tablet */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 580px) and (max-width: 768px) {
   .navbar-container {
     font-size: 18px;
   }
   
   nav {
-    padding-top: 20px;
-    padding-right: 2%;
+    padding-top: 12px;
+    /* padding-right: 2%; */
   }
 
   .logo-fixed img {
-    height: 50px;
-  }
-  nav ul li {
-    padding: 10px 10px 10px 10px;
-  }
-  
-  .nav-toggle {
-    
+    height: 48px;
   }
 
+  nav ul li {
+    padding: 10px 10px;
+  }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 580px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+  
+  nav {
+    padding-top: 12px;
+    /* padding-right: 2%; */
+  }
+
+  .logo-fixed img {
+    height: 46px;
+  }
+
+  nav ul li {
+    padding: 10px 8px;
+  }
+    
+  /* .nav-toggle {
+    display: block;
+  } */
+
+  /* .ul-navbar{
+    display: flex;
+    flex-direction: column;
+  } */
 }
 
 /* Celu acostado */

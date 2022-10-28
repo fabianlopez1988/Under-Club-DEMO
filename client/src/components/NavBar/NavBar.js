@@ -1,25 +1,25 @@
 import React from "react";
 
-import Container from "react-bootstrap/Container";
+/* import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BsMusicPlayerFill } from "react-icons/bs";
+/* import { useDispatch } from "react-redux"; */
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { userLogout } from "../../store/user";
+import { Link, /* useNavigate */ } from "react-router-dom";
+/* import { userLogout } from "../../store/user"; */
 import "./NavBar.css";
 import gifWaveform from "../../assets/WaveBlanco.gif";
 
 const NavBar = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  /* const user = JSON.parse(localStorage.getItem("user"));
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(userLogout()).then(() => navigate("/login"));
-  };
+  }; */
 
   return (
     <>
@@ -73,9 +73,11 @@ const NavBar = () => {
                 alt="logo"
               />
             </Link>
-            {/* <button className="nav-toggle">
+          </div>
+          <div>
+          <button className="nav-toggle">
               <GiHamburgerMenu />
-            </button> */}
+            </button>
           </div>
           <ul className="ul-navbar nav-menu_visible">
             <li id="our-club-navbar">
