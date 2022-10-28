@@ -2,9 +2,7 @@ import React, { useEffect } from "react";
 import IntroCulture from "./IntroCulture/IntroCulture";
 import "./Culture.css";
 import Slide from "react-reveal/Slide";
-import Flip from "react-reveal/Flip";
 import Zoom from "react-reveal/Zoom";
-import Spin from "react-reveal/Spin";
 import Fade from "react-reveal/Fade";
 import { motion } from "framer-motion";
 

@@ -6,11 +6,12 @@ import Flash from "react-reveal/Flash";
 
 const History = () => {
   return (
-    <motion.div
+    <div
       className="history-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
+
     >
       <div className="img-right-one">
         <img src={imagen} alt="imagen" />
@@ -101,7 +102,7 @@ const History = () => {
         <div></div>
         <div></div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

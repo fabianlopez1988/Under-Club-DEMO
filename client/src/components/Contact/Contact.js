@@ -54,6 +54,7 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
+
       <div className="grid-top">
         <div className="map-container">
           <iframe

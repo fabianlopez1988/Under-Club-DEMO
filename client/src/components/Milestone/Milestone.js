@@ -25,7 +25,7 @@ const Milestone = () => {
   const lineTwoTresor = `Tresor es uno de los clubes más emblemáticos a nivel mundial, una
   institución de la música techno, legitimada por el paso del tiempo.
   En agosto del 2022, Under Club tuvo el privilegio de albergar a
-  Handmade, Jonas Kopp y Dinamite,en lo que fueron noches históricas
+  Handmade, Jonas Kopp y Dinamite, en lo que fueron noches históricas
   para todos. Conectando Sudamérica con Berlín, quedó demostrado que
   nuestro hogar crece, y lo hace fuerte.`;
 
@@ -65,7 +65,7 @@ const Milestone = () => {
   gracias a una curaduría formada tanto por su público como por el
   Club. El fruto de este trabajo en conjunto nos dio la posibilidad de
   unir fuerzas con Paraguay, Chile, Colombia, España y Holanda,
-  trasladando nuestro sonido a lo largo del continente Sudaméricando y
+  trasladando nuestro sonido a lo largo del continente Sudamericano y
   Europeo, representando a nuestro país en el exterior.`;
 
   const sentence = {
