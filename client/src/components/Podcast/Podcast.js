@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPodcast } from "../../store/podcast";
 import { useNavigate, Link } from "react-router-dom";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 import "./Podcast.css";
 import Carousel from "react-bootstrap/Carousel";
@@ -25,12 +24,10 @@ const Podcast = () => {
 
   const podcasts = useSelector((state) => state.podcast);
 
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.2, 1.8]);
 
   return (
     <div>
-      <motion.section style={{ scale }} className="podcast">
+      <section className="podcast">
         <div>
           <h1 className="podcast_title">PODCAST</h1>
         </div>
@@ -52,16 +49,11 @@ const Podcast = () => {
             </p>
           </div>
         </div>
-        <motion.div
-          style={{
-            scaleY: scrollYProgress,
-          }}
-        />
-      </motion.section>
+      </section>
       <section>
         <Carousel>
           {podcasts?.data?.map((podcast) => (
-            <Carousel.Item>
+            <Carousel.Item>NUESTRO CLUB
               <div className="podcast-container">
                 <div className="podcast-container-flyer">
                   <img className="" src={podcast.flyer} alt={podcast.id} />

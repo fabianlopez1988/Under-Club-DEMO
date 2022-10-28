@@ -21,17 +21,18 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  left: 2%;
   margin-bottom: 200px;
 }
 
 .titulo1 {
   font-size: 100px;
+  margin-left: 2%;
 }
 
 .titulo2 {
   font-size: 100px;
   color: blueviolet;
+  margin-left: 2%;
 }
 
 .overlay {
