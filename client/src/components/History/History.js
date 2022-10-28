@@ -1,52 +1,20 @@
 import "./History.css";
 import imagen from "../../assets/DemoSlider3.jpg";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-
-const boxVariantRight = {
-  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.9 } },
-  hidden: { opacity: 0, scale: 0, x: 500 },
-};
-
-const boxVariantLeft = {
-  visible: { opacity: 1, scale: 1, x: 0, transition: { duration: 0.9 } },
-  hidden: { opacity: 0, scale: 0, x: -500 },
-};
-
-const boxVariantCenter = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.9, delay: 3000 } },
-  hidden: { opacity: 0, scale: 0 },
-};
+import { motion } from "framer-motion";
+import Slide from "react-reveal/Slide";
+import Flash from "react-reveal/Flash";
 
 const History = () => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-
   return (
     <motion.div
       className="history-container"
-      initial={{ width: 0 }}
-      animate={{ width: "100%" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
-      <motion.div
-        className="img-right-one"
-        ref={ref}
-        variants={boxVariantRight}
-        initial="hidden"
-        animate={control}
-      >
+      <div className="img-right-one">
         <img src={imagen} alt="imagen" />
-      </motion.div>
+      </div>
 
       <div className="text-container">
         <p className="text-history">
@@ -57,17 +25,15 @@ const History = () => {
       </div>
 
       <div className="img-left-one">
-        <motion.div
-          className="img-left-two-container"
-          ref={ref}
-          variants={boxVariantLeft}
-          initial="hidden"
-          animate={control}
-        >
-          <img src={imagen} alt="imagen-2" />
-        </motion.div>
+        <div className="img-left-two-container">
+          <Slide left>
+            <img src={imagen} alt="imagen-2" />
+          </Slide>
+        </div>
         <div></div>
-        <div className="right-line"></div>
+        <Flash>
+          <div className="right-line"></div>
+        </Flash>
       </div>
       <div className="text-container">
         <p className="text-history-center">
@@ -77,10 +43,14 @@ const History = () => {
       </div>
 
       <div className="img-right-two">
-        <div className="left-line"></div>
+        <Flash>
+          <div className="left-line"></div>
+        </Flash>
         <div></div>
         <div className="img-right-three-container">
-          <img src={imagen} alt="imagen-3" />
+          <Slide right>
+            <img src={imagen} alt="imagen-3" />
+          </Slide>
         </div>
       </div>
 
@@ -94,10 +64,16 @@ const History = () => {
       </div>
       <div className="img-left-two">
         <div className="img-left-three-container">
-          <img src={imagen} alt="imagen-3" />
+          <Slide left>
+            <img src={imagen} alt="imagen-3" />
+          </Slide>
         </div>
-        <div className="line-ultima"></div>
-        <div className="right-line"></div>
+        <Flash>
+          <div className="line-ultima"></div>
+        </Flash>
+        <Flash>
+          <div className="right-line"></div>
+        </Flash>
       </div>
 
       <div className="grid-colum-gracias-container">
