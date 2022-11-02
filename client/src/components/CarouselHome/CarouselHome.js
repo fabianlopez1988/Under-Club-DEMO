@@ -28,7 +28,7 @@ function CarouselHome() {
     <div className="carousel-home-container">
       <Carousel fade>
       {/* activeIndex={index} onSelect={handleSelect} */}
-      <Carousel.Item>
+      {/* <Carousel.Item>
 
           {events ? (
          
@@ -44,7 +44,7 @@ function CarouselHome() {
           )}
 
     
-        </Carousel.Item>
+        </Carousel.Item> */}
         <Carousel.Item>
           <img className="d-block w-100" src={DemoSlider} alt="slider" />
           <Carousel.Caption>

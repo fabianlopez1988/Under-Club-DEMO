@@ -1,9 +1,9 @@
 const Sequelize= require("sequelize")
 const db= require("../db")
 
-class Residents extends Sequelize.Model{}
+class Agency extends Sequelize.Model{}
 
-Residents.init({
+Agency.init({
     name: {
         type: Sequelize.STRING,
         unique: true
@@ -38,14 +38,7 @@ Residents.init({
       validate: {
         notEmpty: true
       }
-    },
-    trackSoundcloud: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
     }
-},{sequelize: db, modelName: "resident"})
+},{sequelize: db, modelName: "agency"})
 
-module.exports= Residents
+module.exports= Agency

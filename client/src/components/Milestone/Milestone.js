@@ -8,15 +8,15 @@ import { motion, useScroll } from "framer-motion";
 import Loader from "../Loader/Loader";
 
 const Milestone = () => {
-  const { scrollYProgress } = useScroll();
-  const [loading, setLoading] = useState(false);
+  // const { scrollYProgress } = useScroll();
+  // const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 6000);
+  // }, []);
 
   const lineOneTresor = `"Incluso antes de ver el lugar, había algo especial en el aire. En
   la parte delantera había unas ventanas enrejadas que daban al
@@ -86,229 +86,229 @@ const Milestone = () => {
   };
 
   return (
+    // <motion.div
+    //   className="milestone-container"
+    //   initial={{ width: 0 }}
+    //   animate={{ width: "100%" }}
+    //   exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+    // >
     <motion.div
       className="milestone-container"
-      initial={{ width: 0 }}
-      animate={{ width: "100%" }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
-      {loading ? (
+      {/* {loading ? (
         <Loader />
-      ) : (
-        <div>
+      ) : ( */}
+      <div>
+        <div className="grid-milestone">
           <motion.div
-            className="progress-bar"
-            style={{ scaleX: scrollYProgress }}
-          />
-
-          <div className="grid-milestone">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="img-milestone-container"
-            >
-              <img className="tresor-img" src={tresornight} />
-            </motion.div>
-
-            <div className="parrafo-container">
-              <motion.h6 variants={sentence} initial="hidden" animate="visible">
-                {lineOneTresor.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-                <br />
-                <br />
-                {lineTwoTresor.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-              </motion.h6>
-            </div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 3 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="img-milestone-container"
           >
-            <div className="grid-line">
-              <div></div>
-              <div className="line"></div>
-              <div></div>
-            </div>
-
-            <div className="grid-line">
-              <div></div>
-              <div className="line-one"></div>
-              <div></div>
-            </div>
+            <img className="tresor-img" src={tresornight} />
           </motion.div>
 
-          <div className="grid-milestone inversa">
-            <div className="parrafo-container-left-milestone">
-              <motion.h6 variants={sentence} initial="hidden" animate="visible">
-                {lineOneBassiani.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-                <br />
-                <br />
-                {lineTwoBassiani.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-              </motion.h6>
-            </div>
+          <div className="parrafo-container">
+            <motion.h6 variants={sentence} initial="hidden" animate="visible">
+              {lineOneTresor.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+              <br />
+              <br />
+              {lineTwoTresor.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </motion.h6>
+          </div>
+        </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="img-milestone-container-bassiani"
-            >
-              <img className="bassiani-img" src={Bassiani} />
-            </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          <div className="grid-line">
+            <div></div>
+            <div className="line"></div>
+            <div></div>
+          </div>
+
+          <div className="grid-line">
+            <div></div>
+            <div className="line-one"></div>
+            <div></div>
+          </div>
+        </motion.div>
+
+        <div className="grid-milestone inversa">
+          <div className="parrafo-container-left-milestone">
+            <motion.h6 variants={sentence} initial="hidden" animate="visible">
+              {lineOneBassiani.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+              <br />
+              <br />
+              {lineTwoBassiani.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </motion.h6>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 3 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="img-milestone-container-bassiani"
           >
-            <div className="grid-line">
-              <div></div>
-              <div className="line-center"></div>
-              <div></div>
-            </div>
-
-            <div className="grid-line">
-              <div></div>
-              <div className="line-two"></div>
-              <div></div>
-            </div>
-          </motion.div>
-
-          <div className="grid-milestone">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="img-milestone-container"
-            >
-              <img className="underground-img" src={underground} />
-            </motion.div>
-            <div className="parrafo-container">
-              <motion.h6 variants={sentence} initial="hidden" animate="visible">
-                {lineOneUnderGround.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-                <br />
-                <br />
-                {lineTwoUnderGround.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-                <br />
-                {lineThreeUnderGround.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-              </motion.h6>
-            </div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 3 }}
-          >
-            <div className="grid-line">
-              <div></div>
-              <div className="line-under"></div>
-              <div></div>
-            </div>
-
-            <div className="grid-line">
-              <div></div>
-              <div className="line-three"></div>
-              <div></div>
-            </div>
-          </motion.div>
-
-          <div className="grid-milestone inversa">
-            <div className="parrafo-container-left-milestone">
-              <motion.h6 variants={sentence} initial="hidden" animate="visible">
-                {lineOneWorld.split("").map((char, index) => {
-                  return (
-                    <motion.span key={char + "-" + index} variants={letter}>
-                      {char}
-                    </motion.span>
-                  );
-                })}
-              </motion.h6>
-            </div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="img-milestone-container tierras"
-            >
-              <img className="tierra-img" src={tierra} />
-            </motion.div>
-          </div>
-
-          <div className="banner-milestones">
-            <p className="banner-milestones-text">
-              TRAS CASI 10 AÑOS DE ARDUO TRABAJO, NOS ENORGULLECE MIRAR ATRÁS Y
-              VER TODO LO QUE HEMOS LOGRADO CONSTRUIR HASTA EL MOMENTO.
-              <br></br>
-              <br></br>A TODOS AQUELLOS QUE NOS PERMITEN CONTINUAR CRECIENDO Y
-              DESARROLLANDO NUESTRO SUEÑO:
-            </p>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 3 }}
-          >
-            <div className="grid-line">
-              <div></div>
-              <div className="line-center-gracias"></div>
-              <div></div>
-            </div>
-
-            <div className="grid-line" style={{ marginBottom: "5%" }}>
-              <div className="text-gracias-milestone">GRACIAS</div>
-              <div className="line-four-small"></div>
-              <div></div>
-            </div>
+            <img className="bassiani-img" src={Bassiani} />
           </motion.div>
         </div>
-      )}
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          <div className="grid-line">
+            <div></div>
+            <div className="line-center"></div>
+            <div></div>
+          </div>
+
+          <div className="grid-line">
+            <div></div>
+            <div className="line-two"></div>
+            <div></div>
+          </div>
+        </motion.div>
+
+        <div className="grid-milestone">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="img-milestone-container"
+          >
+            <img className="underground-img" src={underground} />
+          </motion.div>
+          <div className="parrafo-container">
+            <motion.h6 variants={sentence} initial="hidden" animate="visible">
+              {lineOneUnderGround.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+              <br />
+              <br />
+              {lineTwoUnderGround.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+              <br />
+              {lineThreeUnderGround.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </motion.h6>
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          <div className="grid-line">
+            <div></div>
+            <div className="line-under"></div>
+            <div></div>
+          </div>
+
+          <div className="grid-line">
+            <div></div>
+            <div className="line-three"></div>
+            <div></div>
+          </div>
+        </motion.div>
+
+        <div className="grid-milestone inversa">
+          <div className="parrafo-container-left-milestone">
+            <motion.h6 variants={sentence} initial="hidden" animate="visible">
+              {lineOneWorld.split("").map((char, index) => {
+                return (
+                  <motion.span key={char + "-" + index} variants={letter}>
+                    {char}
+                  </motion.span>
+                );
+              })}
+            </motion.h6>
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="img-milestone-container tierras"
+          >
+            <img className="tierra-img" src={tierra} />
+          </motion.div>
+        </div>
+
+        <div className="banner-milestones">
+          <p className="banner-milestones-text">
+            Tras casi 10 años de arduo trabajo, nos enorgullece mirar atrás y
+            ver todo lo que hemos logrado construir hasta el momento.
+            <br></br>
+            <br></br>A todos aquellos que nos permiten continuar creciendo y
+            desarrollando nuestro sueño:
+          </p>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          <div className="grid-line">
+            <div></div>
+            <div className="line-center-gracias"></div>
+            <div></div>
+          </div>
+
+          <div className="grid-line" style={{ marginBottom: "5%" }}>
+            <div className="text-gracias-milestone">GRACIAS</div>
+            <div className="line-four-small"></div>
+            <div></div>
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

@@ -1,13 +1,13 @@
-import "./AddResidents.css";
+import "./AddInternationalResidents.css";
 import Form from "react-bootstrap/Form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import useInput from "../../../../../../utils/useInput";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import { addResidents } from "../../../../../../store/residents";
+import { addInternationalResidents } from "../../../../../../store/agency";
 
-function AddResidents() {
+function AddInternationalResidents() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -17,7 +17,6 @@ function AddResidents() {
   const instagram = useInput()
   const residentAdvisor = useInput()
   const pressKit = useInput()
-  const trackSoundcloud = useInput()
 
   const [baseImage, setBaseImage] = useState("");
 
@@ -44,15 +43,14 @@ function AddResidents() {
 
   const handleClick = (blob) => {
     dispatch(
-      addResidents({
+      addInternationalResidents({
         name: name.value.length === 0 ? errorAlert() : name.value,
         photo: blob ? blob : errorAlert(),
         biography: biography.value.length === 0 ? errorAlert() : biography.value,
         instagram: instagram.value.length === 0 ? errorAlert() : instagram.value,
         soundcloud: soundcloud.value.length === 0 ? errorAlert() : soundcloud.value,
         residentAdvisor: residentAdvisor.value.length === 0 ? errorAlert : residentAdvisor.value,
-        pressKit: pressKit.value.length === 0 ? errorAlert() : pressKit.value,
-        trackSoundcloud: trackSoundcloud.value.length === 0 ? errorAlert() : trackSoundcloud.value
+        pressKit: pressKit.value.length === 0 ? errorAlert() : pressKit.value
       })
     )
       .then(() =>
@@ -63,7 +61,7 @@ function AddResidents() {
           timer: 1500,
         })
       )
-      .then(() => navigate("/admin/ourclub/residents"));
+      .then(() => navigate("/admin/ourclub/agency"));
   };
 
   const handleSubmit = (e) => {
@@ -72,9 +70,9 @@ function AddResidents() {
 
   return (
     <>
-      <div className="add-residents-container">
+      <div className="add-international-residents-container">
         <Form onSubmit={handleSubmit}>
-          <h1>Residentes</h1>
+          <h1>Agencia</h1>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Nombre</Form.Label>
             <br></br>
@@ -100,7 +98,7 @@ function AddResidents() {
             <Form.Label>Biografía</Form.Label>
             <br></br>
             <textarea
-              placeholder="Narre la Biografía..."
+              placeholder="Escriba la biografía..."
               {...biography}
             ></textarea>
           </Form.Group>
@@ -140,15 +138,6 @@ function AddResidents() {
               {...pressKit}
             />
           </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Soundcloud Track</Form.Label>
-            <br></br>
-            <input
-              placeholder="https://. . ."
-              {...trackSoundcloud}
-            />
-          </Form.Group>
           <button
             className="submit"
             type="submit"
@@ -162,4 +151,4 @@ function AddResidents() {
   );
 }
 
-export default AddResidents;
+export default AddInternationalResidents;

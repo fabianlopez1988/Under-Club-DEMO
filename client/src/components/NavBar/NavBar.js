@@ -115,6 +115,12 @@ const NavBar = () => {
                 <a>Contacto</a>
               </Link>
             </li>
+
+            <li>
+              <Link to="/agency" target="_blank">
+                <a className="navbar-agency-button">Agencia</a>
+              </Link>
+            </li>
             <li>
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>

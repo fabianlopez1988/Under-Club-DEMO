@@ -1,7 +1,5 @@
 import React from "react";
 import "./ShortHistory.css";
-// import Zoom from "react-reveal/Zoom";
-// import Rotate from "react-reveal/Rotate";
 
 const ShortHistory = () => {
 

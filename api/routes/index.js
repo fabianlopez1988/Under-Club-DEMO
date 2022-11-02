@@ -1,24 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const residents = require("./residents");
-const hitos = require("./hitos");
 const users = require("./users");
 const events = require("./events");
-const history = require("./history");
-const culture = require("./culture");
-const introCulture = require("./introCulture");
-const initialVideo = require("./initialVideo");
 const podcast = require("./podcast");
 const episode = require("./episode");
+const agency = require("./agency")
 
 router.use("/residents", residents);
-router.use("/hitos", hitos);
 router.use("/admin", users);
 router.use("/events", events);
-router.use("/history", history);
-router.use("/culture", culture);
-router.use("/introculture", introCulture);
 router.use("/podcast", podcast);
 router.use("/episode", episode);
+router.use("/agency", agency);
 
 module.exports = router;

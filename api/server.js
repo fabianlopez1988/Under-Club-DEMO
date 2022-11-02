@@ -10,6 +10,7 @@ const path = require("path");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const port = 5000;
+const User = require("./models/Users");
 
 app.use(cors());
 
@@ -37,13 +38,13 @@ passport.use(
     function (email, password, done) {
       User.findOne({ where: { email } })
         .then((user) => {
-          if (!user) {
-            return done(null, false, { message: "Incorrect username" });
+          if (!user) {  
+            return done(null, false, {message: "Incorrect username"});
           }
 
           user.hash(password, user.salt).then((hash) => {
             if (hash !== user.password) {
-              return done(null, false, { message: "Incorrect password" });
+              return done(null, false, {message: "Incorrect password"}); 
             }
 
             return done(null, user);
@@ -59,23 +60,12 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (id, done) {
-  User.findByPk(id)
-    .then((user) => {
-      done(null, user);
-    })
-    .catch(done);
+  User.findById(id, function (err, user) {
+    done(err, user);
+  })
+  .catch(done);
 });
 
-app.post(
-  "/login/password",
-  passport.authenticate("local", {
-    failureRedirect: "/login",
-    failureMessage: true,
-  }),
-  function (req, res) {
-    res.redirect("/~" + req.user.username);
-  }
-);
 
 app.use("/api", routes);
 

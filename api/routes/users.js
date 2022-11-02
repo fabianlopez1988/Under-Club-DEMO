@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/usersController");
+const passport = require("passport")
 
 router.post("/", usersController.createUser);
-router.post("/login", usersController.loginUser);
+router.post("/login", passport.authenticate("local"), (req, res) => {
+    res.send(req.user).status(200)
+});
 router.post("/logout", usersController.logoutUser);
 router.get("/:id", usersController.getUser);
 router.get("/", usersController.getAllUsers);
