@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import History from "./components/History/History";
 import Artists from "./components/Artists/Artists";
 import Home from "./components/Home/Home";
+import Register from "./components/Register/Register";
 import Login from "./components/LoginAdmin/Login";
 import Culture from "./components/Culture/Culture";
 import Events from "./components/Events/Events";
@@ -63,6 +64,8 @@ import UpdateEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/Upda
 import EditViewEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/EditViewEpisode/EditViewEpisode";
 
 import { AnimatePresence } from "framer-motion";
+import AddUsers from "./components/PanelAdmin/Options/Users/AddUsers/AddUsers";
+import DeleteUsers from "./components/PanelAdmin/Options/Users/DeleteUsers/DeleteUsers";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -77,13 +80,17 @@ const AnimatedRoutes = () => {
         <Route path="/milestones" element={<Milestone />} />
         <Route path="/contact" element={<Contact />} />
 
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<PanelAdmin />} />
 
         <Route path="/admin/events" element={<EventsAdmin />} />
         <Route path="/admin/initialvideo" element={<InitialVideo />} />
         <Route path="/admin/ourclub" element={<OurClub />} />
+
         <Route path="/admin/users" element={<Users />} />
+        <Route path="/admin/users/addusers" element={<AddUsers />} />
+        <Route path="/admin/users/deleteusers" element={<DeleteUsers />} />
 
         <Route path="/admin/ourclub/residents" element={<Residents />} />
         <Route path="/admin/ourclub/milestones" element={<Milestones />} />

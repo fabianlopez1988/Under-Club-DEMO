@@ -1,5 +1,9 @@
 import "./History.css";
-import imagen from "../../assets/DemoSlider3.jpg";
+import imgOneHistory from "../../assets/img-one-history.jpeg"
+import imgTwoHistory from "../../assets/img-two-history.jpeg"
+import imgThreeHistory from "../../assets/img-three-history.jpeg"
+import imgFourHistory from "../../assets/img-four-history.jpeg"
+
 import { motion } from "framer-motion";
 import Slide from "react-reveal/Slide";
 import Flash from "react-reveal/Flash";
@@ -14,7 +18,7 @@ const History = () => {
 
     >
       <div className="img-right-one">
-        <img src={imagen} alt="imagen" />
+        <img src={imgOneHistory} alt="imagen" />
       </div>
 
       <div className="text-container">
@@ -28,7 +32,7 @@ const History = () => {
       <div className="img-left-one">
         <div className="img-left-two-container">
           <Slide left>
-            <img src={imagen} alt="imagen-2" />
+            <img src={imgTwoHistory} alt="imagen-2" />
           </Slide>
         </div>
         <div></div>
@@ -50,7 +54,7 @@ const History = () => {
         <div></div>
         <div className="img-right-three-container">
           <Slide right>
-            <img src={imagen} alt="imagen-3" />
+            <img src={imgThreeHistory} alt="imagen-3" />
           </Slide>
         </div>
       </div>
@@ -66,7 +70,7 @@ const History = () => {
       <div className="img-left-two">
         <div className="img-left-three-container">
           <Slide left>
-            <img src={imagen} alt="imagen-3" />
+            <img src={imgFourHistory} alt="imagen-3" />
           </Slide>
         </div>
         <Flash>

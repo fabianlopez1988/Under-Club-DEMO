@@ -1,16 +1,15 @@
-import "./Login.css";
+import "./Register.css";
 import imgLogin from "../../assets/imgLogin.jpg";
 import Form from "react-bootstrap/Form";
-// import imgVinilo from "../../assets/imgVinilo.png";
 import useInput from "../../utils/useInput";
 import { useDispatch } from "react-redux";
-import { userLogin } from "../../store/user";
+import { userRegister } from "../../store/user";
 import { useNavigate } from "react-router";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const Login = () => {
+const Register = () => {
   const email = useInput();
   const password = useInput();
 
@@ -35,7 +34,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      userLogin({
+      userRegister({
         email: email.value.length === 0 ? errorAlert() : email.value,
         password: password.value.length === 0 ? errorAlert() : password.value,
       })
@@ -43,33 +42,20 @@ const Login = () => {
       .then(() =>
         Swal.fire({
           icon: "success",
-          title: "Iniciando",
+          title: "Creado",
           showConfirmButton: false,
           timer: 1500,
         })
       )
-      .then(() => {
-        if (localStorage.getItem("user")) {
-          navigate("/admin");
-        } else {
-          navigate("/");
-        }
-      })
+      .then(() => navigate("/login"))
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className="login-container">
-      <div className="form-container">
-        <h1>Iniciar Sesión</h1>
+    <div className="register-container">
+      <div className="form-container-register">
+        <h1>Registrarse</h1>
         <br></br>
-        {/* <img
-          className="rotate"
-          src={imgVinilo}
-          style={{ width: "80px", height: "80px" }}
-          alt="vinilo"
-        />
-        <br></br> */}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Correo electrónico</Form.Label>
@@ -93,14 +79,14 @@ const Login = () => {
 
           <Form.Group className="mb-3" controlId="formBasicLogin">
             <Form.Text className="text-muted">
-              ¿No es un miembro?{" "}
-              <Link className="link-login" to="/register">
-                Crear cuenta
+              ¿Ya es miembro?{" "}
+              <Link className="link-login" to="/login">
+                Iniciar Sesión
               </Link>
             </Form.Text>
           </Form.Group>
 
-          <button type="submit">Acceder</button>
+          <button type="submit">Crear cuenta</button>
         </Form>
       </div>
 
@@ -111,4 +97,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

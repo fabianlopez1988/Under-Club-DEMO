@@ -1,26 +1,23 @@
-import "./Login.css";
-import imgLogin from "../../assets/imgLogin.jpg";
+import "./AddUsers.css";
 import Form from "react-bootstrap/Form";
-// import imgVinilo from "../../assets/imgVinilo.png";
-import useInput from "../../utils/useInput";
 import { useDispatch } from "react-redux";
-import { userLogin } from "../../store/user";
-import { useNavigate } from "react-router";
+import useInput from "../../../../../utils/useInput";
+import { userRegister } from "../../../../../store/user";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 
-const Login = () => {
-  const email = useInput();
-  const password = useInput();
-
+const AddUsers = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const email = useInput();
+  const password = useInput();
 
   const user = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {
-    if (user) navigate("/admin");
+    if (!user) navigate("/");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -35,7 +32,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      userLogin({
+      userRegister({
         email: email.value.length === 0 ? errorAlert() : email.value,
         password: password.value.length === 0 ? errorAlert() : password.value,
       })
@@ -43,40 +40,27 @@ const Login = () => {
       .then(() =>
         Swal.fire({
           icon: "success",
-          title: "Iniciando",
+          title: "Creado",
           showConfirmButton: false,
           timer: 1500,
         })
       )
-      .then(() => {
-        if (localStorage.getItem("user")) {
-          navigate("/admin");
-        } else {
-          navigate("/");
-        }
-      })
+      .then(() => navigate("/admin/users"))
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className="login-container">
-      <div className="form-container">
-        <h1>Iniciar Sesión</h1>
+    <div className="add-users-container">
+      <div className="form-container-add-users">
+        <h1>Registrar</h1>
         <br></br>
-        {/* <img
-          className="rotate"
-          src={imgVinilo}
-          style={{ width: "80px", height: "80px" }}
-          alt="vinilo"
-        />
-        <br></br> */}
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Correo electrónico</Form.Label>
             <br></br>
             <input
               type="email"
-              placeholder="Ingrese su email"
+              placeholder="Ingrese email"
               {...email}
             ></input>
           </Form.Group>
@@ -86,29 +70,17 @@ const Login = () => {
             <br></br>
             <input
               type="password"
-              placeholder="Ingrese su contraseña"
+              placeholder="Ingrese contraseña"
               {...password}
             ></input>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicLogin">
-            <Form.Text className="text-muted">
-              ¿No es un miembro?{" "}
-              <Link className="link-login" to="/register">
-                Crear cuenta
-              </Link>
-            </Form.Text>
-          </Form.Group>
-
-          <button type="submit">Acceder</button>
+          <button className="submit" type="submit">Crear cuenta</button>
         </Form>
       </div>
 
-      <div className="img-container">
-        <img src={imgLogin} alt="img-login" />
-      </div>
     </div>
   );
 };
 
-export default Login;
+export default AddUsers;

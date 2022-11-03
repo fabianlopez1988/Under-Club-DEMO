@@ -10,6 +10,7 @@ const path = require("path");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const port = 5000;
+const User = require("./models/Users")
 
 app.use(cors());
 
@@ -28,6 +29,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 passport.use(
   new LocalStrategy(
     {
@@ -42,6 +44,7 @@ passport.use(
           }
 
           user.hash(password, user.salt).then((hash) => {
+            
             if (hash !== user.password) {
               return done(null, false, { message: "Incorrect password" });
             }
@@ -51,7 +54,7 @@ passport.use(
         })
         .catch(done);
     }
-  )
+  ) 
 );
 
 passport.serializeUser(function (user, done) {
@@ -65,17 +68,6 @@ passport.deserializeUser(function (id, done) {
     })
     .catch(done);
 });
-
-app.post(
-  "/login/password",
-  passport.authenticate("local", {
-    failureRedirect: "/login",
-    failureMessage: true,
-  }),
-  function (req, res) {
-    res.redirect("/~" + req.user.username);
-  }
-);
 
 app.use("/api", routes);
 
