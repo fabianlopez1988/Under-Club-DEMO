@@ -4,22 +4,22 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { BsMusicPlayerFill } from "react-icons/bs";
-/* import { useDispatch } from "react-redux"; */
+import { BsMusicPlayerFill } from "react-icons/bs";*/
+import { useDispatch } from "react-redux";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link, /* useNavigate */ } from "react-router-dom";
-/* import { userLogout } from "../../store/user"; */
+import { Link, useNavigate } from "react-router-dom";
+import { userLogout } from "../../store/user";
 import "./NavBar.css";
 import gifWaveform from "../../assets/WaveBlanco.gif";
 
 const NavBar = () => {
-  /* const user = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("user"));
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(userLogout()).then(() => navigate("/login"));
-  }; */
+  };
 
   return (
     <>
@@ -75,7 +75,7 @@ const NavBar = () => {
             </Link>
           </div>
           <div>
-          <button className="nav-toggle">
+            <button className="nav-toggle">
               <GiHamburgerMenu />
             </button>
           </div>
@@ -117,6 +117,17 @@ const NavBar = () => {
                 <a>Contacto</a>
               </Link>
             </li>
+
+            <li>
+              {!user ? null : (
+                <div onClick={handleLogout}>
+                  <Link to="/login">
+                    <a>Cerrar Sesión</a>
+                  </Link>
+                </div>
+              )}
+            </li>
+
             <li>
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>

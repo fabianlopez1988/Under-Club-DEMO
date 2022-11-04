@@ -33,8 +33,8 @@ export const userUpdate = createAsyncThunk("USER_UPDATE", (data) => {
   })
 });
 
-export const userDelete = createAsyncThunk("USER_DELETE", (user) => {
-  return axios.delete(`/api/admin/${user.id}`);
+export const userDelete = createAsyncThunk("USER_DELETE", (id) => {
+  return axios.delete(`/api/admin/${id}`);
 });
 
 export const getUsersAll = createAsyncThunk("GET_ALL_USER", () => {

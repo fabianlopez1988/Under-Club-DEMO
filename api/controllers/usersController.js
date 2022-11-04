@@ -63,11 +63,12 @@ const usersController = {
       await Users.destroy({
         where: { id: req.params.id },
       });
-      return res.status(204);
+      return res.sendStatus(204);
     } catch (error) {
       console.log(error);
     }
   },
+
 
   //edita cualquier campo de user
   updateUser: async (req, res) => {

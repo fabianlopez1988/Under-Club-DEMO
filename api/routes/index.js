@@ -11,6 +11,7 @@ const initialVideo = require("./initialVideo");
 const podcast = require("./podcast");
 const episode = require("./episode");
 
+
 router.use("/residents", residents);
 router.use("/hitos", hitos);
 router.use("/admin", users);

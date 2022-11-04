@@ -76,6 +76,15 @@
   z-index: -1;
 }
 
+.link-login {
+  text-decoration: none;
+  color: white;
+}
+
+.link-login:hover {
+  color: blueviolet;
+}
+
 .img-container {
   width: 50%;
 }
@@ -85,16 +94,8 @@
   height: 100%;
 }
 
-/* // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... } */
-
-@media (max-width: 767.98px) {
-}
-
-@media (max-width: 575.98px) {
+@media (max-width: 800px) {
   .login-container {
     position: absolute;
     display: inline-block;
