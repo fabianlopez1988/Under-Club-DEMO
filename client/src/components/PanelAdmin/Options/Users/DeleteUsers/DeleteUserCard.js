@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { userDelete, getUsersAll } from "../../../../../store/user";
 import Swal from "sweetalert2";
 
-const DeleteUserCard = ({userAdmin}) => {
+const DeleteUserCard = ( { userAdmin } ) => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
