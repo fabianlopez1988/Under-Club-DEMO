@@ -77,6 +77,7 @@ const AnimatedRoutes = () => {
         <Route path="/admin/users/deleteusers" element={<DeleteUsers />} />
 
         <Route path="/admin/ourclub/residents" element={<Residents />} />
+
         <Route path="/admin/ourclub/agency" element={<AgencyAdmin />} />
         <Route path="/admin/ourclub/podcast" element={<PodcastAdmin />} />
         <Route path="/admin/ourclub/episodes" element={<EpisodeAdmin />} />
@@ -97,6 +98,7 @@ const AnimatedRoutes = () => {
           path="/admin/ourclub/residents/deleteresidents"
           element={<DeleteResidents />}
         />
+
         <Route path="/admin/events/addevents" element={<AddEvents />} />
         <Route path="/admin/events/updateevents" element={<UpdateEvents />} />
         <Route path="/admin/events/updateevents/:id" element={<EditEvents />} />
