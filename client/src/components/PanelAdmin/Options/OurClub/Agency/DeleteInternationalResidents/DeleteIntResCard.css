@@ -1,8 +1,19 @@
-.card-container-user h1 {
-  font-size: 16px;
+.agency-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  column-gap: 30px;
 }
 
-.card-container-user button {
+.agency-card-container img {
+  width: 200px;
+  height: 150px;
+  padding: 15px;
+}
+
+.agency-card-container button {
   border: none;
   border: 3px solid blueviolet;
   background: black;
@@ -16,7 +27,7 @@
   position: relative;
 }
 
-.card-container-user button:before {
+.agency-card-container button:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -28,8 +39,7 @@
   color: white;
   opacity: 0;
 }
-
-.card-container-user button:hover:before {
+.agency-card-container button:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;

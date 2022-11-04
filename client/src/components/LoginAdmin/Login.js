@@ -51,7 +51,8 @@ const Login = () => {
       .then(() => {
         if (localStorage.getItem("user")) {
           navigate("/admin");
-        } else {
+        } 
+        else {
           navigate("/");
         }
       })

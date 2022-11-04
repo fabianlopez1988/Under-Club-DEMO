@@ -8,19 +8,24 @@ import Register from "./components/Register/Register";
 import Login from "./components/LoginAdmin/Login";
 import Culture from "./components/Culture/Culture";
 import Events from "./components/Events/Events";
+import Agency from "./components/Agency/Agency";
 
 import PanelAdmin from "./components/PanelAdmin/PanelAdmin";
 
-import InitialVideo from "./components/PanelAdmin/Options/InitialVideo/InitialVideo";
 import OurClub from "./components/PanelAdmin/Options/OurClub/OurClub";
 import Users from "./components/PanelAdmin/Options/Users/Users";
 import Residents from "./components/PanelAdmin/Options/OurClub/Residents/Residents";
+import AgencyAdmin from "./components/PanelAdmin/Options/OurClub/Agency/AgencyAdmin";
 
 import AddResidents from "./components/PanelAdmin/Options/OurClub/Residents/AddResidents/AddResidents";
 import UpdateResidents from "./components/PanelAdmin/Options/OurClub/Residents/UpdateResidents/UpdateResidents";
 import EditViewResidents from "./components/PanelAdmin/Options/OurClub/Residents/EditViewResidents/EditViewResidents";
 import DeleteResidents from "./components/PanelAdmin/Options/OurClub/Residents/DeleteResidents/DeleteResidents";
 
+import AddInternationalResidents from "./components/PanelAdmin/Options/OurClub/Agency/AddInternationalResidents/AddInternationalResidents";
+import UpdateInternationalResidents from "./components/PanelAdmin/Options/OurClub/Agency/UpdateInternationalResidents/UpdateInternationalResidents";
+import EditViewInternationalResidents from "./components/PanelAdmin/Options/OurClub/Agency/EditViewInternationalResidents/EditViewInternationalResidents";
+import DeleteInternationalResidents from "./components/PanelAdmin/Options/OurClub/Agency/DeleteInternationalResidents/DeleteInternationalResidents";
 
 import EventsAdmin from "./components/PanelAdmin/Options/Events/EventsAdmin";
 import AddEvents from "./components/PanelAdmin/Options/Events/AddEvents/AddEvents";
@@ -58,13 +63,13 @@ const AnimatedRoutes = () => {
         <Route path="/events" element={<Events />} />
         <Route path="/milestones" element={<Milestone />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/agency" element={<Agency />} />
 
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<PanelAdmin />} />
 
         <Route path="/admin/events" element={<EventsAdmin />} />
-        <Route path="/admin/initialvideo" element={<InitialVideo />} />
         <Route path="/admin/ourclub" element={<OurClub />} />
 
         <Route path="/admin/users" element={<Users />} />
@@ -72,9 +77,9 @@ const AnimatedRoutes = () => {
         <Route path="/admin/users/deleteusers" element={<DeleteUsers />} />
 
         <Route path="/admin/ourclub/residents" element={<Residents />} />
+        <Route path="/admin/ourclub/agency" element={<AgencyAdmin />} />
         <Route path="/admin/ourclub/podcast" element={<PodcastAdmin />} />
         <Route path="/admin/ourclub/episodes" element={<EpisodeAdmin />} />
-
 
         <Route
           path="/admin/ourclub/residents/addresidents"
@@ -92,9 +97,6 @@ const AnimatedRoutes = () => {
           path="/admin/ourclub/residents/deleteresidents"
           element={<DeleteResidents />}
         />
-
-  
-
         <Route path="/admin/events/addevents" element={<AddEvents />} />
         <Route path="/admin/events/updateevents" element={<UpdateEvents />} />
         <Route path="/admin/events/updateevents/:id" element={<EditEvents />} />
@@ -132,6 +134,23 @@ const AnimatedRoutes = () => {
         <Route
           path="/admin/ourclub/episode/deleteepisode"
           element={<DeleteEpisode />}
+        />
+
+        <Route
+          path="/admin/ourclub/agency/addagency"
+          element={<AddInternationalResidents />}
+        />
+        <Route
+          path="/admin/ourclub/agency/updateagency"
+          element={<UpdateInternationalResidents />}
+        />
+        <Route
+          path="/admin/ourclub/agency/updateagency/:id"
+          element={<EditViewInternationalResidents />}
+        />
+        <Route
+          path="/admin/ourclub/agency/deleteagency"
+          element={<DeleteInternationalResidents />}
         />
       </Routes>
     </AnimatePresence>

@@ -119,6 +119,7 @@ const NavBar = () => {
             </li>
 
             <li>
+<<<<<<< HEAD
               {!user ? null : (
                 <div onClick={handleLogout}>
                   <Link to="/login">
@@ -128,6 +129,12 @@ const NavBar = () => {
               )}
             </li>
 
+=======
+              <Link to="/agency" target="_blank">
+                <a className="navbar-agency-button">Agencia</a>
+              </Link>
+            </li>
+>>>>>>> fabian3
             <li>
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>

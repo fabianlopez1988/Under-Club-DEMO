@@ -55,6 +55,7 @@
   font-size: 25px;
   font-family: LeagueSpartan-Regular;
   word-wrap: break-word;
+  text-align: justify;
 }
 
 .podcast-container_intro_button {

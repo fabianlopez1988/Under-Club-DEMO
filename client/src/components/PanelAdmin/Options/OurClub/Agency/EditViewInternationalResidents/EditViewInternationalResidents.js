@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useParams } from "react-router-dom"
-import { getAllResidents, getResident, updateResidents } from "../../../../../../store/residents"
+import { getAllInternationalResidents, getInternationalResident, updateInternationalResidents } from "../../../../../../store/agency"
 import useInput from "../../../../../../utils/useInput"
-import "./EditViewResidents.css"
+import "./EditViewInternationalResidents.css"
 import Form from "react-bootstrap/Form"
 import Swal from "sweetalert2"
 
-function EditViewResidents() {
+function EditViewInternationalResidents() {
     const { id } = useParams()
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -18,9 +18,6 @@ function EditViewResidents() {
     const instagram = useInput()
     const residentAdvisor = useInput()
     const pressKit = useInput()
-    const trackSoundcloud = useInput()
-
-    
 
     const [baseImage, setBaseImage] = useState("")
 
@@ -32,11 +29,11 @@ function EditViewResidents() {
     }, [])
     
     useEffect(() => {
-      dispatch(getResident(id))
+      dispatch(getInternationalResident(id))
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
-    const residentRedux = useSelector((state) => state.resident)
+    const agencyRedux = useSelector((state) => state.agency)
 
     const uploadImage = (e) => {
         const file = e.target.files[0]
@@ -46,15 +43,14 @@ function EditViewResidents() {
 
     const handleClick = (blob) => {
         dispatch(
-            updateResidents({
-                photo: blob === "" ? residentRedux.photo : blob,
-                name: name.value.length === 0 ? residentRedux.name : name.value,
-                biography: biography.value.length === 0 ? residentRedux.biography : biography.value,
-                soundcloud: soundcloud.value.length === 0 ? residentRedux.soundcloud : soundcloud.value,
-                instagram: instagram.value.length === 0 ? residentRedux.instagram : instagram.value,
-                residentAdvisor : residentAdvisor.value.length === 0 ? residentRedux.residentAdvisor : residentAdvisor.value,
-                pressKit: pressKit.value.length === 0 ? residentRedux.pressKit : pressKit.value,
-                trackSoundcloud: trackSoundcloud.value.length === 0 ? residentRedux.trackSoundcloud : trackSoundcloud.value
+            updateInternationalResidents({
+                photo: blob === "" ? agencyRedux.photo : blob,
+                name: name.value.length === 0 ? agencyRedux.name : name.value,
+                biography: biography.value.length === 0 ? agencyRedux.biography : biography.value,
+                soundcloud: soundcloud.value.length === 0 ? agencyRedux.soundcloud : soundcloud.value,
+                instagram: instagram.value.length === 0 ? agencyRedux.instagram : instagram.value,
+                residentAdvisor : residentAdvisor.value.length === 0 ? agencyRedux.residentAdvisor : residentAdvisor.value,
+                pressKit: pressKit.value.length === 0 ? agencyRedux.pressKit : pressKit.value
             })
         )
         .then(() =>
@@ -65,8 +61,8 @@ function EditViewResidents() {
           timer: 1500,
         })
       )
-      .then(() => dispatch(getAllResidents()))
-      .then(() => navigate("/admin/ourclub/residents"))
+      .then(() => dispatch(getAllInternationalResidents()))
+      .then(() => navigate("/admin/ourclub/agency"))
     }
 
     const handleSubmit = (e) => {
@@ -74,13 +70,13 @@ function EditViewResidents() {
     }
 
   return (
-    <div className="edit-container">
+    <div className="edit-agency-container">
       <Form onSubmit={handleSubmit}>
         <h1>Residentes</h1>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Nombre</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.name} {...name} />
+          <input placeholder={agencyRedux.name} {...name} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -95,8 +91,8 @@ function EditViewResidents() {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={residentRedux.photo}
-              alt={residentRedux.id}
+              src={agencyRedux.photo}
+              alt={agencyRedux.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -105,37 +101,31 @@ function EditViewResidents() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Biografía</Form.Label>
           <br></br>
-          <textarea placeholder={residentRedux.biography} {...biography}></textarea>
+          <textarea placeholder={agencyRedux.biography} {...biography}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Instagram</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.instagram} {...instagram} />
+          <input placeholder={agencyRedux.instagram} {...instagram} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>SoundCloud</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.soundcloud} {...soundcloud} />
+          <input placeholder={agencyRedux.soundcloud} {...soundcloud} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Resident Advisor</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.residentAdvisor} {...residentAdvisor} />
+          <input placeholder={agencyRedux.residentAdvisor} {...residentAdvisor} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Press Kit</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.pressKit} {...pressKit} />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Track SoundCloud</Form.Label>
-          <br></br>
-          <input placeholder={residentRedux.trackSoundcloud} {...trackSoundcloud} />
+          <input placeholder={agencyRedux.pressKit} {...pressKit} />
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar
@@ -145,4 +135,4 @@ function EditViewResidents() {
   )
 }
 
-export default EditViewResidents
+export default EditViewInternationalResidents

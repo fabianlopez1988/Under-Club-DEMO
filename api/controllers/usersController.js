@@ -13,16 +13,6 @@ const usersController = {
     }
   },
 
-  //loguea un user
-  loginUser: async (req, res) => {
-    try {
-      await passport.authenticate("local");
-      return res.status(200).send(req.body);
-    } catch (error) {
-      console.log(error);
-    }
-  },
-
   //desloguea un user
   logoutUser: async (req, res, next) => {
     try {
@@ -84,7 +74,7 @@ const usersController = {
     }
   },
 
-  //recibe email 
+  //recibe email
   sendMail: (req, res) => {
     try {
       const mail = {

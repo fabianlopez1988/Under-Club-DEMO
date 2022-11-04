@@ -39,7 +39,7 @@
 }
 
 .accordion-button {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #8342ea;
   border-bottom: 4px solid #8342ea;
   letter-spacing: 0.2rem;
@@ -47,13 +47,8 @@
   padding-bottom: 1%;
 }
 
-/* .accordion-button collapsed {
-  text-decoration-line: underline;
-} */
-
 .accordion-button:hover {
   color: white;
-  /* filter: opacity(0.95) drop-shadow(0.5px 0.5px 0.3px #8342ea); */
 }
 
 .accordion-body {
@@ -64,7 +59,7 @@
 
 .accordion-right {
 display: flex;
-align-items: center;
+align-items: flex-end;
 justify-content: center;
 height: auto
 }
@@ -73,6 +68,7 @@ height: auto
   width: 80%;
   height: 94%;
   margin: 0 auto;
+  margin-right: 0;
 }
 
 .photo:hover {
@@ -130,8 +126,8 @@ height: auto
 }
 
 .biography {
-  margin-top: 7%;
-  margin-bottom: 7%;
+  margin-top: 2%;
+  margin-bottom: 2%;
   font-size: 1.7em;
   line-height: 2.2rem;
   font-family: LeagueSpartan-Regular;
@@ -144,17 +140,21 @@ height: auto
   color: #8342ea;
 }
 
+.artists-tag-a:hover{
+  color: white;
+}
+
 .social-media ul {
   list-style: none;
   float: right;
   font-size: 1.5rem;
   padding: 10%;
   margin: 0 10%;
+  padding-bottom: 0;
 }
 
 .social-media {
   border-left: 44px solid rgba(131, 66, 234, 0.3);
-  margin-bottom: 3.5%;
 }
 
 .container-artists {
@@ -176,7 +176,7 @@ height: auto
   }
 
   .social-media {
-    border-left: 40px solid #8342ea;
+    border-left: 40px solid rgba(131, 66, 234, 0.3);
   }
 
   .artists-section-title {
@@ -244,7 +244,7 @@ height: auto
   }
 
   .social-media {
-    border-left: 35px solid #8342ea;
+    border-left: 35px solid rgba(131, 66, 234, 0.3);
   } 
 }
 
@@ -281,7 +281,7 @@ height: auto
   }
 
   .social-media {
-    border-left: 33px solid #8342ea;
+    border-left: 33px solid rgba(131, 66, 234, 0.3);
   } 
 }
 
@@ -322,7 +322,7 @@ height: auto
   }
 
   .social-media {
-    border-left: 25px solid #8342ea;
+    border-left: 25px solid rgba(131, 66, 234, 0.3);
     margin-bottom: 4.5%;
   }
   
@@ -343,7 +343,6 @@ height: auto
 
   .social-media ul {
     font-size: 1.0rem;
-    padding: 9%;
   margin: 0 7%;
   }
 
@@ -365,7 +364,7 @@ height: auto
   }
 
   .social-media {
-    border-left: 24px solid #8342ea;
+    border-left: 24px solid rgba(131, 66, 234, 0.3);
     margin-bottom: 4.5%;
   }
   
@@ -408,8 +407,11 @@ height: auto
   }
 
   .social-media {
-    border-left: 23px solid #8342ea;
+    border-left: 23px solid rgba(131, 66, 234, 0.3);
     margin-bottom: 4.5%;
+  }
+  .artists-soundcloud-container {
+    display: none
   }
   
 }
@@ -454,6 +456,9 @@ height: auto
     border-left: none;
     margin-bottom: 4.5%;
   }
+  .artists-soundcloud-container {
+    display: none
+  }
 }
 
 @media only screen and (min-width: 560px) and (max-width: 670px) {
@@ -496,6 +501,9 @@ height: auto
   .social-media {
     border-left: none;
     margin-bottom: 4.5%;
+  }
+  .artists-soundcloud-container {
+    display: none
   }
 }
 
@@ -546,7 +554,10 @@ height: auto
     width: 90%;
     height: 92%;
     margin: 0 auto;
-}
+  }
+  .artists-soundcloud-container {
+    display: none
+  }
 }
 
 /* Celu acostado */
@@ -676,5 +687,8 @@ height: auto
   .social-media {
     border-left: none;
     margin-bottom: 0%;
+  }
+  .artists-soundcloud-container {
+    display: noneabian3
   }
 }
