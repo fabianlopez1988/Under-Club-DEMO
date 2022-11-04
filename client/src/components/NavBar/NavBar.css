@@ -21,9 +21,8 @@ nav ul li {
 }
 
 .ul-navbar {
-  list-style: none;
-  left: 100%;
-  transition: left 0.3s;
+  position: initial;
+  margin: 0;
 }
 
 .ul-navbar li ul {
@@ -70,29 +69,19 @@ nav ul li {
   height: 60px;
 }
 
-.nav-toggle {
-  color: white;
-  background: none;
-  border: none;
-  font-size: 30px;
-  padding: 0 20px;
-  line-height: 60px;
-  display: none;
-}
 .navbar-waveform {
   height: 80px;
   width: 80px;
 }
 
+.burguer{
+  display: none;
+}
 
 /* MEDIA QUERIES */
 
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  /* .navbar-container {
-    font-size: 20px;
-  } */
-  
   nav {
     padding-top: 16px;
   }
@@ -127,7 +116,6 @@ nav ul li {
   
   nav {
     padding-top: 12px;
-    /* padding-right: 2%; */
   }
 
   .logo-fixed img {
@@ -137,6 +125,43 @@ nav ul li {
   nav ul li {
     padding: 10px 10px;
   }
+
+  .burguer{
+    display: block;
+  }
+
+  .ul-navbar {
+    list-style: none;
+    left: 100%;
+    transition: left 0.3s;
+    position: absolute;
+      top: -700px;
+      left: -2000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  
+  .ul-navbar.active{
+    display: flex;
+    flex-direction: column;
+    /* display: block;
+    position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  
+    height: calc(100% - 60px);
+    overflow-y: auto;
+  }
+  
 }
 
 
@@ -147,7 +172,6 @@ nav ul li {
   
   nav {
     padding-top: 12px;
-    /* padding-right: 2%; */
   }
 
   .logo-fixed img {
@@ -155,17 +179,44 @@ nav ul li {
   }
 
   nav ul li {
-    padding: 10px 8px;
+    padding: 25px 8px;
   }
     
-  /* .nav-toggle {
+  .burguer{
     display: block;
-  } */
+  }
 
-  /* .ul-navbar{
+  .ul-navbar {
+    list-style: none;
+    left: 100%;
+    transition: left 0.3s;
+    position: absolute;
+      top: -700px;
+      left: -2000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  
+  .ul-navbar.active{
     display: flex;
     flex-direction: column;
-  } */
+    /* display: block;
+    position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  
+    height: calc(100% - 60px);
+    overflow-y: auto;
+  }
 }
 
 /* Celu acostado */
@@ -193,8 +244,41 @@ nav ul li {
   .nav-toggle {
     display: block;
   }
-  .nav-menu_visible {
+
+  .burguer{
+    display: block;
+  }
+
+  .ul-navbar {
+    list-style: none;
+    left: 100%;
+    transition: left 0.3s;
+    position: absolute;
+      top: -700px;
+      left: -2000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  
+  .ul-navbar.active{
+    display: flex;
+    flex-direction: column;
+    /* display: block;
+    position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    position: fixed;
+    top: 30%;
     left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  
+    height: calc(100% - 60px);
+    overflow-y: auto;
   }
 }
 
@@ -214,5 +298,41 @@ nav ul li {
   }
   .nav-toggle {
     display: block
+  }
+
+  .burguer{
+    display: block;
+  }
+
+  .ul-navbar {
+    list-style: none;
+    left: 100%;
+    transition: left 0.3s;
+    position: absolute;
+      top: -700px;
+      left: -2000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+  
+  .ul-navbar.active{
+    display: flex;
+    flex-direction: column;
+    /* display: block;
+    position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  
+    height: calc(100% - 60px);
+    overflow-y: auto;
   }
 }

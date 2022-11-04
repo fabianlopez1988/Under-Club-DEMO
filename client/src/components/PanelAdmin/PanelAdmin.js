@@ -18,15 +18,9 @@ const PanelAdmin = () => {
         <Link className="links-options" to="/admin/ourclub">
           <button>Nuestro Club</button>
         </Link>
-
         <Link className="links-options" to="/admin/events">
           <button>Eventos</button>
         </Link>
-
-        <Link className="links-options" to="/admin/initialvideo">
-          <button>Video Inicial</button>
-        </Link>
-
         <Link className="links-options" to="/admin/users">
           <button>Users</button>
         </Link>

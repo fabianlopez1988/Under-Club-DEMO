@@ -15,22 +15,6 @@ const OurClub = () => {
     <div className="ourclub-container">
       <h1>Configuraciones</h1>
       <ul>
-        <Link className="links-options" to="/admin/ourclub/history">
-          <button>Historia</button>
-        </Link>
-
-        <Link className="links-options" to="/admin/ourclub/introculture">
-          <button>Intro Sección Cultura</button>
-        </Link>
-
-        <Link className="links-options" to="/admin/ourclub/culture">
-          <button>Cultura</button>
-        </Link>
-
-        <Link className="links-options" to="/admin/ourclub/milestones">
-          <button>Hitos</button>
-        </Link>
-
         <Link className="links-options" to="/admin/ourclub/residents">
           <button>Residentes</button>
         </Link>
