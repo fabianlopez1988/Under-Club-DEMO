@@ -28,8 +28,18 @@ const Login = () => {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Debes completar todos los campos!",
+      text: "El usuario no existe o los datos son incorrectos!",
     });
+  };
+
+  const okUser = () => {
+    Swal.fire({
+      icon: "success",
+      title: "Iniciando",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    navigate("/admin");
   };
 
   const handleSubmit = (e) => {
@@ -40,22 +50,7 @@ const Login = () => {
         password: password.value.length === 0 ? errorAlert() : password.value,
       })
     )
-      .then(() =>
-        Swal.fire({
-          icon: "success",
-          title: "Iniciando",
-          showConfirmButton: false,
-          timer: 1500,
-        })
-      )
-      .then(() => {
-        if (localStorage.getItem("user")) {
-          navigate("/admin");
-        } 
-        else {
-          navigate("/");
-        }
-      })
+      .then(() => (localStorage.getItem("user") ? okUser() : errorAlert()))
       .catch((err) => console.log(err));
   };
 

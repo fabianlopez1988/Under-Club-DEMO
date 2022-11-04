@@ -110,7 +110,7 @@
   border-bottom: rgba(131, 66, 234, 0.4);
   border-top: rgba(131, 66, 234, 0.4);
   height: 100px;
-  margin-top: -1%;
+  margin-top: 1%;
 }
 
 /*linea vertical para unir imagenes 2*/
@@ -122,7 +122,7 @@
   border-bottom: rgba(131, 66, 234, 0.4);
   border-top: rgba(131, 66, 234, 0.4);
   height: 100px;
-  margin-top: -8%;
+  margin-top: -6%;
 }
 
 /*primera linea*/
@@ -133,7 +133,7 @@
   border-left: rgba(131, 66, 234, 0.4);
   border-bottom: rgba(131, 66, 234, 0.4);
   height: 350px;
-  margin-bottom: -10%;
+  margin-bottom: -8%;
 }
 /*segunda linea*/
 .line-two {
@@ -142,7 +142,7 @@
   border-color: rgba(131, 66, 234, 0.4);
   border-right: rgba(131, 66, 234, 0.4);
   height: 370px;
-  margin-bottom: -5%;
+  margin-bottom: -3%;
   border-bottom: rgba(131, 66, 234, 0.4);
 }
 
@@ -154,7 +154,7 @@
   border-bottom: rgba(131, 66, 234, 0.4);
   border-top: rgba(131, 66, 234, 0.4);
   height: 220px;
-  margin-top: -5%;
+  margin-top: -3%;
 }
 /*tercera linea*/
 .line-three {
@@ -164,6 +164,7 @@
   border-left: rgba(131, 66, 234, 0.4);
   border-bottom: rgba(131, 66, 234, 0.4);
   height: 100px;
+  margin-bottom: 2%;
 }
 
 .banner-milestones {
@@ -203,9 +204,9 @@
 .text-gracias-milestone {
   display: flex;
   justify-content: flex-end;
-  margin-top: -7%;
+  margin-top: -3%;
   margin-right: 5%;
-  font-size: 80px;
+  font-size: 60px;
   color: #8542ea;
 }
 

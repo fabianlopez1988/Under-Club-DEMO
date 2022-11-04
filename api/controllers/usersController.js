@@ -14,15 +14,11 @@ const usersController = {
   },
 
   //desloguea un user
-  logoutUser: async (req, res, next) => {
-    try {
-      await req.logout((err) => {
-        if (err) return next(err);
-        return res.sendStatus(200);
-      });
-    } catch (error) {
-      console.log(error);
-    }
+    logoutUser: (req, res, next) => {
+      req.logout((err) => {
+        if (err) return next(err)
+        return res.sendStatus(200)
+    })
   },
 
   //trae un user

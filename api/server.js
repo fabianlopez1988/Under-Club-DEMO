@@ -60,9 +60,11 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
-    done(err, user);
-  }).catch(done);
+  User.findByPk(id)
+    .then((user) => {
+      done(null, user);
+    })
+    .catch(done);
 });
 
 app.use("/api", routes);

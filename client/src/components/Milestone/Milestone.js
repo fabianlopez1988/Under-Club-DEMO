@@ -298,7 +298,7 @@ const Milestone = () => {
         </div>
 
         <div className="grid-line" style={{ marginBottom: "5%" }}>
-          <div className="text-gracias-milestone">Gracias</div>
+          <div className="text-gracias-milestone">GRACIAS</div>
           <div className="line-four-small"></div>
           <div></div>
         </div>
