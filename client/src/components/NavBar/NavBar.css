@@ -74,16 +74,11 @@ nav ul li {
   width: 80px;
 }
 
-.navbar-agency-button {
-  padding: 5%;
-}
-
 .burguer {
   display: none;
 }
 
 /* MEDIA QUERIES */
-
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   nav {
@@ -96,7 +91,7 @@ nav ul li {
 }
 
 /* Tablet acostada */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 767.99px) and (max-width: 1024px) {
   .navbar-container {
     font-size: 19px;
   }
@@ -111,7 +106,7 @@ nav ul li {
 }
 
 /* Tablet */
-@media only screen and (min-width: 580px) and (max-width: 768px) {
+@media only screen and (min-width: 580px) and (max-width: 767.98px) {
   .navbar-container {
     font-size: 18px;
   }

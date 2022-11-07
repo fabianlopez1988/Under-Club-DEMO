@@ -26,6 +26,14 @@
   align-items: flex-end;
 }
 
+.episode-container-paragraph-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 .episode_paragraph {
   font-size: 1.6rem;
   margin-bottom: 0;
@@ -45,7 +53,7 @@
   margin: 5%;
 }
 
-.episode-container_intro {
+.episode-container-intro {
   height: 700px;
   background-color: rgba(131, 66, 234, 0.3);
   padding: 10% 10%;
@@ -55,6 +63,7 @@
   margin-left: -20%;
   margin-right: 10%;
   align-items: center;
+  width: 1000px;
 }
 
 .episode-container-intro_grid {
@@ -62,19 +71,26 @@
   grid-template-columns: 0.25fr 1fr;
 }
 
-.episode-container_intro p {
+/* .episode-container-intro p {
   height: auto;
   font-size: 25px;
   font-family: LeagueSpartan-Regular;
   word-wrap: break-word;
+} */
+
+.episode-container-paragraph-intro p {
+  width: 800px;
+  height: 400px;
+  text-align: justify;
 }
 
 .episode-container_button {
-  display: grid;
-  grid-template-columns: 0.25fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.episode-container_intro_button {
+.episode-container-intro_button {
   text-transform: uppercase;
   width: 15%;
   border: none;
@@ -88,7 +104,7 @@
   position: relative;
 }
 
-.episode-container_intro_button:before {
+.episode-container-intro_button:before {
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -102,7 +118,7 @@
   border-radius: 25px;
 }
 
-.episode-container_intro_button:hover:before {
+.episode-container-intro_button:hover:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
@@ -138,11 +154,11 @@
 
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  .episode-container_intro {
+  .episode-container-intro {
     padding: 8%;
     height: 90%;
   }
-  .episode-container_intro p {
+  .episode-container-intro p {
     font-size: 20px;
   }
   .episode-container-flyer img {
@@ -152,7 +168,7 @@
   .episode_paragraph {
     font-size: 1.4rem;
   }
-  .episode-container_intro_button {
+  .episode-container-intro_button {
     width: 40%;
   }
 }
@@ -170,12 +186,12 @@
   .episode_title {
     font-size: 40px;
   }
-  .episode-container_intro {
+  .episode-container-intro {
     padding: 5%;
     height: 60%;
     margin-left: -15%;
   }
-  .episode-container_intro p {
+  .episode-container-intro p {
     font-size: 16px;
   }
   .episode-container-flyer img {
@@ -185,7 +201,7 @@
   .episode_paragraph {
     font-size: 1.4rem;
   }
-  .episode-container_intro_button {
+  .episode-container-intro_button {
     width: 25%;
   }
   .episode_line {
@@ -203,13 +219,13 @@
   .episode_title {
     font-size: 30px;
   }
-  .episode-container_intro {
+  .episode-container-intro {
     padding: 8%;
     height: 400px;
     margin-right: 10%;
     margin-left: 10%;
   }
-  .episode-container_intro p {
+  .episode-container-intro p {
     font-size: 18px;
   }
   .episode-container-flyer img {
@@ -220,7 +236,7 @@
   .episode_paragraph {
     font-size: 1.2rem;
   }
-  .episode-container_intro_button {
+  .episode-container-intro_button {
     width: 80px;
   }
   .episode_line {
@@ -256,13 +272,13 @@
   .episode_title {
     font-size: 20px;
   }
-  .episode-container_intro {
+  .episode-container-intro {
     padding: 8%;
     height: 300px;
     margin-right: 10%;
     margin-left: 10%;
   }
-  .episode-container_intro p {
+  .episode-container-intro p {
     font-size: 16px;
   }
   .episode-container-flyer{
@@ -276,7 +292,7 @@
   .episode_paragraph {
     font-size: 16px;
   }
-  .episode-container_intro_button {
+  .episode-container-intro_button {
     width: 80px;
   }
   .episode_line {
@@ -313,13 +329,13 @@
   .episode_title {
     font-size: 20px;
   }
-  .episode-container_intro {
+  .episode-container-intro {
     padding: 8%;
     height: 300px;
     margin-right: 10%;
     margin-left: 10%;
   }
-  .episode-container_intro p {
+  .episode-container-intro p {
     font-size: 16px;
   }
   .episode-container-flyer{
@@ -333,7 +349,7 @@
   .episode_paragraph {
     font-size: 16px;
   }
-  .episode-container_intro_button {
+  .episode-container-intro_button {
     width: 80px;
   }
   .episode_line {
@@ -356,3 +372,4 @@
   }
   
 }
+

@@ -53,7 +53,7 @@ const Podcast = () => {
       <section>
         <Carousel>
           {podcasts?.data?.map((podcast) => (
-            <Carousel.Item>NUESTRO CLUB
+            <Carousel.Item>
               <div className="podcast-container">
                 <div className="podcast-container-flyer">
                   <img className="" src={podcast.flyer} alt={podcast.id} />

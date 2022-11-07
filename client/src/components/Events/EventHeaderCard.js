@@ -18,12 +18,13 @@ const EventHeaderCard = () => {
   }, []);
 
   const events = useSelector((state) => state.events);
+  console.log(events);
 
   return (
     <div>
       {events ? (
         <div className="flyer-box">
-          <img src={events.data[0].flyerLarge} alt="flyer" />
+          <img src={events.data[0]?.flyerLarge} alt="flyer" />
           <a
             href="https://tickets.underclub.com.ar/productora/eventos/13"
             target="_blank"

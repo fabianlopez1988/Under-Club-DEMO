@@ -6,9 +6,7 @@ export const addPodcast = createAsyncThunk("ADD_PODCAST", (data) => {
 });
 
 export const updatePodcast = createAsyncThunk("UPDATE_PODCAST", (data, thunkAPI) => {
-  console.log(data , "soy data")
   const {podcast} = thunkAPI.getState();
-  console.log(podcast, "podcast")
   return axios.put(`/api/podcast/${podcast.id}`, data).then((update) => update.data);
 });
 

@@ -33,9 +33,7 @@ const Episodes = () => {
         <div className="episode-title-paragraph_container">
           <div className="episode-paragraph_container">
             <p className="episode_paragraph">
-              8 artistas <br></br>
-              8 episodios <br></br>
-              8 experiencias
+              8 artistas <br></br>8 episodios <br></br>8 experiencias
             </p>
           </div>
           <div></div>
@@ -50,27 +48,21 @@ const Episodes = () => {
                 <div className="episode-container-flyer">
                   <img className="" src={episode.flyer} alt={episode.id} />
                 </div>
-                <div className="episode-container_intro">
-                  <div className="episode-container-intro_grid">
-                    <div></div>
-                    <div>
-                      <p>{episode.intro}</p>
-                    </div>
-                  </div>
+
+                <div className="episode-container-intro">
+                    <p>{episode.intro}</p>
                   <div className="episode-container_button">
-                    <div></div>
-                    <div>
-                      <a href={episode.url} target="_blank" rel="noreferrer">
-                        <button
-                          className="episode-container_intro_button"
-                          src={episode.url}
-                        >
-                          VER
-                        </button>
-                      </a>
-                    </div>
+                    <a href={episode.url} target="_blank" rel="noreferrer">
+                      <button
+                        className="episode-container_intro_button"
+                        src={episode.url}
+                      >
+                        VER
+                      </button>
+                    </a>
                   </div>
                 </div>
+
               </div>
             </Carousel.Item>
           ))}
