@@ -88,15 +88,6 @@ const NavBar = () => {
             </li>
 
             <li>
-              {!user ? null : (
-                <div onClick={handleLogout}>
-                  <Link to="/login">
-                    <a>Cerrar Sesión</a>
-                  </Link>
-                </div>
-              )}
-            </li>
-            <li>
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>
           </ul>
