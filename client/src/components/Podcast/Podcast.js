@@ -54,27 +54,31 @@ const Podcast = () => {
         <Carousel>
           {podcasts?.data?.map((podcast) => (
             <Carousel.Item>
-              <div className="podcast-container">
-                <div className="podcast-container-flyer">
-                  <img className="" src={podcast.flyer} alt={podcast.id} />
-                </div>
-                <div className="podcast-container_intro">
-                  <div>
-                    <p>{podcast.intro}</p>
-                  </div>
-                  <div className="podcast-container_button">
-                    <a href={podcast.url} target="_blank" rel="noreferrer">
-                      <button
-                        className="podcast-container_intro_button"
-                        src={podcast.url}
-                      >
-                        ESCUCHAR
-                      </button>
-                    </a>
-                  </div>
+            <div className="podcast-container">
+              <div className="podcast-container-flyer">
+                <img className="" src={podcast.flyer} alt={podcast.id} />
+              </div>
+
+              <div className="podcast-container-intro">
+                  <p>{podcast.intro}</p>
+                <div className="podcast-container_button">
+                  <a href={podcast.url} target="_blank" rel="noreferrer">
+                    <button
+                      className="podcast-container-intro_button"
+                      src={podcast.url}
+                    >
+                      VER
+                    </button>
+                  </a>
                 </div>
               </div>
-            </Carousel.Item>
+
+            </div>
+          </Carousel.Item>
+
+            
+
+
           ))}
         </Carousel>
       </section>

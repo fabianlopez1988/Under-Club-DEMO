@@ -54,7 +54,7 @@ const Episodes = () => {
                   <div className="episode-container_button">
                     <a href={episode.url} target="_blank" rel="noreferrer">
                       <button
-                        className="episode-container_intro_button"
+                        className="episode-container-intro_button"
                         src={episode.url}
                       >
                         VER

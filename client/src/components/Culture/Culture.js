@@ -24,15 +24,6 @@ const Culture = () => {
       <section className="culture-section ">
         {
           <div>
-            <Zoom>
-              <div className="footer-intro">
-                <div>AMOR</div>
-                <div id="line-footer-intro"></div>
-                <div>RESPETO</div>
-                <div id="line-footer-intro"></div>
-                <div>HUMILDAD</div>
-              </div>
-            </Zoom>
             <div className="grid1">
               <Fade top>
                 <div className="box left">
