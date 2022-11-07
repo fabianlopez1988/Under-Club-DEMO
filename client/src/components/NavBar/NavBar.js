@@ -1,27 +1,25 @@
 import "./NavBar.css";
 import gifWaveform from "../../assets/WaveBlanco.gif";
-import { useState } from "react"
+import { useState } from "react";
 import BurguerButton from "./BurguerButton";
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../../store/user";
 
-
 const NavBar = () => {
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleClick = () => {
-    setClicked(!clicked)
-  }
+    setClicked(!clicked);
+  };
 
   const user = JSON.parse(localStorage.getItem("user"));
 
   const handleLogout = () => {
     dispatch(userLogout()).then(() => navigate("/login"));
   };
-
 
   return (
     <>
@@ -35,7 +33,7 @@ const NavBar = () => {
               />
             </Link>
           </div>
-          <ul className={`ul-navbar ${ clicked ? "active" : ""}`}>
+          <ul className={`ul-navbar ${clicked ? "active" : ""}`}>
             <li id="our-club-navbar">
               Nuestro Club
               <ul>
@@ -90,11 +88,20 @@ const NavBar = () => {
             </li>
 
             <li>
+              {!user ? null : (
+                <div onClick={handleLogout}>
+                  <Link to="/login">
+                    <a>Cerrar Sesión</a>
+                  </Link>
+                </div>
+              )}
+            </li>
+            <li>
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>
           </ul>
           <div className="burguer">
-          <BurguerButton clicked={clicked} handleClick={handleClick} />
+            <BurguerButton clicked={clicked} handleClick={handleClick} />
           </div>
         </nav>
       </div>
