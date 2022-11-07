@@ -1,15 +1,27 @@
-import { Link} from "react-router-dom";
 import "./NavBar.css";
 import gifWaveform from "../../assets/WaveBlanco.gif";
 import { useState } from "react"
 import BurguerButton from "./BurguerButton";
+import { Link, useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { userLogout } from "../../store/user";
+
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleClick = () => {
     setClicked(!clicked)
   }
+
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const handleLogout = () => {
+    dispatch(userLogout()).then(() => navigate("/login"));
+  };
+
 
   return (
     <>
@@ -66,6 +78,17 @@ const NavBar = () => {
                 <a className="navbar-agency-button">Agencia</a>
               </Link>
             </li>
+
+            <li>
+              {!user ? null : (
+                <div onClick={handleLogout}>
+                  <Link to="/login">
+                    <a>Cerrar Sesión</a>
+                  </Link>
+                </div>
+              )}
+            </li>
+
             <li>
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>

@@ -13,7 +13,7 @@ export const userRegister = createAsyncThunk("USER_REGISTER", (data) => {
 
 export const userLogin = createAsyncThunk("USER_LOGGED", (data) => {
   return axios.post("/api/admin/login", data).then((user) => {
-    localStorage.setItem("user", JSON.stringify(user.data));
+    localStorage.setItem("user", JSON.stringify(user.data.email));
     return user.data;
   });
 });
