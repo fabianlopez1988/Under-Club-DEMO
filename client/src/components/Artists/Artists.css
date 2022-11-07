@@ -34,6 +34,7 @@
 
 .artists-section-title {
   font-size: 5rem;
+  padding-top: 2%;
   padding-bottom: 5%;
   letter-spacing: 0.4rem;
 }
@@ -53,7 +54,7 @@
 
 .accordion-body {
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(100px, 800px);
 }
 
@@ -131,7 +132,7 @@ height: auto
   font-size: 1.7em;
   line-height: 2.2rem;
   font-family: LeagueSpartan-Regular;
-  width: 80%;
+  width: 95%;
   overflow-y: auto;
 }
 
@@ -170,8 +171,8 @@ height: auto
   }
 
   .biography {
-    margin-top: 6%;
-    margin-bottom: 6%;
+    margin-top: 5%;
+    margin-bottom: 2%;
     font-size: 1.6rem;
   }
 

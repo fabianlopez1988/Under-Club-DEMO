@@ -10,7 +10,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -74,10 +74,6 @@ nav ul li {
   width: 80px;
 }
 
-.navbar-agency-button {
-  padding: 5%;
-}
-
 .burguer {
   display: none;
 }
@@ -93,10 +89,14 @@ nav ul li {
   .logo-fixed img {
     height: 56px;
   }
+
+  nav ul li {
+    padding: 10px 15px;
+  }
 }
 
 /* Tablet acostada */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 915px) and (max-width: 1024px) {
   .navbar-container {
     font-size: 19px;
   }
@@ -107,6 +107,28 @@ nav ul li {
 
   .logo-fixed img {
     height: 52px;
+  }
+
+  nav ul li {
+    padding: 10px 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 915px) {
+  .navbar-container {
+    font-size: 18px;
+  }
+
+  nav {
+    padding-top: 14px;
+  }
+
+  .logo-fixed img {
+    height: 50px;
+  }
+
+  nav ul li {
+    padding: 10px 10px;
   }
 }
 
@@ -125,7 +147,7 @@ nav ul li {
   }
 
   nav ul li {
-    padding: 10px 10px;
+    padding: 20px;
   }
 
   .burguer {
@@ -133,35 +155,44 @@ nav ul li {
   }
 
   .ul-navbar {
-    list-style: none;
-    left: 100%;
-    transition: left 0.3s;
     position: absolute;
     top: -700px;
     left: -2000px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    transition: left 0.3s;
   }
 
   .ul-navbar.active {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     /* display: block;
     position: absolute; */
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
     background-color: black;
     position: fixed;
-    top: 0%;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 
     height: 100%;
     overflow-y: auto;
+  }
+
+  .ul-navbar li:hover > ul {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: -7.2%;
+  }
+
+  .ul-navbar li ul li{
+    padding: 10px ;
   }
 }
 
