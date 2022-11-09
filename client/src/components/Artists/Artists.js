@@ -25,12 +25,91 @@ const Artists = () => {
         {!resident
           ? null
           : resident.map((res) => (
+              //componente original con foto y redes
+              // <Accordion bsPrefix={{ background: "#d0f1f7" }} flush>
+              //   <Accordion.Item eventKey="0">
+              //     <Accordion.Header>{res.name}</Accordion.Header>
+              //     <Accordion.Body>
+              //       <div className="accordion-left">
+              //         <div className="container-artists">
+              //           <a
+              //             className="link artists-tag-a"
+              //             href={res.pressKit}
+              //             target="_blank"
+              //             rel="noreferrer"
+              //           >
+              //             PRESS KIT
+              //           </a>
+              //         </div>
+              //         <div className="biography">{res.biography}</div>
+              //         <div className="social-media">
+              //           <ul>
+              //             <li>
+              //               <a
+              //                 className="artists-tag-a"
+              //                 href={res.instagram}
+              //                 target="_blank"
+              //                 rel="noreferrer"
+              //               >
+              //                 INSTAGRAM
+              //               </a>
+              //             </li>
+              //             <li>
+              //               <a
+              //                 className="artists-tag-a"
+              //                 href={res.soundcloud}
+              //                 target="_blank"
+              //                 rel="noreferrer"
+              //               >
+              //                 SOUNDCLOUD
+              //               </a>
+              //             </li>
+              //             <li>
+              //               <a
+              //                 className="artists-tag-a"
+              //                 href={res.residentAdvisor}
+              //                 target="_blank"
+              //                 rel="noreferrer"
+              //               >
+              //                 RESIDENT ADVISOR
+              //               </a>
+              //             </li>
+
+              //             <li>
+              //               <div className="artists-soundcloud-container">
+              //                 <ReactSoundCloud
+              //                 height={"200px"}
+              //                 color={"#8342ea"}
+              //                   url={
+              //                     "https://soundcloud.com/dynamic-reflection/5-audio-units-ancient-manifold"
+              //                   }
+              //                 />
+              //               </div>
+              //             </li>
+              //           </ul>
+              //         </div>
+              //       </div>
+              //       <div className="accordion-right">
+              //         <img src={res.photo} alt="foto" className="photo"></img>
+              //       </div>
+              //     </Accordion.Body>
+              //   </Accordion.Item>
+              // </Accordion>
+
               <Accordion bsPrefix={{ background: "#d0f1f7" }} flush>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>{res.name}</Accordion.Header>
-                  <Accordion.Body>
-                    <div className="accordion-left">
-                      <div className="container-artists">
+                  <Accordion.Body className="artists-accordion-body_modifier">
+                      <div style={{filter: "grayscale(100%)" }}className="artists-soundcloud-container">
+                        <ReactSoundCloud
+                          height={"200px"}
+                          color={"#8342ea"}
+                          url={
+                            res.trackSoundcloud
+                          }
+                        />
+                      </div>
+                      <div className="presskit-artists">
                         <a
                           className="link artists-tag-a"
                           href={res.pressKit}
@@ -40,57 +119,6 @@ const Artists = () => {
                           PRESS KIT
                         </a>
                       </div>
-                      <div className="biography">{res.biography}</div>
-                      <div className="social-media">
-                        <ul>
-                          <li>
-                            <a
-                              className="artists-tag-a"
-                              href={res.instagram}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              INSTAGRAM
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="artists-tag-a"
-                              href={res.soundcloud}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              SOUNDCLOUD
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              className="artists-tag-a"
-                              href={res.residentAdvisor}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              RESIDENT ADVISOR
-                            </a>
-                          </li>
-
-                          <li>
-                            <div className="artists-soundcloud-container">
-                              <ReactSoundCloud
-                              height={"200px"}
-                              color={"#8342ea"}
-                                url={
-                                  "https://soundcloud.com/dynamic-reflection/5-audio-units-ancient-manifold"
-                                }
-                              />
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="accordion-right">
-                      <img src={res.photo} alt="foto" className="photo"></img>
-                    </div>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

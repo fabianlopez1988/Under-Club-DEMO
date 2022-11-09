@@ -66,6 +66,12 @@ const NavBar = () => {
                 <a href="/">Eventos</a>
               </Link>
             </li>
+         
+            <li>
+              <Link to="/agency" target="_blank">
+                <a className="navbar-agency-button">Agencia</a>
+              </Link>
+            </li>
 
             <li>
               <Link to="/contact">
@@ -73,12 +79,6 @@ const NavBar = () => {
               </Link>
             </li>
             
-            <li>
-              <Link to="/agency" target="_blank">
-                <a className="navbar-agency-button">Agencia</a>
-              </Link>
-            </li>
-
             <li>
               {!user ? null : (
                 <div onClick={handleLogout}>

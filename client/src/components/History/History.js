@@ -42,7 +42,7 @@ const History = () => {
       </div>
       <div className="text-container">
         <p className="text-history-center">
-          El esprítu de unión, amor y libertad, se encontraba vagando por las
+          El espíritu de unión, amor y libertad, se encontraba vagando por las
           noches de Buenos Aires a la espera de nuevas propuestas.
         </p>
       </div>

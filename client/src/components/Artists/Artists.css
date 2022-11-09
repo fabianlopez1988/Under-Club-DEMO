@@ -52,10 +52,9 @@
   color: white;
 }
 
-.accordion-body {
+.artists-accordion-body_modifier {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(100px, 800px);
+  grid-template-columns:  1fr 1fr;
 }
 
 .accordion-right {
@@ -97,7 +96,7 @@ height: auto
   z-index: 1;
   text-decoration: none;
   color: #8342ea;
-  font-size: 1.4rem;
+  font-size: 20px;
   width: 10rem;
   height: 3.1rem;
   margin: 3% 0;
@@ -145,28 +144,20 @@ height: auto
   color: white;
 }
 
-.social-media ul {
-  list-style: none;
-  float: right;
-  font-size: 1.5rem;
-  padding: 10%;
-  margin: 0 10%;
-  padding-bottom: 0;
-}
-
-.social-media {
-  border-left: 44px solid rgba(131, 66, 234, 0.3);
-}
-
-.container-artists {
+.presskit-artists {
   display: flex;
-
+  justify-content: flex-end;
 }
+
+.artists-soundcloud-container {
+  margin-top: 3%;
+}
+
 
 /* MEDIA QUERIES */
 
 @media only screen and (min-width: 1290px) and (max-width: 1420px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 745px);
   }
 
@@ -186,7 +177,7 @@ height: auto
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1290px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 730px);
   }
 
@@ -215,7 +206,7 @@ height: auto
 
 /* Notebook */
 @media only screen and (min-width: 1100px) and (max-width: 1200px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 700px);
   }
 
@@ -250,7 +241,7 @@ height: auto
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1100px){
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 610px);
   }
 
@@ -290,7 +281,7 @@ height: auto
 
 /* Tablet acostada */
 @media only screen and (min-width: 930px) and (max-width: 1024px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 560px);
   }
 
@@ -330,7 +321,7 @@ height: auto
 }
 
 @media only screen and (min-width: 840px) and (max-width: 930px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 515px);
   }
 
@@ -372,7 +363,7 @@ height: auto
 }
 
 @media only screen and (min-width: 768px) and (max-width: 840px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 460px);
   }
 
@@ -418,7 +409,7 @@ height: auto
 }
 
 @media only screen and (min-width: 670px) and (max-width: 768px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 360px);
   }
 
@@ -463,7 +454,7 @@ height: auto
 }
 
 @media only screen and (min-width: 560px) and (max-width: 670px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 320px);
   }
 
@@ -509,7 +500,7 @@ height: auto
 }
 
 @media only screen and (min-width: 480px) and (max-width: 560px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     grid-template-rows: minmax(100px, 260px);
   }
 
@@ -563,7 +554,7 @@ height: auto
 
 /* Celu acostado */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     display: grid;
     grid-template-rows: minmax(100px, 275px);
     grid-template-columns: minmax(100px, 410px);
@@ -628,7 +619,7 @@ height: auto
 
 /* Celu */
 @media only screen and (max-width: 320px) {
-  .accordion-body {
+  .artists-accordion-body_modifier {
     display: grid;
     grid-template-rows: minmax(100px, 275px);
     grid-template-columns: minmax(100px, 410px);
@@ -693,3 +684,10 @@ height: auto
     display: noneabian3
   }
 }
+
+
+
+
+
+
+
