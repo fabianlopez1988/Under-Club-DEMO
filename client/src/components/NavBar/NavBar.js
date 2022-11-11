@@ -78,7 +78,7 @@ const NavBar = () => {
 
             <li>
               <Link to="/agency" target="_blank">
-                <a href="/" className="navbar-agency-button">
+                <a onClick={handleClick} className="navbar-agency-button">
                   Agencia
                 </a>
               </Link>
@@ -91,19 +91,12 @@ const NavBar = () => {
                 </a>
               </Link>
             </li>
-            <li>
-              <Link to="/agency" target="_blank">
-                <a onClick={handleClick} className="navbar-agency-button">
-                  Agencia
-                </a>
-              </Link>
-            </li>
 
             <li>
               {!user ? null : (
                 <div onClick={handleLogout}>
                   <Link to="/login">
-                    <a href="/">Cerrar Sesión</a>
+                    <a onClick={handleClick}>Cerrar Sesión</a>
                   </Link>
                 </div>
               )}
