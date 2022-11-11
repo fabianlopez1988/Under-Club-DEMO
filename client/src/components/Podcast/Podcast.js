@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPodcast } from "../../store/podcast";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./Podcast.css";
 import Carousel from "react-bootstrap/Carousel";

@@ -1,15 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import foto from "../../assets/UCfooter.jpg";
 import "./Footer.css";
-import {
-  FaFacebook,
-  FaMailBulk,
-  FaTwitter,
-  FaYoutube,
-  FaInstagram,
-  FaSoundcloud,
-} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -56,7 +47,7 @@ const Footer = () => {
         <div></div>
         <div id="link-to-contact">
           <Link to="/contact">
-            <a>
+            <a href="/">
               <h1>ESCRIBINOS</h1>
             </a>
           </Link>
@@ -66,74 +57,6 @@ const Footer = () => {
           <div></div>
           <div></div>
         </div>
-        {/* <img src={foto} alt="foto-footer" /> */}
-        {/* <ul className="icons">
-          <li>
-            <a
-              href="https://www.facebook.com/1derclub"
-              target="_blank"
-              class=" brands fa-facebook-f "
-            >
-              <span className="label">
-                <FaFacebook color="white"/>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/under.club.oficial"
-              target="_blank"
-              class="icon brands fa-instagram"
-            >
-              <span className="label">
-                <FaInstagram color="white"/>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://soundcloud.com/under-club" 
-              target="_blank"
-              class="icon brands fa-soundcloud"
-            >
-              <span className="label">
-                <FaSoundcloud color="white" />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/c/UnderClubOficial"
-              target="_blank"
-              class="icon brands fa-youtube"
-            >
-              <span className="label">
-                <FaYoutube color="white" />
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/under_club"
-              target="_blank"
-              class="icon brands fa-twitter"
-            >
-              <span className="label">
-                <FaTwitter color="white"/>
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto:joe.underclub@gmail.com"
-              class="icon brands fa-mailbulk"
-            >
-              <span className="label">
-                <FaMailBulk color="white" />
-              </span>
-            </a>
-          </li>
-        </ul> */}
       </footer>
     </>
   );

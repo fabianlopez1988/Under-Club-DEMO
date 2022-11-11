@@ -15,6 +15,7 @@ const EventHeaderCard = () => {
 
   useEffect(() => {
     dispatch(getAllEvent()).then(() => setIsLoading(false));
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const events = useSelector((state) => state.events);
