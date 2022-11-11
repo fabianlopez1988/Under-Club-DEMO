@@ -27,7 +27,7 @@ function CarouselHome() {
   const events = useSelector((state) => state.events);
 
   return (
-    <div className="carousel-home-container">
+    <div className="carousel-home-container" >
       <Carousel fade>
         {/* activeIndex={index} onSelect={handleSelect} */}
         {/* <Carousel.Item>

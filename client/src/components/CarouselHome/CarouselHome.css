@@ -85,3 +85,7 @@
         font-size: 20px;
     }
 }
+
+.carousel-indicators {
+    z-index: 1;
+}

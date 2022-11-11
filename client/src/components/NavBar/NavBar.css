@@ -78,6 +78,10 @@ nav ul li {
   display: none;
 }
 
+#burger-background {
+  position: fixed;
+}
+
 /* MEDIA QUERIES */
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -114,7 +118,7 @@ nav ul li {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 915px) {
+@media only screen and (min-width: 858px) and (max-width: 915px) {
   .navbar-container {
     font-size: 18px;
   }
@@ -129,6 +133,24 @@ nav ul li {
 
   nav ul li {
     padding: 10px 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 858px) {
+  .navbar-container {
+    font-size: 16px;
+  }
+
+  nav {
+    padding-top: 14px;
+  }
+
+  .logo-fixed img {
+    height: 48px;
+  }
+
+  nav ul li {
+    padding: 10px 8px;
   }
 }
 
@@ -150,8 +172,24 @@ nav ul li {
     padding: 20px;
   }
 
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 30%;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .ul-navbar li{
+    border: 1px solid;
+  }
+
   .burguer {
     display: block;
+  }
+
+  .li-waveform{
+    border: none;
+    display: none;
   }
 
   .ul-navbar {
@@ -168,31 +206,46 @@ nav ul li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: block;
-    position: absolute; */
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     padding: 20px;
-
     height: 100%;
-    overflow-y: auto;
   }
 
   .ul-navbar li:hover > ul {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    margin-top: -7.2%;
+    position: absolute;
+    top: 58%;
+    left: 47.7%;
+    transform: translate(-50%, -50%);
   }
 
-  .ul-navbar li ul li {
-    padding: 10px;
+  .ul-navbar li ul li{
+    padding: 10px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -210,159 +263,272 @@ nav ul li {
   }
 
   nav ul li {
-    padding: 25px 8px;
+    padding: 20px;
+  }
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 30%;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .ul-navbar li{
+    border: 1px solid;
   }
 
   .burguer {
     display: block;
   }
 
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
   .ul-navbar {
-    list-style: none;
-    left: 100%;
-    transition: left 0.3s;
     position: absolute;
     top: -700px;
     left: -2000px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    transition: left 0.3s;
   }
 
   .ul-navbar.active {
     display: flex;
     flex-direction: column;
-    /* display: block;
-    position: absolute; */
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    text-align: center;
     position: fixed;
-    top: 30%;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    height: 100%;
+  }
 
-    height: calc(100% - 60px);
-    overflow-y: auto;
+  .ul-navbar li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 58%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ul-navbar li ul li{
+    padding: 10px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
 /* Celu acostado */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .navbar-container {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   nav {
-    padding-top: 15px;
+    padding-top: 12px;
   }
 
   .logo-fixed img {
-    height: 40px;
-  }
-
-  .ul-navbar {
-    padding-left: 10px;
-    padding-right: 5px;
+    height: 45px;
   }
 
   nav ul li {
-    padding: 10px 0px 10px 10px;
+    padding: 20px;
   }
-  .nav-toggle {
-    display: block;
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 28%;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  .ul-navbar li{
+    border: 1px solid;
   }
 
   .burguer {
     display: block;
   }
 
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
   .ul-navbar {
-    list-style: none;
-    left: 100%;
-    transition: left 0.3s;
     position: absolute;
     top: -700px;
     left: -2000px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    transition: left 0.3s;
   }
 
   .ul-navbar.active {
     display: flex;
     flex-direction: column;
-    /* display: block;
-    position: absolute; */
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    text-align: center;
     position: fixed;
-    top: 30%;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    height: 100%;
+  }
 
-    height: calc(100% - 60px);
-    overflow-y: auto;
+  .ul-navbar li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ul-navbar li ul li{
+    padding: 10px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
 /* Celu */
 @media only screen and (max-width: 320px) {
   .navbar-container {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   nav {
-    padding-top: 15px;
+    padding-top: 12px;
   }
 
   .logo-fixed img {
-    height: 40px;
+    height: 46px;
   }
-  .nav-toggle {
-    display: block;
+
+  nav ul li {
+    padding: 20px;
+  }
+
+  #our-club-navbar:hover {
+    color: #8342ea;
+    height: 30%;
+    transition: 0.5s;
+    position: relative;
+  }
+  
+  .ul-navbar li{
+    border: 1px solid;
   }
 
   .burguer {
     display: block;
   }
 
+  .li-waveform{
+    border: none;
+    display: none;
+  }
+
   .ul-navbar {
-    list-style: none;
-    left: 100%;
-    transition: left 0.3s;
     position: absolute;
     top: -700px;
     left: -2000px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    transition: left 0.3s;
   }
 
   .ul-navbar.active {
     display: flex;
     flex-direction: column;
-    /* display: block;
-    position: absolute; */
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+    text-align: center;
     position: fixed;
-    top: 30%;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    height: 100%;
+  }
 
-    height: calc(100% - 60px);
-    overflow-y: auto;
+  .ul-navbar li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 58%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ul-navbar li ul li{
+    padding: 10px ;
+    border: none
+  }
+  
+  #burger-background {
+    background-color: black;
+    top: -700px;
+    left: -1000px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  #burger-background.active {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

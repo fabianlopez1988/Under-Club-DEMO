@@ -2,13 +2,12 @@ import "./NavBar.css";
 import gifWaveform from "../../assets/WaveBlanco.gif";
 import { useState } from "react";
 import BurguerButton from "./BurguerButton";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../../store/user";
 
 const NavBar = () => {
-
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -40,22 +39,30 @@ const NavBar = () => {
               <ul>
                 <li>
                   <Link to="/history">
-                    <a href="/">Historia</a>
+                    <a onClick={handleClick} href="/">
+                      Historia
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link to="/culture">
-                    <a href="/">Cultura</a>
+                    <a onClick={handleClick} href="/">
+                      Cultura
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link to="/milestones">
-                    <a href="/">Hitos</a>
+                    <a onClick={handleClick} href="/">
+                      Hitos
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link to="/artists">
-                    <a href="/">Residentes</a>
+                    <a onClick={handleClick} href="/">
+                      Residentes
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -63,22 +70,35 @@ const NavBar = () => {
 
             <li>
               <Link to="/events">
-                <a href="/">Eventos</a>
+                <a onClick={handleClick} href="/">
+                  Eventos
+                </a>
               </Link>
             </li>
-         
+
             <li>
               <Link to="/agency" target="_blank">
-                <a href="/" className="navbar-agency-button">Agencia</a>
+                <a href="/" className="navbar-agency-button">
+                  Agencia
+                </a>
               </Link>
             </li>
 
             <li>
               <Link to="/contact">
-                <a href="/">Contacto</a>
+                <a onClick={handleClick} href="/">
+                  Contacto
+                </a>
               </Link>
             </li>
-            
+            <li>
+              <Link to="/agency" target="_blank">
+                <a onClick={handleClick} className="navbar-agency-button">
+                  Agencia
+                </a>
+              </Link>
+            </li>
+
             <li>
               {!user ? null : (
                 <div onClick={handleLogout}>
@@ -88,14 +108,18 @@ const NavBar = () => {
                 </div>
               )}
             </li>
-            
-            <li>
+
+            <li className="li-waveform">
               <img className="navbar-waveform" src={gifWaveform} alt="gif" />
             </li>
           </ul>
           <div className="burguer">
             <BurguerButton clicked={clicked} handleClick={handleClick} />
           </div>
+          <div
+            id="burger-background"
+            className={`initial ${clicked ? " active" : ""}`}
+          ></div>
         </nav>
       </div>
     </>
