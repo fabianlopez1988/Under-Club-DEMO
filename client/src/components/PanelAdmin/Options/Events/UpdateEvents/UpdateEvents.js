@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllEvent } from "../../../../../store/events";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
 
 const UpdateEvents = () => {
   const dispatch = useDispatch();

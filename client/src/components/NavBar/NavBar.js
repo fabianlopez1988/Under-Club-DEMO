@@ -69,7 +69,7 @@ const NavBar = () => {
          
             <li>
               <Link to="/agency" target="_blank">
-                <a className="navbar-agency-button">Agencia</a>
+                <a href="/" className="navbar-agency-button">Agencia</a>
               </Link>
             </li>
 
@@ -83,7 +83,7 @@ const NavBar = () => {
               {!user ? null : (
                 <div onClick={handleLogout}>
                   <Link to="/login">
-                    <a>Cerrar Sesión</a>
+                    <a href="/">Cerrar Sesión</a>
                   </Link>
                 </div>
               )}

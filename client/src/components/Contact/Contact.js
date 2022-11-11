@@ -6,6 +6,7 @@ import { sendMailToUnder } from "../../store/user";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const Contact = () => {
   const name = useInput();
@@ -15,6 +16,11 @@ const Contact = () => {
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
+
+  useEffect(()=>  {
+    window.scrollTo(0, 0);
+  },[]);
+
 
   const errorAlert = () => {
     Swal.fire({

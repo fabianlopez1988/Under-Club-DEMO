@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Milestone.css";
 import tresornight from "../../assets/tresornight.png";
 import Bassiani from "../../assets/Bassiani.png";
@@ -8,14 +8,10 @@ import { motion, useScroll } from "framer-motion";
 
 const Milestone = () => {
   const { scrollYProgress } = useScroll();
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 6000);
-  }, []);
+  useEffect(()=>  {
+    window.scrollTo(0, 0);
+  },[]);
 
   const lineOneTresor = `"Incluso antes de ver el lugar, había algo especial en el aire. En
   la parte delantera había unas ventanas enrejadas que daban al
@@ -103,7 +99,7 @@ const Milestone = () => {
           viewport={{ once: true }}
           className="img-milestone-container"
         >
-          <img className="tresor-img" src={tresornight} />
+          <img className="tresor-img" src={tresornight} alt="tresor"/>
         </motion.div>
 
         <div className="parrafo-container">
@@ -174,7 +170,7 @@ const Milestone = () => {
           viewport={{ once: true }}
           className="img-milestone-container-bassiani"
         >
-          <img className="bassiani-img" src={Bassiani} />
+          <img className="bassiani-img" src={Bassiani} alt="bassiani"/>
         </motion.div>
       </div>
 
@@ -203,7 +199,7 @@ const Milestone = () => {
           viewport={{ once: true }}
           className="img-milestone-container"
         >
-          <img className="underground-img" src={underground} />
+          <img className="underground-img" src={underground} alt="underground"/>
         </motion.div>
         <div className="parrafo-container">
           <motion.h6 variants={sentence} initial="hidden" animate="visible">
@@ -271,7 +267,7 @@ const Milestone = () => {
           viewport={{ once: true }}
           className="img-milestone-container tierras"
         >
-          <img className="tierra-img" src={tierra} />
+          <img className="tierra-img" src={tierra} alt="tierra"/>
         </motion.div>
       </div>
 

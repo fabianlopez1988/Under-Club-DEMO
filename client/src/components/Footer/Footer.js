@@ -1,15 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import foto from "../../assets/UCfooter.jpg";
 import "./Footer.css";
-import {
-  FaFacebook,
-  FaMailBulk,
-  FaTwitter,
-  FaYoutube,
-  FaInstagram,
-  FaSoundcloud,
-} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -56,7 +47,7 @@ const Footer = () => {
         <div></div>
         <div id="link-to-contact">
           <Link to="/contact">
-            <a>
+            <a href="/">
               <h1>ESCRIBINOS</h1>
             </a>
           </Link>

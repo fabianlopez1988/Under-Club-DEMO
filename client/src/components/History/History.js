@@ -3,12 +3,17 @@ import imgOneHistory from "../../assets/img-one-history.jpeg"
 import imgTwoHistory from "../../assets/img-two-history.jpeg"
 import imgThreeHistory from "../../assets/img-three-history.jpeg"
 import imgFourHistory from "../../assets/img-four-history.jpeg"
-
-import { motion } from "framer-motion";
 import Slide from "react-reveal/Slide";
 import Flash from "react-reveal/Flash";
+import { useEffect } from "react";
+
 
 const History = () => {
+
+  useEffect(()=>  {
+    window.scrollTo(0, 0);
+  },[]);
+
   return (
     <div
       className="history-container"
