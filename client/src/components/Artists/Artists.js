@@ -8,9 +8,14 @@ import ReactSoundCloud from "react-soundcloud-embedded";
 const Artists = () => {
   const [resident, setResident] = useState([]);
 
+  useEffect(()=>  {
+    window.scrollTo(0, 0);
+  },[]);
+
   useEffect(() => {
     axios.get("/api/residents").then((res) => setResident(res.data));
   }, []);
+  
   return (
     <motion.div
       className="artists-container"

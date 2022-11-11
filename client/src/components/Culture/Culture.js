@@ -8,6 +8,10 @@ import { motion } from "framer-motion";
 
 
 const Culture = () => {
+
+  useEffect(()=>  {
+    window.scrollTo(0, 0);
+  },[]);
   
   return (
     <motion.div className="culture-container"
