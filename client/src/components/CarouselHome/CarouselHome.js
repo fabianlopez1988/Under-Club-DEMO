@@ -8,6 +8,7 @@ import DemoSlider from "../../assets/DemoSlider.jpg";
 import DemoSlider2 from "../../assets/DemoSlider2.jpg";
 import DemoSlider3 from "../../assets/DemoSlider3.jpg";
 import DemoSlider4 from "../../assets/DemoSlider4.jpg";
+import DemoSlider5 from "../../assets/Oscar.jpeg";
 
 function CarouselHome() {
   const [cultures, setCultures] = useState(0);
@@ -17,18 +18,19 @@ function CarouselHome() {
   };
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getAllEvent());
   }, []);
-  
+
   const events = useSelector((state) => state.events);
 
   return (
     <div className="carousel-home-container">
       <Carousel fade>
-      {/* activeIndex={index} onSelect={handleSelect} */}
-      {/* <Carousel.Item>
+        {/* activeIndex={index} onSelect={handleSelect} */}
+        {/* <Carousel.Item>
 
           {events ? (
          
@@ -46,36 +48,60 @@ function CarouselHome() {
     
         </Carousel.Item> */}
         <Carousel.Item>
-          <img className="d-block w-100" src={DemoSlider} alt="slider" />
-          <Carousel.Caption>
-            {/* <h3>
-              PERMISO<br></br> PERDÓN <br></br>GRACIAS
-            </h3> */}
+          <img
+            className="d-block w-100 carousel-resize-image"
+            src={DemoSlider5}
+            alt="slider"
+            onClick={() => navigate("/culture")}
+          />
+          <Carousel.Caption className="carousel-caption-culture">
+            <h3 className="carousel-title-culture"
+            onClick={() => navigate("/culture")}>
+              NO FOTOS<br></br> NO VIDEOS
+            </h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={DemoSlider2} alt="slider" />
-          {/* <Carousel.Caption>
-            <h3>
-              NO FOTOS<br></br> NO VIDEOS
-            </h3>
-          </Carousel.Caption> */}
-        </Carousel.Item>
-        <Carousel.Item>
-          <img className="d-block w-100" src={DemoSlider3} alt="slider" />
-          {/* <Carousel.Caption>
-            <h3>
+          <img
+            className="d-block w-100 carousel-resize-image"
+            src={DemoSlider3}
+            alt="slider"
+            onClick={() => navigate("/culture")}
+          />
+          <Carousel.Caption className="carousel-caption-culture">
+            <h3 className="carousel-title-culture"
+            onClick={() => navigate("/culture")}>
               NO VIP<br></br>SOMOS TODOS <br></br>IGUALES
             </h3>
-          </Carousel.Caption> */}
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={DemoSlider4} alt="slider" />
-          {/* <Carousel.Caption>
-            <h3>
+          <img
+            className="d-block w-100 carousel-resize-image"
+            src={DemoSlider4}
+            alt="slider"
+            onClick={() => navigate("/culture")}
+          />
+          <Carousel.Caption className="carousel-caption-culture">
+            <h3 className="carousel-title-culture"
+            onClick={() => navigate("/culture")}>
               PERMISO<br></br> PERDÓN <br></br>GRACIAS
             </h3>
-          </Carousel.Caption> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100 carousel-resize-image"
+            src={DemoSlider2}
+            alt="slider"
+            onClick={() => navigate("/culture")}
+          />
+          <Carousel.Caption className="carousel-caption-culture">
+            <h3 className="carousel-title-culture"
+            onClick={() => navigate("/culture")}>
+              GREEN<br></br>CLUB<br></br>
+            </h3>
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

@@ -42,8 +42,7 @@ const History = () => {
       </div>
       <div className="text-container">
         <p className="text-history-center">
-          El espíritu de unión, amor y libertad, se encontraba vagando por las
-          noches de Buenos Aires a la espera de nuevas propuestas.
+        Fue el 4 de febrero en la ciudad de Haedo, Buenos Aires, donde Under Club empezaba a dar sus primeros pasos. Un año después, abría sus puertas en Niceto Vega 5699, Capital Federal.
         </p>
       </div>
 
@@ -61,10 +60,10 @@ const History = () => {
 
       <div className="text-container">
         <p className="text-history-last">
-          Fue el 4 de febrero en la ciudad de Haedo, Buenos Aires, donde Under
-          Club iba a dar sus primeros pasos de vida, y al año se instala en su
-          propia locación, situada en una de las esquinas más emblemáticas de
-          Palermo Hollywood.
+        A lo largo de estos 10 años, personas de todas partes del mundo hicieron de Under Club un espacio de amor, unión, respeto y libertad. 
+        <br></br>
+        <br></br>
+        <h4><b>Nuestro Club, Nuestro Hogar. </b></h4>
         </p>
       </div>
       <div className="img-left-two">

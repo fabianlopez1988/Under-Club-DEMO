@@ -13,7 +13,9 @@ const agencyController = {
   //trae de la db todos los residentes
   getAllInternationalResidents: async (req, res) => {
     try {
-      const allAgency = await Agency.findAll();
+      const allAgency = await Agency.findAll({
+        order: [["name", "ASC"]],
+      });
       return res.status(200).send(allAgency);
     } catch (error) {
       console.log(error);

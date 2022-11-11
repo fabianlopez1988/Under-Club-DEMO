@@ -13,7 +13,9 @@ const residentsController = {
   //trae de la db todos los residentes
   getAllResidents: async (req, res) => {
     try {
-      const allResidents = await Residents.findAll();
+      const allResidents = await Residents.findAll({
+        order: [["name", "ASC"]],
+      });
       return res.status(200).send(allResidents);
     } catch (error) {
       console.log(error);
