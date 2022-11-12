@@ -101,12 +101,6 @@
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-/*grilla para la última linea*/
-/* .grid-line-last {
-  display: grid;
-  grid-template-columns: 1.25fr 1.75fr 1fr;
-} */
-
 /*linea vertical para unir imagenes 1 y 3*/
 .line {
   border-style: solid;
@@ -175,9 +169,8 @@
 
 .banner-milestones {
   background-color: rgba(131, 66, 234, 0.4);
-  margin-left: 15%;
-  margin-right: 15%;
-  /* text-align: left; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .banner-milestones-text {
@@ -208,6 +201,12 @@
   border-right: rgba(131, 66, 234, 0.4);
   border-left: rgba(131, 66, 234, 0.4);
   border-bottom: rgba(131, 66, 234, 0.4);
+}
+
+/*grilla para la última linea*/
+.exception {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1fr;
 }
 
 .text-gracias-milestone {
@@ -263,9 +262,6 @@
   .line-under {
     margin-top: 0%;
   }
-  .banner-milestones {
-    width: 100%;
-  }
 
   .parrafo-container-left-milestone {
     width: 100%;
@@ -280,6 +276,11 @@
     margin-top: 0%;
     margin-right: 5%;
     font-size: 40px;
+  }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr 1fr;
   }
 }
 
@@ -388,9 +389,6 @@
     font-size: 18px;
   }
 
-  .banner-milestones {
-    width: 100%;
-  }
 
   .parrafo-container-left-milestone {
     width: 100%;
@@ -429,9 +427,14 @@
     border-left: rgba(131, 66, 234, 0.4);
     border-bottom: rgba(131, 66, 234, 0.4);
   }
+
+  .exception {
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr 1fr;
+  }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 767px) {
   .grid-milestone {
     display: flex;
     grid-template-columns: none;
@@ -467,10 +470,10 @@
     align-items: center;
   }
 
-  .grid-line {
+  .exception {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr;
-    height: 40px;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr;
+    height: 20px;
   }
 
   .line {
@@ -483,14 +486,17 @@
 
   .line-one {
     border-style: none;
+    height: 50px;
   }
 
   .line-two {
     border-style: none;
+    height: 50px;
   }
 
   .line-under {
     border-style: none;
+    height: 50px;
   }
 
   .line-three {
@@ -505,9 +511,6 @@
     font-size: 18px;
   }
 
-  .banner-milestones {
-    width: 100%;
-  }
 
   .parrafo-container-left-milestone {
     width: 100%;
@@ -524,6 +527,7 @@
 
   .text-gracias-milestone {
     margin-right: -100%;
+    font-size: 25px;
   }
 
   .line-center-gracias {
@@ -550,21 +554,22 @@
 
   .tresor-img {
     padding-left: 0%;
+    height: 14em
   }
 
   .underground-img {
     padding-left: 0%;
-    height: 17em;
+    height: 14em;
   }
 
   .bassiani-img {
-    height: 18em;
+    height: 14em;
     padding-right: 0%;
   }
 
   .tierra-img {
     padding-right: 0%;
-    height: 10em;
+    height: 8em;
   }
 
   .inversa {
@@ -575,10 +580,10 @@
     align-items: center;
   }
 
-  .grid-line {
+  .exception {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr;
-    height: 40px;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr;
+    height: 20px;
   }
 
   .line {
@@ -591,14 +596,19 @@
 
   .line-one {
     border-style: none;
+    height: 50px;
+
   }
 
   .line-two {
     border-style: none;
+    height: 50px;
   }
 
   .line-under {
     border-style: none;
+    height: 50px;
+
   }
 
   .line-three {
@@ -617,9 +627,7 @@
     font-size: 16px;
   }
 
-  .banner-milestones {
-    width: 100%;
-  }
+
 
   .parrafo-container-left-milestone {
     width: 100%;
@@ -627,12 +635,12 @@
   }
 
   .banner-milestones-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .text-gracias-milestone {
-    margin-right: -120%;
-    font-size: 35px;
+    margin-right: -100%;
+    font-size: 20px;
   }
 
   .line-center-gracias {
@@ -659,21 +667,22 @@
 
   .tresor-img {
     padding-left: 0%;
+    height: 10em
   }
 
   .underground-img {
     padding-left: 0%;
-    height: 17em;
+    height: 10em;
   }
 
   .bassiani-img {
-    height: 18em;
+    height: 10em;
     padding-right: 0%;
   }
 
   .tierra-img {
     padding-right: 0%;
-    height: 10em;
+    height: 6em;
   }
 
   .inversa {
@@ -684,10 +693,10 @@
     align-items: center;
   }
 
-  .grid-line {
+  .exception {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 2fr;
-    height: 40px;
+    grid-template-columns: 0.5fr 0.5fr 0.1fr;
+    height: 20px;
   }
 
   .line {
@@ -700,14 +709,19 @@
 
   .line-one {
     border-style: none;
+    height: 30px;
+
   }
 
   .line-two {
     border-style: none;
+    height: 30px;
   }
 
   .line-under {
     border-style: none;
+    height: 30px;
+
   }
 
   .line-three {
@@ -726,23 +740,19 @@
     font-size: 16px;
   }
 
-  .banner-milestones {
-    width: 100%;
-  }
 
   .parrafo-container-left-milestone {
-    font-size: 16px;
     width: 100%;
     margin-left: 5%;
   }
 
   .banner-milestones-text {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .text-gracias-milestone {
-    margin-right: -150%;
-    font-size: 35px;
+    margin-right: -100%;
+    font-size: 18px;
   }
 
   .line-center-gracias {

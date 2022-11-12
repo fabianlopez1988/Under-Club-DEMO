@@ -8,14 +8,14 @@ import ReactSoundCloud from "react-soundcloud-embedded";
 const Artists = () => {
   const [resident, setResident] = useState([]);
 
-  useEffect(()=>  {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  },[]);
+  }, []);
 
   useEffect(() => {
     axios.get("/api/residents").then((res) => setResident(res.data));
   }, []);
-  
+
   return (
     <motion.div
       className="artists-container"
@@ -105,15 +105,18 @@ const Artists = () => {
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>{res.name}</Accordion.Header>
                   <Accordion.Body className="artists-accordion-body_modifier">
-                      <div style={{filter: "grayscale(100%)" }}className="artists-soundcloud-container">
-                        {/* <ReactSoundCloud
+                    {/* <div style={{filter: "grayscale(100%)" }}className="artists-soundcloud-container">
+                        <ReactSoundCloud
                           height={"200px"}
                           color={"#8342ea"}
                           url={
                             res.trackSoundcloud
                           }
-                        /> */}
-                      </div>
+                        />
+                      </div> */}
+
+                    <div className="artists-grid-line_horizontal">
+                      <div className="artists-line_horizontal"></div>
                       <div className="presskit-artists">
                         <a
                           className="link artists-tag-a"
@@ -124,6 +127,7 @@ const Artists = () => {
                           PRESS KIT
                         </a>
                       </div>
+                    </div>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

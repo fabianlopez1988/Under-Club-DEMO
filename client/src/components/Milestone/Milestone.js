@@ -279,13 +279,13 @@ const Milestone = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 3 }}
       >
-        <div className="grid-line">
+        <div className="grid-line exception">
           <div></div>
           <div className="line-center-gracias"></div>
           <div></div>
         </div>
 
-        <div className="grid-line" style={{ marginBottom: "5%" }}>
+        <div className="grid-line exception" style={{ marginBottom: "5%" }}>
           <div className="text-gracias-milestone">GRACIAS</div>
           <div className="line-four-small"></div>
           <div></div>
