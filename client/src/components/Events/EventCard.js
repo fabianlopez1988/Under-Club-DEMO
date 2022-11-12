@@ -28,7 +28,7 @@ const EventCard = () => {
           <div className="event-grid">
             <img src={event.flyerGrid} alt="flyer" />
             <a
-              href="https://tickets.underclub.com.ar/productora/eventos/13"
+              href={event.url}
               target="_blank"
               rel="noreferrer"
             >

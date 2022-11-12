@@ -270,7 +270,7 @@ const Milestone = () => {
           <br></br>
           <br></br>
           A todos aquellos que nos permiten continuar creciendo y
-          desarrollando nuestro sueño:
+          desarrollando nuestro sueño
         </p>
       </div>
 

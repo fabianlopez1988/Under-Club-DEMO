@@ -54,7 +54,7 @@
 }
 
 .episode-container-intro {
-  height: 500px;
+  height: 550px;
   background-color: rgba(131, 66, 234, 0.3);
   padding: 10% 10%;
   padding-left: 30%;
@@ -64,7 +64,7 @@
   margin-left: -20%;
   margin-right: 10%;
   align-items: center;
-  width: 110%;
+  width: 100%;
   font-family: LeagueSpartan-Regular;
   font-size: 24px;
 
@@ -153,7 +153,7 @@
 .episode-container-flyer img {
   height: 130%;
   width: 80%;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 /* MEDIA QUERIES */
