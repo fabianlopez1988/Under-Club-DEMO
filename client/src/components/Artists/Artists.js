@@ -101,13 +101,13 @@ const Artists = () => {
                   <Accordion.Header>{res.name}</Accordion.Header>
                   <Accordion.Body className="artists-accordion-body_modifier">
                       <div style={{filter: "grayscale(100%)" }}className="artists-soundcloud-container">
-                        <ReactSoundCloud
+                        {/* <ReactSoundCloud
                           height={"200px"}
                           color={"#8342ea"}
                           url={
                             res.trackSoundcloud
                           }
-                        />
+                        /> */}
                       </div>
                       <div className="presskit-artists">
                         <a

@@ -3,7 +3,6 @@ import Accordion from "react-bootstrap/Accordion";
 import "./Agency.css";
 import axios from "axios";
 import { motion } from "framer-motion";
-import AccordionBody from "react-bootstrap/esm/AccordionBody";
 
 const Agency = () => {
   const [resident, setResident] = useState([]);

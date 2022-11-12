@@ -27,7 +27,7 @@ const EventHeaderCard = () => {
         <div className="flyer-box">
           <img src={events.data[0]?.flyerLarge} alt="flyer" />
           <a
-            href="https://tickets.underclub.com.ar/productora/eventos/13"
+            href={events.data[0]?.url}
             target="_blank"
             rel="noreferrer"
           >

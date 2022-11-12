@@ -83,15 +83,7 @@ const Milestone = () => {
   return (
     <motion.div
       className="milestone-container"
-      // initial={{ width: 0 }}
-      // animate={{ width: "100%" }}
-      // exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}
     >
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
-
       <div className="grid-milestone">
         <motion.div
           initial={{ opacity: 0 }}
@@ -278,7 +270,7 @@ const Milestone = () => {
           <br></br>
           <br></br>
           A todos aquellos que nos permiten continuar creciendo y
-          desarrollando nuestro sueño:
+          desarrollando nuestro sueño
         </p>
       </div>
 
