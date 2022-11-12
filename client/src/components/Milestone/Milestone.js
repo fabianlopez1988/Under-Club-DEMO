@@ -84,11 +84,6 @@ const Milestone = () => {
     <motion.div
       className="milestone-container"
     >
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
-
       <div className="grid-milestone">
         <motion.div
           initial={{ opacity: 0 }}
