@@ -3,6 +3,7 @@ import imgOneHistory from "../../assets/img-one-history.jpeg"
 import imgTwoHistory from "../../assets/img-two-history.jpeg"
 import imgThreeHistory from "../../assets/img-three-history.jpeg"
 import imgFourHistory from "../../assets/img-four-history.jpeg"
+import imgFiveHistory from "../../assets/img-five-history.jpeg"
 import Slide from "react-reveal/Slide";
 import Flash from "react-reveal/Flash";
 import { useEffect } from "react";
@@ -74,7 +75,7 @@ const History = () => {
       <div className="img-left-two">
         <div className="img-left-three-container">
           <Slide left>
-            <img src={imgFourHistory} alt="imagen-3" />
+            <img src={imgFiveHistory} alt="imagen-3" />
           </Slide>
         </div>
         <Flash>
