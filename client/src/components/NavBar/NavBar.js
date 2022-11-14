@@ -103,7 +103,18 @@ const NavBar = () => {
             </li>
 
             <li className="li-waveform">
-              <img className="navbar-waveform" src={gifWaveform} alt="gif" />
+              <a href="https://www.youtube.com/UnderClubOficial" target="_blank">
+              <div className="loader-music">
+                <span className="stroke-music"></span>
+                <span className="stroke-music"></span>
+                <span className="stroke-music"></span>
+                <span className="stroke-music"></span>
+                <span className="stroke-music"></span>
+                <span className="stroke-music"></span>
+                <span className="stroke-music"></span>
+              </div>
+              </a>
+              {/* <img className="navbar-waveform" src={gifWaveform} alt="gif" /> */}
             </li>
           </ul>
           <div className="burguer">

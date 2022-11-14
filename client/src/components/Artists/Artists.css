@@ -52,10 +52,54 @@
   color: white;
 }
 
+/* 
 .artists-accordion-body_modifier {
   display: grid;
   grid-template-columns:  1fr 1fr;
+} */
+
+
+
+/*CODIGO NUEVO LINEAS */
+.artists-grid-line_horizontal{
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  margin-top: 0.5%; /*separa la linea del acordeon de la vertical (opcional)*/
 }
+
+.artists-line_horizontal{
+  height: 80px;
+  margin-right: 1%;
+  border-left: 35px solid #8542ea;
+  border-bottom: 35px solid #8542ea;
+}
+
+.presskit-artists {
+  display: flex;
+  align-items: flex-end;
+}
+
+.link {
+  padding: 0.5em 1.2em;
+  border: 1px solid #8342ea;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  transition: .3s;
+  z-index: 1;
+  text-decoration: none;
+  color: #8342ea;
+  font-size: 20px;
+  width: 10rem;
+  height: 3.1rem;
+
+  margin-bottom: -5%; /*el boton mas hacia abajo para alinear con la linea*/
+
+  /*se comento en todas las querys el margin en .link*/
+}
+/*HASTA ACA*/
+
 
 .accordion-right {
 display: flex;
@@ -85,7 +129,7 @@ height: auto
 }
 
 /*Boton presskit*/
-.link {
+/* .link {
   padding: 0.5em 1.2em;
   border: 1px solid #8342ea;
   position: relative;
@@ -100,7 +144,7 @@ height: auto
   width: 10rem;
   height: 3.1rem;
   margin: 3% 0;
-}
+} */
 
 .link:hover {
   color: white;
@@ -144,10 +188,10 @@ height: auto
   color: white;
 }
 
-.presskit-artists {
+/* .presskit-artists {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 .artists-soundcloud-container {
   margin-top: 3%;
@@ -192,10 +236,14 @@ height: auto
   }
 
   .link {
-    font-size: 1.3rem;
-    width: 8.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 10rem;
     height: 2.9rem;
-    margin: 4% 0;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
 
   .artists-section-title {
@@ -221,11 +269,16 @@ height: auto
   }
 
   .link {
-    font-size: 1.3rem;
-    width: 8.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 10rem;
     height: 2.9rem;
-    margin: 4% 0;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
+
 
   .artists-section-title {
     font-size: 3.8rem;
@@ -258,11 +311,16 @@ height: auto
   }
 
   .link {
-    font-size: 1.2rem;
-    width: 8.3rem;
-    height: 2.8rem;
-    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2.9rem;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
+
 
   .artists-section-title {
     font-size: 3.6rem;
@@ -298,11 +356,16 @@ height: auto
   }
 
   .link {
-    font-size: 1.1rem;
-    width: 7.5rem;
-    height: 2.4rem;
-    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2.9rem;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
+
 
   .artists-section-title {
     font-size: 3.4rem;
@@ -339,11 +402,16 @@ height: auto
   }
 
   .link {
-    font-size: 1.0rem;
-    width: 7.1rem;
-    height: 2.3rem;
-    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2.9rem;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
+
 
   .artists-section-title {
     font-size: 3.2rem;
@@ -382,11 +450,16 @@ height: auto
   }
 
   .link {
-    font-size: 0.9rem;
-    width: 6.5rem;
-    height: 2.2rem;
-    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2.9rem;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
+
 
   .artists-section-title {
     font-size: 3.0rem;
@@ -428,15 +501,28 @@ height: auto
   }
 
   .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.8rem;
-    width: 5.6rem;
+    width: 7rem;
     height: 2.0rem;
-    margin: 4% 0;
+    margin-bottom: -3%;
+    /* margin: 4% 0; */
   }
+
+  .artists-line_horizontal{
+    height: 60px;
+    margin-right: 1%;
+    border-left: 25px solid #8542ea;
+    border-bottom: 25px solid #8542ea;
+  }
+
 
   .artists-section-title {
     font-size: 2.7rem;
     letter-spacing: 0.2rem;
+    padding-top: 5%;
   }
 
   .accordion-button {
@@ -473,16 +559,27 @@ height: auto
   }
 
   .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.8rem;
-    width: 5.2rem;
-    height: 1.9rem;
-    margin: 4% 0;
-    padding: 0.4em 0.9em;
+    width: 7rem;
+    height: 2.0rem;
+    margin-bottom: -4%;
+    /* margin: 4% 0; */
+  }
+
+  .artists-line_horizontal{
+    height: 50px;
+    margin-right: 1%;
+    border-left: 20px solid #8542ea;
+    border-bottom: 20px solid #8542ea;
   }
 
   .artists-section-title {
     font-size: 2.4rem;
     letter-spacing: 0.2rem;
+    padding-top: 5%;
   }
 
   .accordion-button {
@@ -520,16 +617,27 @@ height: auto
   }
 
   .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.8rem;
-    width: 4.9rem;
+    width: 6.5rem;
     height: 1.7rem;
-    margin: 4% 0;
-    padding: 0.4em 0.9em;
+    margin-bottom: -5%;
+    /* margin: 4% 0; */
+  }
+
+  .artists-line_horizontal{
+    height: 40px;
+    margin-right: 1%;
+    border-left: 16px solid #8542ea;
+    border-bottom: 16px solid #8542ea;
   }
 
   .artists-section-title {
     font-size: 2.0rem;
     letter-spacing: 0.2rem;
+    padding-top: 10%;
   }
 
   .accordion-button {
@@ -553,12 +661,12 @@ height: auto
 }
 
 /* Celu acostado */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .artists-accordion-body_modifier {
+@media only screen and (min-width: 350px) and (max-width: 480px) {
+  /* .artists-accordion-body_modifier {
     display: grid;
     grid-template-rows: minmax(100px, 275px);
     grid-template-columns: minmax(100px, 410px);
-  }
+  } */
 
   .accordion-left {
     display:block;
@@ -594,16 +702,27 @@ height: auto
   }
 
   .link {
-    font-size: 0.7rem;
-    width: 4.5rem;
-    height: 1.6rem;
-    margin: 3% 0;
-    padding: 0.4em 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    width: 6.3rem;
+    height: 1.7rem;
+    margin-bottom: -5%;
+    /* margin: 4% 0; */
+  }
+
+  .artists-line_horizontal{
+    height: 35px;
+    margin-right: 2%;
+    border-left: 15px solid #8542ea;
+    border-bottom: 15px solid #8542ea;
   }
 
   .artists-section-title {
     font-size: 1.9rem;
     letter-spacing: 0.2rem;
+    padding-top: 10%;
   }
 
   .accordion-button {
@@ -618,12 +737,12 @@ height: auto
 }
 
 /* Celu */
-@media only screen and (max-width: 320px) {
-  .artists-accordion-body_modifier {
+@media only screen and (max-width: 350px) {
+  /* .artists-accordion-body_modifier {
     display: grid;
     grid-template-rows: minmax(100px, 275px);
     grid-template-columns: minmax(100px, 410px);
-  }
+  } */
 
   .accordion-left {
     display:block;
@@ -659,16 +778,27 @@ height: auto
   }
 
   .link {
-    font-size: 0.6rem;
-    width: 3.8rem;
-    height: 1.4rem;
-    margin: 3% 0;
-    padding: 0.4em 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    width: 6.3rem;
+    height: 1.7rem;
+    margin-bottom: -5%;
+    /* margin: 4% 0; */
+  }
+
+  .artists-line_horizontal{
+    height: 35px;
+    margin-right: 2%;
+    border-left: 15px solid #8542ea;
+    border-bottom: 15px solid #8542ea;
   }
 
   .artists-section-title {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
+    padding-top: 15%;
   }
 
   .accordion-button {

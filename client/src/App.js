@@ -24,7 +24,7 @@ function App() {
       {loading ? (
         <Flash>
           <div className="logo-app-loading">
-            <img className="logo-app-img" src={logo} />
+            <img className="logo-app-img" src={logo} alt="logo under"/>
           </div>
         </Flash>
       ) : (
