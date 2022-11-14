@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
 import History from "./components/History/History";
 import Artists from "./components/Artists/Artists";
@@ -50,6 +50,7 @@ import EditViewEpisode from "./components/PanelAdmin/Options/OurClub/Episodes/Ed
 import { AnimatePresence } from "framer-motion";
 import AddUsers from "./components/PanelAdmin/Options/Users/AddUsers/AddUsers";
 import DeleteUsers from "./components/PanelAdmin/Options/Users/DeleteUsers/DeleteUsers";
+import NotFound from "./components/NotFound/NotFound";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -154,6 +155,8 @@ const AnimatedRoutes = () => {
           path="/admin/ourclub/agency/deleteagency"
           element={<DeleteInternationalResidents />}
         />
+        <Route path="404" element={<NotFound/>} />
+        <Route path="*" element={<Navigate to="404" />} />
       </Routes>
     </AnimatePresence>
   );

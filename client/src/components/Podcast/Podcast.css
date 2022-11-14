@@ -158,6 +158,20 @@
 
 /* MEDIA QUERIES */
 
+/* Gigante */
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {
+  .podcast-container-intro {
+    height: 135%;
+  }
+  .podcast-container-intro p {
+    font-size: 20px;
+  }
+  .podcast-container-flyer img {
+    height: 150%;
+    width: 75%;
+  }
+}
+
 /* Notebook */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .podcast-container-intro {
