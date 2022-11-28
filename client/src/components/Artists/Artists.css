@@ -62,16 +62,18 @@
 
 /*CODIGO NUEVO LINEAS */
 .artists-grid-line_horizontal{
-  display: grid;
-  grid-template-columns: 1fr 0.1fr;
-  margin-top: 0.5%; /*separa la linea del acordeon de la vertical (opcional)*/
+  /* display: grid;
+  grid-template-columns: 1fr 0.1fr; */
+  /* margin-top: 0.5%; */
+   /*separa la linea del acordeon de la vertical (opcional)*/
 }
 
 .artists-line_horizontal{
   height: 80px;
   margin-right: 1%;
-  border-left: 35px solid #8542ea;
-  border-bottom: 35px solid #8542ea;
+  /* border-left: 7px solid #8542ea; */
+  /* border-bottom: px solid #8542ea; */
+  opacity: 0.4;
 }
 
 .presskit-artists {
@@ -89,7 +91,7 @@
   transition: .3s;
   z-index: 1;
   text-decoration: none;
-  color: #8342ea;
+  /* color: #8342ea; */
   font-size: 20px;
   width: 10rem;
   height: 3.1rem;
@@ -181,7 +183,8 @@ height: auto
 
 .artists-tag-a{
   text-decoration: none;
-  color: #8342ea;
+  /* color: #8342ea; */
+  color: white
 }
 
 .artists-tag-a:hover{

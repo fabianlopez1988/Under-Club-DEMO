@@ -10,7 +10,7 @@
   color: white;
   text-align: left;
   padding: 2% 5% 2% 5%;
-  font-size: 40px;
+  font-size: 50px;
   text-transform: uppercase;
 }
 
@@ -24,7 +24,7 @@
 
 .culture-section div h1 {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 60px;
 }
 
 .culture-section div p {
@@ -51,7 +51,7 @@
   flex-direction: column;
   justify-content: center;
   padding-right: 15%;
-  margin-top: 40%;
+  margin-top: 35%;
 }
 
 .center-left {

@@ -9,10 +9,14 @@ const routes = require("./routes/index");
 const path = require("path");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const port = 5000;
+// const port = 5000;
 const User = require("./models/Users");
+const PORT = process.env.PG_PORT || 5000
 
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3000",
+  methods:  ["GET", "POST", "DELETE", "OPTIONS"], credentials: true,
+}));
 
 app.use(express.json());
 
@@ -20,7 +24,7 @@ app.use(cookieParser());
 
 app.use(
   sessions({
-    secret: "UCWeb",
+    secret: "ucweb",
     resave: true,
     saveUninitialized: true,
   })
@@ -70,5 +74,5 @@ passport.deserializeUser(function (id, done) {
 app.use("/api", routes);
 
 db.sync({ force: false }).then(() => {
-  app.listen(port, () => console.log(`Escuchando en el puerto ${port}`));
+  app.listen(PORT, () => console.log(`Escuchando en el puerto ${PORT}`));
 });
