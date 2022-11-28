@@ -1,12 +1,4 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-
 const IntroCulture = () => {
-  // const [introCulture, setIntroCulture] = useState([]);
-
-  // useEffect(() => {
-  //   axios.get("/api/introculture").then((res) => setIntroCulture(res.data));
-  // }, []);
 
   return (
     <section>
@@ -17,9 +9,6 @@ const IntroCulture = () => {
         el crecimiento y el cuidado de dicha cultura:<br></br><br></br>
         AMOR, RESPETO, HUMILDAD.
       </p>
-      {/* {!introCulture
-        ? null
-        : introCulture.map((intro) => <div>{intro.paragraph}</div>)} */}
     </section>
   );
 };
