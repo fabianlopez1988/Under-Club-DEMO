@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const History = () => {
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,16 +14,17 @@ const History = () => {
   return (
     <div
       className="history-container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
-      <motion.div className="img-right-one">
-        <img
-          src={imgOneHistory}
-          alt="imagen"
-          onLoad={() => setIsLoaded(true)}
-        />
+      <motion.div
+        className="img-right-one"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <img src={imgOneHistory} alt="imagen" />
       </motion.div>
 
       <div className="text-container">
@@ -36,15 +36,16 @@ const History = () => {
       </div>
 
       <div className="img-left-one">
-        <motion.div className="img-left-two-container">
-          <img
-            src={imgTwoHistory}
-            alt="imagen-2"
-            onLoad={() => setIsLoaded(true)}
-          />
+        <motion.div
+          className="img-left-two-container"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <img src={imgTwoHistory} alt="imagen-2" />
         </motion.div>
         <div></div>
-        <div className="right-line"></div>
+        <motion.div className="right-line"></motion.div>
       </div>
       <div className="text-container">
         <p className="text-history-center">
@@ -57,12 +58,13 @@ const History = () => {
       <div className="img-right-two">
         <div className="left-line"></div>
         <div></div>
-        <motion.div className="img-right-three-container">
-          <img
-            src={imgThreeHistory}
-            alt="imagen-3"
-            onLoad={() => setIsLoaded(true)}
-          />
+        <motion.div
+          className="img-right-three-container"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <img src={imgThreeHistory} alt="imagen-3" />
         </motion.div>
       </div>
 
@@ -78,9 +80,14 @@ const History = () => {
         </p>
       </div>
       <div className="img-left-two">
-        <div className="img-left-three-container">
-          <img src={imgFiveHistory} alt="imagen-3" />
-        </div>
+        <motion.div
+          className="img-left-three-container"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+        >
+          <img src={imgFiveHistory} alt="imagen-4" />
+        </motion.div>
         <div className="line-ultima"></div>
         <div className="right-line"></div>
       </div>
