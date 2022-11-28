@@ -1,4 +1,6 @@
-FROM node:16.17.0
+
+FROM node:latest
+
 
 WORKDIR /client-test
 
@@ -12,3 +14,4 @@ RUN ["npm", "install"]
 EXPOSE 3000
 
 CMD ["npm", "start"]
+

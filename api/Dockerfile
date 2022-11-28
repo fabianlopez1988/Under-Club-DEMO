@@ -9,4 +9,8 @@ RUN npm install
 
 EXPOSE 5000
 
+<<<<<<< HEAD
 CMD ["npm", "run", "dev"]
+=======
+CMD ["npm", "run", "dev"]
+>>>>>>> fabian3

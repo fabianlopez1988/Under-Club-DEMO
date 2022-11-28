@@ -85,7 +85,7 @@ function CarouselHome() {
           <Carousel.Caption className="carousel-caption-culture">
             <h3 className="carousel-title-culture"
             onClick={() => navigate("/culture")}>
-              PERMISO<br></br> PERDÓN <br></br>GRACIAS
+              PERMISO<br></br> PERDON <br></br>GRACIAS
             </h3>
           </Carousel.Caption>
         </Carousel.Item>
