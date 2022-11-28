@@ -20,9 +20,9 @@ const History = () => {
     >
       <motion.div
         className="img-right-one"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 2 }}
       >
         <img src={imgOneHistory} alt="imagen" />
       </motion.div>
@@ -38,9 +38,9 @@ const History = () => {
       <div className="img-left-one">
         <motion.div
           className="img-left-two-container"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 2 }}
         >
           <img src={imgTwoHistory} alt="imagen-2" />
         </motion.div>
@@ -60,9 +60,9 @@ const History = () => {
         <div></div>
         <motion.div
           className="img-right-three-container"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 2 }}
         >
           <img src={imgThreeHistory} alt="imagen-3" />
         </motion.div>
@@ -82,9 +82,9 @@ const History = () => {
       <div className="img-left-two">
         <motion.div
           className="img-left-three-container"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 2 }}
         >
           <img src={imgFiveHistory} alt="imagen-4" />
         </motion.div>
