@@ -3,12 +3,11 @@ import imgOneHistory from "../../assets/img-one-history.jpeg";
 import imgTwoHistory from "../../assets/img-two-history.jpeg";
 import imgThreeHistory from "../../assets/img-three-history.jpeg";
 import imgFiveHistory from "../../assets/img-five-history.jpeg";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const History = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,9 +19,7 @@ const History = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.1 } }}
     >
-      <motion.div
-        className="img-right-one"
-      >
+      <motion.div className="img-right-one">
         <img
           src={imgOneHistory}
           alt="imagen"
@@ -39,9 +36,7 @@ const History = () => {
       </div>
 
       <div className="img-left-one">
-        <motion.div
-          className="img-left-two-container"
-        >
+        <motion.div className="img-left-two-container">
           <img
             src={imgTwoHistory}
             alt="imagen-2"
@@ -49,7 +44,7 @@ const History = () => {
           />
         </motion.div>
         <div></div>
-          <div className="right-line"></div>
+        <div className="right-line"></div>
       </div>
       <div className="text-container">
         <p className="text-history-center">
@@ -60,11 +55,9 @@ const History = () => {
       </div>
 
       <div className="img-right-two">
-          <div className="left-line"></div>
+        <div className="left-line"></div>
         <div></div>
-        <motion.div
-          className="img-right-three-container"
-        >
+        <motion.div className="img-right-three-container">
           <img
             src={imgThreeHistory}
             alt="imagen-3"
@@ -86,10 +79,10 @@ const History = () => {
       </div>
       <div className="img-left-two">
         <div className="img-left-three-container">
-            <img src={imgFiveHistory} alt="imagen-3" />
+          <img src={imgFiveHistory} alt="imagen-3" />
         </div>
-          <div className="line-ultima"></div>
-          <div className="right-line"></div>
+        <div className="line-ultima"></div>
+        <div className="right-line"></div>
       </div>
 
       <div className="grid-colum-gracias-container">
