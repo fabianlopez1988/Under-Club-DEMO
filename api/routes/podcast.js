@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const podcastController = require("../../api/controllers/podcastController");
+const podcastController = require("../controllers/podcastController");
 
 
 router.get("/", podcastController.getAllPodcast);

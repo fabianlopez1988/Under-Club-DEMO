@@ -1,6 +1,6 @@
 const Users = require("../models/Users");
 const passport = require("passport");
-const { sendMailToUnder } = require("../mail");
+const { sendMailToUnder } = require("../config/mail");
 
 const usersController = {
   //crea un user

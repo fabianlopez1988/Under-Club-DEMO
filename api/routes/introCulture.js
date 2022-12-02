@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const introCultureController = require("../../api/controllers/introCultureController");
+const introCultureController = require("../controllers/introCultureController");
 
 
 router.get("/", introCultureController.getIntroCulture);

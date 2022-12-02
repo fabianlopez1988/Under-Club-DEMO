@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - 5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=root
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    ports:
+      - 80
+    depends_on:
+      - postgres
+
+
+  api:
+    build: ./api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api/models:/api-test/models
+      - ./api/controllers:/api-test/controllers
+      - ./api/routes:/api-test/routes 
+      - ./api/config:/api-test/config 
+
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/src
+      - ./client/public:/app/public
+
+
+volumes:
+  pgadmin-data:
+  pgdata:
