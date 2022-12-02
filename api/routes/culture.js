@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const cultureController = require("../../api/controllers/cultureController");
+const cultureController = require("../controllers/cultureController");
 
 
 router.get("/", cultureController.getAllCultures);

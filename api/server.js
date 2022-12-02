@@ -1,15 +1,12 @@
 const express = require("express");
 const app = express();
-const db = require("./db");
+const db = require("./config/db");
 const cors = require("cors");
-const models = require("./models/index");
 const cookieParser = require("cookie-parser");
 const sessions = require("express-session");
 const routes = require("./routes/index");
-const path = require("path");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-// const port = 5000;
 const User = require("./models/Users");
 const PORT = process.env.PG_PORT || 5000
 
