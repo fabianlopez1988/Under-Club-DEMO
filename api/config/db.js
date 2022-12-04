@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-// require('dotenv').config();
+require('dotenv').config();
 const db = new Sequelize('UCWeb', null, null, {
     host: 'localhost',
     dialect: 'postgres',
