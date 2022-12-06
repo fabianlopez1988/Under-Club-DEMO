@@ -8,10 +8,11 @@ const routes = require("./routes/index");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/Users");
-const PORT = process.env.PG_PORT || 5000
+/* const PORT = process.env.PG_PORT || 5000 */
+require("dotenv").config();
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: true,
   methods:  ["GET", "POST", "DELETE", "OPTIONS"], credentials: true,
 }));
 
@@ -70,6 +71,11 @@ passport.deserializeUser(function (id, done) {
 
 app.use("/api", routes);
 
+const PORT = process.env.PORT;
+
 db.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Escuchando en el puerto ${PORT}`));
-});
+})
+// .catch(err => {
+//   console.log("DB sync failed", err);
+// });
