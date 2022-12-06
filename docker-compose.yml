@@ -22,7 +22,7 @@ services:
       PSQL_PASS: "postgres1"
       DB_HOST: db
     ports:
-      - "5000:5432"
+      - "5000:5000"
     volumes:
       - ./api/models:/api-test/models
       - ./api/controllers:/api-test/controllers
@@ -38,3 +38,4 @@ services:
     volumes:
       - ./client/public:/client-test/public
       - ./client/src:/client-test/src
+

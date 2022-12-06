@@ -11,10 +11,13 @@ const User = require("./models/Users");
 /* const PORT = process.env.PG_PORT || 5000 */
 require("dotenv").config();
 
-app.use(cors({
-  origin: true,
-  methods:  ["GET", "POST", "DELETE", "OPTIONS"], credentials: true,
-}));
+app.use(
+  cors({
+    origin: true,
+    methods: ["GET", "POST", "DELETE", "OPTIONS"],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
@@ -75,7 +78,4 @@ const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Escuchando en el puerto ${PORT}`));
-})
-// .catch(err => {
-//   console.log("DB sync failed", err);
-// });
+});
