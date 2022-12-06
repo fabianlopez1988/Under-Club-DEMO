@@ -1,50 +1,47 @@
 version: '3'
 
 services:
-  postgres:
-    image: postgres
+  db:
+    image: postgres:10
     restart: always
-    ports:
-      - 5432
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-  
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "admin@admin.com"
-      PGADMIN_DEFAULT_PASSWORD: "admin"
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
+      POSTGRES_DB: "UCWeb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres1"
+    #volumes:
+      #- pgdata:/var/lib/postgresql/data
     ports:
-      - 80
-    depends_on:
-      - postgres
+      - "5432"
 
 
   api:
     build: ./api
+    environment:
+      PORT: 5000
+      BASE_URL: "http://localhost"
+      DB_NAME: "UCWeb"
+      PSQL_USER: "postgres"
+      PSQL_PASS: "postgres1"
+      DB_HOST: db
     ports:
-      - "5000:5000"
+      - "5000:5432"
     volumes:
       - ./api/models:/api-test/models
       - ./api/controllers:/api-test/controllers
       - ./api/routes:/api-test/routes 
-      - ./api/config:/api-test/config 
+      - ./api/config:/api-test/config
+    depends_on:
+      - db
 
   client:
     build: ./client
     ports:
       - "3000:3000"
     volumes:
-      - ./client/src:/app/src
-      - ./client/public:/app/public
+      - ./client/public:/client-test/public
+      - ./client/src:/client-test/src
 
 
-volumes:
-  pgadmin-data:
-  pgdata:
+#volumes:
+  #pgadmin-data:
+  #pgdata:
