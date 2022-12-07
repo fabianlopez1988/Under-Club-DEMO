@@ -39,10 +39,12 @@ function EditViewResidents() {
     const residentRedux = useSelector((state) => state.resident)
 
     const uploadImage = (e) => {
-        const file = e.target.files[0]
-        const blob = URL.createObjectURL(file)
-        setBaseImage(blob)
-    }
+      const blob= e.target.files[0]
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onload = () => {
+        setBaseImage(reader.result);
+    }}
 
     const handleClick = (blob) => {
         dispatch(

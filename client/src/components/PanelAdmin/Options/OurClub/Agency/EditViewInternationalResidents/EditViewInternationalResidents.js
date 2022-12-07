@@ -36,15 +36,17 @@ function EditViewInternationalResidents() {
     const agencyRedux = useSelector((state) => state.agency)
 
     const uploadImage = (e) => {
-        const file = e.target.files[0]
-        const blob = URL.createObjectURL(file)
-        setBaseImage(blob)
-    }
+      const blob= e.target.files[0]
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onload = () => {
+        setBaseImage(reader.result);
+    }}
 
-    const handleClick = (blob) => {
+    const handleClick = (baseImage) => {
         dispatch(
             updateInternationalResidents({
-                photo: blob === "" ? agencyRedux.photo : blob,
+                photo: baseImage === "" ? agencyRedux.photo : baseImage,
                 name: name.value.length === 0 ? agencyRedux.name : name.value,
                 biography: biography.value.length === 0 ? agencyRedux.biography : biography.value,
                 soundcloud: soundcloud.value.length === 0 ? agencyRedux.soundcloud : soundcloud.value,

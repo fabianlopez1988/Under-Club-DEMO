@@ -29,7 +29,6 @@ const UpdatePodcast = () => {
         {podcasts?.data?.map((podcast) => (
           <div>
             <Link to={`/admin/ourclub/podcast/updatepodcast/${podcast.id}`}>
-              {console.log(podcast)}
               <img src={podcast.flyer} alt={podcast.id} />
             </Link>
           </div>

@@ -36,16 +36,24 @@ const EditViewEpisode = () => {
 
   const episodeRedux = useSelector((state) => state.episode);
 
-  const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
+  // const uploadImage = (e) => {
+  //   const file = e.target.files[0];
+  //   const blob = URL.createObjectURL(file);
+  //   setBaseImage(blob);
+  // };
 
-  const handleClick = (blob) => {
+  const uploadImage = (e) => {
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+  }}
+
+  const handleClick = (baseImage) => {
     dispatch(
       updateEpisode({
-        flyer: blob === "" ? episodeRedux.flyer : blob,
+        flyer: baseImage === "" ? episodeRedux.flyer : baseImage,
         intro:
           intro.value.length === 0 ? episodeRedux.intro : intro.value,
         url:

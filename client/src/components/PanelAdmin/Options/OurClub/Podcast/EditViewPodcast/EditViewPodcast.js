@@ -37,15 +37,17 @@ const EditViewPodcast = () => {
   const podcastRedux = useSelector((state) => state.podcast);
 
   const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
-
-  const handleClick = (blob) => {
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+  }}
+  
+  const handleClick = (baseImage) => {
     dispatch(
       updatePodcast({
-        flyer: blob === "" ? podcastRedux.flyer : blob,
+        flyer: baseImage === "" ? podcastRedux.flyer : baseImage,
         intro:
           intro.value.length === 0 ? podcastRedux.intro : intro.value,
         url:

@@ -37,16 +37,21 @@ const EditEvents = () => {
   const eventsRedux = useSelector((state) => state.events);
 
   const uploadImageLarge = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImageLarge(blob);
-  };
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImageLarge(reader.result);
+  }}
+
 
   const uploadImageGrid = (e) => {
-    const file2 = e.target.files[0];
-    const blob2 = URL.createObjectURL(file2);
-    setBaseImageGrid(blob2);
-  };
+    const blob2= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob2);
+    reader.onload = () => {
+      setBaseImageGrid(reader.result);
+  }}
 
   const handleClick = (blob, blob2) => {
     dispatch(
