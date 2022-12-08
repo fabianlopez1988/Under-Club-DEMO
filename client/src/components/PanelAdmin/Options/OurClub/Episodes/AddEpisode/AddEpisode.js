@@ -6,9 +6,6 @@ import { addEpisode } from "../../../../../../store/episodes";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
-import { storage } from "../../../../../../firebase/config"
-import { ref, uploadBytes } from "firebase/storage"
-import  { v4 }  from "uuid";
 
 const AddEpisode = () => {
   const dispatch = useDispatch();
@@ -17,9 +14,7 @@ const AddEpisode = () => {
   const intro = useInput();
   const url = useInput();
 
-
   const [baseImage, setBaseImage] = useState("");
-  const [imageList, setImageList] = useState([]);
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -28,17 +23,18 @@ const AddEpisode = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const uploadImage = (e) => {
-  //   const file = e.target.files[0];
-  //   const blob = URL.createObjectURL(file);
-  //   setBaseImage(blob);
-  // };
 
-  const uploadFirebaseImage = () => {
-    if(baseImage == null) return;
-    const imageRef = ref(storage, `episodes/${baseImage.name + v4()}`);
-    uploadBytes(imageRef, baseImage)
-  }
+  /* convertimos la imagen a blob y seteamos el estado */
+  const uploadImage = (e) => {
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+      console.log(blob, "soy blob")
+      console.log(reader.result, "soy reader result");
+  }}
+
 
   const errorAlert = () => {
     Swal.fire({
@@ -48,25 +44,23 @@ const AddEpisode = () => {
     });
   };
 
-  const handleClick = (blob) => {
-    uploadFirebaseImage();
-    dispatch(
-      addEpisode({
-        // flyer: blob ? blob : errorAlert(),
+
+  const handleClick = (baseImage) => {
+    if(baseImage) {
+      dispatch(addEpisode({
+        flyer: baseImage || errorAlert(),
         intro: intro.value.length === 0 ? errorAlert() : intro.value,
         url: url.value.length === 0 ? errorAlert() : url.value, 
+      }));
+      Swal.fire({
+        icon: "success",
+        title: "Agregado",
+        text: "Agregado",
       })
-    )
-      .then(() =>
-        Swal.fire({
-          icon: "success",
-          title: "Creado",
-          showConfirmButton: false,
-          timer: 2500,
-        })
-      )
       .then(() => navigate("/admin/ourclub/episodes"));
-  };
+    }
+  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -82,12 +76,11 @@ const AddEpisode = () => {
             <br></br>
             <input
               type="file"
-              // onChange={(e) => {
-              //   uploadImage(e);
-              // }}
-              onChange={(e)=> setBaseImage(e.target.files[0])}
+              onChange={(e) => {
+                uploadImage(e);
+              }}
             ></input>
-            {/* <img height={"200px"} src={baseImage} alt="" /> */}
+            <img height={"200px"} src={baseImage} alt="" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

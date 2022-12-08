@@ -5,11 +5,7 @@ import { useNavigate } from "react-router-dom";
 import useInput from "../../../../../../utils/useInput";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import { addResidents } from "../../../../../../store/residents";
-
-import { storage } from "../../../../../../firebase/config"
-import { ref, uploadBytes } from "firebase/storage"
-import  { v4 }  from "uuid";
+import { addResidents } from "../../../../../../store/residents"
 
 function AddResidents() {
   const dispatch = useDispatch();
@@ -23,9 +19,8 @@ function AddResidents() {
   const pressKit = useInput()
   const trackSoundcloud = useInput()
 
-  const [baseImage, setBaseImage] = useState("");
-  const [fileImage, setFileImage] = useState(null);
 
+  const [baseImage, setBaseImage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -34,27 +29,14 @@ function AddResidents() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const uploadImage = (e) => {
-  //   const file = e.target.files[0];
-  //   const blob = URL.createObjectURL(file);
-  //   setBaseImage(file);
-  // };
 
-  // const uploadFirebase = async () => {
-  //   try{
-  //     const result = await uploadFile(fileImage);
-  //     console.log(result);
-  //   }catch(err){
-  //     console.error(err);
-  //   }
-  // }
-
-  const uploadFirebaseImage = () => {
-    console.log(fileImage, "aca")
-    if(fileImage == null) return;
-    const imageRef = ref(storage, `artists/${fileImage.name + v4()}`);
-    uploadBytes(imageRef, fileImage)
-  }
+  const uploadImage = (e) => {
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+  }}
 
   const errorAlert = () => {
     Swal.fire({
@@ -69,7 +51,7 @@ function AddResidents() {
     dispatch(
       addResidents({
         name: name.value.length === 0 ? errorAlert() : name.value,
-        // photo: blob ? blob : errorAlert(),
+        photo: blob ? blob : errorAlert(),
         biography: biography.value.length === 0 ? errorAlert() : biography.value,
         instagram: instagram.value.length === 0 ? errorAlert() : instagram.value,
         soundcloud: soundcloud.value.length === 0 ? errorAlert() : soundcloud.value,
@@ -114,10 +96,9 @@ function AddResidents() {
             <br></br>
             <input
               type="file"
-              // onChange={(e) => {
-              //   uploadImage(e);
-              // }}
-              onChange={(e)=> setFileImage(e.target.files[0])}
+              onChange={(e) => {
+                uploadImage(e);
+              }}
             ></input>
             <img height={"200px"} src={fileImage} alt="" />
           </Form.Group>

@@ -29,7 +29,6 @@ const UpdateEpisode = () => {
         {episodes?.data?.map((episode) => (
           <div>
             <Link to={`/admin/ourclub/episode/updateepisode/${episode.id}`}>
-              {console.log(episode)}
               <img src={episode.flyer} alt={episode.id} />
             </Link>
           </div>

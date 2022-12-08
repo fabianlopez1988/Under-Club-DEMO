@@ -1,40 +1,41 @@
-# version: '3'
+version: '3'
 
-# services:
-#   db:
-#     image: postgres:10
-#     restart: always
-#     environment:
-#       POSTGRES_DB: "UCWeb"
-#       POSTGRES_USER: "postgres"
-#       POSTGRES_PASSWORD: "postgres1"
-#     ports:
-#       - "5432"
+services:
+  db:
+    image: postgres:10
+    restart: always
+    environment:
+      PORT: 5432
+      POSTGRES_DB: "UCWeb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres1"
+    ports:
+      - "5432"
 
 
-#   api:
-#     build: ./api
-#     environment:
-#       PORT: 5000
-#       BASE_URL: "http://localhost"
-#       DB_NAME: "UCWeb"
-#       PSQL_USER: "postgres"
-#       PSQL_PASS: "postgres1"
-#       DB_HOST: db
-#     ports:
-#       - "5000:5000"
-#     volumes:
-#       - ./api/models:/api-test/models
-#       - ./api/controllers:/api-test/controllers
-#       - ./api/routes:/api-test/routes 
-#       - ./api/config:/api-test/config
-#     depends_on:
-#       - db
+  api:
+    build: ./api
+    environment:
+      PORT: 5000
+      BASE_URL: "http://localhost"
+      DB_NAME: "UCWeb"
+      PSQL_USER: "postgres"
+      PSQL_PASS: "postgres1"
+      DB_HOST: db
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api/models:/api-test/models
+      - ./api/controllers:/api-test/controllers
+      - ./api/routes:/api-test/routes 
+      - ./api/config:/api-test/config
+    depends_on:
+      - db
 
-#   client:
-#     build: ./client
-#     ports:
-#       - "3000:3000"
-#     volumes:
-#       - ./client/public:/client-test/public
-#       - ./client/src:/client-test/src
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/public:/client-test/public
+      - ./client/src:/client-test/src

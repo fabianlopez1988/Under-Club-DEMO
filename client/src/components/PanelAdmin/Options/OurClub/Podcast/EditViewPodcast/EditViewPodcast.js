@@ -37,15 +37,17 @@ const EditViewPodcast = () => {
   const podcastRedux = useSelector((state) => state.podcast);
 
   const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
-
-  const handleClick = (blob) => {
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+  }}
+  
+  const handleClick = (baseImage) => {
     dispatch(
       updatePodcast({
-        flyer: blob === "" ? podcastRedux.flyer : blob,
+        flyer: baseImage === "" ? podcastRedux.flyer : baseImage,
         intro:
           intro.value.length === 0 ? podcastRedux.intro : intro.value,
         url:
@@ -84,8 +86,8 @@ const EditViewPodcast = () => {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={podcastRedux.flyer}
-              alt={podcastRedux.id}
+              src={podcastRedux?.flyer}
+              alt={podcastRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -93,13 +95,13 @@ const EditViewPodcast = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Intro</Form.Label>
           <br></br>
-          <textarea placeholder={podcastRedux.intro} {...intro}></textarea>
+          <textarea placeholder={podcastRedux?.intro} {...intro}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>url</Form.Label>
           <br></br>
-          <input placeholder={podcastRedux.url} {...url}></input>
+          <input placeholder={podcastRedux?.url} {...url}></input>
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar

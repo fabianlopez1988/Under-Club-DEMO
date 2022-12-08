@@ -14,7 +14,6 @@ const AddPodcast = () => {
   const intro = useInput();
   const url = useInput();
 
-
   const [baseImage, setBaseImage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -25,9 +24,12 @@ const AddPodcast = () => {
   }, []);
 
   const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
+    const blob = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+    };
   };
 
   const errorAlert = () => {
@@ -38,23 +40,23 @@ const AddPodcast = () => {
     });
   };
 
-  const handleClick = (blob) => {
-    dispatch(
-      addPodcast({
-        flyer: blob ? blob : errorAlert(),
-        intro: intro.value.length === 0 ? errorAlert() : intro.value,
-        url: url.value.length === 0 ? errorAlert() : url.value, 
-      })
-    )
-      .then(() =>
-        Swal.fire({
-          icon: "success",
-          url: "Creado",
-          showConfirmButton: false,
-          timer: 2500,
+  const handleClick = (baseImage) => {
+    if (baseImage) {
+      dispatch(
+        addPodcast({
+          flyer: baseImage || errorAlert(),
+          intro: intro.value.length === 0 ? errorAlert() : intro.value,
+          url: url.value.length === 0 ? errorAlert() : url.value,
         })
-      )
+      );
+      Swal.fire({
+        icon: "success",
+        url: "Creado",
+        showConfirmButton: false,
+        timer: 2500,
+      })
       .then(() => navigate("/admin/ourclub/podcast"));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -81,12 +83,8 @@ const AddPodcast = () => {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>url</Form.Label>
             <br></br>
-            <input
-              placeholder="Ingrese la URL del podcast"
-              {...url}
-            ></input>
-          </Form.Group> 
-
+            <input placeholder="Ingrese la URL del podcast" {...url}></input>
+          </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Intro</Form.Label>
