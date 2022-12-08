@@ -34,7 +34,7 @@ services:
   client:
     build: ./client
     ports:
-      - "3031:3031"
+      - "3000:3000"
     volumes:
       - ./client/public:/client-test/public
       - ./client/src:/client-test/src
