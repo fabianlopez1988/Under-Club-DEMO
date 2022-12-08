@@ -10,11 +10,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// transporter.verify((err, success) => {
-//     if (err) console.error(err);
-//     else console.log('Mail config is correct');
-// });
-
 const sendMailToUnder = (mail) => {
   const mailOptions = {
     from: mail.from,

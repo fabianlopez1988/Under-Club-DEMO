@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEpisodes } from "../../store/episodes";
 import { useNavigate } from "react-router-dom";
 import "./Episodes.css";
 import Carousel from "react-bootstrap/Carousel";
-import { storage } from "../../firebase/config"
-import { ref, listAll, getDownloadURL } from "firebase/storage"
 
 const Episodes = () => {
   const dispatch = useDispatch();
@@ -24,21 +22,6 @@ const Episodes = () => {
   }, []);
 
   const episodes = useSelector((state) => state.episode);
-
-
-
-  const [imageList, setImageList] = useState([]);
-
-  const imageListRef = ref(storage, "episodes/")
-
-  useEffect(()=>{
-    listAll(imageListRef)
-    .then((res)=> res.items.forEach((item)=>{
-      getDownloadURL(item).then((url)=> {
-        setImageList((prev) => [...prev, url]);
-      })
-    }))
-  },[])
 
   return (
     <div>
@@ -62,13 +45,7 @@ const Episodes = () => {
             <Carousel.Item>
               <div className="episode-container">
                 <div className="episode-container-flyer">
-                  {/* <img className="" src={episode.flyer} alt={episode.id} /> */}
-                  {imageList.map((url, id)=> {
-                      // return <img src={url} alt={id}/>
-                      console.log(imageList[0], "aca")
-                    })
-                  }
-                   {/* <img src={imageList[0]} />    */}
+                  <img className="" src={episode.flyer} alt={episode.id} />
                 </div>
 
                 <div className="episode-container-intro">

@@ -47,7 +47,6 @@ function AddResidents() {
   };
 
   const handleClick = (blob) => {
-    uploadFirebaseImage();
     dispatch(
       addResidents({
         name: name.value.length === 0 ? errorAlert() : name.value,
@@ -100,7 +99,7 @@ function AddResidents() {
                 uploadImage(e);
               }}
             ></input>
-            <img height={"200px"} src={fileImage} alt="" />
+            <img height={"200px"} src={baseImage} alt="" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
