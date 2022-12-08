@@ -91,13 +91,22 @@ const EditEvents = () => {
               uploadImageLarge(e);
             }}
           ></input>
-          {!baseImageLarge ? (
+          {/* {!baseImageLarge ? (
             <img
               height={"200px"}
               src={eventsRedux.flyerLarge}
               alt={eventsRedux.id}
             />
+          ) : null} */}
+
+          {!baseImageLarge ? (
+            <img
+              height={"200px"}
+              src={eventsRedux?.flyerLarge}
+              alt={eventsRedux?.id}
+            />
           ) : null}
+
           <img height={"200px"} src={baseImageLarge} alt="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -112,8 +121,8 @@ const EditEvents = () => {
           {!baseImageGrid ? (
             <img
               height={"200px"}
-              src={eventsRedux.flyerGrid}
-              alt={eventsRedux.id}
+              src={eventsRedux?.flyerGrid}
+              alt={eventsRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImageGrid} alt="" />
@@ -121,13 +130,13 @@ const EditEvents = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>date</Form.Label>
           <br></br>
-          <input type="date" placeholder={eventsRedux.date} {...date}></input>
+          <input type="date" placeholder={eventsRedux?.date} {...date}></input>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Url</Form.Label>
           <br></br>
-          <input type="text" placeholder={eventsRedux.url} {...url}></input>
+          <input type="text" placeholder={eventsRedux?.url} {...url}></input>
         </Form.Group>
 
         <button

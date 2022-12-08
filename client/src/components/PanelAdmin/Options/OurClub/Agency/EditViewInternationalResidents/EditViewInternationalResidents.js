@@ -78,7 +78,7 @@ function EditViewInternationalResidents() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Nombre</Form.Label>
           <br></br>
-          <input placeholder={agencyRedux.name} {...name} />
+          <input placeholder={agencyRedux?.name} {...name} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -93,8 +93,8 @@ function EditViewInternationalResidents() {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={agencyRedux.photo}
-              alt={agencyRedux.id}
+              src={agencyRedux?.photo}
+              alt={agencyRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -103,31 +103,31 @@ function EditViewInternationalResidents() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Biografía</Form.Label>
           <br></br>
-          <textarea placeholder={agencyRedux.biography} {...biography}></textarea>
+          <textarea placeholder={agencyRedux?.biography} {...biography}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Instagram</Form.Label>
           <br></br>
-          <input placeholder={agencyRedux.instagram} {...instagram} />
+          <input placeholder={agencyRedux?.instagram} {...instagram} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>SoundCloud</Form.Label>
           <br></br>
-          <input placeholder={agencyRedux.soundcloud} {...soundcloud} />
+          <input placeholder={agencyRedux?.soundcloud} {...soundcloud} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Resident Advisor</Form.Label>
           <br></br>
-          <input placeholder={agencyRedux.residentAdvisor} {...residentAdvisor} />
+          <input placeholder={agencyRedux?.residentAdvisor} {...residentAdvisor} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Press Kit</Form.Label>
           <br></br>
-          <input placeholder={agencyRedux.pressKit} {...pressKit} />
+          <input placeholder={agencyRedux?.pressKit} {...pressKit} />
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar

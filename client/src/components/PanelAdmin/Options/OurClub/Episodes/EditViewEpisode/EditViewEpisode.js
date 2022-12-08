@@ -92,8 +92,8 @@ const EditViewEpisode = () => {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={episodeRedux.flyer}
-              alt={episodeRedux.id}
+              src={episodeRedux?.flyer}
+              alt={episodeRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -101,13 +101,13 @@ const EditViewEpisode = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Intro</Form.Label>
           <br></br>
-          <textarea placeholder={episodeRedux.intro} {...intro}></textarea>
+          <textarea placeholder={episodeRedux?.intro} {...intro}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>url</Form.Label>
           <br></br>
-          <input placeholder={episodeRedux.url} {...url}></input>
+          <input placeholder={episodeRedux?.url} {...url}></input>
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar
