@@ -5,6 +5,7 @@ services:
     image: postgres:10
     restart: always
     environment:
+      PORT: 5432
       POSTGRES_DB: "UCWeb"
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "postgres1"

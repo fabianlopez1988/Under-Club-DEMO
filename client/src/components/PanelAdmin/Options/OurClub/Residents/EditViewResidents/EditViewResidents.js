@@ -39,10 +39,12 @@ function EditViewResidents() {
     const residentRedux = useSelector((state) => state.resident)
 
     const uploadImage = (e) => {
-        const file = e.target.files[0]
-        const blob = URL.createObjectURL(file)
-        setBaseImage(blob)
-    }
+      const blob= e.target.files[0]
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onload = () => {
+        setBaseImage(reader.result);
+    }}
 
     const handleClick = (blob) => {
         dispatch(
@@ -80,7 +82,7 @@ function EditViewResidents() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Nombre</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.name} {...name} />
+          <input placeholder={residentRedux?.name} {...name} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -95,8 +97,8 @@ function EditViewResidents() {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={residentRedux.photo}
-              alt={residentRedux.id}
+              src={residentRedux?.photo}
+              alt={residentRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -105,37 +107,37 @@ function EditViewResidents() {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Biografía</Form.Label>
           <br></br>
-          <textarea placeholder={residentRedux.biography} {...biography}></textarea>
+          <textarea placeholder={residentRedux?.biography} {...biography}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Instagram</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.instagram} {...instagram} />
+          <input placeholder={residentRedux?.instagram} {...instagram} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>SoundCloud</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.soundcloud} {...soundcloud} />
+          <input placeholder={residentRedux?.soundcloud} {...soundcloud} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Resident Advisor</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.residentAdvisor} {...residentAdvisor} />
+          <input placeholder={residentRedux?.residentAdvisor} {...residentAdvisor} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Press Kit</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.pressKit} {...pressKit} />
+          <input placeholder={residentRedux?.pressKit} {...pressKit} />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Track SoundCloud</Form.Label>
           <br></br>
-          <input placeholder={residentRedux.trackSoundcloud} {...trackSoundcloud} />
+          <input placeholder={residentRedux?.trackSoundcloud} {...trackSoundcloud} />
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar

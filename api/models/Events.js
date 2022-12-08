@@ -10,11 +10,11 @@ Events.init(
       allowNull: false,
     },
     flyerLarge: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: false,
     },
     flyerGrid: {
-      type: Sequelize.STRING,
+      type: Sequelize.TEXT,
       allowNull: false,
     },
     url: {

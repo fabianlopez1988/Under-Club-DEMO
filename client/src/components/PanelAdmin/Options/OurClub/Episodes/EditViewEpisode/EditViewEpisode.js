@@ -36,16 +36,24 @@ const EditViewEpisode = () => {
 
   const episodeRedux = useSelector((state) => state.episode);
 
-  const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
+  // const uploadImage = (e) => {
+  //   const file = e.target.files[0];
+  //   const blob = URL.createObjectURL(file);
+  //   setBaseImage(blob);
+  // };
 
-  const handleClick = (blob) => {
+  const uploadImage = (e) => {
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+  }}
+
+  const handleClick = (baseImage) => {
     dispatch(
       updateEpisode({
-        flyer: blob === "" ? episodeRedux.flyer : blob,
+        flyer: baseImage === "" ? episodeRedux.flyer : baseImage,
         intro:
           intro.value.length === 0 ? episodeRedux.intro : intro.value,
         url:
@@ -84,8 +92,8 @@ const EditViewEpisode = () => {
           {!baseImage ? (
             <img
               height={"200px"}
-              src={episodeRedux.flyer}
-              alt={episodeRedux.id}
+              src={episodeRedux?.flyer}
+              alt={episodeRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImage} alt="" />
@@ -93,13 +101,13 @@ const EditViewEpisode = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Intro</Form.Label>
           <br></br>
-          <textarea placeholder={episodeRedux.intro} {...intro}></textarea>
+          <textarea placeholder={episodeRedux?.intro} {...intro}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>url</Form.Label>
           <br></br>
-          <input placeholder={episodeRedux.url} {...url}></input>
+          <input placeholder={episodeRedux?.url} {...url}></input>
         </Form.Group>
         <button type="submit" onClick={() => handleClick(baseImage)}>
           Guardar

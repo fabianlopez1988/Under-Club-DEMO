@@ -37,16 +37,21 @@ const EditEvents = () => {
   const eventsRedux = useSelector((state) => state.events);
 
   const uploadImageLarge = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImageLarge(blob);
-  };
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImageLarge(reader.result);
+  }}
+
 
   const uploadImageGrid = (e) => {
-    const file2 = e.target.files[0];
-    const blob2 = URL.createObjectURL(file2);
-    setBaseImageGrid(blob2);
-  };
+    const blob2= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob2);
+    reader.onload = () => {
+      setBaseImageGrid(reader.result);
+  }}
 
   const handleClick = (blob, blob2) => {
     dispatch(
@@ -86,13 +91,22 @@ const EditEvents = () => {
               uploadImageLarge(e);
             }}
           ></input>
-          {!baseImageLarge ? (
+          {/* {!baseImageLarge ? (
             <img
               height={"200px"}
               src={eventsRedux.flyerLarge}
               alt={eventsRedux.id}
             />
+          ) : null} */}
+
+          {!baseImageLarge ? (
+            <img
+              height={"200px"}
+              src={eventsRedux?.flyerLarge}
+              alt={eventsRedux?.id}
+            />
           ) : null}
+
           <img height={"200px"} src={baseImageLarge} alt="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -107,8 +121,8 @@ const EditEvents = () => {
           {!baseImageGrid ? (
             <img
               height={"200px"}
-              src={eventsRedux.flyerGrid}
-              alt={eventsRedux.id}
+              src={eventsRedux?.flyerGrid}
+              alt={eventsRedux?.id}
             />
           ) : null}
           <img height={"200px"} src={baseImageGrid} alt="" />
@@ -116,13 +130,13 @@ const EditEvents = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>date</Form.Label>
           <br></br>
-          <input type="date" placeholder={eventsRedux.date} {...date}></input>
+          <input type="date" placeholder={eventsRedux?.date} {...date}></input>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Url</Form.Label>
           <br></br>
-          <input type="text" placeholder={eventsRedux.url} {...url}></input>
+          <input type="text" placeholder={eventsRedux?.url} {...url}></input>
         </Form.Group>
 
         <button

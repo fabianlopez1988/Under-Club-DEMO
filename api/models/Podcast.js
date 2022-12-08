@@ -5,7 +5,7 @@ class Podcast extends Sequelize.Model {}
 
 Podcast.init({
   flyer: {
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
     // allowNull: false,
     // validate: {
     //   notEmpty: true,

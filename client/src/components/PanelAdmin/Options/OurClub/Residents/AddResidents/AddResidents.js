@@ -19,6 +19,7 @@ function AddResidents() {
   const pressKit = useInput()
   const trackSoundcloud = useInput()
 
+
   const [baseImage, setBaseImage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -29,10 +30,12 @@ function AddResidents() {
   }, []);
 
   const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
+    const blob= e.target.files[0]
+    const reader = new FileReader();
+    reader.readAsDataURL(blob);
+    reader.onload = () => {
+      setBaseImage(reader.result);
+  }}
 
   const errorAlert = () => {
     Swal.fire({
