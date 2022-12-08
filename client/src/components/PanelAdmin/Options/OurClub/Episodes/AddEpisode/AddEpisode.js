@@ -6,6 +6,9 @@ import { addEpisode } from "../../../../../../store/episodes";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import { storage } from "../../../../../../firebase/config"
+import { ref, uploadBytes } from "firebase/storage"
+import  { v4 }  from "uuid";
 
 const AddEpisode = () => {
   const dispatch = useDispatch();
@@ -16,6 +19,7 @@ const AddEpisode = () => {
 
 
   const [baseImage, setBaseImage] = useState("");
+  const [imageList, setImageList] = useState([]);
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -24,11 +28,17 @@ const AddEpisode = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
+  // const uploadImage = (e) => {
+  //   const file = e.target.files[0];
+  //   const blob = URL.createObjectURL(file);
+  //   setBaseImage(blob);
+  // };
+
+  const uploadFirebaseImage = () => {
+    if(baseImage == null) return;
+    const imageRef = ref(storage, `episodes/${baseImage.name + v4()}`);
+    uploadBytes(imageRef, baseImage)
+  }
 
   const errorAlert = () => {
     Swal.fire({
@@ -39,9 +49,10 @@ const AddEpisode = () => {
   };
 
   const handleClick = (blob) => {
+    uploadFirebaseImage();
     dispatch(
       addEpisode({
-        flyer: blob ? blob : errorAlert(),
+        // flyer: blob ? blob : errorAlert(),
         intro: intro.value.length === 0 ? errorAlert() : intro.value,
         url: url.value.length === 0 ? errorAlert() : url.value, 
       })
@@ -71,11 +82,12 @@ const AddEpisode = () => {
             <br></br>
             <input
               type="file"
-              onChange={(e) => {
-                uploadImage(e);
-              }}
+              // onChange={(e) => {
+              //   uploadImage(e);
+              // }}
+              onChange={(e)=> setBaseImage(e.target.files[0])}
             ></input>
-            <img height={"200px"} src={baseImage} alt="" />
+            {/* <img height={"200px"} src={baseImage} alt="" /> */}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

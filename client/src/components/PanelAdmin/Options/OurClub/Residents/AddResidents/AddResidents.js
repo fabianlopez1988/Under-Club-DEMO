@@ -7,6 +7,10 @@ import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { addResidents } from "../../../../../../store/residents";
 
+import { storage } from "../../../../../../firebase/config"
+import { ref, uploadBytes } from "firebase/storage"
+import  { v4 }  from "uuid";
+
 function AddResidents() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -20,6 +24,8 @@ function AddResidents() {
   const trackSoundcloud = useInput()
 
   const [baseImage, setBaseImage] = useState("");
+  const [fileImage, setFileImage] = useState(null);
+
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -28,11 +34,27 @@ function AddResidents() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const uploadImage = (e) => {
-    const file = e.target.files[0];
-    const blob = URL.createObjectURL(file);
-    setBaseImage(blob);
-  };
+  // const uploadImage = (e) => {
+  //   const file = e.target.files[0];
+  //   const blob = URL.createObjectURL(file);
+  //   setBaseImage(file);
+  // };
+
+  // const uploadFirebase = async () => {
+  //   try{
+  //     const result = await uploadFile(fileImage);
+  //     console.log(result);
+  //   }catch(err){
+  //     console.error(err);
+  //   }
+  // }
+
+  const uploadFirebaseImage = () => {
+    console.log(fileImage, "aca")
+    if(fileImage == null) return;
+    const imageRef = ref(storage, `artists/${fileImage.name + v4()}`);
+    uploadBytes(imageRef, fileImage)
+  }
 
   const errorAlert = () => {
     Swal.fire({
@@ -43,10 +65,11 @@ function AddResidents() {
   };
 
   const handleClick = (blob) => {
+    uploadFirebaseImage();
     dispatch(
       addResidents({
         name: name.value.length === 0 ? errorAlert() : name.value,
-        photo: blob ? blob : errorAlert(),
+        // photo: blob ? blob : errorAlert(),
         biography: biography.value.length === 0 ? errorAlert() : biography.value,
         instagram: instagram.value.length === 0 ? errorAlert() : instagram.value,
         soundcloud: soundcloud.value.length === 0 ? errorAlert() : soundcloud.value,
@@ -68,6 +91,7 @@ function AddResidents() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
   };
 
   return (
@@ -84,16 +108,18 @@ function AddResidents() {
             />
           </Form.Group>
 
+
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Foto</Form.Label>
             <br></br>
             <input
               type="file"
-              onChange={(e) => {
-                uploadImage(e);
-              }}
+              // onChange={(e) => {
+              //   uploadImage(e);
+              // }}
+              onChange={(e)=> setFileImage(e.target.files[0])}
             ></input>
-            <img height={"200px"} src={baseImage} alt="" />
+            <img height={"200px"} src={fileImage} alt="" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

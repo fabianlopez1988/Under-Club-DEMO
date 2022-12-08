@@ -5,8 +5,24 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import ReactSoundCloud from "react-soundcloud-embedded";
 
+import { storage } from "../../firebase/config"
+import { ref, listAll, getDownloadURL } from "firebase/storage"
+
 const Artists = () => {
   const [resident, setResident] = useState([]);
+  const [imageList, setImageList] = useState([]);
+
+  const imageListRef = ref(storage, "artists/")
+
+  useEffect(()=>{
+    listAll(imageListRef)
+    .then((res)=> res.items.forEach((item)=>{
+      getDownloadURL(item).then((url)=> {
+        setImageList((prev) => [...prev, url]);
+      })
+    }))
+  },[])
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -127,6 +143,11 @@ const Artists = () => {
                           PRESS KIT
                         </a>
                       </div>
+                      {imageList.map((url)=> {
+                        return <img src={url}/>
+                      })
+
+                      }
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
