@@ -43,10 +43,10 @@ const Episodes = () => {
       <section className="episode-section-carousel">
         <Carousel>
           {episodes?.data?.map((episode) => (
-            <Carousel.Item>
+            <Carousel.Item key={episode.id}>
               <div className="episode-container">
                 <div className="episode-container-flyer">
-                  <img className="" src={episode.flyer} alt={episode.id} />
+                  <img className="" src={episode.flyer} alt={episode.id} key={episode.id}/>
                 </div>
 
                 <div className="episode-container-intro">
