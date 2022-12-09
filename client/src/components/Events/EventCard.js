@@ -25,7 +25,7 @@ const EventCard = () => {
     <div className="flyers-grid">
       {events ? (
         events.data.slice(1).map((event) => (
-          <div className="event-grid">
+          <div className="event-grid" key={event.id}>
             <img src={event.flyerGrid} alt="flyer" />
             <a
               href={event.url}

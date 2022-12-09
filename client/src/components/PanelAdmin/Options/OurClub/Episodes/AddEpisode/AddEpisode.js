@@ -14,7 +14,6 @@ const AddEpisode = () => {
   const intro = useInput();
   const url = useInput();
 
-
   const [baseImage, setBaseImage] = useState("");
 
   const user = JSON.parse(localStorage.getItem("user"));
@@ -23,6 +22,7 @@ const AddEpisode = () => {
     if (!user) navigate("/");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
 
   /* convertimos la imagen a blob y seteamos el estado */
   const uploadImage = (e) => {
@@ -34,6 +34,7 @@ const AddEpisode = () => {
       console.log(blob, "soy blob")
       console.log(reader.result, "soy reader result");
   }}
+
 
   const errorAlert = () => {
     Swal.fire({
@@ -73,25 +74,13 @@ const AddEpisode = () => {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Flyer</Form.Label>
             <br></br>
-
-            {/* <input
-              type="file"
-              onChange={(e) => {
-                uploadImage(e);
-              }}
-            ></input> */}
-
-          <input
+            <input
               type="file"
               onChange={(e) => {
                 uploadImage(e);
               }}
             ></input>
-
             <img height={"200px"} src={baseImage} alt="" />
-
-        
-
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

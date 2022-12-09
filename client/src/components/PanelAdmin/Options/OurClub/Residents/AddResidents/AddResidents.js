@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import useInput from "../../../../../../utils/useInput";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
-import { addResidents } from "../../../../../../store/residents";
+import { addResidents } from "../../../../../../store/residents"
 
 function AddResidents() {
   const dispatch = useDispatch();
@@ -28,6 +28,7 @@ function AddResidents() {
     if (!user) navigate("/");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
 
   const uploadImage = (e) => {
     const blob= e.target.files[0]
@@ -71,6 +72,7 @@ function AddResidents() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
   };
 
   return (
@@ -86,6 +88,7 @@ function AddResidents() {
               {...name}
             />
           </Form.Group>
+
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Foto</Form.Label>

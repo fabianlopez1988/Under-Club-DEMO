@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllEpisodes } from "../../store/episodes";
 import { useNavigate } from "react-router-dom";
-
 import "./Episodes.css";
 import Carousel from "react-bootstrap/Carousel";
 
@@ -43,10 +42,10 @@ const Episodes = () => {
       <section className="episode-section-carousel">
         <Carousel>
           {episodes?.data?.map((episode) => (
-            <Carousel.Item>
+            <Carousel.Item key={episode.id}>
               <div className="episode-container">
                 <div className="episode-container-flyer">
-                  <img className="" src={episode.flyer} alt={episode.id} />
+                  <img className="" src={episode.flyer} alt={episode.id} key={episode.id}/>
                 </div>
 
                 <div className="episode-container-intro">
