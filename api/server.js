@@ -72,6 +72,12 @@ passport.deserializeUser(function (id, done) {
     .catch(done);
 });
 
+//estrategia de rutas del lado del server
+app.get('/', function (req, res) {
+  res.sendFile('public/index.html', { root: __dirname });
+});
+
+
 app.use("/api", routes);
 
 const PORT = process.env.PORT;
