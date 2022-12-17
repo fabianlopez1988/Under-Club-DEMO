@@ -74,6 +74,17 @@ passport.deserializeUser(function (id, done) {
 
 app.use("/api", routes);
 
+//evitar mensaje de cannot get en browser
+// app.get((req, res, next) => {
+//   res.sendFile(path.join(__dirname, "public", "index.html"));
+//   next();
+// })
+
+//estrategia de rutas del lado del server
+app.get('/', function (req, res) {
+  res.sendFile('public/index.html', { root: __dirname });
+});
+
 const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
