@@ -20,7 +20,7 @@ app.use(
   })
 );
 
-app.use(express.json({limit: "50mb"}));
+app.use(express.json({ limit: "50mb" }));
 
 app.use(cookieParser());
 
@@ -78,12 +78,16 @@ passport.deserializeUser(function (id, done) {
 //   res.sendFile('public/index.html', { root: __dirname });
 // });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) => res.send("Hello World"));
+
+// app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", routes);
 
 const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Escuchando en el puertooooooooooo ${PORT}`));
+  app.listen(PORT, () =>
+    console.log(`Escuchando en el puertooooooooooo ${PORT}`)
+  );
 });
