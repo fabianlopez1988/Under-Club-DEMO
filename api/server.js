@@ -73,10 +73,12 @@ passport.deserializeUser(function (id, done) {
 });
 
 //estrategia de rutas del lado del server
-app.get('/', function (req, res) {
-  res.sendFile('public/index.html', { root: __dirname });
-});
+// app.get('/', function (req, res) {
+//   res.sendFile('public/index.html', { root: __dirname });
+// });
 
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/api", routes);
 
