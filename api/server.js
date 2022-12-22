@@ -8,6 +8,7 @@ const routes = require("./routes/index");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/Users");
+const path = require("path");
 /* const PORT = process.env.PG_PORT || 5000 */
 require("dotenv").config();
 
@@ -76,7 +77,6 @@ passport.deserializeUser(function (id, done) {
 // app.get('/', function (req, res) {
 //   res.sendFile('public/index.html', { root: __dirname });
 // });
-
 
 app.use(express.static(path.join(__dirname, "public")));
 
