@@ -78,7 +78,12 @@ passport.deserializeUser(function (id, done) {
 //   res.sendFile('public', { root: __dirname })
 // });
 
-app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
+app.get('/', function (req, res) {
+  res.sendFile('./index.html')
+});
+
+
+// app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
 
 // app.use(express.static(path.join(__dirname, "public")));
 
