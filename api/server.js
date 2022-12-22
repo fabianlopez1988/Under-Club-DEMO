@@ -74,11 +74,11 @@ passport.deserializeUser(function (id, done) {
 });
 
 //estrategia de rutas del lado del server
-app.get('/', function (req, res) {
-  res.sendFile('public', { root: __dirname })
-});
+// app.get('/', function (req, res) {
+//   res.sendFile('public', { root: __dirname })
+// });
 
-// app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
+app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
 
 // app.use(express.static(path.join(__dirname, "public")));
 
