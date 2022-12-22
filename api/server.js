@@ -78,8 +78,12 @@ passport.deserializeUser(function (id, done) {
 //   res.sendFile('public', { root: __dirname })
 // });
 
-app.get('/', function (req, res) {
-  res.sendFile('./index.html', { root: __dirname })
+// app.get('/', function (req, res) {
+//   res.sendFile('./index.html', { root: "public" })
+// });
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 
