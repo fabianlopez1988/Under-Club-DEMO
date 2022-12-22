@@ -85,5 +85,5 @@ app.use("/api", routes);
 const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Escuchando en el puerto ${PORT}`));
+  app.listen(PORT, () => console.log(`Escuchando en el puertooooooooooo ${PORT}`));
 });

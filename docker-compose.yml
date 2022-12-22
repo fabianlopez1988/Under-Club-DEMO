@@ -24,18 +24,19 @@ services:
     ports:
       - "6000:6000"
     volumes:
-      # - ./api/models:/api-test/models
-      # - ./api/controllers:/api-test/controllers
-      # - ./api/routes:/api-test/routes 
-      # - ./api/config:/api-test/config
-      ./api/:/api-test
+      - ./api/models:/api-test/models
+      - ./api/controllers:/api-test/controllers
+      - ./api/routes:/api-test/routes 
+      - ./api/config:/api-test/config
     depends_on:
       - db
 
   client:
     build: ./client
+    environment:
+      PORT: 3031
     ports:
-      - "3031:3000"
+      - "3031:3031"
     volumes:
       - ./client/public:/client-test/public
       - ./client/src:/client-test/src

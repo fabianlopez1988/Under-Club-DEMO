@@ -11,4 +11,4 @@ COPY . .
 RUN ["npm", "install"]
 CMD ["npm", "start"]
 
-EXPOSE 6000
+EXPOSE 5000
