@@ -21,6 +21,8 @@ app.use(
   })
 );
 
+app.use(express.static('public'));
+
 app.use(express.json({ limit: "50mb" }));
 
 app.use(cookieParser());
@@ -75,6 +77,23 @@ passport.deserializeUser(function (id, done) {
 });
 
 
+app.use("/api", routes);
+
+
+app.use((req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+})
+
+
+const PORT = process.env.PORT;
+
+db.sync({ force: false }).then(() => {
+  app.listen(PORT, () =>
+    console.log(`Escuchando en el puertooooooooooo ${PORT}`)
+  );
+});
+
+
 // app.get('/', function (req, res) {
 //   res.sendFile('public', { root: __dirname })
 // });
@@ -88,26 +107,3 @@ passport.deserializeUser(function (id, done) {
 // app.get('/', function (req, res) {
 //   res.send('SITIO EN CONSTRUCCIÓN');
 // });
-
-
-// app.get("/", (req, res) => res.send("SITIO EN CONSTRUCCIÓN"));
-
-
-app.use(express.static('/public'));
-
-
-app.get("*", function(req, res) {
-  res.sendFile('public/index.html');
-});
-
-
-
-app.use("/api", routes);
-
-const PORT = process.env.PORT;
-
-db.sync({ force: false }).then(() => {
-  app.listen(PORT, () =>
-    console.log(`Escuchando en el puertooooooooooo ${PORT}`)
-  );
-});
