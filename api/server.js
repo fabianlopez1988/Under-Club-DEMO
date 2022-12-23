@@ -102,7 +102,7 @@ app.get("/", (req, res) => res.send("SITIO EN CONSTRUCCIÓN"));
 
 
 
-app.use("/", routes);
+app.use("/api", routes);
 
 const PORT = process.env.PORT;
 
