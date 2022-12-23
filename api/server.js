@@ -23,7 +23,10 @@ app.use(
 
 app.use(express.static(path.resolve(__dirname, "./client/public")));
 
+
 app.use(express.json({ limit: "50mb" }));
+
+app.use(express.urlencoded({ extended: true }))
 
 app.use(cookieParser());
 
