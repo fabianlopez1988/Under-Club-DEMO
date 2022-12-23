@@ -12,6 +12,7 @@ const path = require("path");
 /* const PORT = process.env.PG_PORT || 5000 */
 require("dotenv").config();
 
+
 app.use(
   cors({
     origin: true,
@@ -78,14 +79,24 @@ passport.deserializeUser(function (id, done) {
 //   res.sendFile('public', { root: __dirname })
 // });
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get('/', function (req, res) {
-res.sendFile(path.join(__dirname, './public', 'index.html'));
+  res.sendFile(__dirname + '../client/public/index.html');
 });
 
 
 // app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
 
-// app.use(express.static(path.join(__dirname, "public")));
+
+// app.use(express.static('client/public'));
+
+
+// app.get("*", function(req, res) {
+//     res.sendFile(path.join(__dirname+'/client/public/index.html'));
+// });
+
+
 
 app.use("/api", routes);
 
