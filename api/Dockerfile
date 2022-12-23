@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /api-test
+WORKDIR /api
 
 COPY ./package.json package.json
 COPY ./package-lock.json package-lock.json
