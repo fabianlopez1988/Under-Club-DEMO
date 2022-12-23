@@ -21,7 +21,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.resolve(__dirname, "./public")));
+app.use(express.static(path.resolve(__dirname, "./build")));
 
 
 app.use(express.json({ limit: "50mb" }));
@@ -82,7 +82,7 @@ passport.deserializeUser(function (id, done) {
 //Express routing
 app.use("/api", routes);
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public", "index.html"));
+  res.sendFile(path.join(__dirname, "./build", "index.html"));
 });
 
 
