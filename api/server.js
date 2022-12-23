@@ -74,7 +74,7 @@ passport.deserializeUser(function (id, done) {
     .catch(done);
 });
 
-//estrategia de rutas del lado del server
+
 // app.get('/', function (req, res) {
 //   res.sendFile('public', { root: __dirname })
 // });
@@ -90,15 +90,15 @@ passport.deserializeUser(function (id, done) {
 // });
 
 
-app.get("/", (req, res) => res.send("SITIO EN CONSTRUCCIÓN"));
+// app.get("/", (req, res) => res.send("SITIO EN CONSTRUCCIÓN"));
 
 
-// app.use(express.static('client/public'));
+app.use(express.static('/public'));
 
 
-// app.get("*", function(req, res) {
-//     res.sendFile(path.join(__dirname+'/client/public/index.html'));
-// });
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname +'/public/index.html'));
+});
 
 
 
