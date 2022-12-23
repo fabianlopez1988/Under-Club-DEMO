@@ -79,15 +79,15 @@ passport.deserializeUser(function (id, done) {
 //   res.sendFile('public', { root: __dirname })
 // });
 
-app.get('*', (req, res) => { 
-  res.sendFile('./public/index.html');
-});
+// app.get('*', (req, res) => { 
+//   res.sendFile('./public/index.html');
+// });
 
 // app.use(express.static(path.join(__dirname, "public")));
 
-// app.get('/', function (req, res) {
-//   res.send('SITIO EN CONSTRUCCIÓN');
-// });
+app.get('/', function (req, res) {
+  res.send('SITIO EN CONSTRUCCIÓN');
+});
 
 
 // app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
