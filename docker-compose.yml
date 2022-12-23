@@ -13,7 +13,7 @@ services:
 
 
   api:
-    build: ./api
+    build: ./api-test
     environment:
       PORT: 6000
       BASE_URL: "http://localhost"
@@ -28,7 +28,7 @@ services:
       # - ./api/controllers:/api-test/controllers
       # - ./api/routes:/api-test/routes 
       # - ./api/config:/api-test/config
-      - ./api/:/api
+      - ./api/:/api-test
     depends_on:
       - db
 
