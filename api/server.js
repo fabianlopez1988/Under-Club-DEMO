@@ -21,7 +21,7 @@ app.use(
   })
 );
 
-app.use(express.static('public'));
+app.use(express.static(path.resolve(__dirname, "./client/public")));
 
 app.use(express.json({ limit: "50mb" }));
 
@@ -76,23 +76,26 @@ passport.deserializeUser(function (id, done) {
     .catch(done);
 });
 
-
+//Express routing
 app.use("/api", routes);
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/public", "index.html"));
+});
 
-
-app.use((req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-})
 
 
 const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(`Escuchando en el puertooooooooooo ${PORT}`)
+  console.log(`Escuchando en el puertooooooooooo ${PORT}`)
   );
 });
 
+
+// app.use((req, res) => {
+//   res.sendFile(__dirname + '/public/index.html');
+// })
 
 // app.get('/', function (req, res) {
 //   res.sendFile('public', { root: __dirname })
