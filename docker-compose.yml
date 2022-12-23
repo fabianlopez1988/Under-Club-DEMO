@@ -28,7 +28,7 @@ services:
       # - ./api/controllers:/api-test/controllers
       # - ./api/routes:/api-test/routes 
       # - ./api/config:/api-test/config
-      - ./api/:/api-test
+      - ./api/:/api
     depends_on:
       - db
 
@@ -39,5 +39,5 @@ services:
     ports:
       - "3031:3031"
     volumes:
-      - ./client/public:/client-test/public
-      - ./client/src:/client-test/src
+      - ./client/public:/client/public
+      - ./client/src:/client/src
