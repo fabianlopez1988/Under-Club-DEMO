@@ -79,18 +79,18 @@ passport.deserializeUser(function (id, done) {
 //   res.sendFile('public', { root: __dirname })
 // });
 
-// app.get('*', (req, res) => { 
+// app.get('*', (req, res) => {
 //   res.sendFile('./public/index.html');
 // });
 
 // app.use(express.static(path.join(__dirname, "public")));
 
-app.get('/', function (req, res) {
-  res.send('SITIO EN CONSTRUCCIÓN');
-});
+// app.get('/', function (req, res) {
+//   res.send('SITIO EN CONSTRUCCIÓN');
+// });
 
 
-// app.get("/", (req, res) => res.send("Hello Worldddddddddddddddd"));
+app.get("/", (req, res) => res.send("SITIO EN CONSTRUCCIÓN"));
 
 
 // app.use(express.static('client/public'));
@@ -102,7 +102,7 @@ app.get('/', function (req, res) {
 
 
 
-app.use("/api", routes);
+app.use("/", routes);
 
 const PORT = process.env.PORT;
 
