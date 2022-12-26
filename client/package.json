@@ -57,6 +57,7 @@
       "minify": false,
       "inlineCritical": false
     },
-    "fonts": true
+    "fonts": true,
+    "homepage": "http://underclub.com.ar/"
   }
 }
