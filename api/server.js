@@ -12,7 +12,12 @@ const path = require("path");
 /* const PORT = process.env.PG_PORT || 5000 */
 require("dotenv").config();
 
-app.use(express.static("build"))
+//esta es la que funcionó
+// app.use(express.static("build"))
+
+app.use(express.static("./client/build"))
+
+
 
 app.use(
   cors({
@@ -87,7 +92,7 @@ app.use("/api", routes);
 
 
 app.use((req, res) => {
-  res.sendFile("build/index.html")
+  res.sendFile("client/build/index.html")
 });
 
 
