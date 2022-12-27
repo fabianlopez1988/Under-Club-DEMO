@@ -16,7 +16,8 @@ require("dotenv").config();
 //esta es la que funcionó
 // app.use(express.static("build"))
 
-app.use(express.static("./client/build"))
+// Hacer que node sirva los archivos de nuestro app React
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 
 
@@ -92,13 +93,11 @@ app.use("/api", routes);
 // });
 
 
-// app.use((req, res) => {
-//   res.sendFile("../build/index.html")
-// });
+// Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
 
-app.get("*", (req, res) => {
-  res.sendFile("client", "build", "index.html");
-})
 
 
 const PORT = process.env.PORT;
