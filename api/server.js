@@ -12,6 +12,7 @@ const path = require("path");
 /* const PORT = process.env.PG_PORT || 5000 */
 require("dotenv").config();
 
+app.use(express.static("build"))
 
 app.use(
   cors({
@@ -21,7 +22,6 @@ app.use(
   })
 );
 
-app.use(express.static(path.resolve(__dirname, "./public")));
 
 app.use(express.json({ limit: "50mb" }));
 
@@ -78,9 +78,12 @@ passport.deserializeUser(function (id, done) {
 
 //Express routing
 app.use("/api", routes);
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public", "index.html"));
-});
+app.use((req, res)=> {
+  res.sendFile(__dirname + "./client/build/index.html");
+})
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./public", "index.html"));
+// });
 
 
 
