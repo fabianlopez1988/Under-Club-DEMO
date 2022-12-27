@@ -20,8 +20,8 @@ coverage/*
 coverage/**
 
 # production
-/build
-/build/*
+# /build
+# /build/*
 /dist
 /dist/*
 
