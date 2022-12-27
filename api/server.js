@@ -9,6 +9,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/Users");
 const path = require("path");
+const { application } = require("express");
 /* const PORT = process.env.PG_PORT || 5000 */
 require("dotenv").config();
 
@@ -91,9 +92,13 @@ app.use("/api", routes);
 // });
 
 
-app.use((req, res) => {
-  res.sendFile("../build/index.html")
-});
+// app.use((req, res) => {
+//   res.sendFile("../build/index.html")
+// });
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../build/index.html"));
+})
 
 
 const PORT = process.env.PORT;
