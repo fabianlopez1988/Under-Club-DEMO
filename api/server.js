@@ -10,16 +10,14 @@ const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/Users");
 const path = require("path");
 const { application } = require("express");
-/* const PORT = process.env.PG_PORT || 5000 */
+/* const PORT = process.env.PORT || 5000 */
 require("dotenv").config();
 
 //esta es la que funcionó
-// app.use(express.static("build"))
+app.use(express.static("build"))
 
 // Hacer que node sirva los archivos de nuestro app React
-app.use(express.static(path.resolve(__dirname, '../client/build')));
-
-
+// app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 app.use(
   cors({
@@ -28,7 +26,6 @@ app.use(
     credentials: true,
   })
 );
-
 
 app.use(express.json({ limit: "50mb" }));
 
@@ -86,19 +83,16 @@ passport.deserializeUser(function (id, done) {
 //Express routing
 app.use("/api", routes);
 
-
 //esta es la que funcionó con la carpeta build dentro de api
-// app.use((req, res) => {
-//   res.sendFile("./build/index.html")
-// });
-
-
-// Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
 app.use((req, res) => {
-  res.sendFile('./client/build', 'index.html');
+  res.sendFile("./build/index.html")
 });
 
 
+// Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
+// app.get((req, res) => {
+//   res.sendFile('./client/build', 'index.html');
+// });
 
 const PORT = process.env.PORT;
 
