@@ -78,12 +78,16 @@ passport.deserializeUser(function (id, done) {
 
 //Express routing
 app.use("/api", routes);
-app.get((req, res)=> {
-  res.sendFile("/client/build/index.html");
-})
+// app.get((req, res)=> {
+//   res.sendFile("/client/build/index.html");
+// })
 // app.get("/*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "./public", "index.html"));
 // });
+
+app.use((req, res) => {
+  res.sendFile(__dirname + '/build/index.html');
+})
 
 
 
