@@ -92,7 +92,7 @@ app.use("/api", routes);
 
 
 app.use((req, res) => {
-  res.sendFile("./build/index.html")
+  res.sendFile("../build/index.html")
 });
 
 
