@@ -94,7 +94,7 @@ app.use("/api", routes);
 
 
 // Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
-app.get((req, res) => {
+app.use((req, res) => {
   res.sendFile('./client/build', 'index.html');
 });
 
