@@ -81,7 +81,7 @@ app.use("/api", routes);
 
 
 app.use((req, res) => {
-  res.sendFile("/build/index.html")
+  res.sendFile("./client/build/index.html")
 });
 
 const PORT = process.env.PORT;
