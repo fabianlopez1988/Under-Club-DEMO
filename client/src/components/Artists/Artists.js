@@ -25,7 +25,7 @@ const Artists = () => {
     >
       <section className="artists-section">
         <h1 className="artists-section-title">
-          ESTA ES LA SECCIÓN DE RESIDENTES<br></br>
+          RESIDENTES<br></br>
         </h1>
         {!resident
           ? null
