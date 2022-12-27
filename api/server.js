@@ -90,7 +90,7 @@ app.use("/api", routes);
 // })
 
 app.use((req, res) => {
-  res.sendFile(__dirname, "/build/index.html")
+  res.sendFile("/build/index.html")
 });
 
 const PORT = process.env.PORT;
