@@ -97,7 +97,7 @@ app.use("/api", routes);
 // });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve("client", "build", "index.html"));
+  res.sendFile("client", "build", "index.html");
 })
 
 
