@@ -85,11 +85,13 @@ app.use("/api", routes);
 //   res.sendFile(path.join(__dirname, "./public", "index.html"));
 // });
 
+// app.use((req, res) => {
+//   res.sendFile(__dirname + '/build/index.html');
+// })
+
 app.use((req, res) => {
-  res.sendFile(__dirname + '/build/index.html');
-})
-
-
+  res.sendFile(__dirname, "/build/index.html")
+});
 
 const PORT = process.env.PORT;
 
