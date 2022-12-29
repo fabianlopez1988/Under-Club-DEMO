@@ -84,9 +84,9 @@ passport.deserializeUser(function (id, done) {
 app.use("/api", routes);
 
 //esta es la que funcionó con la carpeta build dentro de api
-// app.use((req, res) => {
-//   res.sendFile("./build/index.html")
-// });
+app.use((req, res) => {
+  res.sendFile("../public/index.html")
+});
 
 
 // Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
