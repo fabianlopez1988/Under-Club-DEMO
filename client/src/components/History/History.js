@@ -22,7 +22,7 @@ const History = () => {
         className="img-right-one"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 2 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <img src={imgOneHistory} alt="imagen" />
       </motion.div>
@@ -40,7 +40,7 @@ const History = () => {
           className="img-left-two-container"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 2 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           <img src={imgTwoHistory} alt="imagen-2" />
         </motion.div>
