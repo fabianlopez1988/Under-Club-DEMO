@@ -53,10 +53,12 @@ import DeleteUsers from "./components/PanelAdmin/Options/Users/DeleteUsers/Delet
 import NotFound from "./components/NotFound/NotFound";
 
 const AnimatedRoutes = () => {
-  const location = useLocation();
+  // const location = useLocation();
   return (
     <AnimatePresence>
-      <Routes location={location} key={location.pathname}>
+      <Routes 
+      // location={location} key={location.pathname}
+      >
         <Route path="/" element={<Home />} />
         <Route path="/artists" element={<Artists />} />
         <Route path="/history" element={<History />} />
