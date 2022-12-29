@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import "./CarouselHome.css";
 import { getAllEvent } from "../../store/events";
 import DemoSlider from "../../assets/DemoSlider.jpg";
-import DemoSlider2 from "../../assets/DemoSlider2.jpg";
+import DemoSlider2 from "../../assets/anetha.jpg";
 import DemoSlider3 from "../../assets/DemoSlider3.jpg";
 import DemoSlider4 from "../../assets/DemoSlider4.jpg";
 import DemoSlider5 from "../../assets/Oscar.jpeg";

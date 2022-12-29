@@ -5,6 +5,7 @@ import BurguerButton from "./BurguerButton";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../../store/user";
+import logoUC  from "../../assets/logoUC.png";
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
@@ -28,7 +29,7 @@ const NavBar = () => {
           <div className="logo-fixed">
             <Link to="/">
               <img
-                src="https://underclub.com.ar/wp-content/uploads/2022/06/Polygon-1.svg"
+                src={logoUC}
                 alt="logo"
               />
             </Link>

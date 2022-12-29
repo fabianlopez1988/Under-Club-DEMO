@@ -11,7 +11,7 @@
 .short-history-container h1 {
   font-size: 75px;
   font-family: LeagueSpartan-Bold;
-  padding-left: 10%
+  padding-left: 10%;
 }
 
 #line-container {
@@ -36,7 +36,7 @@
   border-left: 45px solid #8342ea;
   border-bottom: 45px solid #8342ea;
   opacity: 0.4;
-  padding-left: 10%
+  padding-left: 10%;
 }
 
 #paragraph-container {
@@ -76,12 +76,21 @@
 }
 
 /* Tablet acostada */
+@media only screen and (min-width: 1888px) and (max-width: 2500px) {
+  #grid-col-container-line {
+    padding-left: 5%;
+  }
+  .short-history-container h1 {
+    padding-left: 5%;
+  }
+}
+
 @media only screen and (min-width: 768.99px) and (max-width: 1023.99px) {
   .short-history-container h1 {
     font-size: 40px;
   }
 
-  #grid-line-col {
+  #grid-col-container-line {
     border-left: 30px solid #8342ea;
     border-bottom: 30px solid #8342ea;
   }
