@@ -14,7 +14,7 @@ const { application } = require("express");
 require("dotenv").config();
 
 //esta es la que funcionó
-app.use(express.static("build"))
+app.use(express.static("public"))
 
 // Hacer que node sirva los archivos de nuestro app React
 // app.use(express.static(path.resolve(__dirname, '../client/build')));
