@@ -90,7 +90,7 @@ app.use("/api", routes);
 
 
 app.use((req, res) => {
-  res.sendFile("../client/build/index.html", { root: __dirname })
+  res.sendFile("../../client/build/index.html", { root: __dirname })
 });
 
 
