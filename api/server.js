@@ -14,7 +14,7 @@ const { application } = require("express");
 require("dotenv").config();
 
 //esta es la que funcionó
-// app.use(express.static("build"))
+app.use(express.static("build"))
 
 // Hacer que node sirva los archivos de nuestro app React
 // app.use(express.static(path.resolve(__dirname, '../client/build')));
@@ -84,25 +84,17 @@ passport.deserializeUser(function (id, done) {
 app.use("/api", routes);
 
 //esta es la que funcionó con la carpeta build dentro de api
-// app.use((req, res) => {
-//   res.sendFile("./build/index.html", { root: __dirname })
-// });
+app.use((req, res) => {
+  res.sendFile("./build/index.html", { root: __dirname })
+});
 
 
-
-
-// Todas las peticiones GET que no hayamos manejado en las líneas anteriores retornaran nuestro app React
-// app.get((req, res) => {
-//   res.sendFile('./client/build', 'index.html');
-// });
-
-app.use(express.static(path.join(__dirname, '../client/build/index.html')));
 
 const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-  console.log(`Escuchando en el puertooooooooooo ${PORT}`)
+  console.log(`Escuchando en el puerto ${PORT}`)
   );
 });
 
