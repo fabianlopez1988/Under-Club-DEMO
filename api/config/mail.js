@@ -5,15 +5,15 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: "matiasezequielnasif@gmail.com",
-    pass: "mbczxhrjwbehhonl",
+    user: "joe.underclub@gmail.com",
+    pass: "kwtxycrwjlhiytzg",
   },
 });
 
 const sendMailToUnder = (mail) => {
   const mailOptions = {
     from: mail.from,
-    to: "matiasezequielnasif@gmail.com",
+    to: "joe.underclub@gmail.com",
     subject: `${mail.person} se quiere comunicar con vos desde Under Club Page`,
     html: `
     <h3>Información</h3>
