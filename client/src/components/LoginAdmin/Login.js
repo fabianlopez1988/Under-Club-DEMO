@@ -87,14 +87,14 @@ const Login = () => {
             ></input>
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicLogin">
+          {/* <Form.Group className="mb-3" controlId="formBasicLogin">
             <Form.Text className="text-muted">
               ¿No es un miembro?{" "}
               <Link className="link-login" to="/register">
                 Crear cuenta
               </Link>
             </Form.Text>
-          </Form.Group>
+          </Form.Group> */}
 
           <button type="submit">Acceder</button>
         </Form>
