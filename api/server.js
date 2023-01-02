@@ -84,10 +84,15 @@ passport.deserializeUser(function (id, done) {
 app.use("/api", routes);
 
 //esta es la que funcionó con la carpeta build dentro de api
+// app.use((req, res) => {
+//   res.sendFile("./build/index.html", { root: __dirname })
+// });
+
+
 app.use((req, res) => {
-  res.sendFile("./build/index.html", { root: __dirname })
-  console.log(__dirname, "dirname")
+  res.sendFile("../client/build/index.html", { root: __dirname })
 });
+
 
 
 
