@@ -85,9 +85,10 @@ body {
 }
 
 
-@media only screen and (min-width: 340px) and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .logo-app-loading {
     margin-top: 30%;
+    display: none;
   }
 
   .logo-app-img {
@@ -95,4 +96,9 @@ body {
     height: 50%;
   }
 }
+
+/* Celu */
+@media only screen and (max-width: 320px) {
+}
+
 

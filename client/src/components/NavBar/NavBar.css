@@ -67,6 +67,7 @@ nav ul li {
 
 .logo-fixed img {
   height: 60px;
+  opacity: 0.8;
 }
 
 .navbar-waveform {
@@ -224,6 +225,7 @@ nav ul li {
 
   .logo-fixed img {
     height: 48px;
+    opacity: 0.5;
   }
 
   nav ul li {
@@ -318,6 +320,7 @@ nav ul li {
 
   .logo-fixed img {
     height: 46px;
+    opacity: 0.5;
   }
 
   nav ul li {
@@ -413,6 +416,7 @@ nav ul li {
 
   .logo-fixed img {
     height: 45px;
+    opacity: 0.5;
   }
 
   nav ul li {
@@ -508,6 +512,7 @@ nav ul li {
 
   .logo-fixed img {
     height: 46px;
+    opacity: 0.5;
   }
 
   nav ul li {
