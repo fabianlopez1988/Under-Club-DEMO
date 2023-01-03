@@ -93,9 +93,12 @@ const EditViewPodcast = () => {
           <img height={"200px"} src={baseImage} alt="" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Intro</Form.Label>
+          <Form.Label>Intro (máximo 400 caracteres)</Form.Label>
           <br></br>
-          <textarea placeholder={podcastRedux?.intro} {...intro}></textarea>
+          <textarea 
+          maxLength="400"
+          // onKeyUp={this.value.length >= this.maxLength ? alert("Te excediste en la cantidad de caracteres") : null}
+          placeholder={podcastRedux?.intro} {...intro}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">

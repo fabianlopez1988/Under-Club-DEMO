@@ -101,7 +101,7 @@ const EditViewEpisode = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Intro</Form.Label>
           <br></br>
-          <textarea placeholder={episodeRedux?.intro} {...intro}></textarea>
+          <textarea maxLength="400" placeholder={episodeRedux?.intro} {...intro}></textarea>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">

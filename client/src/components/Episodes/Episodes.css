@@ -152,7 +152,7 @@
 
 .episode-container-flyer img {
   height: 130%;
-  width: 80%;
+  /* width: 80%; */
   margin-left: 20%;
 }
 
@@ -168,7 +168,7 @@
   }
   .episode-container-flyer img {
     height: 150%;
-    width: 65%;
+    /* width: 65%; */
   }
 }
 

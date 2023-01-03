@@ -31,8 +31,6 @@ const AddEpisode = () => {
     reader.readAsDataURL(blob);
     reader.onload = () => {
       setBaseImage(reader.result);
-      console.log(blob, "soy blob")
-      console.log(reader.result, "soy reader result");
   }}
 
 
@@ -97,6 +95,7 @@ const AddEpisode = () => {
             <Form.Label>Intro</Form.Label>
             <br></br>
             <textarea
+              maxLength="400"
               placeholder="Escriba una breve introducción del episodio..."
               {...intro}
             ></textarea>
