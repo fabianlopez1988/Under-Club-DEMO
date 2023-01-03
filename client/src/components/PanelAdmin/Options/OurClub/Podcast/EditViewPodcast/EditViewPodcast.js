@@ -96,7 +96,7 @@ const EditViewPodcast = () => {
           <Form.Label>Intro (máximo 400 caracteres)</Form.Label>
           <br></br>
           <textarea 
-          maxLength="400"
+          maxLength="500"
           // onKeyUp={this.value.length >= this.maxLength ? alert("Te excediste en la cantidad de caracteres") : null}
           placeholder={podcastRedux?.intro} {...intro}></textarea>
         </Form.Group>

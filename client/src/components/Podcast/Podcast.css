@@ -54,7 +54,7 @@
 }
 
 .podcast-container-intro {
-  height: 550px;
+  height: 600px;
   background-color: rgba(131, 66, 234, 0.3);
   padding: 10% 10%;
   padding-left: 30%;
@@ -98,7 +98,7 @@
 
 .podcast-container-intro_button {
   text-transform: uppercase;
-  width: 100px;
+  width: 150px;
   border: none;
   background: rgb(255, 255, 255);
   padding: 10%;
@@ -172,16 +172,16 @@
   }
 }
 
-/* Notebook */
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+/* PC */
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
   .podcast-container-intro {
-    height: 80%;
+    height: 90%;
   }
   .podcast-container-intro p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .podcast-container-flyer img {
-    height: 90%;
+    height: 95%;
     width: 100%;
   }
   .podcast_paragraph {
@@ -189,17 +189,33 @@
   }
 }
 
-/* Tablet acostada */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* Notebook */
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .podcast-container-intro {
-    height: 70%;
-
+    height: 90%;
   }
   .podcast-container-intro p {
     font-size: 16px;
   }
   .podcast-container-flyer img {
+    height: 95%;
+    width: 100%;
+  }
+
+}
+
+/* Tablet acostada */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .podcast-container-intro {
     height: 80%;
+    width: 105%;
+
+  }
+  .podcast-container-intro p {
+    font-size: 14px;
+  }
+  .podcast-container-flyer img {
+    height: 90%;
     width: 100%;
   }
   .podcast_paragraph {
@@ -218,17 +234,19 @@
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   
   .podcast-container-intro {
-    height: 60%;
-    padding: 5% 5%;
-    padding-left: 30%;
+    height: 70%;
+    padding: 2%;
+    padding-left: 15%;
+    width: 110%;
 
   }
   .podcast-container-intro p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .podcast-container-flyer img {
     height: 70%;
     width: 100%;
+    margin-left: 0;
   }
   .podcast_paragraph {
     font-size: 1.2rem;
@@ -241,8 +259,8 @@
     border-bottom: 20px solid #8342ea;
   }
   .podcast-container-intro_button {
-    width: 60px;
-    font-size: 16px;
+    width: 120%;
+    font-size: 15px;
   }
   .podcast {
     grid-template-rows: 0.1fr 1fr;
@@ -266,14 +284,14 @@
 
   .podcast-container-intro {
     padding: 5%;
-    height: 300px;
+    height: 350px;
     margin-right: 10%;
     margin-left: 10%;
     width: 80%;
-    font-size: 16px;
+    font-size: 14px;
   }
   .podcast-container-intro p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .podcast-container-flyer{
     height: 400px;
@@ -287,8 +305,9 @@
     font-size: 16px;
   }
   .podcast-container-intro_button {
-    width: 80px;
-    font-size: 16px;
+    width: 110px;
+    font-size: 15px;
+    padding: 2%;
   }
   .podcast_line {
     border-left: 15px solid #8342ea;
@@ -331,10 +350,10 @@
     margin-right: 10%;
     margin-left: 10%;
     width: 80%;
-    font-size: 16px;
+    font-size: 14px;
   }
   .podcast-container-intro p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .podcast-container-flyer{
     height: 400px;

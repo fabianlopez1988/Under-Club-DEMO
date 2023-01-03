@@ -67,7 +67,7 @@ const Podcast = () => {
                       className="podcast-container-intro_button"
                       src={podcast.url}
                     >
-                      VER
+                      ESCUCHAR
                     </button>
                   </a>
                 </div>

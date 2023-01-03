@@ -95,7 +95,7 @@ const AddEpisode = () => {
             <Form.Label>Intro</Form.Label>
             <br></br>
             <textarea
-              maxLength="400"
+              maxLength="500"
               placeholder="Escriba una breve introducción del episodio..."
               {...intro}
             ></textarea>

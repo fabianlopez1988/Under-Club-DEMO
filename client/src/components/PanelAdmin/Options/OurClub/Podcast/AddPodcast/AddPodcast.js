@@ -89,7 +89,7 @@ const AddPodcast = () => {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Intro (máximo 400 caracteres)</Form.Label>
             <br></br>
-            <textarea maxLength="400"
+            <textarea maxLength="500"
               placeholder="Escriba una breve introducción del podcast..."
               // onKeyUp={this.value.length >= this.maxLength ? alert("Te excediste en la cantidad de caracteres") : null}
               {...intro}
