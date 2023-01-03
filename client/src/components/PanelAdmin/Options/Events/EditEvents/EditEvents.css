@@ -49,4 +49,12 @@
     min-height: 10em;
     min-width: 100%;
   }
+
+  @media only screen and (min-width: 250px) and (max-width: 430px) {
+    .edit-container{
+      font-size: 14px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
   
