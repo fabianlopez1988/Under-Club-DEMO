@@ -301,8 +301,26 @@
   }
 
   .label-contact {
-    font-size: 18px;
+    font-size: 16px;
   }
+
+  .input-name{
+    padding: 10px;
+  }
+
+  .input-email{
+    padding: 10px;
+  }
+
+  .input-comment{
+    padding: 10px;
+    min-height: 7em;
+  }
+
+  .form-button-contact button{
+    font-size: 16px;
+  }
+
 }
 
 @media only screen and (max-width: 340px) {
@@ -365,6 +383,24 @@
   }
 
   .label-contact {
-    font-size: 18px;
+    font-size: 15px;
   }
+
+  .input-name{
+    padding: 10px;
+  }
+
+  .input-email{
+    padding: 10px;
+  }
+
+  .input-comment{
+    padding: 10px;
+    min-height: 7em;
+  }
+
+  .form-button-contact button{
+    font-size: 16px;
+  }
+
 }
