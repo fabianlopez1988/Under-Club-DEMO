@@ -35,38 +35,12 @@ const NavBar = () => {
             </Link>
           </div>
           <ul className={`ul-navbar ${clicked ? "active" : ""}`}>
-            <li id="our-club-navbar">
-              Nuestro Club
-              <ul>
-                <li>
-                  <Link to="/history">
-                    <a onClick={handleClick} href="/">
-                      Historia
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/culture">
-                    <a onClick={handleClick} href="/">
-                      Cultura
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/milestones">
-                    <a onClick={handleClick} href="/">
-                      Hitos
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/artists">
-                    <a onClick={handleClick} href="/">
-                      Residentes
-                    </a>
-                  </Link>
-                </li>
-              </ul>
+            <li>
+            <Link to="/ourclub">
+                <a onClick={handleClick} href="/">
+                  Nuestro Club
+                </a>
+              </Link>
             </li>
 
             <li>
@@ -93,15 +67,15 @@ const NavBar = () => {
               </Link>
             </li>
 
+            {!user ? null : (
             <li>
-              {!user ? null : (
                 <div onClick={handleLogout}>
                   <Link to="/login">
                     <a onClick={handleClick}>Cerrar Sesión</a>
                   </Link>
                 </div>
-              )}
             </li>
+              )}
 
             <li className="li-waveform">
               <a href="https://www.youtube.com/UnderClubOficial" target="_blank">

@@ -112,7 +112,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
+  margin-top: 10%;
 }
 
 .title-contact {
@@ -127,15 +128,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 96%;
 }
 
 .form-button-contact button {
   text-transform: uppercase;
   border: none;
   background: rgb(255, 255, 255);
-  padding: 20%;
+  padding: 15%;
   color: black;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 25px;
   transition: ease-out 0.3s;
   z-index: 1;
@@ -268,7 +270,7 @@
     display: flex;
     grid-template-columns: none;
     height: 400px;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     margin-top: 10%;
     column-gap: none;
     flex-direction: column;
@@ -281,7 +283,7 @@
   }
 
   .title-contact {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .grid-contact-right {
@@ -345,7 +347,7 @@
   }
 
   .title-contact {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .grid-contact-right {
@@ -365,6 +367,6 @@
   }
 
   .label-contact {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
