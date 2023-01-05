@@ -234,7 +234,7 @@ nav ul li {
 
   #our-club-navbar:hover {
     color: #8342ea;
-    height: 25%;
+    height: 30%;
     transition: 0.5s;
     position: relative;
   }
@@ -280,7 +280,7 @@ nav ul li {
 
   .ul-navbar li:hover > ul {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     position: absolute;
     top: 58%;
     left: 47.7%;
@@ -329,7 +329,7 @@ nav ul li {
 
   #our-club-navbar:hover {
     color: #8342ea;
-    height: 25%;
+    height: 30%;
     transition: 0.5s;
     position: relative;
   }
@@ -375,7 +375,7 @@ nav ul li {
 
   .ul-navbar li:hover > ul {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     position: absolute;
     top: 58%;
     left: 47%;
@@ -425,7 +425,7 @@ nav ul li {
 
   #our-club-navbar:hover {
     color: #8342ea;
-    height: 25%;
+    height: 28%;
     transition: 0.5s;
     position: relative;
   }
@@ -471,16 +471,15 @@ nav ul li {
 
   .ul-navbar li:hover > ul {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     position: absolute;
     top: 60%;
     left: 46%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
   }
 
   .ul-navbar li ul li{
-    padding: 8px ;
+    padding: 10px ;
     border: none
   }
   
@@ -522,7 +521,7 @@ nav ul li {
 
   #our-club-navbar:hover {
     color: #8342ea;
-    height: 22%;
+    height: 30%;
     transition: 0.5s;
     position: relative;
   }
@@ -568,16 +567,15 @@ nav ul li {
 
   .ul-navbar li:hover > ul {
     display: flex;
-      /* flex-direction: column; */
+    flex-direction: column;
     position: absolute;
     top: 58%;
     left: 45%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
   }
 
   .ul-navbar li ul li{
-    padding: 5px ;
+    padding: 10px ;
     border: none
   }
   
