@@ -10,8 +10,6 @@ const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/Users");
 const path = require("path");
 const { application } = require("express");
-// const fs = require("fs")
-// const https = require("https");
 /* const PORT = process.env.PORT || 5000 */
 require("dotenv").config();
 
