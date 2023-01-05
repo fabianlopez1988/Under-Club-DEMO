@@ -5,7 +5,7 @@ import BurguerButton from "./BurguerButton";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLogout } from "../../store/user";
-import logoUC  from "../../assets/logoUC.png";
+import logoUC from "../../assets/logoUC.png";
 
 const NavBar = () => {
   const [clicked, setClicked] = useState(false);
@@ -28,10 +28,7 @@ const NavBar = () => {
         <nav>
           <div className="logo-fixed">
             <Link to="/">
-              <img
-                src={logoUC}
-                alt="logo"
-              />
+              <img src={logoUC} alt="logo" />
             </Link>
           </div>
           <ul className={`ul-navbar ${clicked ? "active" : ""}`}>
@@ -93,27 +90,30 @@ const NavBar = () => {
               </Link>
             </li>
 
-            <li>
-              {!user ? null : (
+            {!user ? null : (
+              <li>
                 <div onClick={handleLogout}>
                   <Link to="/login">
                     <a onClick={handleClick}>Cerrar Sesión</a>
                   </Link>
                 </div>
-              )}
-            </li>
+              </li>
+            )}
 
             <li className="li-waveform">
-              <a href="https://www.youtube.com/UnderClubOficial" target="_blank">
-              <div className="loader-music">
-                <span className="stroke-music"></span>
-                <span className="stroke-music"></span>
-                <span className="stroke-music"></span>
-                <span className="stroke-music"></span>
-                <span className="stroke-music"></span>
-                <span className="stroke-music"></span>
-                <span className="stroke-music"></span>
-              </div>
+              <a
+                href="https://www.youtube.com/UnderClubOficial"
+                target="_blank"
+              >
+                <div className="loader-music">
+                  <span className="stroke-music"></span>
+                  <span className="stroke-music"></span>
+                  <span className="stroke-music"></span>
+                  <span className="stroke-music"></span>
+                  <span className="stroke-music"></span>
+                  <span className="stroke-music"></span>
+                  <span className="stroke-music"></span>
+                </div>
               </a>
               {/* <img className="navbar-waveform" src={gifWaveform} alt="gif" /> */}
             </li>
