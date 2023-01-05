@@ -180,7 +180,7 @@ const Contact = () => {
             </div>
             <div className="form-button-contact">
               <Form onSubmit={handleSubmit}>
-                <button type="submit">Enviar</button>
+                <button id="button-contact" type="submit">Enviar</button>
               </Form>
             </div>
           </div>
