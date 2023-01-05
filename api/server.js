@@ -10,8 +10,8 @@ const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/Users");
 const path = require("path");
 const { application } = require("express");
-const fs = require("fs")
-const https = require("https");
+// const fs = require("fs")
+// const https = require("https");
 /* const PORT = process.env.PORT || 5000 */
 require("dotenv").config();
 
@@ -95,10 +95,7 @@ app.use((req, res) => {
 const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
-  https.createServer({
-    cert: fs.readFileSync("underclub.com.ar.crt"),
-    key: fs.readFileSync("underclub.com.ar.key")
-  }, app).listen(PORT, () =>
+  app.listen(PORT, () =>
   console.log(`Escuchando en el puerto ${PORT}`)
   );
 });
