@@ -63,5 +63,9 @@
     .podcast-options-container ul button {
       min-width: 200px;
     }
+
+    .podcast-options-container{
+      padding-top: 20%;
+    }
   }
   

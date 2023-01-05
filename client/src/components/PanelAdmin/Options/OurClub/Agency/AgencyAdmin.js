@@ -16,15 +16,15 @@ function AgencyAdmin() {
     <h1>Configuraciones</h1>
     <ul>
       <Link className="links-options" to="/admin/ourclub/agency/addagency">
-        <button>Crear un Residente Internacional</button>
+        <button>Crear un Residente Int.</button>
       </Link>
 
       <Link className="links-options" to="/admin/ourclub/agency/updateagency">
-        <button>Editar un Residente Internacional</button>
+        <button>Editar un Residente Int.</button>
       </Link>
 
       <Link className="links-options" to="/admin/ourclub/agency/deleteagency">
-        <button>Borrar un Residente Internacional</button>
+        <button>Borrar un Residente Int.</button>
       </Link>
 
       <Link className="links-options" to="/admin/ourclub">

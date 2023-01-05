@@ -61,4 +61,8 @@
   .panel-container ul button {
     min-width: 200px;
   }
+
+  .panel-container{
+    padding-top: 20%;
+  }
 }

@@ -281,7 +281,7 @@
   }
 
   .title-contact {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .grid-contact-right {
@@ -301,15 +301,17 @@
   }
 
   .label-contact {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .input-name{
     padding: 10px;
+    min-height: 2em;
   }
 
   .input-email{
     padding: 10px;
+    min-height: 2em;
   }
 
   .input-comment{
@@ -388,19 +390,21 @@
 
   .input-name{
     padding: 10px;
+    min-height: 2em;
   }
 
   .input-email{
     padding: 10px;
+    min-height: 2em;
   }
 
   .input-comment{
-    padding: 10px;
+    padding: 10px;  
     min-height: 7em;
   }
 
   .form-button-contact button{
-    font-size: 16px;
+    font-size: 15px;
   }
 
 }

@@ -63,5 +63,9 @@
     .events-container ul button {
       min-width: 200px;
     }
+
+    .events-container{
+      padding-top: 20%;
+    }
   }
   
