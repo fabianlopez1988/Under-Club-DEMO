@@ -94,7 +94,7 @@ const PORT = process.env.PORT;
 
 db.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-  console.log(`Escuchando en el puerto ${PORT}`)
+  console.log(`Escuchando en el puertooooooooo ${PORT}`)
   );
 });
 
