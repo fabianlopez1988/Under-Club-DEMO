@@ -36,7 +36,6 @@ services:
     build: ./client
     environment:
       PORT: 3031
-      HOST: "underclub.com.ar"
     ports:
       - "3031:3031"
     volumes:
